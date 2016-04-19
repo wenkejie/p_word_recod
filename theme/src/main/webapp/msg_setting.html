@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="msg_request">
+<div ms-include-src="'vip-center-header.html'"></div>
+<div class="main-frame">
+	<div ms-include-src="'vip-center-left.html'"></div>
+	<div class="right-frame">
+        <div class="msg-setting-wrapper">
+            <h3 class="ui-title-1">我要评论<span class="ui-title-1-prompt"></h3>
+
+            <div class="msg-setting-filter">
+                <div class="left">
+                    <input type="checkbox">
+                    <a ms-widget="button" class="mg-l10">批量标记为已读</a>
+                    <a ms-widget="button" class="mg-l5">批量删除</a>
+                </div>
+
+                <div class="right mg-t3">
+                    <label>
+                        <input type="radio" name="type">
+                        全部
+                    </label>
+
+                    <label class="mg-l10">
+                        <input type="radio" name="type">
+                        未读消息
+                    </label>
+                </div>
+                
+            </div>
+
+            <div class="msg-setting-item">
+                <p class="title">
+                    <label id="c1" class="fw-b left"><input type="checkbox" class="mg-r10">亲爱的小伙伴,天航物流邀请您加入他的公司</label>
+                    <i class="del-icon"></i>
+                </p>
+
+                <p class="mg-t5">尊敬的马帮网会员:</p>
+                <p class="cnt">非常荣幸能得到你的加入！说不定您很快发现，身边的同行朋友早已把这里当成了订舱的据点了哦。</p>
+                
+                <p class="time">2014 12.15 12.12.33</p>
+            </div>
+
+            <div class="msg-setting-item">
+                <p class="title">
+                    <label id="c1" class="fw-b left"><input type="checkbox" class="mg-r10">亲爱的小伙伴,天航物流邀请您加入他的公司</label>
+                    <i class="del-icon"></i>
+                </p>
+
+                <p class="mg-t5">尊敬的马帮网会员:</p>
+                <p class="cnt">非常荣幸能得到你的加入！说不定您很快发现，身边的同行朋友早已把这里当成了订舱的据点了哦。</p>
+                
+                <p class="time">2014 12.15 12.12.33</p>
+            </div>
+
+            <div class="msg-setting-item">
+                <p class="title">
+                    <label id="c1" class="fw-b left"><input type="checkbox" class="mg-r10">亲爱的小伙伴,天航物流邀请您加入他的公司</label>
+                    <i class="del-icon"></i>
+                </p>
+
+                <p class="mg-t5">尊敬的马帮网会员:</p>
+                <p class="cnt">非常荣幸能得到你的加入！说不定您很快发现，身边的同行朋友早已把这里当成了订舱的据点了哦。</p>
+                
+                <p class="time">2014 12.15 12.12.33</p>
+            </div>
+
+            <div class="mg-t20">
+                <div ms-widget="pager" class="pagination right"></div>
+            </div>
+            
+        </div>
+	</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"pager/avalon.pager",
+			"dropdown/avalon.dropdown"
+			], function() {
+			avalon.define("msg_request", function(vm) {
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+				
+
+			})
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

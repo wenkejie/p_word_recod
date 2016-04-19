@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>注册失败</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/example.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="p_pay" class="rg-body">
+    <div ms-include-src="'header_pay.html'"></div>
+    <div class="rg-record mg-t20 error">
+        <div class="rg-record-content">
+            <div class="rg-record-icon"></div>
+            <div class="rg-record-right">
+                <p class="rg-record-item rg-record-top"><span>注册失败</span></p>
+                <p class="rg-record-item">注册失败，原因不明。</p>
+            </div>
+        </div>
+        <div class="rg-record-footer">
+            <a class="mg-l95" href="javascript:">返回我的大掌柜平台</a>
+        </div>
+    </div>
+    
+    <div ms-include-src="'vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("p_pay", function(vm) {
+
+                })
+                avalon.scan()
+            })
+    </script>
+</body>
+</html>

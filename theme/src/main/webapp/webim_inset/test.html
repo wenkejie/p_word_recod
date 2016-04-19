@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+
+<style type="text/css">
+#im {
+	position: absolute;
+	bottom: 6px;
+	right: 20px;
+	width: 592;
+	height: 485px;
+}
+
+body {background-color: #f3f3f3;}
+</style>
+
+<script type="text/javascript" src="js/interface.js"></script>
+
+<script type="text/javascript">
+
+function login()
+{ 
+	//olyIm_Login("dddd","AA用户");
+	//return;
+	var user =document.getElementById('username').value;
+	var pass=document.getElementById('password').value;
+	var nickname=document.getElementById('snickname').value;
+	if (user == '' || pass == '') {
+	alert("请输入用户名和密码");
+	return;
+	}
+	else
+	{
+
+	document.getElementById('imFrame').contentWindow.interFaceLogin(user,pass,nickname);
+
+	}
+ }
+ function contactTo(id,nickname)
+ {
+	 //添加 用户名，及昵称对应关系至 昵称表
+	 //olyIm_addNickList("test2","用户B");
+
+	//查询用户名对应nickname
+	 //alert(olyIm_getNickByUsername("test2"));
+	 //return
+	 document.getElementById('imFrame').contentWindow.interFaceSend2Other(id,nickname);
+ }
+ function chatTo()
+ {
+	 var chatto =document.getElementById('chatto').value;//$("#chatto").val();
+	 var nickname=document.getElementById('nickname').value;
+	 document.getElementById('imFrame').contentWindow.interFaceSend2Other(chatto,nickname);
+ }
+
+ </script>
+</head>
+
+ <body>
+
+<br>
+<label>注意:登录前请先填写用户昵称，如test1 ，填写 A用户，test2，填写 B用户 ，以此类推<label>
+
+<br>
+<div class="modal - body">
+			<table>
+				<tr>
+					<td width="120"><label for="username">用户名:</label> <input
+						type="text" name="username" id="username" tabindex="1" value="test1"/>
+						<td width="120"><label for="password">密码:</label> <input type="password" 
+						name="password" id="password" tabindex="2" value="111111" /></td>
+						<td width="120"><label for="snickname">昵称:</label> <input type="text" value="A用户"
+						name="snickname" id="snickname" tabindex="3" /></td>
+						<td><a href="#" onClick="login()">登录</a></td>
+
+				</tr>
+				<!--
+				<tr>
+					<td>
+						<label for="chatto">向谁发送id:</label> <input type="text" value=""
+						name="chatto" id="chatto" tabindex="4" />
+						<label for="nickname">昵称:</label> <input type="text" value=""
+						name="nickname" id="nickname" tabindex="5" /></td>
+				</tr>
+				-->
+			</table>
+</div>
+
+<div align=center id="im">
+<iframe id="imFrame" src="im.html" frameBorder=0 marginwidth=0 marginheight=0 scrolling=no style="width:705px;height:486px;background-color=transparent" width=705  height=486 scrolling=no ALLOWTRANSPARENCY="true">
+</iframe>
+</div>
+
+
+
+<br>
+<span>
+<input name="ContactA" type="button" value="联系Test1" title="id:test1 昵称 A用户" onClick="contactTo('test1','A用户')">
+</span>
+
+<span>
+<input name="ContactB" type="button" value="联系Test2" title="id:test2 昵称 B用户" onClick="contactTo('test2','B用户')">
+</span>
+
+<span>
+<input name="ContactC" type="button" value="联系Test3" title="id:test3 昵称 C用户" onClick="contactTo('test3','C用户')">
+</span>
+
+<span>
+<input name="ContactD" type="button" value="联系Test4" title="id:test4 昵称 D用户" onClick="contactTo('test4','D用户')">
+</span>
+
+<br>
+<span>
+<input name="ContactE" type="button" value="联系Test5" title="id:test5 昵称 E用户" onClick="contactTo('test5','E用户')">
+</span>
+
+<span>
+<input name="ContactF" type="button" value="联系Test6" title="id:test6 昵称 F用户" onClick="contactTo('test6','F用户')">
+</span>
+
+<span>
+<input name="ContactG" type="button" value="联系Test7" title="id:test7 昵称 G用户" onClick="contactTo('test7','G用户')">
+</span>
+
+<span>
+<input name="ContactH" type="button" value="联系Test8" title="id:test8 昵称 H用户" onClick="contactTo('test8','H用户')">
+</span>
+
+ </body>
+</html>

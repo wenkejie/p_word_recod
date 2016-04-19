@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/en-register.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register">
+    <div ms-include-src="'en_register_header.html'"></div>
+    
+    <div class="en-register-bd-wrapper">
+        <div class="en-register-success-bd">
+            <div class="en-register-success">
+                <div class="en-register-success-main">
+                    <div class="en-register-success-logo activation-logo">
+
+                    </div>
+
+
+                    <div class="en-register-success-msg">
+                        <p class="welcome">Congratulation!</p>
+
+                        <p>Your password has been reset, please Sign in with your new password.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="en-register-success-link-wrapper">
+                    <p class="en-register-success-link">You can also:</p>
+                    <p><a href="#">Sign in</a></p>
+                    <p><a href="#">Manage Orders</a></p>
+                    <p><a href="#">Query rate</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div ms-include-src="'en_register_footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    vm.opt = {
+                        width: "250px",
+                        listWidth: "250px",
+                    }
+
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

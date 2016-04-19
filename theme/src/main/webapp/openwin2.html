@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>填写校验码</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/example.css">
+    <script src="vendor/avalon/avalon.js"></script>
+</head>
+<body>
+    <div class="demo-show" ms-controller="demo">
+        <fieldset>  
+            <legend>填写校验码</legend>
+                <button ms-click="show('aa')">打开对话框</button>
+                <div ms-widget="dialog,aa,$aaOpts">
+                    <div class="" style="height:106px;padding:20px 40px;">
+                        <!-- <div class="ui-form-group">
+                            <input type="text" class="ui-input" placeholder="">
+                            <div class="ui-dropdown-box">
+                                <div class="ui-dropdown">
+                                    <button class="ui-dropdown-btn">选择<i>&#xe615;</i></button>
+                                    <ul class="ui-dropdown-list">
+                                        <li>选项一</li>
+                                        <li>选项二</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> -->
+                        <select ms-widget="dropdown" ms-duplex="value">
+                            <option value="value1">小二</option>
+                            <option>textValue</option>
+                            <option label="label" value="labelValue">小三</option>
+                            <option value="value2" selected>小四</option>
+                            <option value="value3">小老大</option>
+
+                            <option value="value4">小八</option>
+                            <option value="value5" disabled>小九</option>
+                            <option value="value6">小九九</option>
+                        </select>
+                    </div>
+                </div>
+        </fieldset>
+        <script>
+            require(["dialog/avalon.dialog","dropdown/avalon.dropdown"], function(avalon) {
+                avalon.define("demo", function(vm) {
+                    vm.$aaOpts = {
+                        title: "小二分配",
+                        showClose: false,
+                        width: 374
+                    }
+                    vm.show = function( id ){
+                        avalon.vmodels[id].toggle = true;
+                    }
+
+                    // vm.dropdown = {
+                    //     getTemplate: function(template) {
+                    //         var templates = template.split("MS_OPTION_TEMPLATE");
+                    //         templates[0] = '<div id="title-MS_OPTION_ID"><button ms-widget="button">{{label}}</button></div>';
+                    //         return templates.join("MS_OPTION_TEMPLATE");
+                    //     }
+                    // };
+
+                })
+                avalon.scan();
+            })
+        </script>
+    </div>
+</body>
+</html>

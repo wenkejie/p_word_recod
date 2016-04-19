@@ -1,0 +1,1195 @@
+// 常量 
+@import "variables.less";
+ 
+// 通用样式集合
+@import "mixin.less"; 
+
+@import "vip-center-frame.less";
+
+// 邀请结构
+@import "invite.less";
+
+.reset();
+
+// ===================================================
+// ================= 网上营业厅页面 ==================
+// ===================================================
+ 
+.wrapper{
+  width: 998px;
+  margin: 0 auto; 
+}
+
+.hipping-compay-logo{
+  width: 24px;
+  height: 24px; 
+}
+
+.cost-info-des{
+  padding: 10px 0;
+  color: #666;
+}
+
+.cost-info-des-title{
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+// ==================================================
+// ================= tags ===================
+// ==================================================
+.ui-tag{
+  .inline-block;
+  padding:3px;
+  margin-right:5px;
+  // border: 1px solid #ddd;
+  background: #ddd;
+  color: #666;
+  line-height: 1;
+  border-radius: 2px; 
+}
+ 
+.ui-tag-orage{
+  background: #FF5C26;
+  color: #fff;
+}
+
+
+// ==================================================
+// ================= param select ===================
+// ==================================================
+.ui-param-select{
+  border: 1px solid #ccc;
+  border-top: 1px solid @color-orange;
+  box-shadow: 2px 2px 10px #dcdcdc;
+  background: #fff;
+  margin-top: 20px;
+  .ui-param-option-selected{
+      background: url("../images/confirm_bg.jpg") no-repeat;
+      background-position: right bottom;
+      border: 2px solid @color-orange;
+      background-position: right bottom
+  }
+  .bigger-zindex{
+    z-index:66;
+  }
+}
+
+.ui-param-select-row{
+  position: relative;
+  padding: 9px 0 9px 8em;
+  margin: 0;
+  margin-bottom: -1px;
+  min-height:30px;
+  _height:30px;
+  &:extend(.clearfix all);
+  border-bottom: 1px dashed #ddd;
+  /*z-index: 2;*/
+}
+
+.ui-param-select-label{
+  position: absolute;
+  top: 14px;
+  left: 1em;
+  margin: 0;
+  color: #999;
+  width: 70px;
+  text-align: right;
+}
+
+.ui-param-selected-cnt{
+  .clearfix;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  .all-select{
+    height: 24px;
+    line-height: 24px;
+	color: #999;
+  }
+  dt{
+    float: left;
+  }
+}
+
+.ui-param-selected-item{
+  .left;
+  padding:2px 8px;
+  margin-left: 5px;
+  border: 1px solid #ccc;
+  color: #666;
+  background: #fff;
+  &:hover{
+    border-color: #000;
+    color: #666;
+  }
+}
+
+.ui-param-select-item{
+  float: left;
+  margin: 0;
+  padding-right: 11px;
+  padding-left: 11px;
+  text-align: left;
+  color: #666;
+  white-space: nowrap;
+  height: 25px;
+  line-height: 25px;
+  border: 2px solid #fff;
+  &:hover{
+    color: #c30;
+  }
+}
+ 
+// ===================================================
+// ================= table ===========================
+// ===================================================
+.ui-table{
+  table-layout: fixed;
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  thead{
+    background: #f5f5f5;
+  }
+
+  th{
+    border-bottom: 1px solid #ddd;
+    font-weight: normal;
+    color: #666;
+  }
+
+  th,td{
+    padding:10px 8px;
+  }
+
+  td{
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  .tbody-open{
+      .tr-active{
+      position: relative;
+      background: #fff2e6;
+      font-weight: bold;color: #796053;
+      td{
+        border-color: #e6cebf;
+        border-bottom: none;
+      }
+    }
+
+    .td-inside{
+      padding: 0;border: none;
+    }
+  }
+  
+  .split{
+    background: #fafafa;
+  }
+
+  .price{
+    font-size: 18px;
+    font-weight: 700;
+    color: @color-orange;
+  }
+
+  .dropdown-cnt{
+    padding: 20px;
+    background: #FFF8F0;
+  }
+
+  .cost-info{
+    float: left;
+
+    thead{
+      background:#FEEEE2;
+    }
+
+    th{
+      border-bottom:1px dashed #ddd;
+    }
+
+    td{
+      border: none;
+      padding: 5px;
+    }
+  }
+}
+
+
+// ===================================================
+// ================= 有边框的表格 ===========================
+// ===================================================
+.ui-table-border{
+  table-layout: fixed;
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  thead{
+    background: #f9f9f9;
+  }
+
+  th{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-weight: 700;
+    color: #666;
+  }
+
+  th,td{
+    padding:10px 8px;
+  }
+
+  td{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .split{
+    background: #f9f9f9;
+  }
+  tbody{
+	  tr:hover {
+		  background:#fff8f0;
+	  }
+  }
+}
+
+// ===================================================
+// ================= 没有边框的表格 ===================
+// ===================================================
+.ui-table-noborder {
+	border-left: none;
+  	border-right: none;
+	thead{
+    	th {
+			border-top:none;
+		}
+  	}
+}
+
+// ====================== end ========================
+
+
+.ui-table-hs{
+  td{
+    padding: 20px 8px;
+  }
+  .option{
+    color: #999;
+  }
+}
+
+
+// ===================================================
+// =================== 表格内部表格 ===================
+// ===================================================
+.ui-inside-table {
+   // table-layout: fixed;
+    width: 100%;
+    text-align: left;
+    background: #fffaf6;
+  td{
+    padding: 8px;
+    border-left:1px solid #e6cebf;
+    border-top:1px solid #e6cebf;
+    border-bottom:1px solid #e6cebf;
+  }
+  th{
+    background: #fef5ef;
+    border-top:1px solid #e6cebf;border-left:1px solid #e6cebf;
+    border-bottom:1px solid #e6cebf;
+  }
+  .th-first{
+    border-left:none;
+  }
+  .tr-last{
+    th,td{
+      border-bottom: none;
+    }
+  }
+}
+
+// ====================== end ========================
+
+// ==================================================
+// ================= progress bar ===================
+// ==================================================
+.ui-progress-bar {
+	width:100%;
+}
+.ui-progress-bar-bg-round,.ui-step-line-right,.ui-step-line-left,.ui-step-number,.ui-step-icon-circle {
+	background: url(../images/bg.png) no-repeat;
+}
+.ui-progress-bar-bg {
+	position:relative;
+	background-color:#e6e6e6;
+	height:6px;
+	margin-top:13px;
+	_font-size:0;
+}
+.ui-progress-bar-bg-round {
+	background-position:0 -69px;
+	width:6px;
+	height:6px;
+	position:absolute;
+	right:-3px;
+	top:0;
+	display:block;
+	_font-size:0;
+}
+.ui-step {
+	margin-top:-19px;
+	_margin-top:-15px;
+	.clearfix;
+	li{
+		list-style:none;
+		float:left;
+		position:relative;
+		height:60px;
+		.ui-step-line{
+			display:none;
+		}
+	}
+}
+.ui-step-2 {
+	li{
+		width:50%;
+	}	
+}
+.ui-step-3 {
+	li{
+		width:33.33333333333%;
+		*width:33.30%;
+	}	
+}
+.ui-step-4 {
+	li{
+		width:25%;
+	}	
+}
+.ui-step-5 {
+	li{
+		width:20%;
+		*width:19.98%;
+	}	
+}
+.ui-step-6 {
+	li{
+		width:16.6666666666%;
+	}	
+}
+li.ui-step-active {
+	.ui-step-line{
+		height: 6px;
+		display: block;
+		margin-top: 13px;
+		_margin-top: 9px;
+		padding-left:10px;
+		width:100%;
+		margin-left:-10px;
+		_font-size:0;
+		background:#00b285;
+		position:relative;
+	}
+	.ui-step-line-right {
+		height: 6px;
+		width:6px;
+		background-position:-12px -69px;
+		text-indent:-999em;
+		position:absolute;
+		_font-size:0;
+		position:absolute;
+		right:-3px;
+		top:0;
+	}
+	.ui-step-line-left {
+		height: 6px;
+		width:6px;
+		background-position:-12px -69px;
+		text-indent:-999em;
+		position:absolute;
+		_font-size:0;
+		position:absolute;
+		left:-3px;
+		top:0;
+	}
+	.ui-step-number {
+		background-position:-42px -90px;
+		color:#fff;
+	}
+	.ui-step-text {
+		color:#00b285;
+		font-weight:bold;
+	}
+	
+}
+li.ui-step-start {
+	_margin-left:0;
+	.ui-step-line {
+		background-position:0 -75px;
+		padding:0;
+		margin-left:0;
+	}
+}
+.ui-step-icon {
+	height: 60px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	left: 0;
+	font-family: tahoma;
+}
+.ui-step-number {
+	display:block;
+	width:30px;
+	height:30px;
+	line-height:30px;
+	position:absolute;
+	top:0;
+	_top:-4px;
+	left:50%;
+	margin-left:-18px;
+	background-position:left -90px;
+	color:#999;
+	font-size:18px;
+}
+.ui-step-text {
+	height: 20px;
+	line-height: 20px;
+	position: relative;
+	top: 36px;
+	left: 0;
+	font-size:14px;
+	color:#999;
+}
+.ui-progress-step-time {
+	height: 20px;
+	line-height: 20px;
+	position: relative;
+	top: 35px;
+	left: 0;
+	font-size:12px;
+	color:#999;
+	display:block;
+}
+// ==================================================
+// ================= tooltip ===================
+// ==================================================
+.ui-tooltip {
+	border:#ccc 1px solid;
+	background:#fff;
+	box-shadow: 0 3px 10px #dcdcdc;
+	padding:10px;
+	width:220px;
+}
+.ui-tooltip-header {
+	position:relative;
+	height:28px;
+	line-height:28px;
+}
+.ui-tooltip-title {
+	.left;
+	padding-left:10px;
+	font-size:14px;
+	color:#1c8cda;
+}
+.ui-tooltip-arrow-1 {
+	position:absolute;
+	left:40px;
+	top:-20px;
+	margin-top:2px\9;
+	*top:-24px;
+	font-size:22px;
+	color:#ccc;
+}
+.ui-tooltip-arrow-2 {
+	position:absolute;
+	left:40px;
+	top:-19px;
+	*top:-23px;
+	font-size:22px;
+	color:#fff;
+	margin-top:2px\9;
+}
+.ui-tooltip-arrow-topright-1 {
+	position:absolute;
+	right:40px;
+	top:-20px;
+	*top:-24px;
+	font-size:22px;
+	color:#ccc;
+	margin-top:2px\9;
+}
+.ui-tooltip-arrow-topright-2 {
+	position:absolute;
+	right:40px;
+	top:-19px;
+	*top:-23px;
+	font-size:22px;
+	color:#fff;
+	margin-top:2px\9;
+}
+.ui-tooltip-arrow-lefttop-1 {
+	position:absolute;
+	left:-21px;
+	top:20px;
+	font-size:22px;
+	color:#ccc;
+	margin-left:2px;
+	margin-left:0\9;
+}
+.ui-tooltip-arrow-lefttop-2 {
+	position:absolute;
+	left:-20px;
+	top:20px;
+	font-size:22px;
+	color:#fff;
+	margin-left:2px;
+	margin-left:0\9;
+}
+.ui-tooltip-arrow-righttop-1 {
+	position:absolute;
+	right:-21px;
+	top:20px;
+	font-size:22px;
+	color:#ccc;
+	margin-right:2px;
+	margin-right:0\9;
+}
+.ui-tooltip-arrow-righttop-2 {
+	position:absolute;
+	right:-20px;
+	top:20px;
+	font-size:22px;
+	color:#fff;
+	margin-right:2px;
+	margin-right:0\9;
+}
+.ui-tooltip-colse {
+	color:#ccc;
+	cursor:pointer;
+	position:absolute;
+	top:-10px;
+	*top:-3px;
+	right:0;
+	&:hover {
+		color:#666;
+	}
+	i{
+		font-size:18px;
+	}
+}
+.ui-tooltip-cnt {
+	padding:5px;
+}
+
+// ==================================================
+// ================= logistics progress ===================
+// ==================================================
+.ui-logistics-progress {
+	padding:10px 5px 0;
+}
+.ui-logistics-progress-step {
+	.clearfix;
+}
+.ui-step-time {
+	.left;
+	width:70px;
+	text-align:right;
+	padding-right:10px;
+	line-height:18px;
+	margin-top:-5px;
+	_margin-top:0;
+}
+.ui-step-time-1 {
+	color:#666;
+}
+.ui-step-time-2 {
+	color:#999;
+}
+.ui-step-name {
+	.left;
+	border-left:#ccc 2px solid;
+	position:relative;
+	padding-left:20px;
+	width:95px;
+	min-height:40px;
+	_height:40px;
+	padding-bottom:5px;
+	p {
+		margin-top:-5px;
+		_margin-top:0;
+		line-height:150%;
+		font-size:14px;
+	}
+}
+.ui-step-name-last {
+	border-left-color:#fff;
+}
+.ui-step-icon-circle {
+	position:absolute;
+	top:0;
+	left:-7px;
+	background-position:-146px -107px;
+	width:12px;
+	height:12px;
+}
+
+// ==================================================
+// ================= head nav ===================
+// ==================================================
+.ui-nav{
+  width:100%;
+  height:35px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  .ui-nav-cnt{
+    .wrapper
+  };
+  a{
+    color:#757575;;
+  }
+}
+
+.ui-nav-cnt-left{
+  .left;
+  list-style: none;
+  height: 35px;
+  line-height: 35px;
+  li {
+    .left;
+    margin-right: 2px;
+    color: #999;
+  };
+  .ui-nav-cnt-left-login{
+    color:#0088cc;
+  }
+}
+
+.ui-nav-cnt-right{
+  .right;
+  list-style: none;
+  height: 35px;
+  line-height: 35px;
+  li{
+    .left;
+    margin-right: 2px;
+  };
+}
+
+// ==================================================
+// ================= search area ===================
+// ==================================================
+.ui-search{
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0px 3px 2px rgba(0,0,0,.08);
+  /*margin-bottom: 20px;*/
+  background: #fff;
+}
+.ui-search-wrapper{
+  .clearfix;
+/*  position: relative;
+  z-index: 900;*/
+  width: 998px;
+  height: 98px;
+  margin: 0 auto;
+  a{
+    color:#757575;;
+  }
+}
+
+.ui-search-bd{
+  .left;
+  position: relative;
+  margin-top: 13px;
+  margin-left: 75px;
+  z-index:99;
+}
+
+.ui-search-bd-en{
+  margin-left: 0;
+}
+
+.ui-search-tip{
+   position: absolute;
+   right: -36px;
+   top: 27px;
+}
+
+.ui-search-logo{
+  display: inline;
+  float: left;
+  padding-top: 16px;height: 74px;width: 136px;
+  // background: url("../images/bg.png") left top no-repeat;
+  line-height: 100px;overflow: hidden;
+  a{
+    display: block;
+    width: 136px;height: 58px;line-height: 58px;
+    background: url("../images/bg.png") 0 0 no-repeat;
+  }
+}
+
+.ui-search-adv{
+  position: absolute;
+  right: 0px;
+  top: 44px;
+  width: 133px;
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.ui-search-bd-tab{
+  .clearfix;
+  list-style: none;
+  li{
+    .left;
+    background: #fff4f4;
+    padding: 5px 10px;
+    margin-right: 3px;
+    color: #f26e31;
+    cursor: pointer;
+  };
+  .ui-search-bd-tab-selected{
+     background: @color-orange;
+     color:#fff;
+  }
+}
+
+
+.ui-search-bd-input{
+  .clearfix;
+  border: 3px solid @color-orange;
+  .left;
+}
+
+// 英文版首页头部搜索
+.ui-search-bd-input-en{
+  .ui-search-bd-input-wrapper1,.ui-search-bd-input-wrapper2{
+    .search-input{
+      width: 288px !important;
+    }
+  }
+  .cui-dropdown-pod{
+    width: 307px;
+  }
+}
+
+.ui-search-bd-input-wrapper1{
+  position: relative;
+  border-right: 2px solid #f36041;
+  padding: 0 10px;
+  height: 32px;
+  *height:33px;
+  .left;
+  .name{
+      background: #f7f5f0;
+      padding: 7px 10px;
+      color: #666;
+      .left;
+    };
+  .search-input{
+      width: 182px !important;
+      height: 26px !important;
+	    line-height:18px;
+      border: none !important;
+	    _margin:-1px 0 0 -3px !important;
+      border: none !important;
+	    border-width:0px;
+      outline:none;
+      &:focus{
+        outline: none;
+      }
+  }
+  .oni-textbox{
+    padding:3px 0;
+    border: none;
+  }
+} 
+
+.ui-search-bd-input-wrapper2{
+  position: relative;
+  padding: 0 10px;
+  height:32px;
+  .left;
+  .name{
+      background: #f7f5f0;
+      padding: 7px 10px;
+      color: #666;
+      .left;
+    };
+  .search-input{
+      width: 288px !important;
+      height: 26px !important;
+	    line-height:18px;
+      border: none !important;
+      _margin:-1px 0 0 -3px !important;
+      border: none !important;
+	    border-width:0px;
+      &:focus{
+        outline: none;
+      }
+  }
+  .oni-textbox{
+    border: none;
+  }
+} 
+
+  .ui-search-bd-btn-wrapper{
+    .left;
+      button{
+         padding: 4px 8px;
+         width: 97px;
+         border: none;
+         color: #fff;
+         background: @color-orange;
+         border-radius: 0;
+    		 font-size:16px;
+         height:32px;
+    		 *height:34px;
+		 &:focus {
+			 outline:none;
+		 }
+      }
+  }
+ 
+.ui-search-bd-sgst{
+  margin-top: 5px;
+  a{
+    margin-right: 8px;
+    color: #999;
+  }
+}
+.header-apply-supplier-btn {
+	.left;
+	width:128px;
+	height:38px;
+	border:#d5d5d5 1px solid;
+	background:#f3f3f3;
+	line-height:38px;
+	text-align:center;
+	margin:40px 0 0 20px;
+	font-size:16px;
+	color:#333;
+	font-weight:bold;
+  box-shadow: 1px 1px 2px #f9f9f9;
+	&:hover {
+    color: #000;
+		border-color:#ccc;
+    box-shadow: 2px 2px 3px #ddd;
+	}
+}
+
+// ==================================================
+// ================= panel ===================
+// ==================================================
+.ui-panel{
+  margin-top: 20px;
+  border: 1px solid #ddd;background: #fff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.08);
+}
+.ui-panel-hd{
+  padding: 0px 10px;
+  height: 40px;
+  line-height: 40px;
+  background: #f5f5f5;
+  color:#333;
+  font-size: 15px;
+  border-bottom: 1px solid #ddd;
+  position:relative;
+}
+
+.ui-panel-bd{
+  .clearfix; 
+  padding:20px;
+  background: #fff;
+}
+.ui-panel-bd-lt{
+  .left;
+  width:10%;
+}
+
+.ui-panel-bd-ct{
+  .left;
+  width:30%;
+}
+
+.ui-panel-bd-rt{
+  .left;
+  width:60%;
+}
+.ui-panel-bd-lt-logo{
+  width:24px;
+  height:24px;
+}
+.ui-panel-bd-ct-wrapper{
+  padding: 0px 27px;
+  border-right: 1px solid #ddd;
+}
+.ui-panel-bd-tl{
+  margin-bottom: 10px;
+  border-top: 1px solid #ddd;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+  .clearfix;
+  .line-l{
+    display: none;
+  };
+  .line-r{
+    display: none;
+  }
+  .left{
+    position: absolute;
+    top: -11px;
+    left: 22px;
+    z-index: 22;
+    padding: 0px 16px;
+    background: #fff;
+    font-size: 14px;
+  }
+}
+
+
+
+// 权限界面panel
+.ui-panel-verify{
+  padding: 20px 25px;
+}
+
+// ==================================================
+// ================= 订舱页面 ===================
+// ==================================================
+
+.lt-wrapper{
+  border-right: 1px solid #ddd;
+}
+.ui-panel-bd-ct-wrapper{
+  .place{
+    color: #999;
+    font-size: 14px;
+  }
+}
+
+.ui-panel-bd-rt-wrapper{
+  padding: 0px 27px;
+  font-size: 14px;
+}
+.rt-item{
+  margin-right: 50px;
+}
+.form-label{
+  .left;
+  width: 100px;
+  text-align: right;
+  color: #666;
+  height: 28px;
+  line-height: 28px;
+}
+.form-input{
+  .left;
+}
+.form-group{
+  .clearfix;
+  margin-bottom: 10px;
+}
+.add-product{
+  padding:2px 8px;
+  border: 1px dashed #ccc;
+  color: #666;
+  background: #fff;
+
+  &:hover{
+    border-color: @color-blue;
+    color: @color-blue;
+  }
+}
+
+.clear{
+  .clearfix;
+}
+
+.lh-inht{
+  line-height: inherit;
+}
+
+.label-tip{
+  position: absolute;
+  top: 15px;
+  right: 8%;
+}
+
+.cost-info{
+  thead{
+    background:#f5f5f5;
+  }
+
+  th{
+    border-bottom:1px dashed #ddd;
+    padding: 10px 5px;
+  }
+
+  td{
+    border: none;
+    padding: 5px;
+  }
+}
+
+.cost-info-part1, .cost-info-part2{
+  width: 100%;
+}
+
+.cost-info-part2{
+  border-top: 1px solid #ccc;
+  border-bottom: 2px solid #999;
+}
+
+.order-sub-wrp{
+  margin-top: 20px;
+}
+
+.total-info-label{
+  width:70%;
+  text-align: right;
+  font-weight: bold;
+  .left;
+  p{
+    margin-bottom: 5px
+  }
+}
+.total-info-val{
+  width:30%;
+  text-align: right;
+  .left;
+  p{
+    margin-bottom: 5px
+  }
+  .price{
+    color:@color-orange;
+  }
+  .total-rmb{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+}
+
+.tip{
+  color:#666
+}
+
+// 2015-25-29 by fen
+// 临时解决弹出框过大导致出现滚动层，引起被遮障遮住
+// 滚动层
+ 
+.ui-scroll-con{
+  overflow-y: auto;
+  max-height: 450px;
+}
+
+// ===================================================
+// ================= 轮播插件样式调整 =================
+// ===================================================
+
+// ===================== 常量 ========================
+
+.cms-pager{
+  float: right;*zoom:1;
+  color: #666;
+  strong,a{
+    display: inline-block;_float: left;*zoom:1;
+    vertical-align: middle;
+    height: 28px;line-height: 28px;padding: 0 10px;
+    border: #d6d6d6 1px solid;background-color: #f1f1f1;background-image:linear-gradient(to top,#f1f1f1,#f9f9f9);border-radius: 1px;
+    font-weight: bold;color: #666;
+    font-family: "宋体";
+  }
+  a{
+    &:hover{
+      border-color: #db3917;
+      color: #666;
+    }
+  }
+  strong{
+    background: #f1512e;border-color: #db3917;
+    color: #fff;
+  }
+}
+
+
+
+// ======================= end ======================
+
+// ===================================================
+// ================= 轮播插件样式调整 =================
+// ===================================================
+
+// // =ie9
+
+@media all and (min-width:0) { /* 2. */
+    .oni-carousel .oni-carousel-panel .oni-carousel-item .oni-carousel-img {
+      position: absolute;
+    }
+    /* IE9 only, 现在IE10也支持 */
+    /* Ps:老外的方法都是\0，根本没考虑Opera */
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* 3. */
+    .oni-carousel .oni-carousel-panel .oni-carousel-item .oni-carousel-img {
+      position: static;
+    }
+   /* IE10+ */
+}
+
+// .oni-carousel .oni-carousel-panel .oni-carousel-item .oni-carousel-img {
+//   position: absolute;
+// }
+
+// html[lang='\
+// en'] .oni-carousel .oni-carousel-panel .oni-carousel-item .oni-carousel-img {
+//   position: static;
+// }
+// ==================== end ==========================
+
+// ===================================================
+// ================= 敬请期待页面结构 =================
+// ===================================================
+.expect-content{
+  padding-top: 90px;
+  min-height: 500px;_height: 500px;
+  text-align: center;
+}
+
+
+// ==================== end ==========================
+
+// ===================================================
+// ================= pagination ======================
+// ===================================================
+
+// 插件引入
+
+@import "widget/caesar.carousel.less";
+
+
+// form
+@import "form.less";
+
+// loading
+@import "loading.less";
+
+// table
+@import "table-case.less";
+
+@import "style-don.less";
+
+@import "style-jianshen.less";
+
+@import "common.less";
+
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register-new.css">
+    <script src="../vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'../header_register.html'"></div>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="rg-record">
+                <div class="rg-record-header">
+                    <div class="rg-record-header-left">
+                        <i>&#xe608;</i>
+                    </div>
+                    <div class="rg-record-header-right">
+                        <p class="info">新密码设置成功!</p>
+                        <p class="note">
+                            请牢记您新设置的密码
+                        </p>
+                    </div>
+                </div>
+                <div class="rg-panel">
+                    <div class="rg-sitemap">
+                        <div class="rg-sitemap-cell">
+                            <p class="rg-sitemap-cell-item">
+                                <i>&#xe60f;</i><a href="javascript:" class="rg-sitemap-link">最新运价查询</a>
+                            </p>
+                        </div>
+                        <div class="rg-sitemap-cell">
+                            <p class="rg-sitemap-cell-item">
+                                <i>&#xe602;</i><a href="javascript:" class="rg-sitemap-link">货物实时跟踪</a>
+                            </p>
+                        </div>
+                        <div class="rg-sitemap-cell">
+                            <p class="rg-sitemap-cell-item">
+                                <i>&#xe604;</i><a href="javascript:" class="rg-sitemap-link">会员中心管理</a>
+                            </p>
+                        </div>
+                        <div class="rg-sitemap-cell">
+                            <p class="rg-sitemap-cell-item">
+                                <i>&#xe606;</i><a href="javascript:" class="rg-sitemap-link">企业帐号升级（免费）</a>
+                            </p>
+                        </div>
+                        <div class="rg-sitemap-cell">
+                            <p class="rg-sitemap-cell-item">
+                                <i>&#xe605;</i><a href="javascript:" class="rg-sitemap-link">行业资讯查看</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'../vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

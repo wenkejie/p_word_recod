@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="supplier-apply">
+<div ms-include-src="'header_supplier.html'"></div>
+<div class="main-frame">
+	<div class="ui-register-progress-bar">
+        <ul class="ui-register-step ui-register-step-3">
+            <li class="ui-register-step-pass">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">1</span>
+                    <span class="ui-register-step-text">填写申请信息</span>
+                </div>
+                <div class="ui-register-step-line"></div>
+                <div class="ui-register-step-line-2"></div>
+            </li>
+            <li class="ui-register-step-active">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">2</span>
+                    <span class="ui-register-step-text">提交审核</span>
+                </div>
+                <div class="ui-register-step-line"></div>
+                <div class="ui-register-step-line-2"></div>
+            </li>
+            <li class="ui-register-step-last">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">3</span>
+                    <span class="ui-register-step-text">成为供应商</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+  	<div class="ui-supplier-apply-remind">
+        <div class="ui-supplier-apply-remind-cnt">
+            <p>您申请的资料已提交，请等待客服人员审核，成为供应商后，您可以在马帮网发布产品以及在线接单。</p>
+            <p>供应商审核会在1-2个工作日内完成，客服咨询电话：400-800-800</p>
+        </div>
+    </div>
+    <div class="ui-supplier-apply-link"><a href="#">返回我的大掌柜平台</a></div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"dropdown/avalon.dropdown",
+			"checkboxlist/avalon.checkboxlist"
+			], function() {
+			avalon.define("supplier-apply", function(vm) {
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+			})
+
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

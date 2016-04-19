@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register-new.css">
+    <script src="../vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'../header_register.html'"></div>
+    <div class="rg-progress rg-progress-six">
+        <div class="rg-progress-content">
+            <ul>
+                <li class="rg-progress-cell rg-progress-cell-active">
+                    <span class="rg-progress-icon">1<i class="iconfont">&#xe609;</i></span>
+                    <p class="rg-progress-info">注册账号</p>
+                </li>
+                <li class="rg-progress-cell rg-progress-cell-active">
+                    <span class="rg-progress-icon">2<i class="iconfont">&#xe609;</i></span>
+                    <p class="rg-progress-info">填写账户信息</p>
+                </li>
+                <li class="rg-progress-cell rg-progress-cell-current">
+                    <span class="rg-progress-icon">3<i class="iconfont">&#xe609;</i></span>
+                    <p class="rg-progress-info">完善供应商资料</p>
+                </li>
+                <li class="rg-progress-cell">
+                    <span class="rg-progress-icon">4<i>&#xe609;</i></span>
+                    <p class="rg-progress-info">上传企业资质</p>
+                </li>
+                <li class="rg-progress-cell">
+                    <span class="rg-progress-icon">5<i>&#xe609;</i></span>
+                    <p class="rg-progress-info">完善企业优势</p>
+                </li>
+                <li class="rg-progress-cell">
+                    <span class="rg-progress-icon"><span class="iconfont">&#xe60a;</span><i>&#xe609;</i></span>
+                    <p class="rg-progress-info">完成申请</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="rg-form">
+                <div class="rg-form-title">
+                    <label class="rg-label" for="">您的企业信息</label>
+                    <span class="rg-form-des">登录时需验证，保护账户信息</span>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">公司名称</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder="请填写您的公司名称"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">英文名称</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder="请填写您的公司的英文名称"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">省市区域</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder="请填写您的公司所在地"></div>
+                </div>
+            </div>
+            <div class="rg-form">
+                <div class="rg-form-title">
+                    <label class="rg-label" for="">公司联系人</label>
+                    <span class="rg-form-des">请留下您的联系方式，客服会在第一时间与您联系和确认</span>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">联  系  人</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder="请填写公司联系人姓名"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">手机号码</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder="请填写联系人的手机号码"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">联系电话</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large w60" placeholder="区号"><input type="text" class="rg-input-large w140 mgl8" placeholder="电话号码"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">电子邮箱</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder="请填写电子邮箱，用于接收咖狗的审批结果"></div>
+                </div>
+                <div class="rg-form-line rg-form-btn">
+                    <a class="rg-btn rg-btn-primary" href="javascript:">下一步</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'../vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

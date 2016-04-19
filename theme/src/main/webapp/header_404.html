@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+
+</head>
+<body ms-controller="header">
+<div class="top-bar" ms-controller="top_bar">
+	<div class="top-bar-cnt">
+    	<div class="welcome"><span>您好！</span><a href="#">Viola</a></div>
+        <div class="top-bar-link">
+        	<ul>
+            	<li><a href="#" class="right-line home-page-link">大掌柜首页</a></li>
+                <li class="link-dropdown" ms-hover="link-dropdown-active" ms-mouseover="myDZGVisible" ms-mouseout="myDZGVisible">
+                	<div class="link-dropdown-header"><a href="#" class="right-line">我的大掌柜</a><i class="icon-2">&#xe612;</i></div>
+                    <ul class="link-dropdown-list" ms-css-display="myDZG_visible">
+                    	<li><a href="#">我是买家</a></li>
+                        <li><a href="#">我是卖家</a></li>
+                    </ul>
+                </li>
+                <li class="notice-dropdown" ms-hover="link-dropdown-active" ms-mouseover="msgVisible" ms-mouseout="msgVisible">
+                	<div class="link-dropdown-header"><i class="icon-1">&#xe619;</i><a href="#" class="right-line notice-link">消息</a><i class="icon-2">&#xe612;</i></div>
+                    <ul class="link-dropdown-list" ms-css-display="msg_visible">
+                    	<li><a href="#">我的订单</a></li>
+                        <li><a href="#">评论<span class="num">(1)</span></a></li>
+                        <li><a href="#">认证<span class="num">(1)</span></a></li>
+                        <li><a href="#">邀请<span class="num">(10)</span></a></li>
+                        <li><a href="#">我的积分</a></li>
+                        <li><a href="#">我的优惠券</a></li>
+                        <li><a href="#">系统设置</a></li>
+                        <li class="msg-set"><a href="#">消息设置</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">在线客服</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ui-search">
+    <div class="ui-search-wrapper">
+            <div class="ui-search-logo">
+                
+            </div>
+          <!--   <div class="ui-search-adv">
+                广告
+            </div> -->
+    </div>
+</div>
+<script>
+	require([], function() {
+		avalon.define("top_bar", function(vm) {
+			vm.myDZG_visible = "none";
+			vm.msg_visible = "none";
+			vm.myDZGVisible = function(event) {
+				if(event.type=="mouseover"){
+					vm.myDZG_visible = "block";
+				}else{
+					vm.myDZG_visible = "none";
+				}
+			}
+			
+			vm.msgVisible = function(event) {
+				if(event.type=="mouseover"){
+					vm.msg_visible = "block";
+				}else{
+					vm.msg_visible = "none";
+				}
+			}			
+
+		})
+
+		avalon.scan()
+	})
+</script>
+</body>
+</html>
+
+
+

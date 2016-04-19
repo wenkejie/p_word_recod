@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+        <link rel="stylesheet" href="css/layout.css">
+        <script src="vendor/avalon/avalon.js"></script>
+        <script>
+            require(["button/avalon.button","dialog/avalon.dialog"], function(avalon) {
+                avalon.define("test", function(vm) {
+                    vm.opts = {
+                        title: '邀请成员',
+                        confirmName: "发送邀请"
+                    };
+
+                    vm.dropdown = {
+                        width: "120",
+                        listWidth:"120"
+                    };
+
+                })
+                avalon.scan()
+            })
+        </script>
+    </head>
+    <body ms-controller="test" >
+        <div ms-include-src="'header.html'"></div>
+        <div class="main-frame">
+            <div ms-include-src="'vip-center-left.html'"></div>
+            <div class="right-frame news-bulletin-cnt">
+                <div class="mg-t10 news-bulletin-hd">
+                    <div class="caty-title-wrapper">
+                        <span class="caty-title">专栏类别</span>
+
+                        <select ms-widget="dropdown" class="mg-l21">
+                            <option value="value4">全部</option>
+                        </select>
+                    </div>
+
+                    <div class="ui-form-group mg-l40">
+                        <input type="text" class="ui-input w-325" placeholder="请输入关键词"><button class="ui-search-group-btn">搜索</button>
+                    </div>
+                </div>
+
+                <div class="mg-t10 news-bulletin-bd">
+                    <div class="ui-panel">
+                        <div class="ui-panel-hd">
+                            <span class="left">陆运专栏</span>
+                            <a href="javascript:" class="showmore">显示更多>></a>
+                        </div>
+
+                        <div class="ui-panel-bd">
+                            <div class="news-img">
+                                <img width="240px" height="145px"></img>
+                            </div>
+
+                            <div class="news-cnt">
+                                <h4>开通企业钱包可以查询运价信息</h4>
+                                <p>
+                                    30日的会议，压轴的是苹果公司联合创始人沃兹尼亚克的分享，他现场就人们所关心的诸多问题一一进行解答，语言风格直言不由于沃兹是我的偶像，人生中第一次使用微机，就是一台属于学校的苹果机，因此非常想问他一些问题。会议结束，
+                            </div>
+
+                            <ul class="news-info">
+                                <li>开通企业钱包可以查询运价信息</li>
+                                <li>邀请企业成员可以查询运价信息</li>
+                                <li>设置成员权限</li>
+                                <li>邀请企业成员可以查询运价信息</li>
+                                <li>设置成员权限</li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="ui-panel">
+                        <div class="ui-panel-hd">
+                            <span class="left">陆运专栏</span>
+                            <a href="javascript:" class="showmore">显示更多>></a>
+                        </div>
+
+                        <div class="ui-panel-bd">
+                            <div class="news-img">
+                                <img width="240px" height="145px"></img>
+                            </div>
+
+                            <div class="news-cnt">
+                                <h4>开通企业钱包可以查询运价信息</h4>
+                                <p>
+                                    30日的会议，压轴的是苹果公司联合创始人沃兹尼亚克的分享，他现场就人们所关心的诸多问题一一进行解答，语言风格直言不由于沃兹是我的偶像，人生中第一次使用微机，就是一台属于学校的苹果机，因此非常想问他一些问题。会议结束，
+                            </div>
+
+                            <ul class="news-info">
+                                <li>开通企业钱包可以查询运价信息</li>
+                                <li class="highlight">邀请企业成员可以查询运价信息</li>
+                                <li>设置成员权限</li>
+                                <li>邀请企业成员可以查询运价信息</li>
+                                <li>设置成员权限</li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+
+                    <div class="ui-panel">
+                        <div class="ui-panel-hd">
+                            <span class="left">陆运专栏</span>
+                            <a href="javascript:" class="showmore">显示更多>></a>
+                        </div>
+
+                        <div class="ui-panel-bd">
+                            <div class="news-img">
+                                <img width="240px" height="145px"></img>
+                            </div>
+
+                            <div class="news-cnt">
+                                <h4>开通企业钱包可以查询运价信息</h4>
+                                <p>
+                                    30日的会议，压轴的是苹果公司联合创始人沃兹尼亚克的分享，他现场就人们所关心的诸多问题一一进行解答，语言风格直言不由于沃兹是我的偶像，人生中第一次使用微机，就是一台属于学校的苹果机，因此非常想问他一些问题。会议结束，
+                            </div>
+
+                            <ul class="news-info">
+                                <li>开通企业钱包可以查询运价信息</li>
+                                <li>邀请企业成员可以查询运价信息</li>
+                                <li>设置成员权限</li>
+                                <li>邀请企业成员可以查询运价信息</li>
+                                <li>设置成员权限</li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+
+        <div ms-include-src="'vip-center-footer.html'"></div> 
+    </body>
+</html>

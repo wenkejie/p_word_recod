@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="msg_feedback">
+<div ms-include-src="'vip-center-header.html'"></div>
+<div class="main-frame">
+	<div ms-include-src="'vip-center-left.html'"></div>
+	<div class="right-frame">
+		<h3 class="ui-title-1">邀请反馈<span class="ui-title-1-prompt">您有<em>2</em>条邀请反馈更新</span></h3>
+        <div class="ui-msg-request">
+        	<span class="ui-msg-request-close"><i>&#xe617;</i></span>
+        	<table width="100%" border="0" class="ui-msg-request-tb">
+            	<tr>
+                	<td width="45"><img src="images/header-default.png"></td>
+                    <td>
+                    	<p class="name">张三 | 奥林科技</p>
+                        <p class="text-color-gray">13588888888</p>
+                        <p class="request-text">已确认加入企业成员</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="ui-msg-request">
+        	<span class="ui-msg-request-close"><i>&#xe617;</i></span>
+        	<table width="100%" border="0" class="ui-msg-request-tb">
+            	<tr>
+                	<td width="45"><img src="images/header-default.png"></td>
+                    <td>
+                    	<p class="name">张三 | 奥林科技</p>
+                        <p class="text-color-gray">13588888888</p>
+                        <p class="request-text">已确认加入企业成员</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+	</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"pager/avalon.pager",
+			"dropdown/avalon.dropdown"
+			], function() {
+			avalon.define("msg_feedback", function(vm) {
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+				
+
+			})
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

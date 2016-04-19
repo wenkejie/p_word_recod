@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>找回密码</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/example.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'header_register-password.html'"></div>
+    <div class="rg-record mg-t20 success">
+        <div class="rg-record-content">
+            <div class="rg-record-icon"></div>
+            <div class="rg-record-right">
+                <p class="rg-record-item rg-record-top"><span>设置成功请牢记新的密码</span></p>
+            </div>
+        </div>
+        <div class="rg-record-footer">
+            <a class="mg-l99" href="javascript:">返回我的大掌柜平台</a>
+        </div>
+    </div>
+    
+    <div ms-include-src="'vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+
+                })
+                avalon.scan()
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register-new.css">
+    <script src="../vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'../header_register.html'"></div>
+    <div class="rg-progress">
+        <div class="rg-progress-content">
+            <ul>
+                <li class="rg-progress-cell rg-progress-cell-current">
+                    <span class="rg-progress-icon">1<i class="iconfont">&#xe609;</i></span>
+                    <p class="rg-progress-info">填写认证信息</p>
+                </li>
+                <li class="rg-progress-cell">
+                    <span class="rg-progress-icon">2<i>&#xe609;</i></span>
+                    <p class="rg-progress-info">上传企业证件</p>
+                </li>
+                <li class="rg-progress-cell">
+                    <span class="rg-progress-icon"><span class="iconfont">&#xe60a;</span><i>&#xe609;</i></span>
+                    <p class="rg-progress-info">完成企业认证</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="rg-form">
+                <div class="rg-form-title">
+                    <label class="rg-label" for="">企业基本信息</label>
+                    <span class="rg-form-des">登录时需验证，保护账户信息</span>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>企业名称</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder=""></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">英文名称</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder=""></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>省市区域</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder=""></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>详细地址</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder=""></div>
+                </div>
+            </div>
+            <div class="rg-form">
+                <div class="rg-form-title">
+                    <label class="rg-label" for="">企业联系信息</label>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>联  系  人</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder=""></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>手机号码</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder=""></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">联系电话</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large w60" placeholder="区号"><input type="text" class="rg-input-large w140 mgl8" placeholder=""></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">电子邮箱</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder=""></div>
+                </div>
+                <div class="rg-form-line rg-form-btn">
+                    <a class="rg-btn rg-btn-primary" href="javascript:">下一步</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'../vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

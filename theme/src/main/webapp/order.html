@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="demo">
+<div ms-include-src="'header_order.html'"></div>
+<div class="wrapper" ms-widget="uploader, $, $opts">
+	<div class="ui-panel">
+		<div class="ui-panel-hd">
+			<span>航船信息</span>
+		</div>
+
+		<div class="ui-panel-bd">
+			<div class="ui-panel-bd-lt ta-c">
+				<div class="lt-wrapper">
+					<div>
+						<img src="images/MU.png" class="hipping-compay-logo"></img>
+					</div>
+					<p>HMM</p>
+				</div>		
+			</div>
+			<div class="ui-panel-bd-ct">
+				<div class="ui-panel-bd-ct-wrapper">
+					<span class="fs-23">宁波</span> - <span class="fs-23 mg-r48">洛杉矶</span>
+					<div class="ui-tag ui-tag-orage">中转</div>
+
+					<div>
+						<span class="place">NINGBO-LOS ANGULAR,CA</span>
+					</div>	
+				</div>
+
+			</div>
+			<div class="ui-panel-bd-rt">
+				<div class="ui-panel-bd-rt-wrapper">
+					<div>
+						<span class="rt-item">截关日期：<span>2010-12-1</span></span>
+
+						<span class="rt-item">开航日期：<span>2010-12-1</span></span>
+
+						<span class="rt-item">航程：<span>12天</span></span>
+					</div>
+
+					<div  class="mg-t7">
+						<span class="rt-item">航线：<span>南美航线</span></span>
+
+						<span class="rt-item">中转站：<span>新加坡</span></span>
+
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<div class="ui-panel">
+		<div class="ui-panel-hd">
+			<span>装箱数量</span>
+		</div>
+
+		<div class="ui-panel-bd">
+			<div class="form-group">
+				<label class="form-label">箱型数量：</label>
+				<div class="form-input mg-r30">
+					<p class="mg-b8">20GP</p>
+					<input ms-duplex="p" ms-widget="spinner, $spinner, $spinnerOpts" id="test"/>
+				</div>
+
+				<div class="form-input mg-r30">
+					<p class="mg-b8">40GP</p>
+					<input ms-duplex="p" ms-widget="spinner, $spinner, $spinnerOpts" id="test"/>
+				</div>
+
+				<div class="form-input mg-r30">
+					<p class="mg-b8">40HQ</p>
+					<input ms-duplex="p" ms-widget="spinner, $spinner, $spinnerOpts" id="test"/>
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				<label class="form-label">&nbsp;</label>
+				<div class="">
+					<button ms-widget="button">算一算</button>
+					<a href="javascript:void(0)" class="right">关闭</a>
+				</div>
+			</div>
+
+			<div class="mg-l99">
+				<div class="cost-info">
+					<table class="cost-info-part1">
+						<thead>
+							<tr>
+								<th>费用名称</th>
+								<th>
+									<p>20GP</p>
+								</th>
+								<th>
+									<p>40GP</p>
+								</th>
+								<th>
+									<p>40HQ</p>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr><td>运费(ALL IN)($)</td><td>\</td><td>2418.00</td><td>\</td></tr>
+							<tr><td>安保费(￥)</td><td>\</td><td>30.00</td><td>\</td></tr>
+							<tr><td>装箱信息费(￥)</td><td>\</td><td>10.00</td><td>\</td></tr>
+							<tr><td>码头提柜费(￥)</td><td>\</td><td>75.00</td><td>\</td></tr>
+							<tr><td>综合单证费(￥)</td><td>\</td><td>40.00</td><td>\</td></tr>
+							<tr><td>订舱费(￥)</td><td>\</td><td>380.00</td><td>\</td></tr>
+							<tr><td>码头操作费(THC)(￥)</td><td>\</td><td>1200.00</td><td>\</td></tr>
+							<tr><td>打单费(￥)</td><td>\</td><td>\</td><td>\</td></tr>
+							<tr><td>封条费(￥)</td><td>\</td><td>\</td><td>\</td></tr>
+						</tbody>
+					</table>	
+					<table class="cost-info-part2">
+					<tbody>
+					<tr>
+					<td class="col-1">电子入单费(￥): </td>
+					<td>CN ￥8.00/单</td><td class="col-2">文件费(￥):</td>
+					<td>CN ￥450.00/单</td>
+					</tr>
+							<tr><td class="col-1">舱单申报费（UR-ENS）($): </td><td>US $0.00/单</td><td class="col-2"></td><td></td></tr>
+						</tbody>
+						</table>
+						<dl class="cost-info-des">
+						<dt class="cost-info-des-title">费用说明：</dt>
+							<dd>实际费用以开船后的账单为准实际费用以开船后的账单为准实际费用以开船后的账单为准实际费用以开船后的账单为准实际费用以开船后的账单为准实际费用以开船后的账单为准实际费用以开船后的账单为准</dd>
+						</dl>
+					</div>
+
+					<div class="w-600 right">
+						<div class="total-info-label">
+							<p>美金项合计：</p>
+							<p>人民币项合计：</p>
+							<p>折合人民币总计：</p>
+						</div>
+
+						<div class="total-info-val">
+							<p>US $<span class="price">26439.00</span></p>
+							<p>CN ￥<span class="price">19788.00</span></p>
+							<p class="total-rmb">CN ￥<span class="price">185031.75</span></p>
+						</div>
+						<p class="mg-b8 ta-r tip">(美金兑人民币参考汇率：1 : 6.25000)</p>
+					</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="ui-panel">
+		<div class="ui-panel-hd">
+			附件
+		</div>
+
+		<div class="ui-panel-bd">
+			<div class="form-group">
+				<label class="form-label">订舱附件：</label>
+				<div class="form-input">
+					<input type="text" class="ui-input"/>
+					<div id="browse-btn-dc" class="add ui-upload-btn" ms-class="disabled: files.length >= maxFileCount">浏览</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui-panel">
+		<div class="ui-panel-hd">
+			<span>货运信息</span>
+		</div>
+
+		<div class="ui-panel-bd">
+			<div class="w-50-p left">
+					<div class="form-group mg-b4">
+						<label class="form-label">&nbsp;</label>
+						<div class="form-input">
+							<input type="text" class="ui-input"/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="form-label ps-r">发货人：<span class="label-tip">(SHIPPER)</span></label>
+						<div class="form-input">
+							<textarea class="ui-textarea" rows="4"></textarea>
+						</div>
+					</div>
+					<div class="form-group mg-b4">
+						<label class="form-label">&nbsp;</label>
+						<div class="form-input">
+							<input type="text" class="ui-input"/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="form-label ps-r">收货人：<span class="label-tip" >(CONSIGNEE)</span></label>
+						<div class="form-input">
+							<textarea class="ui-textarea" rows="4"></textarea>
+						</div>
+					</div>
+
+					<div class="form-group mg-b4">
+						<label class="form-label">&nbsp;</label>
+						<div class="form-input">
+							<input type="text" class="ui-input"/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="form-label ps-r">通知人：<span class="label-tip">(NOTYFIY)</span></label>
+						<div class="form-input">
+							<textarea class="ui-textarea" rows="4"> </textarea>
+						</div>
+					</div>
+			</div>
+
+			<div class="w-50-p left">
+				<div class="form-group">
+					<label class="form-label">业务编号：</label>
+					<div class="form-input">
+						<input type="text" class="ui-input"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">工作编号：</label>
+					<div class="form-input">
+						<input type="text" class="ui-input"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">提单类型：</label>
+					<div class="form-input">
+						<input type="text" class="ui-input"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">签单方式：</label>
+					<div class="form-input">
+						<input type="text" class="ui-input"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">运输条款：</label>
+					<div class="form-input">
+						<input type="text" class="ui-input"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">运费条款：</label>
+					<div class="form-input">
+						<input type="text" class="ui-input"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">提单份数：</label>
+					<div class="form-input">
+						<input type="text" class="ui-input"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">货物类型：</label>
+					<div class="form-input"> 
+						<label class="mg-r5 ui-checkbox" for="lc-check">
+							<input type="checkbox" id="lc-check"/> 冷藏  
+						</label>
+
+						<label class="mg-r5 ui-checkbox" for="wxp-check">
+							<input type="checkbox" id="wxp-check"/> 危险品
+						</label>
+
+						<label class="mg-r5 ui-checkbox" for="cxh-check">
+							<input type="checkbox" id="cxh-check"/> 超限货  
+						</label>
+					</div>
+				</div>
+		</div>
+	</div>
+
+
+	<div class="ui-panel">
+		<div class="ui-panel-hd">
+			<span>商品与数量</span>
+		</div>
+
+		<div class="ui-panel-bd">
+			<div class="form-group">
+				<label class="form-label">商品描述：</label>
+				<div class="form-input mg-r30">
+					<textarea placeholder="请输入唛头" class="ui-textarea" rows="4"></textarea>
+				</div>
+
+				<div class="form-input mg-r30">
+					<textarea placeholder="请输入英文品名" class="ui-textarea" rows="4"></textarea>
+				</div>
+
+				<div class="form-input mg-r30">
+					<textarea placeholder="请输入中文品名" class="ui-textarea" rows="4"></textarea>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="form-label">&nbsp;</label>
+				<div class="form-input mg-r30">
+					<input type="text" class=" w-66 ui-input" placeholder="请输入件数"/>
+				</div>
+
+				<div class="form-input mg-r30">
+					<input type="text" class="ui-input w-66" placeholder="请输入包装"/>
+				</div>
+
+				<div class="form-input mg-r30">
+					<input type="text" class="ui-input w-66" placeholder="请输入毛重"/> KG
+				</div>
+
+				<div class="form-input mg-r30">
+					<input type="text" class="ui-input w-66" placeholder="请输入体积"/> m³
+				</div>
+
+				<div class="form-input mg-r30">
+					<input type="text" class="ui-input" placeholder="请输入货物HS CODE"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="form-label">&nbsp;</label>
+				<div class="form-input mg-r30">
+					<a href="javascript:" class="add-product"><span class="icon">+</span>增加一个商品</a>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="form-label">商品总量：</label>
+				<div class="form-input mg-r30">
+					<input type="text" class="ui-input w-66" placeholder="总包装数"/>
+				</div>
+
+				<div class="form-input mg-r30">
+					<select ms-widget="dropdown">
+				        <option>CARTON</option>
+				        <option>CARTON</option>
+				    </select>
+				</div>
+
+				<div class="form-input mg-r30">
+					<input type="text" class="ui-input w-66" placeholder="总毛重"/> KG
+				</div>
+
+				<div class="form-input mg-r30">
+					<input type="text" class="ui-input w-F66" placeholder="总体积"/> m³
+				</div>
+
+				<div class="form-input mg-r30">
+					<input type="text" class="ui-input w-66" placeholder="总申报价格"/> USD $
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+		<div class="ui-panel">
+			<div class="ui-panel-hd">
+				<span>货物附加信息</span>
+			</div>
+
+			<div class="ui-panel-bd">
+				<div>
+					<h4 class="ui-panel-bd-tl">
+						<div class="line-l"></div>
+						<div class="left">冷藏</div>
+						<div class="line-r"></div>
+					</h4>
+
+					<div class="form-group">
+						<label class="form-label">温度：</label>
+						<div class="form-input mg-r30">
+							<div class="ui-input-group">
+			                	<input type="text" class="ui-input left w-66 ui-input-group-left" placeholder="">
+			                    <div class="ui-input-group-addon ui-input-group-addon-right">℃</div>
+			                </div>
+						</div>
+
+						<div class="form-input mg-r30">
+							<div class="ui-input-group">
+			                	<input type="text" class="ui-input left w-66 ui-input-group-left" placeholder="">
+			                    <div class="ui-input-group-addon ui-input-group-addon-right">℃</div>
+			                </div>
+						</div>
+
+						<label class="form-label">湿度：</label>
+						<div class="form-input mg-r30">
+							<div class="ui-input-group">
+			                	<input type="text" class="ui-input left w-66 ui-input-group-left" placeholder="">
+			                    <div class="ui-input-group-addon ui-input-group-addon-right">%</div>
+			                </div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="form-label">&nbsp;</label>
+						<div class="form-input">
+							<label class="mg-r30 ui-checkbox" for="bkm-check">
+								<input type="checkbox" id="bkm-check"/> 半开门
+							</label>
+
+							<label class="mg-r30 ui-checkbox" for="tfd-check">
+								<input type="checkbox" id="tfd-check"/> 通风度
+							</label>
+						</div>
+
+						<label class="form-label">通风口设置：</label>
+						<div class="form-input mg-r30">
+							<input type="text" class="ui-input w-66"/>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<h4 class="ui-panel-bd-tl">
+						<div class="line-l"></div>
+						<div class="left">危险品</div>
+						<div class="line-r"></div>
+					</h4>
+							<div class="form-group mg-b4">
+								<label class="form-label">Class：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label">UIN NO：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label">IMDG NO：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label">FLASH POINT：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="form-label">危险品包装：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input"/>
+								</div>
+
+								<label class="form-label">危险品标签：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input"/>
+								</div>
+							</div>
+							<div class="form-group mg-b4">
+								<label class="form-label">紧急联系人：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input"/>
+								</div>
+
+								<label class="form-label">电话：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-146"/>
+								</div>
+
+								<div class="form-group">
+									<label class="form-label">手机：</label>
+									<div class="form-input">
+										<input type="text" class="ui-input w-146"/>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="form-label">邮件地址：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input"/>
+								</div>
+
+								<label class="form-label">传真：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input"/>
+								</div>
+							</div>
+					</div>
+
+					<div>
+						<h4 class="ui-panel-bd-tl">
+							<div class="line-l"></div>
+							<div class="left">超限货</div>
+							<div class="line-r"></div>
+						</h4>
+
+						<div class="form-group">
+							<label class="form-label">超限类型：</label>
+							<div class="form-input">
+								<input type="text" class="ui-input"/>
+							</div>
+						</div>
+					</div>	
+
+				</div>
+
+				<div>
+					
+				</div>
+				
+			</div>
+		</div>
+
+
+		<div class="ui-panel">
+			<div class="ui-panel-hd">
+				<span>增值服务</span>
+			</div>
+
+			<div class="ui-panel-bd">
+					<div class="form-group">
+						<label class="form-label">&nbsp;</label>
+						<div class="form-input">
+							<label class="mg-r30 ui-checkbox" for="tc-check">
+								<input type="checkbox" id="tc-check"> 委托拖车
+							</label>
+
+							<label class="mg-r30 ui-checkbox" for="cc-check">
+								<input type="checkbox" id="cc-check"> 委托仓储
+							</label>
+
+							<label class="mg-r30 ui-checkbox" for="ams-check">
+								<input type="checkbox" id="ams-check"> AMS
+							</label>
+
+							<label class="mg-r30 ui-checkbox" for="ens-check">
+								<input type="checkbox" id="ens-check"> ENS
+							</label>
+						</div>
+					</div>
+
+					<div class="clear">
+						<h4 class="ui-panel-bd-tl">
+							<div class="line-l"></div>
+							<div class="left">委托报关</div>
+							<div class="line-r"></div>
+						</h4>
+						<div class="w-50-p left">
+							<div class="form-group">
+								<label class="form-label">发票：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input"/>
+									<div id="browse-btn-dc" class="add ui-upload-btn" ms-class="disabled: files.length >= maxFileCount">浏览</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="form-label">装箱单：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input"/>
+									<div id="browse-btn-dc" class="add ui-upload-btn" ms-class="disabled: files.length >= maxFileCount">浏览</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="form-label">合同：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input"/>
+									<div id="browse-btn-dc" class="add ui-upload-btn" ms-class="disabled: files.length >= maxFileCount">浏览</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="form-label">报关单：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input"/>
+									<div id="browse-btn-dc" class="add ui-upload-btn" ms-class="disabled: files.length >= maxFileCount">浏览</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="w-50-p left">
+							<div class="form-group">
+								<label class="form-label">报关备注：</label>
+								<div class="form-input">
+									<textarea class="ui-textarea" rows="4"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div>
+						<h4 class="ui-panel-bd-tl">
+							<div class="line-l"></div>
+							<div class="left">委托拖车</div>
+							<div class="line-r"></div>
+						</h4>
+						<div class="form-group">
+							<label class="form-label">预计装箱：</label>
+							<div class="form-input">
+								<input type="text" class="ui-input"/>
+							</div>
+
+							<label class="form-label">装箱地址：</label>
+							<div class="form-input">
+								<input type="text" class="ui-input"/>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="form-label">联系人：</label>
+							<div class="form-input">
+								<input type="text" class="ui-input"/>
+							</div>
+
+							<label class="form-label">电话：</label>
+							<div class="form-input">
+								<input type="text" class="ui-input w-146"/>
+							</div>
+
+							<label class="form-label">手机号码：</label>
+							<div class="form-input">
+								<input type="text" class="ui-input w-146"/>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="form-label">装箱要求：</label>
+							<div class="form-input">
+								<input type="text" class="ui-input"/>
+							</div>
+						</div>
+					</div>
+
+					<div class="clear">
+						<h4 class="ui-panel-bd-tl">
+							<div class="line-l"></div>
+							<div class="left">AMS</div>
+							<div class="line-r"></div>
+						</h4>
+						<div class="form-group">
+							<label class="form-label">真实交货地址：</label>
+							<div class="form-input">
+								<input type="text" class="ui-input"/>
+							</div>
+						</div>
+
+						<div class="w-50-p left">
+							<div class="form-group">
+								<label class="form-label">真实交货人：</label>
+								<div class="form-input">
+									<textarea class="ui-textarea" rows="4"></textarea>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="form-label">真实通知人：</label>
+								<div class="form-input">
+									<textarea class="ui-textarea" rows="4"></textarea>
+								</div>
+							</div>
+						</div>
+
+						<div class="w-50-p left">
+							<div class="form-group">
+								<label class="form-label">真实收货人：</label>
+								<div class="form-input">
+									<textarea class="ui-textarea" rows="4"></textarea>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="form-label">真实通知人2：</label>
+								<div class="form-input">
+									<textarea class="ui-textarea" rows="4"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<h4 class="ui-panel-bd-tl">
+							<div class="line-l"></div>
+							<div class="left">EMS</div>
+							<div class="line-r"></div>
+
+						</h4>
+
+						<div class="form-group">
+							<label class="form-label">发货人：</label>
+							<div class="form-input">
+								<label class="form-label w-50">EORI：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">国家：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">城市：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">编码：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">TEL：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">FAX：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="form-label">收货人：</label>
+							<div class="form-input">
+								<label class="form-label w-50">EORI：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">国家：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">城市：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">编码：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">TEL：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">FAX：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="form-label">通知人：</label>
+							<div class="form-input">
+								<label class="form-label w-50">EORI：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">国家：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">城市：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">编码：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">TEL：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+
+								<label class="form-label w-50">FAX：</label>
+								<div class="form-input">
+									<input type="text" class="ui-input w-66"/>
+								</div>
+							</div>
+						</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="ui-panel">
+		<div class="ui-panel-hd">
+			备注信息
+		</div>
+
+		<div class="ui-panel-bd">
+			<div class="w-50-p left">
+				<div class="form-group">
+					<label class="form-label">订舱备注：</label>
+					<div class="form-input">
+						<textarea class="ui-textarea" rows="4"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="w-50-p left">
+				<div class="form-group">
+					<label class="form-label">其他备注：</label>
+					<div class="form-input">
+						<textarea class="ui-textarea" rows="4"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="order-sub-wrp">
+		<button ms-widget="button" data-button-size="large"  data-button-color="primary">提交订单</button>
+	</div>
+</div>
+
+	<script>
+		require([
+			"button/avalon.button",
+			"dialog/avalon.dialog",
+			"checkboxlist/avalon.checkboxlist",
+			"pager/avalon.pager",
+			"dropdown/avalon.dropdown",
+			"uploader/avalon.uploader",
+			"browser/avalon.browser",
+			"textbox/avalon.textbox",
+			"spinner/avalon.spinner",
+			"uploader/avalon.uploader"
+			], function() {
+			avalon.define("demo", function(vm) {
+				vm.message = "笑傻了吧！！";
+				vm.namee = avalon.browser.name+' '+avalon.browser.version;
+				vm.show = function( id ){
+					avalon.vmodels[id].toggle = true;
+				}
+
+				vm.pager = {
+					// currentPage: 8,
+					totalItems: 120,
+					showJumper: true,
+					showPages:5
+				}
+
+				vm.dropdown = {
+					width: "100",
+					listWidth:"100"
+				};
+
+
+				vm.$spinnerOpts={
+					min: 0,
+					width:25
+				};
+
+				vm.$opts = {
+					action: 'post.php',
+					browseButton: 'browse-btn-dc',
+					maxFileCount: 1,
+					maxFileSize: 1048576000,
+					onFileSizeErr: function(fileName){
+						alert('自定义信息：' + fileName + '大小超过1M啦~')
+					}
+				};
+
+
+				vm.$skipArray = ["pager"];
+				vm.check1 = ["2"];
+			})
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

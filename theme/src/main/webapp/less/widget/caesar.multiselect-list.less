@@ -1,0 +1,137 @@
+// ===================================================
+// ================= 多选列表 ========================
+// ===================================================
+
+
+.cui-multiselect-list{
+	position: relative;display: inline-block;
+    padding: 5px;width: 228px;
+    background: #fff;
+    border: 1px solid #cfd3d5;
+    border-radius: 1px;
+    box-shadow: inset 0 3px 2px #eee;
+    font-size: 12px;
+    .down-area{
+        position: relative;
+    }
+    
+}
+
+.cui-multiselect-list-tag{
+    padding-top: 0;
+}
+
+.cui-multiselect-textarea{
+    width: 100%;min-height: 18px;_height:18px;
+    border: none;
+    word-wrap: break-word; word-break: normal;
+}
+
+
+
+// 下拉结构
+.cui-multiselec-dropdown{
+    position: absolute;left: 0;top: 28px;z-index: 900;
+    // width: 100%;*width: 252px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.15);
+    // width: 200px;
+    // border: 1px solid #ccc;
+}
+
+.cui-multiselec-dropdown-content{
+    position: relative;
+    height: 174px;overflow-y: auto;*overflow-x: hidden;
+}
+
+
+// 关闭结构
+.cui-multiselec-dropdown-close{
+    position: absolute;right: 7px;top: 7px;z-index: 920;
+    color: #aaa;
+    &:hover{
+        color: #666;
+    }
+}
+
+
+// 航线选择插件的下拉
+
+.cui-multiselec-dropdown-line{
+    top: 5px;left: -5px;
+    width: 503px;
+    .cui-multiselec-dropdown-content{
+        padding: 25px;height: 232px;
+    }
+}
+
+.cui-multiselec-dropdown-footer{
+    height: 26px;padding: 8px 10px;
+    border-top: 1px solid #eee;
+    text-align: right;
+}
+
+.cui-multiselec-dropdown-btn{
+    display: inline-block;
+    padding: 0 15px;height: 26px;line-height: 26px;
+    background: #f36041;border-radius: 2px;
+    color: #fff;
+    &:hover{
+        color: #fff;
+    }
+}
+
+
+
+
+.cui-multiselec-list-filter{
+    .clearfix;
+    position: relative;
+    padding: 5px 0;padding-left: 65px;
+    dt{
+        position: absolute;left: 0;top: 0;z-index: 15;
+        padding-top: 9px;
+        width: 65px;
+        text-align: right;font-weight: bold;
+    }
+    dd {
+        float: left;*display: inline;*zoom:1;
+        margin:3px 5px;
+        padding:1px 5px;
+        cursor:pointer;white-space:nowrap;
+    }
+    .active {
+        border:#f36040 2px solid;
+        color:#f36040;
+        position:relative;
+        margin:1px 5px;
+        .icon-active {
+            position:absolute;bottom:-1px;right:-1px;
+            display:block; 
+            width:10px;height:10px;
+            background:url(../../images/confirm_bg.jpg) bottom right no-repeat;
+            _font-size:0;
+        }
+    }
+}
+
+
+
+
+
+// =====================================
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}

@@ -1,0 +1,1375 @@
+// ===================================================
+// ================= register(rg) ==================
+// ===================================================
+
+// 通用样式集合
+@import "mixin.less";
+@import "variables.less";
+@import "layout-robot-confirm.less";
+
+
+
+// 组件引入
+@import "form.less";
+
+ 
+// 头部
+@import "rg-header.less";
+
+.reset(); 
+
+.rg-body{
+	background: #f5f5f5;
+	font-size: 14px;color: #666;
+	.wrapper{
+		width: 950px;margin: 0 auto;
+	}
+}
+
+.hr{
+  clear: both;
+  height: 0px;
+  overflow: hidden;
+  margin: 15px 0;
+  border-top:1px solid #eee;
+  
+}
+
+// ===================================
+// ==============整体框架=============
+// ===================================
+
+
+.wrapper-header{
+	&:extend(.clearfix all);
+}
+
+.wrapper-header-left{
+	float: left;*display: inline;*zoom:1;
+}
+
+.wrapper-header-right{
+	float: right;*display: inline;*zoom:1;
+	height: 50px;line-height: 50px;
+	font-size: 12px;color: #666;
+}
+
+.wrapper-content{
+	min-height: 425px;_height:425px;padding: 45px 40px;
+	border: 1px solid #ddd;background: #fff;box-shadow: 3px 3px 6px #D9DCE1;
+	
+}
+
+.wrapper-content-agreement{
+	border: none;background: #f5f5f5;box-shadow: none;
+	.rg-agreement-line{
+		margin: 3px 0;
+		text-indent: 2em;
+	}
+}
+
+
+
+// 忘记密码部分的整体框架
+.wrapper-forget,.wrapper-legalize{
+	width: 800px;
+	.rg-label{
+		width: 170px;
+	}
+	.rg-form-unlabel{
+		padding-left: 190px;
+	}
+}
+
+// 针对整体的提示性标题
+.wrapper-title{
+	height: 40px;line-height: 40px;padding: 0 15px;
+	background: #fff;border: 1px solid #ddd;border-bottom: 0;box-shadow: 3px 3px 6px #D9DCE1;
+	.rg-icon-info{
+		display: inline-block;*display: inline;
+	}
+}
+
+.wrapper-title-more{
+	position: relative;
+	padding: 10px 20px 10px 46px;
+	background: #fff;border: 1px solid #ddd;border-bottom: 0;box-shadow: 3px 3px 6px #D9DCE1;
+	.rg-icon-info{
+		position: absolute;left: 16px;top: 13px;
+		width: 16px;height: 16px;
+	}
+}
+
+// ===================================
+// ==========支付界面的主体框=========
+// ===================================
+
+.wrapper-pay{
+	.wrapper-content{
+		padding: 45px 70px;
+
+	}
+}
+
+
+// ===================================
+// ==========tab项切换结构============
+// ===================================
+.rg-tab{
+	&:extend(.clearfix all);
+}
+
+.rg-tab-cell,.rg-tab-last{
+	float: left;*display: inline;*zoom:1;
+	width: 220px;height: 50px;line-height: 50px;margin-bottom: -1px;
+	background: #f3f3f3;border: 1px solid #ddd;
+	cursor: pointer;text-align: center;font-size: 16px;font-weight: bold;
+
+	&.current{
+		background: #fff;border-bottom-color: #fff;
+		color: @color-orange;
+	}
+}
+
+.rg-tab-cell{
+	border-right:none;
+}
+
+
+
+// ===================================
+// ============== form ===============
+// ===================================
+.rg-form{
+	
+}
+
+.rg-form-mini{
+	.rg-label,.rg-select-btn{
+		line-height: 24px;height: 24px;
+	}
+	.rg-form-line{
+		padding: 5px 0;
+	}
+
+	.rg-form-unlabel{
+		padding-left: 231px;
+	}
+}
+
+.form-line-tips{
+	padding: 15px;
+	background: #ffffbf;border: 1px solid #e0cbae;border-radius: 3px;
+	color: #da7107;font-weight: bold;
+	&.error{
+		border: 1px solid #eaa299;
+		background: #fff2f0;
+	}
+	&.normal{
+		font-size: 12px;font-weight: normal;color: #666;
+	}
+}
+
+.rg-form-title{
+	&:extend(.clearfix all);
+	padding: 10px 0;
+	.rg-label{
+		color: #000;font-weight: bold;
+	}
+}
+
+// // 表单顶部提示
+// .rg-form-top-tips{
+// 	width: 380px;
+// 	color: #999;font-size: 12px;
+// }
+
+.rg-form-line{
+	&:extend(.clearfix all);
+	padding: 10px 0;
+}
+
+.rg-form-unlabel{
+	padding-left: 231px;
+}
+
+.rg-label{
+	float: left;*display: inline;
+	width: 210px;line-height: 34px;height: 34px;padding-right: 20px;
+	text-align: right;
+
+}
+
+
+.rg-form-des{
+	float: left;*display: inline;*zoom:1;
+	line-height: 34px;height: 34px;
+	color: #aaa;
+	&.name{
+		color: #ff4000;
+	}
+}
+
+.rg-checkbox,.rg-radio{
+	float: left;*display: inline;
+	height: 32px;line-height: 32px;
+	input{
+		display: inline-block;*display: inline;
+		vertical-align: middle;
+	}
+	span{
+		display: inline-block;*display: inline;
+		padding-left: 7px;
+		vertical-align: middle;
+		font-size: 12px;
+	}
+}
+
+.rg-form-required{
+	margin-right: 6px;
+	color: #FF5618;font-family: SimSun;
+}
+
+.rg-form-cell-tips{
+	margin-top: 5px;
+	color: #999;font-size: 12px;
+	.rg-icon-info{
+		display: inline-block;*display: inline;
+	}
+	&.error{
+		color: #cc0000;
+		.rg-icon-info{
+			background: url(../images/reg_bg.png) -44px -80px;
+		}
+	}
+}
+
+
+// 昵称部分较特殊的form结构
+.rg-form-right{
+	float: left;*display: inline;
+	.form-right-content{
+		&:extend(.clearfix all);
+	}
+}
+
+// 弹窗部分的表单
+.rg-form-openwin{
+	.rg-label{
+		width: 80px;
+	}
+
+	.rg-form-line{
+		&:extend(.clearfix all);
+		padding: 5px 0;
+	}
+
+	.rg-form-unlabel{
+		padding-left: 100px;
+	}
+}
+
+.openwin-form-tips{
+	position: relative;
+	.rg-icon-info{
+		position: absolute;left: 10px;top: 7px;
+	}
+}
+
+.openwin-form-tips-content{
+	padding: 5px 5px 5px 32px;
+}
+
+
+
+// 支付
+.rg-form-pay{
+	.rg-form-title{
+		padding: 0;
+	}
+	.rg-form-line{
+		padding-top: 5px;padding-bottom: 5px;
+	}
+	.rg-form-unlabel{
+		padding-left: 121px;
+	}
+	.rg-label{
+		width: 100px;
+	}
+}
+
+
+// ===================================
+// ============== btn ================
+// ===================================
+
+.rg-btn{
+	float: left;*display: inline;*zoom:1;
+	height: 36px;line-height: 36px;padding: 0 20px;
+	border: 1px solid #bbb;border-radius: 2px;
+	background: #fcfcfc;color: #666;
+	text-align: center;
+	&:hover{
+		background: #eee;
+		color: #666;
+	}
+
+	&.disable{
+		border-color: #e8e8e8;background: #f2f2f2;
+		cursor: not-allowed;color: #aaa;
+		&:hover{
+			background: #f2f2f2;border-color: #e8e8e8;
+			.linear(#f2f2f2,#f2f2f2);
+			color: #aaa;
+		}
+	}
+	&.rg-btn-mini{
+		height: 30px;line-height: 30px;padding: 0 15px;
+	}
+}
+
+.rg-btn-primary{
+	border:#db3917 1px solid;
+	.linear(#f35f3f,#f1512e);
+	color:#fff;
+	&:hover {
+		border:#ba3114 1px solid;
+		.linear(#e94734,#ed4123);
+		color:#fff;
+	}
+}
+
+
+// .rg-btn-disable{
+// 	border-color: #e8e8e8;background: #f2f2f2;
+// 	cursor: not-allowed;color: #aaa;
+// 	&:hover{
+// 		background: #fcfcfc;
+// 		color: #666;
+// 	}
+// }
+
+.rg-btn-link{
+	float: left;*display: inline;*zoom:1;
+	height: 36px;line-height: 36px;padding: 0 20px;
+}
+
+
+// =====带上传功能的按钮======
+.rg-btn-upload{
+	position: relative;
+	overflow: hidden;
+}
+
+.rg-file-upload-input{
+	position: absolute;left: 0;top: 0;bottom: 0;right: 0;z-index: 100;
+	width: 100%;height: 30px;opacity: 0;*width: 280px;
+	cursor: pointer;
+}
+
+
+
+//=======第一步的下拉==========
+.rg-select-btn{
+	position: relative;float: left;*display: inline;*zoom:1;
+	height: 32px;line-height: 32px;padding-left:  20px;padding-right: 32px;
+	border: 1px solid #D9D9D9;background: linear-gradient(to bottom,  #fefefe 0%,#ececec 100%);
+	color: #808080;text-align: center;cursor: pointer;
+	
+}
+
+
+.rg-select-slidedown{
+	position: relative;
+	padding-left: 8px;padding-right: 15px;
+}
+
+.slide-down-icon{
+	// position: absolute;right: 12px;top: 15px;*top:5px;z-index: 5;
+	position: absolute;right: 12px;top:50%;z-index: 5;
+	width: 12px;height: 6px;margin-top: -3px;
+	background: url(../images/reg_bg.png) -45px -102px;_overflow: hidden;
+}
+
+
+// ===================================================
+// ================= 注册进度 ======================
+// ===================================================
+
+.ui-register-step-number,.ui-register-step-line {
+	background-image:url(../images/reg_bg.png);
+	background-repeat:no-repeat;
+}
+
+.ui-register-progress-bar {
+	&:extend(.clearfix all);
+	width:740px;
+	margin:35px auto;
+}
+.ui-register-step {
+	padding:0!important;
+	li {
+		.left;
+		clear:none!important;
+	}
+}
+.ui-register-step-icon {
+	.left;
+	height:60px;
+	width: 36px;
+	text-align: center;
+	font-family: tahoma;
+	position:relative;
+}
+.ui-register-step-number {
+	width:36px;
+	height:37px;
+	line-height:37px;
+	background-position:0 -30px;
+	display:block;
+	color:#fff;
+	font-size:18px;
+}
+.ui-register-step-text {
+	font-size:14px;
+	color:#666;
+	white-space:nowrap;
+	text-align:center;
+	display:block;
+	width:100px;
+	clear:both;
+	position:absolute;
+	left:-32px;
+	top:47px;
+}
+.ui-register-step-line {
+	background-position:0 -9px;
+	background-repeat:repeat-x;
+	height:9px;
+	margin-top:14px;
+	_font-size:0;
+	.left;
+}
+.ui-register-step-line-2 {
+	height:3px;
+	border-bottom:#ff4000 4px solid;
+	position:relative;
+	top:13px;
+	*top:-47px;
+	_top:-65px;
+	left:30px;
+	width:94%;
+	z-index:999;
+}
+.ui-register-step-pass {
+	.ui-register-step-number {
+		background-position:-44px -30px;
+	}
+	.ui-register-step-text {
+		color:#ff4000;
+		font-weight:bold;
+	}
+}
+.ui-register-step-active {
+	.ui-register-step-number {
+		background-position:-44px -30px;
+	}
+	.ui-register-step-line-2 {
+		display:none;
+	}
+	.ui-register-step-text {
+		color:#ff4000;
+		font-weight:bold;
+	}
+}
+
+.ui-register-step-3 {
+	background: #000;
+	li {
+		width:342px;
+	}
+	.ui-register-step-line {
+		width:306px;
+	}
+}
+
+.ui-register-step-4 {
+	li {
+		width:226px;
+	}
+	.ui-register-step-line {
+		width:190px;
+	}
+}
+
+.ui-register-step-last {
+	width:37px!important;
+	.ui-register-step-number {
+		background-position:-89px -30px;
+		text-indent:-999em;
+	}
+}
+
+
+
+// 注册结束反馈框
+.rg-record{
+	width: 950px;margin: 0 auto;
+	&.success{
+		.rg-record-content{
+			border: 1px solid #afcd7e;background: #dfffbf;
+		}		
+	}
+	&.warning{
+		.rg-record-content{
+			border: 1px solid #e0ccae;background: #ffffd6;
+			color: #d86c00;
+		}
+		.rg-record-footer{
+			border-left: 1px solid #e0ccae;border-right: 1px solid #e0ccae;border-bottom: 1px solid #e0ccae;
+		}		
+	}
+	&.error{
+		.rg-record-content{
+			border: 1px solid #d69385;background: #ffe1d7;
+			.rg-record-item {
+				color:#d93600;
+			}
+			.rg-record-icon {
+				background-position:0 -118px;
+			}
+		}
+		.rg-record-footer {
+			border-color:#d69385;
+		}		
+	}
+}
+
+.rg-record-content{
+	&:extend(.clearfix all);
+	position: relative;
+	padding: 32px 36px;padding-left: 95px;
+}
+
+.rg-record-icon{
+	// float: left;*display: inline;
+	position: absolute;left: 36px;top: 32px;
+	width: 40px;height: 40px;
+	background: url(../images/reg_bg.png) 0 -78px;
+}
+
+.rg-record-right{
+	// float: left;*display: inline;
+	padding-right: 20px;
+}
+
+.rg-record-item,.rg-record-last{
+	padding: 5px 0;
+	.user-name,.phone-num{
+		color: #fe4606;
+	}
+	.user-name{
+		margin-right: 10px;
+	}
+}
+
+.rg-record-top{
+	font-size: 18px;font-weight: bold;
+}
+
+.rg-record-last{
+	margin-top: 10px;
+	border-top: 1px solid #afcd7e;
+	font-size: 12px;
+}
+
+
+// 密码找回部分需要的结构
+.rg-record-footer{
+	height: 47px;line-height: 47px;
+	border-left: 1px solid #afcd7e;border-right: 1px solid #afcd7e;border-bottom: 1px solid #afcd7e;background: #fff;
+}
+
+// 回执框底部外链
+.rg-record-link{
+	display: inline-block;*display: inline;*zoom:1;
+	color: #65aee7;
+	a{
+		display: inline-block;*display: inline;*zoom:1;
+		padding: 0 7px;
+		vertical-align: middle;
+		color: #65aee7;
+		&.first{
+			padding-left: 0;
+		}
+	}
+}
+
+// 认证界面的反馈信息
+.rg-record-legalize{
+	width: 800px;
+	.rg-record-content{
+		padding: 15px 25px;
+	}
+}
+
+// ===================================================
+// ================= 企业注册信息上传页面 ======================
+// ===================================================
+.reg-upload-box{
+	 .left;
+	 position: relative;
+	 width: 269px;
+	 height: 200px;
+	 border: 1px dashed #858585;
+	 margin-right: 49px;
+	 margin-bottom: 34px;
+	 cursor: pointer;
+	  .title{
+	    width: 120px;
+	    position: absolute;
+	    top: -11px;
+	    left: 23px;
+	    background: #fff;
+	  }
+	  .cross-area{
+	    position: absolute;
+	    top: 50%;
+	    margin-top: -60px;
+	    left: 50%;
+	    margin-left: -29px;
+	    font-size: 80px;
+	  }
+	&:hover{
+		border: 1px dashed @color-blue;
+	}
+	&:hover .cross-area{
+		color: @color-blue;
+	}
+}
+	.rg-form{
+    	.certificate-request{
+      		li{
+      			list-style-type: disc;
+      		}
+		}
+		.upload-area{
+			margin-top:40px;
+			&:extend(.clearfix all);
+		}
+		.mg-r0{
+			margin-right: 0px;
+		}
+		.doc-upoload-btn-wrapper{
+			*margin-top: 40px;
+			text-align: center;
+		}
+}   
+ 
+// 头部
+.vip-center-footer {
+	width:998px;
+	margin:0 auto;
+	padding:20px 0;
+	text-align:center;
+	margin-top: 30px;
+}
+
+// ===================================================
+// ====================== tips =======================
+// ===================================================
+.rg-tips{
+	float: left;*display: inline;position: relative;
+	margin-left: 10px;
+	&.success{
+		.rg-tips-icon{
+			background: url(../images/reg_bg.png) -61px -80px;
+		}
+	}
+	&.error{
+		.rg-tips-icon{
+			background: url(../images/reg_bg.png) -44px -80px;
+		}
+		.rg-tips-content{
+			color: #D93600;
+		}
+	}
+}
+
+.rg-tips-icon{
+	position: absolute;left: 5px;top: 8px;
+	width: 15px;height: 15px;
+}
+
+.rg-tips-content{
+	padding: 5px 10px 5px 28px;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+
+// ===================================================
+// ================= password-strength ===============
+// ===================================================
+.password-test{
+	position: absolute;left: 10px;top: 50%;z-index: 101;
+	padding: 15px;width: 298px;height: 80px;margin-top: -40px;
+	background: linear-gradient(to bottom,  #fff 0%,#f7f7f7 100%);border: 1px solid #c2c8c8;*background: #f7f7f7;
+	font-size: 12px;color: #000;
+	.direction{
+		position:absolute; left:-7px;top:50%;
+		width: 14px;height: 16px;margin-top: -8px;
+		color:#C2C8C8;  font:14px  Arial, Helvetica, sans-serif;
+		em{
+			position:absolute; left:1px;top:0; 
+			color:#F9F9F9;font-size: 14px;font-style: normal;
+		}
+	}
+}
+
+.password-test-header{
+	&:extend(.clearfix all);
+	padding: 5px 0 10px 0;
+	.label-power{
+		float: left;*display: inline;
+		width: 62px;line-height: 16px;height: 16px;
+	}
+}
+
+.password-test-line{
+	position: relative;*zoom:1;
+	padding: 3px 0 3px 18px;
+	
+}
+
+.password-test-icon{
+	position: absolute;left: 0;top: 50%;
+	width: 11px;height: 11px;margin-top: -5px;
+	background: url(../images/reg_bg.png) -87px -83px;
+	&.success{
+		background-position: -116px -83px;
+	}
+	&.error{
+		background-position: -102px -83px;
+	}
+}
+
+.password-power{
+	&:extend(.clearfix all);
+	float: left;*display: inline;
+	padding-top: 5px;
+	
+}
+
+.password-power-cell{
+	float: left;*display: inline;
+	width: 25px;height: 10px;margin-right: 3px;
+	background: #dcdcdc;
+	&.low{
+		background: #fe0101;
+	}
+	&.strong{
+		background: #ff8000;
+	}
+	&.stronger{
+		background: #2db200;
+	}
+}
+
+
+// 忘记密码新增结构
+.rg-checkcode-img{
+	float: left;*display: inline;
+	height: 34px;width: 110px;
+}
+
+
+
+// ===================================================
+// =========== 认证界面身份证上传结构 ================
+// ===================================================
+.rg-idcard-upload{
+	&:extend(.clearfix all);
+	position:relative;
+	.filePicker {
+		position:absolute;
+		left:0;
+		top:0;
+		width:142px;
+		height:87px;
+		.webuploader-pick {
+			width:112px;
+			height:67px;
+			.opacity(@opacity: 0)
+		}
+	}
+}
+
+.idcard-upload-content{
+	position: relative;float: left;*display: inline;
+	width: 140px;height: 85px;
+	border: 1px dashed #858585;
+	cursor: pointer;
+	&:hover,&.hover{
+		border: 1px dashed @color-blue;
+		.idcard-add{
+			color: @color-blue;
+			i{
+				color: @color-blue;
+			}
+		}
+	}
+	&.error{
+		border: 1px dashed #cc0000;
+		.idcard-add{
+			color: #cc0000;
+			i{
+				color: #cc0000;
+			}
+		}
+	}
+	.idcard-upload-file-input{
+		position: absolute;left: 0;top: 0;bottom: 0;right: 0;z-index: 100;
+		width: 100%;height: 85px;opacity: 0;*width: 280px;
+		cursor: pointer;
+	}
+}
+
+
+.idcard-upload-content-input{
+	position: absolute;left: 0;top: 0;
+	width: 100%;height:26px;opacity: 0;*width: 280px;
+	z-index: 10;cursor: pointer;
+}
+
+.idcard-upload-example{
+	&:extend(.clearfix all);
+	float: left;*display: inline;
+	width: 220px;
+	.label{
+		float: left;*display: inline;
+		width: 79px;
+		text-align: right;
+	}
+
+}
+
+.example-idcard-fir,.example-idcard-sec,.example-idcard-thr{
+	float: left;*display: inline;
+	width: 140px;height: 90px;
+	background: url(../images/confirm_bg.jpg) 0 0;
+}
+
+.example-idcard-sec{
+	background: url(../images/confirm_bg.jpg) 0 -96px;
+}
+
+.example-idcard-thr{
+	float: left;*display: inline;
+	width: 140px;height: 90px;
+	background: url(../images/confirm_bg.jpg) 0 -193px;
+}
+
+
+
+.idcard-add{
+	position: absolute;left: 50%;top: 50%;
+	width: 60px;height: 28px;margin-left: -30px;margin-top: -14px;line-height: 28px;
+	color: #666;
+	i{
+		margin-right: 5px;
+		color: #beb9bd;font-size: 16px;
+	}
+}
+
+
+
+// 证件上传结构
+.rg-paperwork-upload{
+	&:extend(.clearfix all);	
+}
+
+.paperwork-upload-content{
+	font-size: 12px;
+}
+
+// ===================================================
+// ================= 掌柜钱包申请 ======================
+// ===================================================
+.wallet-apply-cnt{
+	.hr{
+		margin:30px 0px;
+	}
+}
+.wa-form-group{
+  &:extend(.clearfix all);
+  margin:10px 0px;
+  .wa-label{
+    .left;
+    margin-right: 20px;
+    width:280px;
+    height: 34px;
+    line-height: 34px;
+    text-align: right;
+  }
+  .wa-value{
+    .left;
+    line-height: 34px;
+    height: 34px;
+    color: #333333;
+  }
+  .agreement{
+  	margin-top: 5px;
+  	color: #999;
+  	font-size: 12px;
+  }
+  .bank-logo{
+  	border: 2px solid #ddd;
+  	padding: 6px;
+  	cursor:pointer;
+  	width: 148px;
+  	height: 38px;
+  }
+  .selected{
+  	background: url("../images/confirm_bg.jpg") no-repeat;
+  	background-position: bottom right;
+  	border-color: @color-orange;
+  }
+}
+.wallet-apply-btn-wrapper{
+	padding-top: 25px;
+	padding-left: 303px;
+	a.oni-button{
+		background-color: @color-orange;
+		border: 0px;
+		color: #fff;
+	}
+}
+
+// ===================================================
+// ================= 掌柜钱包申请成功 ======================
+// ===================================================
+.wa-success-info{
+	border: 1px solid #BFD09D;
+	width:1000px;
+	margin:0 auto;
+	.info-wrapper{
+		&:extend(.clearfix all);
+		padding: 15px 30px;
+		border-bottom: 1px solid #BFD09D;
+		background: #EDFED0;
+	}
+	.success-icon{
+		.left;
+		width: 40px;
+		height: 40px;
+		background: url(../images/reg_bg.png) 0 -78px;
+	}
+	.msg{
+		.left;
+		color: #597557;
+		font-size: 18px;
+		font-weight: bold;
+		display: inline;
+		height: 40px;
+		line-height: 40px;
+		margin-left: 30px;
+	}
+	.return{
+		padding-top:9px;
+		padding-bottom:9px;
+		padding-left: 102px;
+		background: #fff; 
+	} 
+}
+ 
+
+// ===================================================
+// ================= tab ======================
+// ===================================================
+.ui-tab{
+  .clearfix;
+  .selected{
+    position: relative;
+    z-index: 90;
+    border-bottom: 2px solid @color-orange;
+    color:@color-orange;
+  };
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  .highlight_org{
+    color:@color-orange;
+  }
+}
+.ui-tab-item{
+  .left;
+  padding: 10px 0px;
+  cursor: pointer;
+  .bd{
+    border-right: 1px solid #ddd;
+  };
+  .ui-tab-item-cnt{
+    padding: 0px 10px;
+  };
+}
+.ui-tab-line{
+  position: relative;
+  border-top: 2px solid #e0e0e0;
+  width: 100%;
+  z-index: 1;
+  margin-top: 41px;
+  *margin-top: -2px;
+}
+
+
+// ===================================================
+// ================= 企业掌柜钱包申请 ================
+// ===================================================
+.etprs-wallet-apply-cnt{
+	.ui-tab-item-cnt{
+		font-size: 16px;
+		padding: 0px 22px;
+	}
+	.ui-tab-line{
+		margin-top: 44px;
+		*margin-top: -2px;
+	}
+	.wa-form-group{
+		margin: 15px 0px;
+	}
+	.cert-control{
+		font-size: 12px;
+		color: #999;
+	}
+	.cert-area{
+		.clearfix;
+		.mg-r20{
+			cursor: pointer;
+		}
+	}
+	.account{
+		.left;
+		height: 34px;
+		line-height: 34px;
+		padding: 0px 11px;
+		color: #666;
+		margin-right: 5px;
+		border: 2px solid #ddd;
+		cursor: pointer;
+	}
+	.selected{
+		border-color: @color-orange;
+	}
+	.wa-label{
+		width: 105px;
+	}
+	.hr{
+		margin: 20px 0px;
+	}
+	.wallet-apply-btn-wrapper{
+		padding-left: 125px;
+	}
+	.mask{
+		width:203px;
+		height: 134px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		.background-rgba(0,0,0,0.3);
+	}
+	.magnifier-icon{
+		width:40px;
+		height:35px;
+		background:url("../images/component_bg.png") no-repeat;
+		background-position: -99px 0px;
+		position: absolute;
+		top:50%;
+		left: 50%;
+		margin-top: -18px;
+		margin-left: -20px;
+	}
+}
+
+.etprs-wallet-apply-table{
+	width: 100%;
+	margin-top: 20px;
+	table-layout:fixed;
+	td{
+		padding:8px 5px;
+		vertical-align: top;
+	}
+	.name{
+		.left;
+		width: 130px;
+		text-align: right;
+		margin-right: 13px;
+		color:#999;
+	}
+	.value{
+		color:#333;
+	}
+}
+
+// ===================================================
+// ===================== pay =========================
+// ===================================================
+.bank-list{
+	&:extend(.clearfix all);
+}
+
+
+.bank-list-cell{
+	padding: 0 20px;
+	border: 1px solid #eee;cursor: pointer;
+	&:hover{
+		border-color: #ccc;
+	}
+}
+
+.bank-list-item{
+	float: left;*display: inline;
+	width: 210px;height: 104px;margin-right: 21px;
+	&.last{
+		margin-right: 0;
+	}
+	&.hover{
+		border-color: #ccc;
+	}
+	&.error{
+		.bank-list-cell{
+			border-color: #ff0000;
+		}
+	}
+}
+
+.bank-error-info{
+	padding-top: 5px;
+	color: #ff0000;
+}
+
+.bank-info{
+	height: 50px;
+}
+
+.bank-logo{
+	display: inline-block;*display: inline;*zoom:1;
+	width: 26px;height: 26px;
+	vertical-align: middle;
+	img{
+		width: 26px;height: 26px;
+	}
+}
+
+.bank-name{
+	display: inline-block;*display: inline;*zoom:1;
+	line-height: 50px;padding-left: 10px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+
+
+.bank-balance{
+	border-top: 1px solid #eee;
+	height: 53px;
+}
+
+.bank-balance-unit,.bank-balance-num{
+	display: inline-block;*display: inline;*zoom:1;
+	vertical-align: middle;
+}
+
+.bank-balance-num{
+	padding-left: 10px;line-height: 53px;
+	color: #ff0000;font-size: 18px;
+	span{
+		font-size: 12px;
+	}
+}
+
+
+// 支付详情列表
+.pay-detail-list{
+
+}
+
+.detail-list-line,.pay-detail-head{
+	padding: 2px 0;
+	.pay-label{
+		display: inline-block;*display: inline;*zoom:1;
+		width: 75px;
+		vertical-align: middle;
+		text-align: right;
+	}
+	.pay-span{
+		display: inline-block;*display: inline;*zoom:1;
+		vertical-align: middle;
+	}
+
+	
+	
+}
+
+.pay-detail-head{
+	.show-detail{
+		display: inline-block;*display: inline;*zoom:1;
+		margin-left: 25px;
+		vertical-align: middle;
+		font-size: 12px;
+	}
+}
+
+
+
+.pay-total{
+	padding-top: 5px;padding-bottom: 7px;padding-left: 5px;
+	font-size: 18px;
+	.pay-price{
+		color: #ff4000;font-size: 24px;
+		font-weight: bold;
+	}
+	.pay-total-label{
+		margin-right: 20px;
+	}
+}
+
+// 支付确认界面
+.pay-method{
+
+}
+
+.pay-method-line{
+	&:extend(.clearfix all);
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+	&.last{
+		border-bottom: 0;
+	}
+}
+
+.pay-method-item{
+	float: left;*display: inline;
+	width: 50%;
+	strong,span{
+		display: block;
+	}
+}
+
+// 支付确认表
+
+.pay-method-title{
+	padding: 10px 0;
+	border-bottom: 2px solid #ccc;
+}
+
+.pay-method-header{
+	padding: 0px 10px;height: 40px;line-height: 40px;
+	background: #f5f5f5;border-left: 1px solid #ddd;border-right: 1px solid #ddd;border-top: 1px solid #ddd;
+	color: #333;font-size: 15px;
+}
+
+
+.pay-method-table{
+  width: 100%;
+  background: #fff;
+  td{
+    border:1px solid #ddd;
+  }
+  .col-1{
+    padding: 26px;
+    .clearfix;  
+  }
+  .col-2{
+    padding-left: 27px;
+    .clearfix;  
+  }
+  .place-name{
+    margin-bottom: 5px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .tdh{
+    color: #B25900;
+  }
+  .usd{
+    color: #B25900;
+  }
+}
+
+.pay-method-footer{
+	padding: 40px 0;
+	text-align: center;
+	.footer-middle{
+		display: inline-block;*display: inline;*zoom:1;
+	}
+}
+
+// ==================================================
+// ================= tags ===================
+// ==================================================
+.ui-tag{
+  .inline-block;
+  padding:3px;
+  margin-right:5px;
+  // border: 1px solid #ddd;
+  background: #ddd;
+  color: #666;
+  line-height: 1;
+  border-radius: 2px;
+}
+
+// ===================================================
+// ==================== 图标 =========================
+// ===================================================
+
+.rg-icon-info{
+	width: 16px;height: 16px;
+	background: url(../images/reg_bg.png) -61px -97px;
+}
+
+
+
+// ===================================================
+// ==================== 协议框 =======================
+// ===================================================
+
+.rg-license {
+	border: 1px solid #B2B2B2;
+	height: 240px;width: 450px;
+	margin: 15px auto;padding: 5px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+
+// ===================================================
+// ================= footer ======================
+// ===================================================
+.footer-list {
+	width:480px;
+	margin:0 auto;
+	font-size:12px;
+	text-align:center;
+	li {
+		display:inline;
+		a {
+			color:#999999;
+			&:hover {
+				color:@color-orange;
+			}
+		}
+		span {
+			color:#999;
+			padding:0 10px;
+		}
+	}
+}
+.footer-copyright {
+	color:#bbbbbb;
+	line-height:40px;
+	text-align:center;
+	font-size:12px;
+}
+
+@import "common.less";

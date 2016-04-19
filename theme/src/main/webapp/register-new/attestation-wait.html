@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register-new.css">
+    <script src="../vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'../header_register.html'"></div>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="rg-record">
+                <div class="rg-record-header">
+                    <div class="rg-record-header-left">
+                        <i>&#xe608;</i>
+                    </div>
+                    <div class="rg-record-header-right">
+                        <p class="info">已成功提交，请等待审核...</p>
+                        <p class="note">
+                            <span>我们的客服人员会在一个工作日内为您处理，如需其他帮助，<br>请致电400-805-5656</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'../vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

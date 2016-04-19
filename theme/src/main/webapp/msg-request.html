@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="msg_request">
+<div ms-include-src="'vip-center-header.html'"></div>
+<div class="main-frame">
+	<div ms-include-src="'vip-center-left.html'"></div>
+	<div class="right-frame">
+		<h3 class="ui-title-1">我要评论<span class="ui-title-1-prompt">您有<em>1</em>条请求确认更新</span></h3>
+        <div class="ui-msg-request">
+        	<span class="ui-msg-request-close"><i>&#xe617;</i></span>
+        	<table width="100%" border="0" class="ui-msg-request-tb">
+            	<tr>
+                	<td width="45"><img src="images/header-default.png"></td>
+                    <td width="600">
+                    	<p class="name">张三 | 奥林科技</p>
+                        <p class="text-color-gray">13588888888</p>
+                        <p class="request-text">邀请您成为<span class="company">奥林科技</span>企业成员</p>
+                        <p class="text-color-gray">2014-12-12 12:00</p>
+                    </td>
+                    <td>
+                    	<div class="status">
+                        	<a href="#" ms-widget="button" data-button-color="primary">确定</a>
+                            <a href="#" ms-widget="button" data-button-color="default">拒绝</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="ui-msg-request">
+        	<span class="ui-msg-request-close"><i>&#xe617;</i></span>
+        	<table width="100%" border="0" class="ui-msg-request-tb">
+            	<tr>
+                	<td width="45"><img src="images/header-default.png"></td>
+                    <td width="600">
+                    	<p class="name">张三 | 奥林科技</p>
+                        <p class="text-color-gray">13588888888</p>
+                        <p class="request-text">邀请您成为<span class="company">奥林科技</span>企业成员</p>
+                        <p class="text-color-gray">2014-12-12 12:00</p>
+                    </td>
+                    <td>
+                    	<div class="status">
+                        	<p class="agreed">已同意</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="ui-msg-request">
+        	<span class="ui-msg-request-close"><i>&#xe617;</i></span>
+        	<table width="100%" border="0" class="ui-msg-request-tb">
+            	<tr>
+                	<td width="45"><img src="images/header-default.png"></td>
+                    <td width="600">
+                    	<p class="name">张三 | 奥林科技</p>
+                        <p class="text-color-gray">13588888888</p>
+                        <p class="request-text">邀请您成为<span class="company">奥林科技</span>企业成员</p>
+                        <p class="text-color-gray">2014-12-12 12:00</p>
+                    </td>
+                    <td>
+                    	<div class="status">
+                        	<p class="refused">已拒绝</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+	</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"pager/avalon.pager",
+			"dropdown/avalon.dropdown"
+			], function() {
+			avalon.define("msg_request", function(vm) {
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+				
+
+			})
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

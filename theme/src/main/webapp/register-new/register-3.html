@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register-new.css">
+    <script src="../vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'../header_register.html'"></div>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="rg-record">
+                <div class="rg-record-header">
+                    <div class="rg-record-header-left">
+                        <i>&#xe608;</i>
+                    </div>
+                    <div class="rg-record-header-right">
+                        <p class="info">感谢您注册咖狗网，<a href="javascript:">马上登录体验</a></p>
+                        <p class="note">
+                            <label for="">您的帐号：</label>
+                            <span>13838484382</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="rg-panel rg-panel-invite">
+                    <div class="ui-invite">
+                        <div class="ui-invite-line">
+                            <h3 class="ui-invite-title">邀请好友</h3><span class="ui-invite-tips">每成功邀请一位好友加入咖狗网即可获得<span class="ui-invite-notice">100积分</span>，邀请越多奖励越多</span>
+                        </div>
+                        <div class="ui-invite-link">
+                            <input type="text" class="ui-invite-input" value="www.cargopm.com" readonly="readonly" />
+                            <!-- <a href="javascript:" class="ui-invite-btn">点击复制</a> -->
+                            <div class="ui-invite-share">
+                                <div id="bdshare">
+                                    <span class="bds_more nopic">分享到:</span>
+                                    <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+                                    <a class="bds_tieba" title="分享到百度贴吧" href="#"></a>
+                                    <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+                                    <a class="bds_tqq" title="分享到腾讯微博" href="#"></a>
+                                    <a class="bds_renren" title="分享到人人网" href="#"></a>
+                                    <a class="bds_mshare" title="分享到一键分享" href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="rg-panel">
+                    <div class="rg-sitemap">
+                        <div class="rg-sitemap-cell">
+                            <p class="rg-sitemap-cell-item">
+                                <i>&#xe60f;</i><a href="javascript:" class="rg-sitemap-link">最新运价查询</a>
+                            </p>
+                        </div>
+                        <div class="rg-sitemap-cell">
+                            <p class="rg-sitemap-cell-item">
+                                <i>&#xe606;</i><a href="javascript:" class="rg-sitemap-link">企业资质认证（免费）</a>
+                            </p>
+                        </div>
+                        <div class="rg-sitemap-cell">
+                            <p class="rg-sitemap-cell-item">
+                                <i>&#xe604;</i><a href="javascript:" class="rg-sitemap-link">会员中心管理</a>
+                            </p>
+                        </div>
+                        
+                        <div class="rg-sitemap-cell">
+                            <p class="rg-sitemap-cell-item">
+                                <i>&#xe61b;</i><a href="javascript:" class="rg-sitemap-link">申请咖狗供应商</a>
+                            </p>
+                        </div>
+                        <div class="rg-sitemap-cell">
+                            <p class="rg-sitemap-cell-item">
+                                <i>&#xe605;</i><a href="javascript:" class="rg-sitemap-link">行业资讯查看</a>
+                            </p>
+                        </div>
+                        <div class="rg-sitemap-cell">
+                            <p class="rg-sitemap-cell-item">
+                                <i>&#xe602;</i><a href="javascript:" class="rg-sitemap-link">实时货物跟踪</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'../vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

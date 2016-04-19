@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="order-detail">
+<div ms-include-src="'vip-center-header.html'"></div>
+<div class="main-frame">
+	<div class="ui-progress-bar pd-20">
+                <div class="ui-progress-bar-bg"><span class="ui-progress-bar-bg-round"></span></div>
+                <ul class="ui-step ui-step-5">
+                    <li class="ui-step-active ui-step-start">
+                        <div class="ui-step-line"><div class="ui-step-line-left">-</div><div class="ui-step-line-right">-</div></div>    
+                        <div class="ui-step-icon">        
+                            <span class="ui-step-number">1</span>
+                            <span class="ui-step-text">下单</span>
+                            <span class="ui-progress-step-time">2015-03-09 21:00:00</span>
+                        </div>
+                    </li>
+                    <li class="ui-step-active">
+                      <div class="ui-step-line"><div class="ui-step-line-right">-</div></div>    
+                        <div class="ui-step-icon">        
+                            <span class="ui-step-number">2</span>
+                            <span class="ui-step-text">订单确认</span>
+                            <span class="ui-progress-step-time">2015-03-09 21:00:00</span>
+                        </div>
+                  </li>
+                    <li>
+                        <div class="ui-step-icon">        
+                            <span class="ui-step-number">3</span>
+                            <span class="ui-step-text">费用确认</span>
+                        </div>
+                  </li>
+                  <li>
+                        <div class="ui-step-icon">        
+                            <span class="ui-step-number">4</span>
+                            <span class="ui-step-text">支付费用</span>
+                        </div>
+                  </li>
+                     <li>
+                        <div class="ui-step-icon">        
+                            <span class="iconfont ui-step-number">5</span>
+                            <span class="ui-step-text">双方互评</span>
+                       </div>
+                  </li>
+              </ul>
+        </div>
+	<div class="ui-module-box order-total-info">
+		<dl>
+			<dt>物流订单号：</dt>
+			<dd>201232131231231</dd>
+
+			<dt>订单状态：</dt>
+			<dd><span class="wait-state">等待买家接单</span></dd>
+
+			<dt>说明：</dt>
+			<dd>您的订舱信息正在等待卖家接受审核，接单结果将及时通过邮件,短信和站内信息通知您！</dd>
+
+			<dt class="mg-t10">您可以 &nbsp;</dt>
+			<dd class="mg-t10">
+				<a ms-widget="button" data-button-size="big"  data-button-color="primary">编辑业务状态</a>
+				<a ms-widget="button" data-button-size="big"  data-button-color="primary">调整费用</a>
+			</dd>
+		</dl>
+	</div>
+
+		<div class="ui-module-box ps-r pd0 order-detail-area">
+			<div class="ui-tab-type2">
+				<ul class="ui-tab-type2-list">
+					<li ms-class="active:1==index" ms-click="show(event,1)">订舱信息</li>
+					<li ms-class="active:2==index" ms-click="show(event,2)">订舱进舱报关信息</li>
+					<li ms-class="active:3==index" ms-click="show(event,3)">费用信息</li>
+					<li ms-class="active:4==index" ms-click="show(event,4)">物流状态</li>
+					<li ms-class="active:5==index" ms-click="show(event,5)">订单日志</li>
+			  </ul>
+				<a href="#" class="ui-tab-type2-print">打印</a>
+			</div>
+			<div class="ui-tab-type2-cnt">
+			   <div class="order-cabin-tab" ms-visible="1==index">
+						   <div class="order-info-wrapper">
+								<div class="order-info-hd">
+									供应商信息
+								</div>
+
+								<div class="order-info-bd">
+									<div class="supplier-info-list">
+										<p><span class="key">供应商：</span>深圳海光国际货运代理有限公司</p>
+										<p><span class="key">公司地址：</span>广东深圳</p>
+										<p><span class="key">联系电话：</span>266-342342342</p>
+									</div>
+
+									<div class="supplier-info-list mg-l99">
+										<p><span class="key">小二：</span>周星星<a href="#" class="link-contact-me"></a></p>
+										<p><span class="key">姓名：</span>广东深圳</p>
+										<p><span class="key">手机：</span>266-342342342<span class="mg-l40">邮件：3432432@qq.com</span></p>
+									</div>
+								</div>
+						   </div>
+
+						   <div class="order-info-wrapper">
+								<div class="order-info-hd">
+									收发货人信息
+								</div>
+
+								<div class="order-info-bd customer-info">
+										<div class="shipper-info">
+											<div class="mg-b20">
+												<p class="fw-b mg-b5">发货人(shipper)</p>
+
+												<p>DESUN TRADING CO LTD</p>
+												<p>DESUN TRADING CO LTDDESUN TRADING CO LTDDESUN TRADING CO LTD</p>
+											</div>
+
+											<div class="mg-b20">
+												<p class="fw-b mg-b5">发货人(shipper)</p>
+												<p>DESUN TRADING CO LTD</p>
+											</div>
+
+											<div class="mg-b20">
+												<p class="fw-b mg-b5">发货人(shipper)</p>
+												<p>DESUN TRADING CO LTD</p>
+											</div>
+									</div>
+
+									<dl class="shipper-info-list">
+										<dt>业务编号：</dt>
+										<dd>201232131231231</dd>
+
+										<dt>船公司：</dt>
+										<dd>APL</dd>
+
+										<dt>截关日期：</dt>
+										<dd>2015-02-07</dd>
+
+										<dt>开船日期：</dt>
+										<dd>2015-02-07</dd>
+
+										<dt>运费条款：</dt>
+										<dd>PREPAID</dd>
+
+										<dt>运输条款：</dt>
+										<dd>CY-CY</dd>
+
+										<dt>签单方式：</dt>
+										<dd>正本</dd>
+
+										<dt>提单份数：</dt>
+										<dd>3/3</dd>
+
+										<dt>货物类型：</dt>
+										<dd>普通货物</dd>
+
+										<dt>订舱附件：</dt>
+										<dd><a href="javascript:">委托书</a> <a href="javascript:" class="mg-l21">下载</a></dd>
+									</dl>
+								</div>
+						   </div>
+
+						   <div class="order-info-wrapper">
+								<div class="order-info-hd">
+									港口信息
+								</div>
+
+								<div class="order-info-bd">
+									<p>
+										<span class="port-info-place">
+											<span class="key">装货港：</span>NINGBO（宁波）
+										</span>
+
+										<span class="port-info-place">
+											<span class="key">卸货港：</span>NINGBO（宁波）
+										</span>
+										
+									</p>
+								</div>
+						   </div>
+
+						   <div class="order-info-wrapper port-info">
+								<div class="order-info-hd">
+									箱型数量
+								</div>
+
+								<div class="order-info-bd">
+									<p>
+										<span class="port-info-place">
+											20GP*2
+										</span>
+
+										<span class="port-info-place">
+											40GP*2
+										</span>
+										
+									</p>
+								</div>
+						   </div>
+
+						   <div class="order-info-wrapper">
+								<div class="order-info-hd">
+									货物信息
+								</div>
+
+								<div class="order-info-bd">
+									<table class="ui-table-border ui-table-noborder">
+										<thead>
+											<tr>
+												<th>唛头</th>
+												<th>英文品名</th>
+												<th>件数及包装类型</th>
+												<th>毛重(kgs)</th>
+												<th>体积(cbm)</th>
+												<th>海关编号</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<td>sdfdasfasdfadfaf</td>
+												<td>sdf</td>
+												<td>
+													<p>rwerewqrqwe</p>
+													<p>rwerewqrqwe sfddsaf</p>
+													<p>rwerewqrqwedsd</p>
+													<p>rwerewqrqwe</p>
+												</td>
+												<td>
+												1700 CARTONS
+												</td>
+
+												<td>
+												  1200.00
+												</td>
+
+												<td>
+												  8.5
+												</td>
+											</tr>
+
+											<tr>
+												<td>sdf</td>
+												<td>sdf</td>
+												<td>
+													<p>rwerewqrqwe</p>
+													<p>rwerewqrqwe sfddsaf</p>
+												</td>
+												<td>
+												1700 CARTONS
+												</td>
+
+												<td>
+												  1200.00
+												</td>
+
+												<td>
+												  8.5
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+						   </div>
+
+						   <div class="order-info-wrapper addition-service-wrapper">
+								<div class="order-info-hd">
+									增值服务
+								</div>
+
+								<div class="order-info-bd">
+									<div class="addition-service">
+										<p class="fw-b">上门提货</p>
+
+										<div class="addition-service-left">
+											<p class="mg-t5"><span class="key">提货地址：</span>浙江省宁波市鄞州区天童南路112号，华贸 工业园c区</p>
+											<p class="mg-t5"><span class="key">联系人：</span>张小姐 <span class="key mg-l21">联系电话：</span>123234242432 23423422</p>
+										</div>
+
+										<div class="addition-service-right">
+											<p class="mg-t5"><span class="key">提货时间：</span>2013-12-12 13.30</p>
+											<p class="mg-t5"><span class="key">提货备注：</span><span class="orange">sdadafdasfa</span></p>
+										</div>
+									</div>
+
+									<div class="addition-service">
+										<p class="fw-b">代理报关</p>
+
+										<div class="addition-service-left">
+											<p class="mg-t5"><span class="key">报关委托书：</span><a href="javascript:">货物出口代理报关委托书.docx</a></p>
+											<p class="mg-t5"><span class="key">装箱单：</span><a href="javascript:">货物装箱清单.doc</a></p>
+											<p class="mg-t5"><span class="key">报关备注：</span><span class="orange">请分2票报关</span></p>
+										</div>
+
+										<div class="addition-service-right">
+											<p class="mg-t5"><span class="key">提货时间：</span>2013-12-12 13.30</p>
+											<p class="mg-t5"><span class="key">提货备注：</span><span class="orange">sdadafdasfa</span></p>
+										</div>
+									</div>
+
+									<div class="addition-service">
+										<p class="fw-b">AMS/ENS/ACT/AFR</p>
+
+										<div class="addition-service-left mg-t5">
+											<div class="ams-wrapper">
+												<span class="lable">真实发货人：</span>
+												<div class="left">
+													<p>dfdsafdfadfaf</p>
+													<p>dfdsafdfadfaf</p>
+													<p>dfdsafdfadfaf</p>
+												</div>
+											</div>
+
+											<div class="ams-wrapper">
+												<span class="lable">真实通知人：</span>
+												<div class="left">
+													<p>dfdsafdfadfaf</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="addition-service-right">
+											<div class="ams-wrapper">
+												<span class="lable">真实收货人：</span>
+												<div class="left">
+													<p>dfdsafdfadfaf</p>
+													<p>dfdsafdfadfaf</p>
+												</div>
+											</div>
+
+											<div class="ams-wrapper">
+												<span class="lable">真实交货地：</span>
+												<div class="left">
+													<p>dfdsafdfadfaf</p>
+													<p>dfdsafdfadfaf</p>
+													<p>dfdsafdfadfaf</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+						   </div>
+
+						   <div class="order-info-wrapper">
+								<div class="order-info-hd">
+									备注信息
+								</div>
+
+								<div class="order-info-bd">
+									<p class="mg-b4">
+										<span class="key">订舱备注：</span>是的广告人托管人
+									</p>
+									<p class="mg-b4">
+										<span class="key">其他备注：</span>是的广告人托管人
+									</p>
+								</div>
+						   </div>
+			   </div>
+
+			   <div class="business-state-tab"  ms-visible="2==index">
+					<div class="ui-business-state">
+						<div class="ui-business-state-column ui-business-state-column-active">
+							<span class="icon-business-state-point"></span>
+							<div class="ui-business-state-column-title">
+								<span class="state-column-arrow1">◆</span>
+								<span class="state-column-arrow2">◆</span>
+								<h3>舱单已装载</h3>
+								<span class="state-column-time"><b>2014-12-12</b> 12:00</span>
+								<a href="#" class="btn-up-down">收起</a>
+							</div>
+							<table class="ui-business-state-column-tb">
+								<thead>
+									<tr>
+										<th>船名</th>
+										<th>航次</th>
+										<th>当前状态</th>
+										<th>电子口岸收到时间</th>
+										<th>收到海关回执时间</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="text" class="ui-input w-66"></td>
+										<td><input type="text" class="ui-input w-66"></td>
+										<td><textarea rows="2" class="ui-textarea w-146"></textarea></td>
+										<td><input class="ui-state-column-tb-dp" ms-widget="datepicker" data-datepicker-allow-blank="true"/></td>
+										<td><input class="ui-state-column-tb-dp" ms-widget="datepicker" data-datepicker-allow-blank="true"/></td>
+										<td class="ta-c">
+											<button class="ui-btn-edit" ms-widget="button" data-button-size="big" data-button-color="primary">确定</button>
+											<a href="#">取消</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="ui-business-state-column">
+							<span class="icon-business-state-point"></span>
+							<div class="ui-business-state-column-title">
+								<span class="state-column-arrow1">◆</span>
+								<span class="state-column-arrow2">◆</span>
+								<h3>码头已放行</h3>
+								<span class="state-column-time"><b>2014-12-12</b> 12:00</span>
+								<a href="#" class="btn-up-down">展开</a>
+							</div>
+						</div>
+						<div class="ui-business-state-column">
+							<span class="icon-business-state-point"></span>
+							<div class="ui-business-state-column-title">
+								<span class="state-column-arrow1">◆</span>
+								<span class="state-column-arrow2">◆</span>
+								<h3>海关已放行</h3>
+								<span class="state-column-time"><b>2014-12-12</b> 12:00</span>
+								<a href="#" class="btn-up-down">展开</a>
+							</div>
+						</div>
+						<div class="ui-business-state-column">
+							<span class="icon-business-state-point"></span>
+							<div class="ui-business-state-column-title">
+								<span class="state-column-arrow1">◆</span>
+								<span class="state-column-arrow2">◆</span>
+								<h3>海关已检查</h3>
+								<span class="state-column-time"><b>2014-12-12</b> 12:00</span>
+								<a href="#" class="btn-up-down">展开</a>
+							</div>
+						</div>
+						<div class="ui-business-state-column">
+							<span class="icon-business-state-point"></span>
+							<div class="ui-business-state-column-title">
+								<span class="state-column-arrow1">◆</span>
+								<span class="state-column-arrow2">◆</span>
+								<h3>已预配舱单</h3>
+								<span class="state-column-time"><b>2014-12-12</b> 12:00</span>
+								<a href="#" class="btn-up-down">展开</a>
+							</div>
+						</div>
+						<div class="ui-business-state-column ui-business-state-column-active">
+							<span class="icon-business-state-point"></span>
+							<div class="ui-business-state-column-title">
+								<span class="state-column-arrow1">◆</span>
+								<span class="state-column-arrow2">◆</span>
+								<h3>已进港</h3>
+								<span class="state-column-time"><b>2014-12-12</b> 12:00</span>
+								<a href="#" class="btn-up-down">收起</a>
+							</div>
+							<table class="ui-business-state-column-tb">
+								<thead>
+									<tr>
+										<th>进港码头</th>
+										<th>箱号</th>
+										<th>封号</th>
+										<th>进港时间</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>大榭招商码头</td>
+										<td>CCLU34234546</td>
+										<td>3454245</td>
+										<td>2014-12-12 12:00</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="ui-business-state-column ui-business-state-column-no-bd">
+							<span class="icon-business-state-point"></span>
+							<div class="ui-business-state-column-title">
+								<span class="state-column-arrow1">◆</span>
+								<span class="state-column-arrow2">◆</span>
+								<h3>已提箱</h3>
+								<span class="state-column-time"><b>2014-12-12</b> 12:00</span>
+								<a href="#" class="btn-up-down">展开</a>
+							</div>
+						</div>
+					</div>
+			   </div>
+
+			   <div class="order-fee-tab"  ms-visible="3==index">
+					<div class="ui-booking-detail-info ui-fee-detail">
+						<div class="ui-business-info-cost-edit pd0">
+							<div>
+								<table class="ui-business-info-cost-edit-tb ui-fee-detail-tb">
+									<thead>
+										<tr>
+											<th>费用名称</th>
+											<th>币种</th>
+											<th>金额</th>
+											<th>备注</th>
+											<th class="ta-c" width="100">操作</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>海运费</td>
+											<td>USD</td>
+											<td class="color-orange">1230.00</td>
+											<td>威尔斯大飞生栋覆屋而士大夫玩儿</td>
+											<td class="ta-c"><a href="#">编辑</a></td>
+										</tr>
+										<tr class="alt">
+											<td>海运费</td>
+											<td>USD</td>
+											<td class="color-orange">1230.00</td>
+											<td>威尔斯大飞生栋覆屋而士大夫玩儿</td>
+											<td class="ta-c"><a href="#">编辑</a></td>
+										</tr>
+										<tr>
+											<td>海运费</td>
+											<td>USD</td>
+											<td class="color-orange">1230.00</td>
+											<td>-</td>
+											<td class="ta-c"><a href="#">编辑</a></td>
+										</tr>
+										<tr class="alt">
+											<td>
+												<select ms-widget="dropdown,dropdown1,$dropdown1">
+													<option>海运费</option>
+												</select>
+											</td>
+											<td>
+												<select ms-widget="dropdown,dropdown2,$dropdown2">
+													<option>USD</option>
+												</select>
+											</td>
+											<td><input type="text" class="ui-input w-66"></td>
+											<td><textarea rows="2" class="ui-textarea w-180"></textarea></td>
+											<td class="ta-c">
+												<button class="ui-btn-edit" ms-widget="button" data-button-size="big" data-button-color="primary">确定</button>
+												<a href="#">取消</a>
+											</td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td colspan="5" class="fee-detail-td">
+												费用增加项
+											</td>
+										</tr>
+										<tr>
+											<td>海运费</td>
+											<td>USD</td>
+											<td class="color-orange">1230.00</td>
+											<td>威尔斯大飞生栋覆屋而士大夫玩儿</td>
+											<td class="ta-c"><a href="#">编辑</a></td>
+										</tr>
+										<tr class="alt">
+											<td>海运费</td>
+											<td>USD</td>
+											<td class="color-orange">1230.00</td>
+											<td>威尔斯大飞生栋覆屋而士大夫玩儿</td>
+											<td class="ta-c"><a href="#">编辑</a></td>
+										</tr>
+										<tr>
+											<td>海运费</td>
+											<td>USD</td>
+											<td class="color-orange">1230.00</td>
+											<td>-</td>
+											<td class="ta-c"><a href="#">编辑</a></td>
+										</tr>
+										<tr class="alt">
+											<td>
+												<select ms-widget="dropdown,dropdown1,$dropdown1">
+													<option>海运费</option>
+												</select>
+											</td>
+											<td>
+												<select ms-widget="dropdown,dropdown2,$dropdown2">
+													<option>USD</option>
+												</select>
+											</td>
+											<td><input type="text" class="ui-input w-66"></td>
+											<td><input type="text" class="ui-input w-180"></td>
+											<td class="ta-c">
+												<button class="ui-btn-edit" ms-widget="button" data-button-size="normal" data-button-color="primary">确定</button>
+												<a href="#" class="mg-l10">取消</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="ui-business-info-cost-add"><a href="#">+ 添加费用</a></div>
+							</div>
+							<div>
+								<table class="ui-business-info-cost-edit-tb ui-fee-detail-tb">
+									<thead>
+										<tr>
+											<th colspan="5">优惠费用项</th>
+										</tr>
+									</thead>
+								</table>
+								<div class="ui-business-info-cost-add"><a href="#">+ 添加费用</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="fee-detail-list">
+						<div class="fee-detail-right">
+							<div class="fee-detail-line">
+								<div class="fee-bill-list">
+									<div class="fee-bill-line important">
+										<label class="fee-bill-label" for="">美金合计项：</label>
+										<span class="fee-bill-num">$ 12323.00</span>
+									</div>
+									<div class="fee-bill-line">
+										<label class="fee-bill-label" for="">人民币合计项：</label>
+										<span class="fee-bill-num">￥ 12323.00</span>
+									</div>
+									<div class="fee-bill-line">
+										<label class="fee-bill-label" for="">折合人民币总计：</label>
+										<span class="fee-bill-num">￥ 12323.00</span>
+									</div>
+								</div>
+								<div class="fee-bill-list">
+									<div class="fee-bill-line important">
+										<label class="fee-bill-label" for="">美金合计项：</label>
+										<span class="fee-bill-num">$ 12323.00</span>
+									</div>
+									<div class="fee-bill-line">
+										<label class="fee-bill-label" for="">人民币合计项：</label>
+										<span class="fee-bill-num">￥ 12323.00</span>
+									</div>
+									<div class="fee-bill-line">
+										<label class="fee-bill-label" for="">折合人民币总计：</label>
+										<span class="fee-bill-num">￥ 12323.00</span>
+									</div>
+								</div>
+							</div>
+							<div class="fee-detail-line last">
+								<div class="fee-bill-list">
+									<div class="fee-bill-line important">
+										<label class="fee-bill-label" for="">应付金额：</label>
+										<span class="fee-bill-num">$ 12323.00</span>
+									</div>
+								</div>
+								<div class="fee-bill-list">
+									<div class="fee-bill-line important">
+										<label class="fee-bill-label" for="">&nbsp;</label>
+										<span class="fee-bill-num">￥ 12323.00</span>
+									</div>
+								</div>
+							</div>
+							<div class="fee-detail-footer">
+								<button ms-widget="button" data-button-size="large" data-button-color="primary" class="mg-r10">确认发送给买家</button>
+								<button ms-widget="button" data-button-size="large">保存</button>
+							</div>
+						</div>
+					</div>
+			   </div>
+
+			   <div class="order-logistics-tab" ms-visible="4==index">
+			   </div>
+
+			   <div class="order-log-tab"  ms-visible="5==index">
+					<table class="ui-table-border ui-table-noborder">
+						<thead>
+							<tr>
+								<th width="200">处理时间</th>
+								<th width="425">处理信息</th>
+								<th>操作人</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td>2013-12-12 <span class="key"> 12:12:22</span></td>
+								<td>您提交了订单，请等待系统确认</td>
+								<td>周星星</td>
+							</tr>
+
+							<tr>
+								<td>2013-12-12 <span class="key"> 12:12:22</span></td>
+								<td>您提交了订单，请等待系统确认</td>
+								<td>周星星</td>
+							</tr>
+
+							<tr>
+								<td>2013-12-12 <span class="key"> 12:12:22</span></td>
+								<td>您提交了订单，请等待系统确认</td>
+								<td>周星星</td>
+							</tr>
+						</tbody>
+					</table>
+			   </div>
+			</div>
+		</div>
+</div>
+
+
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"datepicker/avalon.datepicker"
+			], function() {
+			avalon.define("order-detail", function(vm) {
+				vm.$dropdown1 = {
+					width: "120",
+					listWidth:"120"
+				};
+
+				vm.index = 1;
+				vm.show = function(event,index){
+					vm.index = index;
+				}
+
+				vm.$dropdown2 = {
+					width: "80",
+					listWidth:"80"
+				};
+			});
+			
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>

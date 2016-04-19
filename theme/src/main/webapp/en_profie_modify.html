@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/en-register.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register">
+    <div ms-include-src="'en_profile_header.html'"></div>
+    
+    <div class="en-register-bd-wrapper">
+        <div class="en-register-bd">
+            <div class="en-rg-form-title">
+                <label class="en-rg-label">Modify Your Account</label>
+            </div>
+
+          <div class="en-rg-form-line">
+                <label class="en-rg-label">Login Name</label>
+                <div class="ui-form-group">
+                    <p class="ui-form-txt">cargoPM@olymtech.com</p>
+                </div>
+            </div>
+
+			<div class="en-rg-form-line">
+                <label class="en-rg-label">Contact Name:</label>
+                <div class="ui-form-group">
+                    <input type="text" class="ui-input-large w-90" placeholder="First Name">
+                </div>
+                <div class="ui-form-group">
+                    <input type="text" class="ui-input-large w-90 mg-l10" placeholder="Last Name">
+                </div>
+            </div>
+
+			<div class="en-rg-form-line">
+                <label class="en-rg-label">Gender:</label>
+                <div class="ui-form-group">
+                    <input type="radio" name="gender" class="ui-radio"> Male
+                </div>
+				<div class="ui-form-group">
+                    <input type="radio" name="gender" class="ui-radio ml-20"> Female
+                </div>
+				 <div class="en-rg-tips">
+                        <div class="password-test">
+                            <div class="direction">
+                                ◆
+                                <em>
+                                    ◆
+                                </em>
+                            </div>
+                            <p>Must be exactly the same as that</p>
+                        </div>
+                    </div>
+            </div>
+
+			<div class="en-rg-form-line">
+                <label class="en-rg-label">Mobile Phone:</label>
+                <div class="ui-form-group">
+                    <input type="text" class="ui-input-large">
+                </div>
+            </div>
+
+			<div class="en-rg-form-line">
+                <label class="en-rg-label">Country:</label>
+                <div class="ui-form-group">
+                    <select >
+                        <option>---Please Select---</option>
+                    </select>
+                </div>
+            </div>
+			
+			<div class="en-agreement">
+
+                <div class="mg-t30">
+                    <a href="javascript:" class="create-btn">Submit</a>
+                </div>  
+            </div>
+
+        </div>
+    </div>
+
+    <div ms-include-src="'en_register_footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    vm.opt = {
+                        width: "250px",
+                        listWidth: "250px",
+                    }
+
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

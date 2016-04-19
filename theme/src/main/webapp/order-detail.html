@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="order-detail">
+<div ms-include-src="'header_order.html'"></div>
+<div class="main-frame">
+    <div class="ui-module-box pd0">
+    	<div class="ui-buyer-info">
+        	<h3>买家信息</h3>
+            <div class="ui-buyer-info-part1">
+            	<dl>
+                	<dt>姓名：</dt>
+                    <dd><span class="buyer-name">张三</span><a href="#" class="link-contact-me float-l"></a></dd><!--如果没有在线客服请再a标签里加link-contact-me-disabled类名-->
+                    <dt>公司：</dt>
+                    <dd>深圳海光国际物流有限公司</dd>
+                    <dt>手机：</dt>
+                    <dd>13888888888</dd>
+                    <dt>联系电话：</dt>
+                    <dd>0571-88888888</dd>
+                </dl>
+            </div>
+            <div class="ui-buyer-info-part2">
+            	<dl>
+                	<dt>订单号：</dt>
+                    <dd>123235445345534</dd>
+                    <dt>提单号：</dt>
+                    <dd>345324234523464</dd>
+                    <dt>业务编号：</dt>
+                    <dd>SDFSDGR32423423</dd>
+                    <dt>工作编号：</dt>
+                    <dd>ASDFER123234</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="ui-business-info">
+        	<div class="ui-business-info-status">
+            	<h3>当前页面状态：<span>重箱进港</span></h3>
+                <table class="ui-business-info-status-tb">
+                	<thead>
+                    	<tr>
+                        	<td>进港码头</td>
+                            <td>箱号</td>
+                            <td>封号</td>
+                            <td>进港时间</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                        	<td>大榭招商码头</td>
+                            <td>CVSDF346346</td>
+                            <td>3452346</td>
+                            <td>2014-12-12 12:00:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ui-business-info-cost">
+            	<dl>
+                	<dt>美金合计项：</dt>
+                    <dd>12323.00</dd>
+                    <dt>人民币合计项：</dt>
+                    <dd>12323.00</dd>
+                    <dt>折合人民币总计：</dt>
+                    <dd class="fs-18">12323.00</dd>
+                </dl>
+            </div>
+            <div class="ui-business-info-operate">
+            	<span>您可以</span>
+                <button ms-widget="button" data-button-size="big" data-button-color="primary">编辑业务状态</button>
+                <button ms-widget="button" data-button-size="big" data-button-color="primary">费用调整</button>
+            </div>
+        </div>
+    </div>
+    <!--<div class="ui-module-box pd0 of-h">
+    	<div class="ui-business-info-tab">
+        	<ul>
+            	<li class="active">
+                	<h3>当前页面状态：<span>重箱进港</span></h3>
+                    <button class="ui-btn-canel" ms-widget="button" data-button-size="big" data-button-color="default">取消</button>
+                </li>
+                <li>
+                	<dl>
+                        <dt>美金合计项：</dt>
+                        <dd>12323.00</dd>
+                        <dt>人民币合计项：</dt>
+                        <dd>12323.00</dd>
+                    </dl>
+                    <button class="ui-btn-edit mg-t10" ms-widget="button" data-button-size="big" data-button-color="primary">状态编辑</button>
+                </li>
+            </ul>
+        </div>
+        <div class="ui-business-info">
+        	<span class="ui-business-info-close"><i>&#xe614;</i></span>
+        	<div class="ui-tooltip-cnt ui-business-info-choose-status">
+            	<div class="ui-logistics-progress">
+                	<div class="ui-logistics-progress-step">
+                		<div class="ui-step-time">
+                			<div class="ui-step-time-1">2014-12-15</div>
+                            <div class="ui-step-time-2">08:30</div>
+                		</div>
+                        <div class="ui-step-name">
+                        	<div class="ui-step-icon-circle"></div>
+                            <p>已提箱</p>
+                        </div>
+                	</div>
+                    <div class="ui-logistics-progress-step">
+                		<div class="ui-step-time">
+                			<div class="ui-step-time-1">2014-12-15</div>
+                            <div class="ui-step-time-2">08:30</div>
+                		</div>
+                        <div class="ui-step-name">
+                        	<div class="ui-step-icon-circle"></div>
+                            <p>已进港</p>
+                        </div>
+                	</div>
+                    <div class="ui-logistics-progress-step">
+                		<div class="ui-step-time">
+                			<div class="ui-step-time-1">2014-12-15</div>
+                            <div class="ui-step-time-2">08:30</div>
+                		</div>
+                        <div class="ui-step-name">
+                        	<div class="ui-step-icon-circle"></div>
+                            <p>已预配舱单</p>
+                        </div>
+                	</div>
+                    <div class="ui-logistics-progress-step">
+                		<div class="ui-step-time">
+                			<div class="ui-step-time-1">2014-12-15</div>
+                            <div class="ui-step-time-2">08:30</div>
+                		</div>
+                        <div class="ui-step-name">
+                        	<div class="ui-step-icon-circle"></div>
+                            <p>海关已检验</p>
+                        </div>
+                	</div>
+                    <div class="ui-logistics-progress-step">
+                		<div class="ui-step-time">
+                			<div class="ui-step-time-1">2014-12-15</div>
+                            <div class="ui-step-time-2">08:30</div>
+                		</div>
+                        <div class="ui-step-name">
+                        	<div class="ui-step-icon-circle"></div>
+                            <p>海关已放行海关已放行海关已放行海关已放行</p>
+                        </div>
+                	</div>
+                    <div class="ui-logistics-progress-step">
+                		<div class="ui-step-time">
+                			<div class="ui-step-time-1">2014-12-15</div>
+                            <div class="ui-step-time-2">08:30</div>
+                		</div>
+                        <div class="ui-step-name ui-step-name-last">
+                        	<div class="ui-step-icon-circle"></div>
+                            <p>舱单已装载</p>
+                        </div>
+                	</div>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="ui-module-box pd0 of-h">
+    	<div class="ui-business-info-tab">
+        	<ul>
+            	<li>
+                	<h3>当前页面状态：<span>重箱进港</span></h3>
+                    <button class="ui-btn-edit" ms-widget="button" data-button-size="big" data-button-color="primary">状态编辑</button>
+                </li>
+                <li class="active">
+                	<dl>
+                        <dt>美金合计项：</dt>
+                        <dd>12323.00</dd>
+                        <dt>人民币合计项：</dt>
+                        <dd>12323.00</dd>
+                    </dl>
+                    <button class="ui-btn-canel mg-t10" ms-widget="button" data-button-size="big" data-button-color="default">取消</button>
+                </li>
+            </ul>
+        </div>
+        <div class="ui-business-info">
+        	<span class="ui-business-info-close"><i>&#xe614;</i></span>
+        	<div class="ui-business-info-cost-edit">
+            	<table class="ui-business-info-cost-edit-tb">
+                	<thead>
+                    	<tr>
+                        	<th>费用名称</th>
+                            <th>币种</th>
+                            <th>金额</th>
+                            <th>备注</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                        	<td>海运费</td>
+                            <td>USD</td>
+                            <td class="color-orange">1230.00</td>
+                            <td>威尔斯大飞生栋覆屋而士大夫玩儿</td>
+                            <td><a href="#">编辑</a></td>
+                        </tr>
+                        <tr class="alt">
+                        	<td>海运费</td>
+                            <td>USD</td>
+                            <td class="color-orange">1230.00</td>
+                            <td>威尔斯大飞生栋覆屋而士大夫玩儿</td>
+                            <td><a href="#">编辑</a></td>
+                        </tr>
+                        <tr>
+                        	<td>海运费</td>
+                            <td>USD</td>
+                            <td class="color-orange">1230.00</td>
+                            <td>-</td>
+                            <td><a href="#">编辑</a></td>
+                        </tr>
+                        <tr class="alt">
+                        	<td ms-controller="dropdown-costName">
+                            	<select ms-widget="dropdown">
+                                    <option>海运费</option>
+                                </select>
+                            </td>
+                            <td ms-controller="dropdown-currency">
+                            	<select ms-widget="dropdown">
+                                    <option>USD</option>
+                                </select>
+                            </td>
+                            <td><input type="text" class="ui-input w-66"></td>
+                            <td><textarea rows="2" class="ui-textarea w-180"></textarea></td>
+                            <td class="ta-c">
+                            	<div><button class="ui-btn-edit" ms-widget="button" data-button-size="big" data-button-color="primary">确定</button></div>
+                            	<a href="#">取消</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="ui-business-info-cost-add"><a href="#">+ 添加费用</a></div>
+            </div>
+        </div>
+    </div>-->
+    <div class="ui-module-box pd0 ps-r">
+    	<div class="ui-tab-type2">
+        	<ul class="ui-tab-type2-list">
+            	<li class="active">订舱信息</li>
+                <li>费用明细</li>
+                <li>业务状态</li>
+          </ul>
+            <a href="#" class="ui-tab-type2-print">打印</a>
+        </div>
+        <div class="ui-tab-type2-cnt">
+        <div class="ui-panel mg-25">
+				<div class="ui-panel-hd fs-12">
+					<table width="100%">
+                    	<thead>
+                        	<tr>
+                            	<th width="343" class="ta-l">船期信息</th>
+                                <th class="ta-l">箱型数量</th>
+                            </tr>
+                        </thead>
+                    </table>
+				</div>
+
+				<div class="ui-panel-bd pd0">
+					<table class="trade-manage-table">
+						<tr>
+							<td rowspan="2" width="343">
+								<div class="col-1">
+									<div class="left">
+										<img src="images/MU.png" class="hipping-compay-logo dp-b"></img>
+										<p>LOGO</p>
+									</div>
+									<div class="left mg-l21">
+										<p class="place-name">宁波 - 洛杉矶</p>
+										<p>船期：3/5&nbsp;&nbsp;&nbsp;航程：50天</p>
+										<p>预计开航日：2015-02-15</p>
+									</div>
+								</div>
+							</td>
+							<td rowspan="1" width="162">
+								<div class="col-2">
+									<div class="ui-tag left">20GP</div> x2
+								</div>
+							</td>
+							<td rowspan="2">
+								<div class="trade-manage-table-info-list w-116">
+                                	<p>提单类型：MBL</p>
+                                    <p>签单方式：正本</p>
+                                    <p>提单份数：3/3</p>
+                                </div>
+                                <div class="trade-manage-table-info-list">
+                                	<p>运单条款：CY-CY</p>
+                                    <p>运费条款：PREPAID</p>
+                                    <p>货物类型：冷藏，危险品，超限货</p>
+                                </div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="col-2">
+									<div class="ui-tag left">20GP</div> x2
+								</div>
+							</td>
+						</tr>
+					</table>
+			    </div>
+		</div>
+        <div class="ui-booking-detail-info">
+        	<h3>发货人(Shipper)</h3>
+            <div class="ui-booking-detail-info-cnt">
+            	<p>DESUN TRADING CO., LTD.</p>
+                <p>HUARONG MANSION RM2901 NO.85 GUANJIAQIAO, NANJING 210005, CHINA</p>
+            </div>
+        </div>
+        <div class="ui-booking-detail-info">
+        	<h3>收货人(Consingee)</h3>
+            <div class="ui-booking-detail-info-cnt">
+            	<p>ORDER OF ALRAJHI BANKING AND INVESTMENT CORP.</p>
+            </div>
+        </div>
+        <div class="ui-booking-detail-info">
+        	<h3>通知人(Consingee)</h3>
+            <div class="ui-booking-detail-info-cnt">
+            	<p>NEO GENERAL TRADING CO.</p>
+                <p>P.O. BOX 99552, RIYADH 22766, KSA</p>
+            </div>
+        </div>
+        <div class="ui-booking-detail-info">
+        	<h3>商品信息</h3>
+            <dl class="ui-booking-detail-info-cnt">
+            	<dt>总件数及包装类型：</dt>
+                <dd>1700 CARTONS</dd>
+                <dt>总毛重(KGS)：</dt>
+                <dd>1200.00</dd>
+                <dt>总体积(CBM)：</dt>
+                <dd>8.5</dd>
+                <dt>总申报价值：</dt>
+                <dd>USD $ 15000</dd>
+            </dl>
+            <dl class="ui-booking-detail-info-cnt">
+            	<h4>商品描述1</h4>
+                <dt>唛头：</dt>
+                <dd>ROSE BRAND 178/2009 RIYADH</dd>
+                <dt>英文品名：</dt>
+                <dd>CANNED MUSRHOOM PIECES & STEMS 24 TINS X 425 WEIGHT (D.W. 227 GRAMS) AT USD7.80 PER CARTON</dd>
+                <dt>中文品名：</dt>
+                <dd>移动快速充电电源</dd>
+                <dt>件数及包装类型：</dt>
+                <dd>1700 CARTONS</dd>
+                <dt>毛重（KGS)：</dt>
+                <dd>1200.00</dd>
+                <dt>体积（CBM)：</dt>
+                <dd>8.5</dd>
+                <dt>HS编码：</dt>
+                <dd>3994783883</dd>
+            </dl>
+            <dl class="ui-booking-detail-info-cnt">
+            	<h4>商品描述2</h4>
+                <dt>唛头：</dt>
+                <dd>ROSE BRAND 178/2009 RIYADH</dd>
+                <dt>英文品名：</dt>
+                <dd>CANNED MUSRHOOM PIECES & STEMS 24 TINS X 425 WEIGHT (D.W. 227 GRAMS) AT USD7.80 PER CARTON</dd>
+                <dt>中文品名：</dt>
+                <dd>移动快速充电电源</dd>
+                <dt>件数及包装类型：</dt>
+                <dd>1700 CARTONS</dd>
+                <dt>毛重（KGS)：</dt>
+                <dd>1200.00</dd>
+                <dt>体积（CBM)：</dt>
+                <dd>8.5</dd>
+                <dt>HS编码：</dt>
+                <dd>3994783883</dd>
+            </dl>
+        </div>
+        <div class="ui-booking-detail-info">
+        	<h3>货物附近信息</h3>
+            <dl class="ui-booking-detail-info-cnt">
+            	<h4>冷藏品</h4>
+            	<dt>温度：</dt>
+                <dd>20 ℃ - 25 ℃</dd>
+                <dt>湿度：</dt>
+                <dd>23%</dd>
+                <dt>通风口设置：</dt>
+                <dd>12%</dd>
+            </dl>
+            <dl class="ui-booking-detail-info-cnt">
+            	<h4>危险品</h4>
+            	<dt>CLASS：</dt>
+                <dd>222</dd>
+                <dt>UIN NO：</dt>
+                <dd>3232</dd>
+                <dt>IMDG NO：</dt>
+                <dd>5555</dd>
+                <dt>FLASH POINT：</dt>
+                <dd>17</dd>
+                <dt>危险品包装：</dt>
+                <dd>pag</dd>
+                <dt>危险品标签：</dt>
+                <dd>5555</dd>
+                <dt>紧急联系人：</dt>
+                <dd>张聪</dd>
+                <dt>电话：</dt>
+                <dd>5555</dd>
+                <dt>邮件：</dt>
+                <dd>1111111111@136.com</dd>
+                <dt>传真：</dt>
+                <dd>55</dd>
+            </dl>
+            <dl class="ui-booking-detail-info-cnt">
+            	<h4>超限货</h4>
+            	<dt>超限类型：</dt>
+                <dd>超高货</dd>
+            </dl>
+        </div>
+        <div class="ui-booking-detail-info">
+        	<h3>增值服务</h3>
+            <dl class="ui-booking-detail-info-cnt">
+            	<h4>委托报关</h4>
+            </dl>
+            <dl class="ui-booking-detail-info-cnt">
+            	<h4>委托拖车</h4>
+            </dl>
+            <dl class="ui-booking-detail-info-cnt">
+            	<h4>委托仓储</h4>
+            </dl>
+            <dl class="ui-booking-detail-info-cnt">
+            	<h4>AMS</h4>
+            </dl>
+            <dl class="ui-booking-detail-info-cnt">
+            	<h4>ENS</h4>
+            </dl>
+        </div>
+        <div class="ui-booking-detail-info">
+        	<h3>备注信息</h3>
+            <dl class="ui-booking-detail-info-cnt">
+            	<dt>订舱备注：</dt>
+                <dd>222</dd>
+                <dt>其他备注：</dt>
+                <dd>222</dd>
+            </dl>
+        </div>
+        <div class="ui-scroll-monitor">
+        	<span class="ui-scroll-monitor-icon-first"></span>
+        	<ul>
+            	<li><span class="ui-scroll-monitor-icon"></span>收货人</li>
+                <li><span class="ui-scroll-monitor-icon"></span>发货人</li>
+                <li><span class="ui-scroll-monitor-icon"></span>通知人</li>
+                <li class="active"><span class="ui-scroll-monitor-icon"></span>商品信息</li>
+                <li><span class="ui-scroll-monitor-icon"></span>货物附加信息</li>
+                <li><span class="ui-scroll-monitor-icon"></span>增值服务</li>
+                <li><span class="ui-scroll-monitor-icon"></span>备注信息</li>
+            </ul>
+            <span class="ui-scroll-monitor-icon-last"></span>
+        </div>
+        </div>
+    </div>
+    <div class="ui-module-box pd0">
+    	<div class="ui-tab-type2">
+        	<ul class="ui-tab-type2-list">
+            	<li>订舱信息</li>
+                <li class="active">费用明细</li>
+                <li>业务状态</li>
+          </ul>
+            <a href="#" class="ui-tab-type2-print">打印</a>
+        </div>
+        <div class="ui-tab-type2-cnt">
+        <div class="ui-business-info-cost pd-t25">
+            <dl>
+                <dt>美金合计项：</dt>
+                <dd>12323.00</dd>
+                <dt>人民币合计项：</dt>
+                <dd>12323.00</dd>
+                <dt>折合人民币总计：</dt>
+                <dd class="fs-18">12323.00<p class="prompt-exchange-rate">(美元兑人民币汇率：1：6.220000)</p></dd>
+            </dl>
+        </div>
+        <div class="ui-booking-detail-info ui-cost-detail">
+        	<h3>费用明细</h3>
+        	<div class="ui-business-info-cost-edit">
+            	<table class="ui-business-info-cost-edit-tb">
+                	<thead>
+                    	<tr>
+                        	<th>费用名称</th>
+                            <th>币种</th>
+                            <th>金额</th>
+                            <th>备注</th>
+                            <th class="ta-c">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                        	<td>海运费</td>
+                            <td>USD</td>
+                            <td class="color-orange">1230.00</td>
+                            <td>威尔斯大飞生栋覆屋而士大夫玩儿</td>
+                            <td class="ta-c"><a href="#">编辑</a></td>
+                        </tr>
+                        <tr class="alt">
+                        	<td>海运费</td>
+                            <td>USD</td>
+                            <td class="color-orange">1230.00</td>
+                            <td>威尔斯大飞生栋覆屋而士大夫玩儿</td>
+                            <td class="ta-c"><a href="#">编辑</a></td>
+                        </tr>
+                        <tr>
+                        	<td>海运费</td>
+                            <td>USD</td>
+                            <td class="color-orange">1230.00</td>
+                            <td>-</td>
+                            <td class="ta-c"><a href="#">编辑</a></td>
+                        </tr>
+                        <tr class="alt">
+                        	<td>
+                            	<select ms-widget="dropdown,dropdown1,$dropdown1">
+                                    <option>海运费</option>
+                                </select>
+                            </td>
+                            <td>
+                            	<select ms-widget="dropdown,dropdown2,$dropdown2">
+                                    <option>USD</option>
+                                </select>
+                            </td>
+                            <td><input type="text" class="ui-input w-66"></td>
+                            <td><textarea rows="2" class="ui-textarea w-180"></textarea></td>
+                            <td class="ta-c">
+                            	<div><button class="ui-btn-edit" ms-widget="button" data-button-size="big" data-button-color="primary">确定</button></div>
+                            	<a href="#">取消</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="ui-business-info-cost-add"><a href="#">+ 添加费用</a></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="ui-module-box pd0">
+    	<div class="ui-tab-type2">
+        	<ul class="ui-tab-type2-list">
+            	<li>订舱信息</li>
+                <li>费用明细</li>
+                <li class="active">业务状态</li>
+          </ul>
+            <a href="#" class="ui-tab-type2-print">打印</a>
+        </div>
+        <div class="ui-tab-type2-cnt">
+        <div class="ui-business-state">
+        	<div class="ui-business-state-column ui-business-state-column-active">
+            	<span class="icon-business-state-point"></span>
+            	<div class="ui-business-state-column-title">
+                	<span class="state-column-arrow1">◆</span>
+                    <span class="state-column-arrow2">◆</span>
+                	<h3>舱单已装载</h3>
+                    <span class="state-column-time"><b>2014-12-12</b> 12:00</span>
+                    <a href="#" class="btn-up-down">收起</a>
+                </div>
+                <table class="ui-business-state-column-tb">
+                	<thead>
+                    	<tr>
+                        	<th>船名</th>
+                            <th>航次</th>
+                            <th>当前状态</th>
+                            <th>电子口岸收到时间</th>
+                            <th>收到海关回执时间</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                        	<td><input type="text" class="ui-input w-66"></td>
+                            <td><input type="text" class="ui-input w-66"></td>
+                            <td><textarea rows="2" class="ui-textarea w-146"></textarea></td>
+                            <td><input class="ui-state-column-tb-dp" ms-widget="datepicker" data-datepicker-allow-blank="true"/></td>
+                            <td><input class="ui-state-column-tb-dp" ms-widget="datepicker" data-datepicker-allow-blank="true"/></td>
+                            <td class="ta-c">
+                            	<button class="ui-btn-edit" ms-widget="button" data-button-size="big" data-button-color="primary">确定</button>
+                            	<a href="#">取消</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ui-business-state-column">
+            	<span class="icon-business-state-point"></span>
+            	<div class="ui-business-state-column-title">
+                	<span class="state-column-arrow1">◆</span>
+                    <span class="state-column-arrow2">◆</span>
+                	<h3>码头已放行</h3>
+                    <span class="state-column-time"><b>2014-12-12</b> 12:00</span>
+                    <a href="#" class="btn-up-down">展开</a>
+                </div>
+            </div>
+            <div class="ui-business-state-column">
+            	<span class="icon-business-state-point"></span>
+            	<div class="ui-business-state-column-title">
+                	<span class="state-column-arrow1">◆</span>
+                    <span class="state-column-arrow2">◆</span>
+                	<h3>海关已放行</h3>
+                    <span class="state-column-time"><b>2014-12-12</b> 12:00</span>
+                    <a href="#" class="btn-up-down">展开</a>
+                </div>
+            </div>
+            <div class="ui-business-state-column">
+            	<span class="icon-business-state-point"></span>
+            	<div class="ui-business-state-column-title">
+                	<span class="state-column-arrow1">◆</span>
+                    <span class="state-column-arrow2">◆</span>
+                	<h3>海关已检查</h3>
+                    <span class="state-column-time"><b>2014-12-12</b> 12:00</span>
+                    <a href="#" class="btn-up-down">展开</a>
+                </div>
+            </div>
+            <div class="ui-business-state-column">
+            	<span class="icon-business-state-point"></span>
+            	<div class="ui-business-state-column-title">
+                	<span class="state-column-arrow1">◆</span>
+                    <span class="state-column-arrow2">◆</span>
+                	<h3>已预配舱单</h3>
+                    <span class="state-column-time"><b>2014-12-12</b> 12:00</span>
+                    <a href="#" class="btn-up-down">展开</a>
+                </div>
+            </div>
+            <div class="ui-business-state-column ui-business-state-column-active">
+            	<span class="icon-business-state-point"></span>
+            	<div class="ui-business-state-column-title">
+                	<span class="state-column-arrow1">◆</span>
+                    <span class="state-column-arrow2">◆</span>
+                	<h3>已进港</h3>
+                    <span class="state-column-time"><b>2014-12-12</b> 12:00</span>
+                    <a href="#" class="btn-up-down">收起</a>
+                </div>
+                <table class="ui-business-state-column-tb">
+                	<thead>
+                    	<tr>
+                        	<th>进港码头</th>
+                            <th>箱号</th>
+                            <th>封号</th>
+                            <th>进港时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                        	<td>大榭招商码头</td>
+                            <td>CCLU34234546</td>
+                            <td>3454245</td>
+                            <td>2014-12-12 12:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ui-business-state-column ui-business-state-column-no-bd">
+            	<span class="icon-business-state-point"></span>
+            	<div class="ui-business-state-column-title">
+                	<span class="state-column-arrow1">◆</span>
+                    <span class="state-column-arrow2">◆</span>
+                	<h3>已提箱</h3>
+                    <span class="state-column-time"><b>2014-12-12</b> 12:00</span>
+                    <a href="#" class="btn-up-down">展开</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="ui-order-detail-remind">
+    	<h3><i>&#xe611;</i> 大掌柜提醒您：</h3>
+        <ol>
+        	<li>在截关期前，买家可以申请退单，在截关期后买家申请退单，买家需支付因退单而造成卖家损失的费用。</li>
+            <li>卖家在截关期后不可以进行退单，如因实际舱位不足问题，造成买家货运委托无法正常出运，卖家应赔付买家的损失。</li>
+            <li>买卖双方可以在订单确认后的10天内发起售后维权，要求大掌柜客服介入处理。</li>
+        </ol>
+    </div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"datepicker/avalon.datepicker"
+			], function() {
+			avalon.define("order-detail", function(vm) {
+				vm.$dropdown1 = {
+					width: "120",
+					listWidth:"120"
+				};
+				vm.$dropdown2 = {
+					width: "80",
+					listWidth:"80"
+				};
+			});
+			
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>

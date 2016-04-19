@@ -1,0 +1,140 @@
+// ===================================================
+// ================= 下拉结构 ========================
+// ===================================================
+
+
+// ===================== 常量 ========================
+
+//色系
+@colorBlue:            #1488d4;
+@borderColorBlue:      #127ac2;
+
+
+@colorOrange:          #f1512e;
+@borderColorOrange:    #db3917;
+
+
+// ====================== end ========================
+
+
+
+.cui-dropdown{
+	position: absolute;left: 0;top: 28px;z-index: 970;
+	// width: 100%;*width: 252px;
+	background: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 0 5px 7px rgba(0, 0, 0, 0.15);
+	// width: 200px;
+	// border: 1px solid #ccc;
+}
+
+
+.cui-dropdown-pol{
+	top: 32px;
+	width: 200px;
+}
+
+
+.cui-dropdown-pod{
+	top: 32px;
+	width: 307px;
+}
+
+
+// 英文版下拉
+.cui-dropdown-en{
+	left: 72px;top: 39px;
+	width: 280px;
+}
+
+
+.cui-dropdown-content{
+	height: 174px;overflow-y: auto;*overflow-x: hidden;
+}
+
+
+
+
+.cui-dropdown-cell{
+	display: block;*zoom:1;
+	padding: 5px 10px;border-bottom: 1px solid #eee;
+	color: #666;
+	&:hover{
+		background: #f2f2f2;
+		color: #000;
+	}
+}
+
+.cui-dropdown-cell-current{
+	background: #f2f2f2;
+	color: #000;
+}
+
+.cui-dropdown-last{
+	border-bottom: 0;
+}
+
+
+
+.cui-port-code{
+	float: right;
+	*cursor: pointer;color: #999;
+}
+
+.cui-port-name{
+	.input-value{
+		color: #f36041;
+	}
+}
+
+
+
+// 带过滤结构的下拉
+.cui-dropdown-filter{
+	// *left: 20px;
+	.cui-dropdown-content{
+		padding: 10px 0;
+		border: none;
+	}
+	.cui-dropdown-filter-content{
+		padding: 15px;
+		// border: 1px solid #ccc;	
+	}
+}
+
+
+.cui-dropdown-tab{
+	padding-left: 10px;height: 29px;
+	border-bottom: 1px solid #ddd;
+}
+
+.cui-dropdown-tab-cell{
+	float: left;*display: inline;
+	// display: inline-block;*display: inline;*zoom:1;
+	height: 28px;line-height: 28px;padding: 0 15px;
+	background: #f7f7f7;border-top: 1px solid #ddd;border-left: 1px solid #ddd;border-right: 1px solid #ddd;
+	color: #666;
+	&:hover{
+		background: #fff;
+		color: #666;
+	}
+}
+
+.cui-dropdown-tab-current{
+	position: relative;z-index: 3;
+	// height: 29px;line-height: 29px;
+	background: #fff;border-bottom: 1px solid #fff;margin-bottom: -1px;
+	color: #000;
+	&:hover{
+		color: #000;
+	}
+}
+
+.cui-dropdown-tab-last{
+	border-left: 0;
+}
+
+
+
+
+

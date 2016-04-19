@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>404</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="index">
+<div ms-include-src="'header_404.html'" class="ui-header-404"></div>
+<div class="ui-siter-error-wrapper">
+    <div class="center">
+        <div class="ui-site-error-logo">
+         <img src="images/404im.png">
+        </div>
+
+        <div class="ui-site-error-msg">
+            <h3 class="title">Sorry~您访问的页面已经飘走</h3>
+
+            <p class="c1 mg-b5">可能原因：</p>
+            <p class="mg-b5">网址有错误：<span class="c1">请检查地址是否完整或存在多余字符</span></p>
+            <p class="mg-b20">网址已失效：<span class="c1">可能页面已删除，活动已下线等</span></p>
+
+            <p><span class="c1">快速进入：</span><a href="#">咖狗首页</a> <a href="#" class="mg-l6">我的咖狗</a></p>
+        </div>
+    </div>
+   
+</div>
+<div ms-include-src="'vip-center-footer.html'" class="ui-footer-404"></div>
+    <script>
+        require([
+            "button/avalon.button",
+            "datepicker/avalon.datepicker",
+            "dropdown/avalon.dropdown",
+            "carousel/avalon.carousel"
+            ], function() {
+            avalon.define("index", function(vm) {
+                
+            });
+            
+            avalon.scan()
+        })
+    </script>
+
+</body>
+</html>

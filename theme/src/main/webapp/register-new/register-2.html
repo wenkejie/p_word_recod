@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register-new.css">
+    <script src="../vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'../header_register.html'"></div>
+    <div class="rg-progress">
+        <div class="rg-progress-content">
+            <ul>
+                <li class="rg-progress-cell rg-progress-cell-active">
+                    <span class="rg-progress-icon">1<i class="iconfont">&#xe609;</i></span>
+                    <p class="rg-progress-info">填写信息</p>
+                </li>
+                <li class="rg-progress-cell rg-progress-cell-current">
+                    <span class="rg-progress-icon">2<i>&#xe609;</i></span>
+                    <p class="rg-progress-info">等待审核</p>
+                </li>
+                <li class="rg-progress-cell">
+                    <span class="rg-progress-icon"><span class="iconfont">&#xe60a;</span><i>&#xe609;</i></span>
+                    <p class="rg-progress-info">完成认证</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="rg-form">
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">登录名</label>
+                    <span class="rg-form-des rg-form-des-name">13958784523</span>
+                </div>
+            </div>
+            <div class="rg-form">
+                <div class="rg-form-title">
+                    <label class="rg-label" for="">设置登录密码</label>
+                    <span class="rg-form-des">登录时需验证，保护帐号信息</span>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">登录密码</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large" placeholder="设置登录密码"></div>
+                    <div class="rg-tips">
+                        <div class="password-test">
+                            <div class="direction">
+                                ◆
+                                <em>
+                                    ◆
+                                </em>
+                            </div>
+                            <div class="password-test-header">
+                                <label class="label-power" for="">安全强度：</label>
+                                <ul class="password-power">
+                                    <li class="password-power-cell password-power-cell-low"></li>
+                                    <li class="password-power-cell password-power-cell-strong"></li>
+                                    <li class="password-power-cell password-power-cell-stronger"></li>
+                                </ul>
+                            </div>
+                            <p class="password-test-line">
+                                <i class="password-test-icon"></i>
+                                <span>6-20个字符</span>
+                            </p>
+                            <p class="password-test-line">
+                                <i class="password-test-icon password-test-icon-error"></i>
+                                <span>只能含字母、数字以及标点符号（除空格）</span>
+                            </p>
+                            <p class="password-test-line">
+                                <i class="password-test-icon password-test-icon-success"></i>
+                                <span>6-20个字符</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">确认密码</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large" placeholder="再次输入登录密码"></div>
+                    <div class="rg-tips rg-tips-error">
+                        <div class="rg-tips-icon"></div>
+                        <div class="rg-tips-content">
+                            两次密码输入不一致
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rg-form">
+                <div class="rg-form-title">
+                    <label class="rg-label" for="">完善资料</label>
+                    <span class="rg-form-des">完善账户信息</span>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">真实姓名</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">电子邮箱</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large"></div>
+                </div>
+                <div class="rg-form-line rg-form-btn">
+                    <a class="rg-btn rg-btn-primary" href="javascript:">完善注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'../vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

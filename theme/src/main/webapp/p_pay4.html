@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>支付成功</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/example.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="p_pay" class="rg-body">
+    <div ms-include-src="'header_pay.html'"></div>
+    <div class="rg-record mg-t20 success">
+        <div class="rg-record-content">
+            <div class="rg-record-icon"></div>
+            <div class="rg-record-right">
+                <p class="rg-record-item rg-record-top"><span>支付成功</span></p>
+                <p class="rg-record-item">支付单已经递交给通商银行审核，请耐心等待，正常情况下预计2小时对方即可到账</p>
+                <p class="rg-record-item"><a href="javascript:">查询详情 》</a></p>
+            </div>
+        </div>
+        <div class="rg-record-footer">
+            <a class="mg-l99" href="javascript:">查看交易记录</a>
+            <a class="mg-l10" href="javascript:">返回我的大掌柜平台</a>
+        </div>
+    </div>
+    
+    <div ms-include-src="'vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("p_pay", function(vm) {
+
+                })
+                avalon.scan()
+            })
+    </script>
+</body>
+</html>

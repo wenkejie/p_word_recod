@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>企业认证</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/example.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'header_legalize_company.html'"></div>
+    <div class="ui-register-progress-bar">
+        <ul class="ui-register-step ui-register-step-4">
+            <li class="ui-register-step-active">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">1</span>
+                    <span class="ui-register-step-text">填写公司信息</span>
+                </div>
+                <div class="ui-register-step-line"></div>
+                <div class="ui-register-step-line-2"></div>
+            </li>
+            <li class="">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">2</span>
+                    <span class="ui-register-step-text">填写法人信息</span>
+                </div>
+                <div class="ui-register-step-line"></div>
+<!--                 <div class="ui-register-step-line-2"></div> -->
+            </li>
+            <li class="">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">3</span>
+                    <span class="ui-register-step-text">待审核</span>
+                </div>
+                <div class="ui-register-step-line"></div>
+<!--                 <div class="ui-register-step-line-2"></div> -->
+            </li>
+            <li class="ui-register-step-last">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">3</span>
+                    <span class="ui-register-step-text">完成认证</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        
+        <div class="wrapper-content">
+            <div class="rg-form rg-form-mini mg-t20">
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>公司名称</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input ui-input-small" placeholder="Chinese"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">公司名称(英文)</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input ui-input-small" placeholder="English"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>公司地址</label>
+                    <div class="rg-select-btn">
+                        <div class="rg-select-cnt">
+                            <div class="slide-down-icon"></div><span>选择地区</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line rg-form-unlabel">
+                    <div class="ui-form-group"><input type="text" class="ui-input ui-input-small" placeholder="详细地址"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>公司联系人</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input ui-input-small" placeholder="手机号"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>公司电话</label>
+                    <div class="rg-form-right">
+                        <div class="ui-form-group"><input type="text" class="ui-input ui-input-small" placeholder="电话"></div>
+                        <div class="rg-form-cell-tips">如：0571-8828871-862，分机号可不填</div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>邮政编码</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input ui-input-small" placeholder=""></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>行业类别</label>
+                    <div class="ui-form-group">
+                         <input type="text" class="ui-input ui-input-small w-101">
+                         <span class="ui-dropdown-icon"><i>&#xe612;</i></span>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>从业人员数</label>
+                    <div class="ui-form-group">
+                        <input type="text" class="ui-input ui-input-small w-66 ui-input-group-left" placeholder="">
+                        <div class="ui-input-group-addon small ui-input-group-addon-right">人</div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>营业收入</label>
+                    <div class="ui-form-group">
+                        <input type="text" class="ui-input w-54 ui-input-small ui-input-group-left" placeholder="">
+                        <div class="ui-input-group-addon small ui-input-group-addon-right">万元</div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>资产总额</label>
+                    <div class="ui-form-group">
+                        <input type="text" class="ui-input ui-input-small w-54 ui-input-group-left" placeholder="">
+                        <div class="ui-input-group-addon small ui-input-group-addon-right">万元</div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>企业规模</label>
+                    <div class="ui-form-group">
+                         <input type="text" class="ui-input ui-input-small w-101">
+                         <span class="ui-dropdown-icon"><i>&#xe612;</i></span>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>企业类型</label>
+                    <div class="ui-form-group">
+                         <input type="text" class="ui-input ui-input-small w-101">
+                         <span class="ui-dropdown-icon"><i>&#xe612;</i></span>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>控制股东</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input ui-input-small" placeholder=""></div>
+                </div>
+                <p class="form-line-tips mg10-0 normal">
+                    证件要求：<br />
+                    必须是彩色原件电子版，可以扫描件或者数码拍摄照片。<br />
+                    仅支持.jpg,.jpeg,.bmp,.png的图片格式。<span class="text-orange">图片大小不超过 2M</span>
+                </p>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>营业执照号</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input ui-input-small-large" placeholder="输入常用手机号"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>营业执照副本</label>
+                    <div class="rg-form-right">
+                        <div class="rg-paperwork-upload">
+                            <a href="javascript:" class="rg-btn rg-btn-mini rg-btn-upload">
+                                <input type="file" name="" id="" class="rg-file-upload-input">
+                                点击上传
+                            </a>
+                        </div>
+                        <div class="rg-form-cell-tips">
+                            必须在有效期内且年检章齐全（当年成立的公司可无年检章）<br/>
+                            必须为中国大陆工商局颁发
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>组织机构代码</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input ui-input-small-large" placeholder="输入常用手机号"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>组织机构代码证</label>
+                    <div class="rg-form-right">
+                        <div class="rg-paperwork-upload">
+                            <a href="javascript:" class="rg-btn rg-btn-mini rg-btn-upload none">
+                                <input type="file" name="" id="" class="rg-file-upload-input">
+                                点击上传
+                            </a>
+                            <div class="paperwork-upload-content">
+                                <img src="images/paper_example.png" />
+                                <a href="javascript:">删除</a>
+                                <a href="javascript:">查看</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>税务登记证号</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input ui-input-small" placeholder="输入常用手机号"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>税务登记证</label>
+                    <div class="rg-form-right">
+                        <div class="rg-paperwork-upload">
+                            <a href="javascript:" class="rg-btn rg-btn-mini rg-btn-upload">
+                                <input type="file" name="" id="" class="rg-file-upload-input">
+                                点击上传
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>银行开户许可核准证号</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input ui-input-small" placeholder="输入常用手机号"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>银行开户许可证</label>
+                    <div class="rg-form-right">
+                        <div class="rg-paperwork-upload">
+                            <a href="javascript:" class="rg-btn rg-btn-mini rg-btn-upload">
+                                <input type="file" name="" id="" class="rg-file-upload-input">
+                                点击上传
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line rg-form-unlabel mg-t20">
+                    <a class="rg-btn rg-btn-primary" href="javascript:">提交审核</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+
+                })
+                avalon.scan()
+            })
+    </script>
+</body>
+</html>

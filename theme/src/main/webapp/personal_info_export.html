@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+        <link rel="stylesheet" href="css/layout.css">
+        <script src="vendor/avalon/avalon.js"></script>
+    </head>
+    <body ms-controller="demo" >
+        <div ms-include-src="'vip-center-header.html'"></div>
+        <div class="main-frame">
+            <div ms-include-src="'vip-center-left.html'"></div>
+            <div class="right-frame">
+                <div class="persional-info-export-wrapper">
+                    <h3 class="persional-info-export-hd">
+                        基本信息
+                        <span class="last-login-time">上次登录时间：2015-01-12 15:30</span>
+                    </h3>
+
+                    <div class="persional-info-export-detail">
+                        <div class="user-info">
+                            <div class="form-group">
+                                <label class="form-label">账户名</label>
+                                <div class="form-input">
+                                    <span class="form-text"><strong>187612521827</strong></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"><span class="required">*</span> 真实姓名</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="施齐">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"><span class="required">*</span> 昵称</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="Viola">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">固定电话</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large w-66" value="0574">
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large w-135 mg-l6" value="865555555">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"><span class="required">*</span> 业务联系电话</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="1300000000">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">所在地</label>
+                                <div class="form-input">
+                                    <select ms-widget="dropdown">
+                                            <option value="value1">浙江省宁波市镇海区</option>
+                                            <option value="value2">浙江省宁波市镇海区1</option>
+                                            <option value="value3">浙江省宁波市镇海区2</option>
+                                            <option value="value4">浙江省宁波市镇海区3</option>
+                                    </select>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">&nbsp;</label>
+                                <div class="form-input">
+                                   <input type="text" class="ui-input-large" placeholder="详细地址">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">&nbsp;</label>
+                                <div class="form-input">
+                                   <a ms-widget="button" data-button-size="big" data-button-color="primary">保存</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="password-security-strength">
+                            <label class="form-label fw-b">密码安全强度：</label>
+                            <div class="pwd-level-wrapper">
+                               <span class="level">中</span>
+                                <div class="progress middle">
+                                    <div class="progress-bar">
+                                    </div>
+                                </div>
+
+                                <span class="level">高</span>
+                                 <div class="progress high">
+                                     <div class="progress-bar">
+                                     </div>
+                                 </div>
+                                <a href="javascript:" class="change-password">修改密码</a>
+                            </div>
+                        </div>
+
+                        <div class="binding-auth">
+                            <label class="form-label fw-b">绑定认证信息：</label>
+                            <div class="auth-wrapper">
+                                <div class="auth-icon pos-name"></div>
+                                <a href="javascript:" class="auth-view">查看</a>
+                                <span class="auth-msg">实名已认证</span>
+                            </div>
+                            <div class="auth-wrapper">
+                                <div class="auth-icon pos-email disabled"></div>
+                                <a href="javascript:" class="auth-link">邮箱未认证</a>
+                            </div>
+
+                            <div class="auth-wrapper">
+                                <div class="auth-icon pos-ent"></div>
+                                <a href="javascript:" class="auth-view">查看</a>
+                                <span class="auth-msg">个人钱包已开通</span>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>   
+       </div>     
+
+        <div ms-include-src="'vip-center-footer.html'"></div> 
+
+        <script>
+            require([
+                "button/avalon.button",
+                "dialog/avalon.dialog",
+                "checkboxlist/avalon.checkboxlist",
+                "pager/avalon.pager",
+                "dropdown/avalon.dropdown",
+                "browser/avalon.browser",
+                "textbox/avalon.textbox",
+                "spinner/avalon.spinner"
+                ], function() {
+                avalon.define("demo", function(vm) {
+                    vm.message = "笑傻了吧！！";
+                    vm.namee = avalon.browser.name+' '+avalon.browser.version;
+                    vm.show = function( id ){
+                        avalon.vmodels[id].toggle = true;
+                    }
+
+                    vm.pager = {
+                        // currentPage: 8,
+                        totalItems: 120,
+                        showJumper: true,
+                        showPages:5
+                    }
+
+                    vm.dropdown = {
+                        width: "160",
+                        listWidth:"160"
+                    };
+
+                    vm.$spinnerOpts = {
+                        min: 0,
+                        width:25
+                    };
+
+
+                    vm.$skipArray = ["pager"];
+                    vm.check1 = ["2"];
+                })
+                avalon.scan()
+            })
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+        <link rel="stylesheet" href="css/layout.css">
+
+        <script src="vendor/avalon/avalon.js"></script>
+    </head>
+    <body ms-controller="demo" >
+        <div ms-include-src="'vip-center-header.html'"></div>
+        <div class="main-frame">
+            <div ms-include-src="'vip-center-left.html'"></div>
+            <div class="right-frame">
+                <div class="ui-member-center-warning">
+                    <i>&#xe611;</i>
+                    <span> &nbsp;您还未完成会员实名认证，认证后将享受更多权益。</span>
+                    <a href="javascript:" class="setting">立即认证</a>
+                    <i class="ui-member-center-close">&#xe617;</i>
+                </div>
+
+                <div class="member-center-personal-info ui-panel mg-t10">
+                    <div class="avater-wrapper ui-member-center-icon-bg boy-avatar"> 
+                    </div>
+                    <div class="left mg-l20 mg-t13">
+                        <p class="fs-16 fw-b">Boy</p>
+                        <p class="color-value mg-t7"><span class="color-key">所在公司：</span>您还未注册或加入公司</p>
+                        <div class="mg-t13">
+                            <div class="left">
+                                <a href="javascript:">账户管理</a>
+                                <span class="break-line">|</span>
+                                <a href="javascript:">修改密码</a>
+                                <span class="break-line">|</span>
+                                <a href="javascript:">信息认证：</a>
+                            </div>
+                            
+                            <div class="icon-wrapper">
+                                <a class="ui-member-center-icon-bg mobile active" href="#"></a>
+                                <a class="ui-member-center-icon-bg auth"></a>
+                                <a class="ui-member-center-icon-bg email"></a> 
+                                <a class="ui-member-center-icon-bg medal"></a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+
+                <div class="member-center-personal-info ui-panel mg-t10">
+                    <div class="avater-wrapper ui-member-center-icon-bg girl-avatar"> 
+                    </div>
+                    <div class="left mg-l20 mg-t13">
+                        <p class="fs-16 fw-b">Girl</p>
+                        <p class="color-value mg-t7"><span class="color-key">所在公司：</span>您还未注册或加入公司</p>
+                        <div class="mg-t13">
+                            <div class="left">
+                                <a href="javascript:">账户管理</a>
+                                <span class="break-line">|</span>
+                                <a href="javascript:">修改密码</a>
+                                <span class="break-line">|</span>
+                                <a href="javascript:">信息认证：</a>
+                            </div>
+                            
+                            <div class="icon-wrapper">
+                                <a class="ui-member-center-icon-bg mobile"></a>
+                                <a class="ui-member-center-icon-bg auth"></a>
+                                <a class="ui-member-center-icon-bg email"></a> 
+                                <a class="ui-member-center-icon-bg medal"></a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <table width="100%" class="member-center-table mg-t20">
+                    <tr>
+                        <td width="336">
+                            <div class="col-wrapper">
+                                <i class="icon-title walllet"></i><strong class="icon-cnt">掌柜钱包</strong>
+                            </div>
+                        </td>
+                        <td width="301">
+                            <div class="col-wrapper">
+                                <i class="icon-title info"></i><strong class="icon-cnt">会员积分</strong>
+                            </div>
+                        </td>    
+                        <td rowspan="2" class="bg-white">
+                            <img src="/images/qr.png" class="mg-l60"/>
+                            <p class="fwh-text">微信服务号</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="bg-white pd20-23">
+                            <!-- <div class="top-bank-wrapper">
+                                <img src="/images/bank_logo/card_logo.png" class="bank-logo"></img>
+                                <span class="bank-name">宁波通商银行</span>
+                            </div>
+                            <div class="bottom-wrapper">
+                                <span class="rest-money">
+                                    <span class="left">40</span>
+                                    <span class="zeros">.00</span><span class="yuan"> 元</span>
+                                </span>
+
+                                <div class="btn-wrapper">
+                                    <a ms-widget="button" data-button-size="small" class="mg-r2">提现</a>
+                                    <a ms-widget="button" data-button-size="small">明细</a>
+                                </div>
+                            </div> -->
+                            近期上线,敬请期待！
+                        </td>
+                        <td class="point-col">
+                            <p class="your-point">你的积分：<span class="color-orange">20 &nbsp;</span>分<a href="javascript:" class="mg-l12">明细</a></p>
+
+                            <p class="mg-t14">查询下单送积分</p>
+                            <p class="mg-t10">试试手气，1个积分就换了</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="ui-panel ui-member-center-order">
+                    <div class="ui-panel-hd">
+                        <i class="ui-member-center-icon-bg my-order"></i><strong class="icon-cnt">我的订单</strong>
+                    </div>
+
+                    <div class="ui-panel-bd pd0">
+                        <table class="member-center-order-table">
+                            <tr>
+                                <td>待接受订单</td>
+                                <td>待费用确认</td>
+                                <td>待支付订单</td>
+                                <td>待评价订单</td>
+                            </tr>
+
+                            <tr class="split">
+                                <td><a href="javascript:">12</a></td>
+                                <td><a href="javascript:">12</a></td>
+                                <td><a href="javascript:">12</a></td>
+                                <td><a href="javascript:">12</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="member-special-services">
+                </div>
+            </div>   
+       </div>     
+        <div ms-include-src="'vip-center-footer.html'"></div> 
+
+        <script>
+            require([
+                "button/avalon.button",
+                "dialog/avalon.dialog",
+                "checkboxlist/avalon.checkboxlist",
+                "pager/avalon.pager",
+                "dropdown/avalon.dropdown",
+                "browser/avalon.browser",
+                "textbox/avalon.textbox",
+                "spinner/avalon.spinner"
+                ], function() {
+                avalon.define("demo", function(vm) {
+                    vm.message = "笑傻了吧！！";
+                    vm.namee = avalon.browser.name+' '+avalon.browser.version;
+                    vm.show = function( id ){
+                        avalon.vmodels[id].toggle = true;
+                    }
+
+                    vm.pager = {
+                        // currentPage: 8,
+                        totalItems: 120,
+                        showJumper: true,
+                        showPages:5
+                    }
+
+                    vm.dropdown = {
+                        width: "120",
+                        listWidth:"120"
+                    };
+
+                    vm.$spinnerOpts={
+                        min: 0,
+                        width:25
+                    };
+
+
+                    vm.$skipArray = ["pager"];
+                    vm.check1 = ["2"];
+                })
+                avalon.scan()
+            })
+        </script>
+
+    </body>
+</html>

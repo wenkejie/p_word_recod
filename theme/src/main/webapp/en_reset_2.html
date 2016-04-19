@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/en-register.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register">
+    <div ms-include-src="'en_register_header.html'"></div>
+    
+    <div class="en-register-bd-wrapper">
+        <div class="en-register-bd">
+            <p class="en-rg-form-prompt"><i>&#xe611;</i> After you change your password, you'll be able to buy or sell on eBay just like before.</p>
+
+            <div class="en-rg-form-line">
+                <label class="en-rg-label">New password:</label>
+                <div class="ui-form-group">
+                    <input type="text" class="ui-input-large" placeholder="">
+                </div>
+            </div>
+
+            <div class="en-rg-form-line">
+                <label class="en-rg-label">Confirm new password:</label>
+                <div class="ui-form-group">
+                    <input type="text" class="ui-input-large" placeholder="">
+                </div>
+            </div>
+
+
+            <div class="en-agreement">
+
+                <div class="mg-t30">
+                    <a href="javascript:" class="create-btn">Submit</a>
+                </div>  
+            </div>
+
+
+        </div>
+    </div>
+
+    <div ms-include-src="'en_register_footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

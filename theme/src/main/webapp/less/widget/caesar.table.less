@@ -1,0 +1,119 @@
+// ===================================================
+// ================= 表格控件 ========================
+// ===================================================
+.cui-table{
+  table-layout: fixed;
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  thead{
+    background: #eee;
+  }
+
+  th{
+    height: 32px;line-height: 32px;padding: 0 8px;
+    border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;
+    font-weight: 700;color: #666;text-align: left;
+  }
+
+  td{
+    padding:10px 8px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+
+  .split{
+    background: #fafafa;
+  }
+
+
+}
+
+
+// ================= 无数据表格 ======================
+.cui-table-nodata{
+  
+}
+
+.cui-table-nodata-content{
+  padding:80px 0 80px 0;
+  text-align: center;
+  font-size: 18px;color: #ddd;
+  i{
+    margin-right: 5px;
+    font-size: 20px;
+  }
+}
+
+.cui-table-nodata-special{
+  .cui-table-nodata-content{
+    height: 48px;line-height: 48px;
+    padding: 0 10px;margin-top: 20px;
+    background: #fdf4e1;border: 1px solid #d5a880;border-radius: 3px;
+    color: #a55825;text-align: left;font-size: 14px;font-weight: bold;
+    i{
+      font-size: 16px;
+    }
+  }
+}
+
+
+// ===================================================
+// ================= 有边框表格 ======================
+// ===================================================
+.cui-table-bordered{
+  border-left: 1px solid #ccc;border-right: 1px solid #ccc;
+}
+
+// ===================================================
+// ================= 鼠标hover =======================
+// ===================================================
+.cui-table-hover{
+    tbody{
+     tr:hover{
+      background:#fff8f0;
+    } 
+  }  
+}
+
+// ===================================================
+// ================= 紧缩型表格 ======================
+// ===================================================
+.cui-table-condensed{
+  th{
+    height: 24px;line-height: 24px;
+  }
+  td{
+    padding:5px 3px;
+  }
+}
+
+
+// ===================================================
+// ================= 带排序表格 ======================
+// ===================================================
+.cui-table-sort{
+  .th-sort{
+    cursor: pointer;
+    &:hover,&.hover{
+      background: #e3e3e3;
+    }
+  }
+  .th-info{
+    display: inline-block;*display: inline;*zoom:1;
+    vertical-align: middle;
+  }
+  .cui-sort-control{
+    display: inline-block;*display: inline;*zoom:1;
+    width: 8px;height: 11px;margin-left: 5px;
+    vertical-align: middle;
+    background: url(../../images/widget/caesar.png);
+    background-position: -10px -6px;
+    &.desc{
+      background-position: -30px -6px;
+    }
+    &.asc{
+      background-position: -20px -6px;
+    }
+  }
+}

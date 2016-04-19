@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+        <link rel="stylesheet" href="css/layout.css">
+        <script src="vendor/avalon/avalon.js"></script>
+    </head>
+    <body ms-controller="demo" >
+        <div ms-include-src="'vip-center-header.html'"></div>
+        <div class="main-frame">
+            <div ms-include-src="'vip-center-left.html'"></div>
+            <div class="right-frame">
+                <div class="persional-info-export-wrapper">
+                    <h3 class="persional-info-export-hd">
+                        企业资料
+                    </h3>
+
+                    <div class="persional-info-export-detail ps-r">
+                        <div class="user-info user-info-no-border">
+                        	<h4 class="org-info-module-hd">企业基本资料</h4>
+                            <div class="form-group">
+                                <label class="form-label"><span class="required mg-r5">*</span>企业名称</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="">
+                                    <i class="icon-org-info">&#xe61c;</i>
+                                    <i class="icon-org-info">&#xe61b;</i>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">英文名称</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">省市区域</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">详细地址</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="">
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div class="user-info user-info-no-border">
+                        	<h4 class="org-info-module-hd m-t0">企业联系信息</h4>
+                            <div class="form-group">
+                                <label class="form-label"><span class="required mg-r5">*</span>联系人</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"><span class="required mg-r5">*</span>手机号码</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">联系电话</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large w-60" placeholder="区号">
+                                    <input type="text" class="ui-input-large w-140 mg-l4" placeholder="电话号码">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">电子邮箱</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">职位</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">邮编</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-group mg-t30">
+                                <label class="form-label">&nbsp;</label>
+                                <div class="form-input">
+                                   <a ms-widget="button" data-button-size="large" data-button-width="62" data-button-color="primary">保存</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why-org-attestation">
+                        	<h3>为什么要企业资质认证</h3>
+                            <p>1、保证企业与供应商之间的交易</p>
+                            <p>2、让更多更优质的供应商为您提供专业的服务</p>
+                            <p>3、如果您是物流服务企业可以申请为咖狗供应商</p>
+                            <div class="why-org-attestation-link"><a href="#">企业资质认证</a></div>
+                        </div>
+                    </div>    
+                </div>
+            </div>   
+       </div>     
+
+        <div ms-include-src="'vip-center-footer.html'"></div> 
+
+        <script>
+            require([
+                "button/avalon.button",
+                "dialog/avalon.dialog",
+                "checkboxlist/avalon.checkboxlist",
+                "pager/avalon.pager",
+                "dropdown/avalon.dropdown",
+                "browser/avalon.browser",
+                "textbox/avalon.textbox",
+                "spinner/avalon.spinner"
+                ], function() {
+                avalon.define("demo", function(vm) {
+                    vm.message = "笑傻了吧！！";
+                    vm.namee = avalon.browser.name+' '+avalon.browser.version;
+                    vm.show = function( id ){
+                        avalon.vmodels[id].toggle = true;
+                    }
+
+                    vm.pager = {
+                        // currentPage: 8,
+                        totalItems: 120,
+                        showJumper: true,
+                        showPages:5
+                    }
+
+                    vm.dropdown = {
+                        width: "160",
+                        listWidth:"160"
+                    };
+
+                    vm.$spinnerOpts = {
+                        min: 0,
+                        width:25
+                    };
+
+
+                    vm.$skipArray = ["pager"];
+                    vm.check1 = ["2"];
+                })
+                avalon.scan()
+            })
+        </script>
+
+    </body>
+</html>

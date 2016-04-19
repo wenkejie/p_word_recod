@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+        <link rel="stylesheet" href="css/layout.css">
+        <script src="vendor/avalon/avalon.js"></script>
+        <script>
+            require(["button/avalon.button","dialog/avalon.dialog","pager/avalon.pager"], function(avalon) {
+                avalon.define("test", function(vm) {
+                    vm.opts = {
+                        title: '邀请成员',
+                        confirmName: "发送邀请"
+                    };
+
+                    vm.dropdown = {
+                        width: "120",
+                        listWidth:"120"
+                    };
+
+                })
+                avalon.scan()
+            })
+        </script>
+    </head>
+    <body ms-controller="test" >
+        <div ms-include-src="'header_center.html'"></div>
+        <div class="main-frame">
+            <div ms-include-src="'vip-center-left.html'"></div>
+            <div class="right-frame">
+               <div class="ui-help-center-wrapper">
+
+                    <div class="search-wrapper">
+
+                        <div class="clearfix">
+                            <div class="ui-help-center-input-wrapper">
+                                <input type="text" class="ui-help-center-input" placeholder='请输入您的问题或关键词，如"如何修改密码"'/>
+                            </div>
+
+                            <div class="ui-help-center-btn-wrapper">
+                                <a href="javascript:" class="ui-help-center-search-btn">搜索</a>
+                            </div>
+                        </div>
+
+                        <ul class="ui-help-center-faq">
+                            <li>
+                                <span class="ui-help-center-question">热门搜索：</span>
+                            </li>
+
+                            <li>
+                                <span class="ui-help-center-circle"></span>
+                                <span class="ui-help-center-question">如何修改密码</span>
+                            </li>
+
+                            <li>
+                                <span class="ui-help-center-circle"></span>
+                                <span class="ui-help-center-question">想要更换绑定手机</span>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+
+
+
+                    <div class="ui-help-center-items-wrapper">
+
+                        <p class="nav-wrapper">
+                              <span class="nav-level">我是买家</span>
+                              <span> <i class="arrow"> &#xe61a;</i> </span>
+
+                              <span class="nav-level-behind">交易评价</span>
+                         </p>
+
+
+                       <div class="ui-help-center-question-item">
+                            <h3 class="title">
+                                <span class="ui-help-center-circle"></span>
+                                <span class="ui-help-center-question">购买宝贝后如何<span class="color-orange">评价</span>？</span>
+                            </h3>
+
+                            <div class="short-desc-wrapper">
+                                <p class="short-desc">
+                                    <span class="color-orange mg-r4">A</span>
+
+                                    1.充值仅支持快捷支付储蓄卡进行<span class="color-orange-normal">评价</span>充值
+                                    2.充值仅支持快捷支付储蓄卡进行充值
+                                    3.充值仅支持快捷支付储蓄卡进行充值
+                                    4.充值仅支持快捷支付储蓄卡进行充值
+                                </p>
+                                
+                                <a href="javascript:" class="view-detail">
+                                查看详情
+                                </a>
+                            </div>
+                       </div>
+
+                       <div class="ui-help-center-question-item">
+                            <h3 class="title">
+                                <span class="ui-help-center-circle"></span>
+                                <span class="ui-help-center-question">购买宝贝后如何<span class="color-orange">评价</span>？</span>
+                            </h3>
+
+                            <div class="short-desc-wrapper">
+                                <p class="short-desc">
+                                    <span class="color-orange mg-r4">A</span>
+
+                                    1.充值仅支持快捷支付储蓄卡进行<span class="color-orange-normal">评价</span>充值
+                                    2.充值仅支持快捷支付储蓄卡进行充值
+                                    3.充值仅支持快捷支付储蓄卡进行充值
+                                    4.充值仅支持快捷支付储蓄卡进行充值
+                                </p>
+                                
+                                <a href="javascript:" class="view-detail">
+                                查看详情
+                                </a>
+                            </div>
+                       </div>
+
+                       <div class="ui-help-center-question-item">
+                            <h3 class="title">
+                                <span class="ui-help-center-circle"></span>
+                                <span class="ui-help-center-question">购买宝贝后如何<span class="color-orange">评价</span>？</span>
+                            </h3>
+
+                            <div class="short-desc-wrapper">
+                                <p class="short-desc">
+                                    <span class="color-orange mg-r4">A</span>
+
+                                    1.充值仅支持快捷支付储蓄卡进行<span class="color-orange-normal">评价</span>充值
+                                    2.充值仅支持快捷支付储蓄卡进行充值
+                                    3.充值仅支持快捷支付储蓄卡进行充值
+                                    4.充值仅支持快捷支付储蓄卡进行充值
+                                </p>
+                                
+                                <a href="javascript:" class="view-detail">
+                                查看详情
+                                </a>
+                            </div>
+                       </div>
+
+                       <div class="ui-help-center-question-item">
+                            <h3 class="title">
+                                <span class="ui-help-center-circle"></span>
+                                <span class="ui-help-center-question">购买宝贝后如何<span class="color-orange">评价</span>？</span>
+                            </h3>
+
+                            <div class="short-desc-wrapper">
+                                <p class="short-desc">
+                                    <span class="color-orange mg-r4">A</span>
+
+                                    1.充值仅支持快捷支付储蓄卡进行<span class="color-orange-normal">评价</span>充值
+                                    2.充值仅支持快捷支付储蓄卡进行充值
+                                    3.充值仅支持快捷支付储蓄卡进行充值
+                                    4.充值仅支持快捷支付储蓄卡进行充值
+                                </p>
+                                
+                                <a href="javascript:" class="view-detail">
+                                查看详情
+                                </a>
+                            </div>
+                       </div>
+
+                       <div class="ui-help-center-question-item">
+                            <h3 class="title">
+                                <span class="ui-help-center-circle"></span>
+                                <span class="ui-help-center-question">购买宝贝后如何<span class="color-orange">评价</span>？</span>
+                            </h3>
+
+                            <div class="short-desc-wrapper">
+                                <p class="short-desc">
+                                    <span class="color-orange mg-r4">A</span>
+
+                                    1.充值仅支持快捷支付储蓄卡进行<span class="color-orange-normal">评价</span>充值
+                                    2.充值仅支持快捷支付储蓄卡进行充值
+                                    3.充值仅支持快捷支付储蓄卡进行充值
+                                    4.充值仅支持快捷支付储蓄卡进行充值
+                                </p>
+                                
+                                <a href="javascript:" class="view-detail">
+                                查看详情
+                                </a>
+                            </div>
+                       </div>
+                    </div>
+
+                    <div class="ui-help-center-pager-wrapper">
+                        <div ms-widget="pager"></div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        <div ms-include-src="'vip-center-footer.html'"></div> 
+    </body>
+</html>

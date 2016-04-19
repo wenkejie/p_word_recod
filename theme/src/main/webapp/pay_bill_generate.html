@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="demo">
+<div ms-include-src="'vip-center-header.html'"></div>
+<div class="main-frame"  ms-widget="uploader, $, $opts">
+		<div>
+			<h2 class="pay-bill-hd">生成收款单</h2>
+			<table class="pay-bill-table">
+					<tr>
+						<th>收款方</th>
+						<th>金额</th>
+					</tr>
+
+					<tr>
+						<td class="fs-14">手动阀的手法飞儿飞飞</td>
+						<td><p class="price">CNY &nbsp;&nbsp;324234</p></td>
+					</tr>
+			</table>
+		</div>
+
+		<div class="pay-bill-info">
+			<div class="form-group">
+				<label class="form-label">发票号码</label>
+				<div class="form-input">
+					<input type="text" class="ui-input mg-l10"/>
+				</div>
+			</div>
+
+		<!-- 	<div class="form-group mg-b8">
+				<label class="form-label">&nbsp;</label>
+				<div class="form-input">
+					<img src="" width="300px" height="150px" class="mg-l10" alt="发票"></img>
+				</div>
+
+				<div class="form-input">
+					<div class="upload-wrapper">
+						<div class="upload-inner">
+							<div id="browse-btn-dc" class="add ui-upload-btn" ms-class="disabled: files.length >= maxFileCount">添加外汇购汇联</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+
+			<div class="form-group">
+				<label class="form-label">最迟收款时间</label>
+				<div class="form-input">
+					<input type="text" class="ui-input mg-l10"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="form-label">备注说明</label>
+				<div class="form-input">
+					<textarea class="ui-textarea mg-l10 w-380" rows="4"></textarea>
+				</div>
+			</div>
+
+		</div>
+		
+		<div>
+			<h3 class="related-order-hd">关联订单</h3>
+			
+			<div class="ui-panel mg-t10 paybill-order-info">
+					<div class="ui-panel-hd fs-12">
+						<label>
+							订单号：DFDFDFDF123123123
+						</label>
+
+						<label for="order-time" class="mg-l25">
+							交易时间：2014-12-12 &nbsp;15.10
+						</label>
+					</div>
+
+					<div class="ui-panel-bd pd0">
+						<table class="order-info-table">
+							<tr>
+								<td rowspan="2" width="343">
+									<div class="col-1">
+										<div class="left">
+											<img src="images/MU.png" class="hipping-compay-logo dp-b"></img>
+											<p>LOGO</p>
+										</div>
+										<div class="left mg-l21">
+											<p class="place-name">宁波 - 洛杉矶</p>
+											<p class="mg-t3">提单号：<span class="tdh">SADDSDCFSDC231231</span></p>
+										</div>
+									</div>
+								</td>
+								<td rowspan="1" width="162">
+									<div class="col-2">
+										<div class="ui-tag left">20GP</div> x2
+									</div>
+								</td>
+								<td rowspan="2" width="265">
+									<div class="col-3 ta-c">
+										<p class="price">CNY &nbsp;&nbsp;324234</p>
+									</div>
+								</td>
+								<td rowspan="2">
+									<div class="col-4 ta-c">
+										<a href="javascript:void(0)">详情</a>
+										<span class="split">|</span>
+										<a href="javascript:void(0)">移除</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-2">
+										<div class="ui-tag left">20GP</div> x1
+									</div>
+								</td>
+							</tr>
+						</table>
+				    </div>
+			</div>
+
+			<div class="ui-panel mg-t10 paybill-order-info">
+					<div class="ui-panel-hd fs-12">
+						<label>
+							订单号：DFDFDFDF123123123
+						</label>
+
+						<label for="order-time" class="mg-l25">
+							交易时间：2014-12-12 &nbsp;15.10
+						</label>
+					</div>
+
+					<div class="ui-panel-bd pd0">
+						<table class="order-info-table">
+							<tr>
+								<td rowspan="2" width="343">
+									<div class="col-1">
+										<div class="left">
+											<img src="images/MU.png" class="hipping-compay-logo dp-b"></img>
+											<p>LOGO</p>
+										</div>
+										<div class="left mg-l21">
+											<p class="place-name">宁波 - 洛杉矶</p>
+											<p class="mg-t3">提单号：<span class="tdh">SADDSDCFSDC231231</span></p>
+										</div>
+									</div>
+								</td>
+								<td rowspan="1" width="162">
+									<div class="col-2">
+										<div class="ui-tag left">20GP</div>x2
+									</div>
+								</td>
+								<td rowspan="2" width="265">
+									<div class="col-3 ta-c">
+										<p class="price">CNY &nbsp;&nbsp;324234</p>
+									</div>
+								</td>
+								<td rowspan="2">
+									<div class="col-4 ta-c">
+										<a href="javascript:void(0)">详情</a>
+										<span class="split">|</span>
+										<a href="javascript:void(0)">移除</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-2">
+										<div class="ui-tag left">20GP</div>x1
+									</div>
+								</td>
+							</tr>
+						</table>
+				    </div>
+			</div>
+
+			<div class="mg-t10">
+				<button ms-widget="button" class="mg-r5" data-button-color="primary" data-button-size="large">生成支付单</button>
+			</div>
+		</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"dialog/avalon.dialog",
+			"checkboxlist/avalon.checkboxlist",
+			"pager/avalon.pager",
+			"uploader/avalon.uploader",
+			"dropdown/avalon.dropdown",
+			"browser/avalon.browser",
+			"textbox/avalon.textbox",
+			"spinner/avalon.spinner"
+			], function() {
+			avalon.define("demo", function(vm) {	
+				vm.message = "笑傻了吧！！";
+				vm.namee = avalon.browser.name+' '+avalon.browser.version;
+				vm.show = function( id ){
+					avalon.vmodels[id].toggle = true;
+				}
+
+				vm.pager = {
+					// currentPage: 8,
+					totalItems: 120,
+					showJumper: true,
+					showPages:5
+				}
+
+				vm.$spinnerOpts={
+					min: 0,
+					width:25
+				};
+
+				vm.$opts = {
+					action: 'post.php',
+					browseButton: 'browse-btn-dc',
+					maxFileCount: 1,
+					maxFileSize: 1048576000,
+					onFileSizeErr: function(fileName){
+						alert('自定义信息：' + fileName + '大小超过1M啦~')
+					}
+				};
+
+				vm.$skipArray = ["pager"];
+				vm.check1 = ["2"];
+			})
+
+			avalon.define("search", function(vm) {
+				vm.dropdown = {
+					width: "140",
+					listWidth:"140"
+				};	
+			})
+
+			avalon.define("demo", function(vm) {
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+			})
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

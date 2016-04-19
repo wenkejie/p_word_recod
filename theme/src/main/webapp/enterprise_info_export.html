@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+        <link rel="stylesheet" href="css/layout.css">
+        <script src="vendor/avalon/avalon.js"></script>
+    </head>
+    <body ms-controller="demo" >
+        <div ms-include-src="'vip-center-header.html'"></div>
+        <div class="main-frame">
+            <div ms-include-src="'vip-center-left.html'"></div>
+            <div class="right-frame">
+                <div class="enterprise-info-export-wrapper">
+                    <h3 class="enterprise-info-export-hd">
+                        企业基本信息<span class="ispass pass">已认证</span>
+                        <span class="last-login-time">上次登录时间：2015-01-12 15:30</span>
+                    </h3>
+
+                    <div class="enterprise-info-export-detail">
+                        <div class="user-info">
+                            <div class="form-group">
+                                <label class="form-label">会员身份</label>
+                                <div class="form-input">
+                                    <span class="form-text"><strong>买家</strong></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">企业中文名称</label>
+                                <div class="form-input">
+                                    <span class="form-text"><strong>奥林科技</strong></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">企业英文名称</label>
+                                <div class="form-input">
+                                    <span class="form-text"><strong>Ao Ling Ke Ji</strong></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">企业性质</label>
+                                <div class="form-input">
+                                    <select ms-widget="dropdown,aa,$optaa">
+                                        <option>民营企业(含股份公司,有限公司)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">企业类型</label>
+                                <div class="form-input">
+                                    <ul class="enterprise-type-wrapper">
+                                        <li><label for="c1"><input type="checkbox" id="c1"> 工厂</label></li>
+
+                                        <li><label for="c2"><input type="checkbox" id="c2"> 贸易公司</label></li>
+
+                                        <li><label for="c3"><input type="checkbox" id="c3"> 船公司</label></li>
+
+                                        <li><label for="c4"><input type="checkbox" id="c4"> 货代</label></li>
+
+                                        <li><label for="c5"><input type="checkbox" id="c5"> 船代</label></li>
+
+                                        <li><label for="c6"><input type="checkbox" id="c6"> 车队</label></li>
+
+                                        <li><label for="c7"><input type="checkbox" id="c7"> 仓储</label></li>
+
+                                        <li><label for="c8"><input type="checkbox" id="c8"> 报关行</label></li>
+
+                                        <li><label for="c9"><input type="checkbox" id="c9"> 码头</label></li>
+
+                                        <li><label for="c10"><input type="checkbox" id="c10"> 其他</label></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+
+                    <h3 class="enterprise-info-export-hd">
+                        企业联系信息
+                    </h3>
+
+                    <div class="enterprise-info-export-detail">
+                        <div class="user-info">
+                            <div class="form-group">
+                                <label class="form-label">省市区域</label>
+                                <div class="form-input">
+                                    <select ms-widget="dropdown,aa,$optaa">
+                                        <option>浙江省宁波市镇海区</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">详细地址</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="日丽中路555号华茂总部壹号">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">联系人</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="张聪">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">联系电话</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="13000000000">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">电子邮箱</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="dsfaf@qq.com">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">邮编</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="3153434">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">&nbsp;</label>
+                                <div class="form-input">
+                                   <a ms-widget="button" data-button-size="big" data-button-color="primary">保存</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>   
+       </div>     
+
+        <div ms-include-src="'vip-center-footer.html'"></div> 
+
+        <script>
+            require([
+                "button/avalon.button",
+                "dialog/avalon.dialog",
+                "checkboxlist/avalon.checkboxlist",
+                "pager/avalon.pager",
+                "dropdown/avalon.dropdown",
+                "browser/avalon.browser",
+                "textbox/avalon.textbox",
+                "spinner/avalon.spinner"
+                ], function() {
+                avalon.define("demo", function(vm) {
+                    vm.message = "笑傻了吧！！";
+                    vm.namee = avalon.browser.name+' '+avalon.browser.version;
+                    vm.show = function( id ){
+                        avalon.vmodels[id].toggle = true;
+                    }
+
+                    vm.pager = {
+                        // currentPage: 8,
+                        totalItems: 120,
+                        showJumper: true,
+                        showPages:5
+                    }
+
+                    vm.$optaa = {
+                        width: "250",
+                        listWidth:"250"
+                    };
+					vm.dropdown = {
+						width: "120",
+						listWidth:"120"
+					};
+                    vm.$spinnerOpts = {
+                        min: 0,
+                        width:25
+                    };
+
+
+                    vm.$skipArray = ["pager"];
+                    vm.check1 = ["2"];
+                })
+                avalon.scan()
+            })
+        </script>
+
+    </body>
+</html>

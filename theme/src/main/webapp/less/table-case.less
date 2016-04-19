@@ -1,0 +1,106 @@
+// ===================================================
+// ================= p项目表格容器 ===================
+// ===================================================
+
+.pui-table-Layout{
+	
+}
+
+.pui-table-title{
+	padding: 10px 0;
+	font-weight: bold;
+}
+
+.pui-table-case{
+	table-layout: fixed;
+	width: 100%;
+	text-align: left;
+	th{
+		padding: 10px 0;
+	}
+	tr{
+		border-bottom: 1px solid #eee;
+	}
+	td{
+		padding: 25px 0;
+		border-top:1px solid #eee;border-left:1px solid #eee;
+		vertical-align: middle;
+	}
+	.tr-last{
+		border-bottom: none;
+	}
+	.td-first{
+		border-left: none;
+	}
+	.table-case-line{
+		border-top:2px solid #ccc;
+		th{
+			padding: 0;
+		}
+	}
+}
+
+
+// 认证 展示区
+.certify-show{
+	&:extend(.clearfix all);
+	li{
+		float: left;*display: inline;*width: 63px;
+		height: 99px;margin-top: 10px;
+		text-align: center;
+	}
+	.separate{
+		height: 62px;line-height: 62px;padding: 0 30px 37px 30px;*width: 14px;
+		color: #ccc;font-size: 18px;
+	}
+}
+
+
+
+.img-certify{
+	display: block;
+	width: 63px;height: 63px;margin: 0 auto;
+	background: url(../images/rights.png);_background: url(../images/rights-ie6.png);
+	&.id-card{
+		background-position: -6px -5px;
+	}
+	&.business{
+		background-position: -84px -5px;
+	}
+	&.organization{
+		background-position: -162px -5px;	
+	}
+	&.tax{
+		background-position: -240px -5px;	
+	}
+	&.bank{
+		background-position: -318px -5px;	
+	}
+
+}
+
+.certify-info{
+	width: 103px;
+	margin: 0 -20px;
+}
+
+
+
+
+// 认证级别权限
+.verify-power-area{
+	padding-left: 70px;
+}
+
+.verify-power-list{
+	padding-bottom: 15px;
+	li{
+		color: #666;
+	}
+
+	.list-dist{
+		display: inline-block;*display: inline;
+		vertical-align: middle;
+		font-family: "rei";color: #666;
+	}
+}

@@ -1,0 +1,42 @@
+.cui-quickaction-edit {
+  position: relative;
+}
+.cui-quickaction-edit-text {
+  cursor: pointer;
+}
+.cui-quickaction-edit-box {
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  padding: 4px 6px;
+  border: #3580e5 1px solid;
+  border-radius: 3px;
+  box-shadow: 0 0 10px #abcfff;
+  width: 230px;
+  z-index: 999;
+  background: #fff;
+  display: none;
+}
+.cui-quickaction-delete {
+  position: relative;
+  display: inline;
+}
+.cui-quickaction-delete-box {
+  position: absolute;
+  top: -8px;
+  right: 0;
+  padding: 4px 6px;
+  border: #d95551 1px solid;
+  border-radius: 3px;
+  box-shadow: 0 0 10px #fcb5b3;
+  width: 200px;
+  z-index: 999;
+  background: #fff;
+  display: none;
+}
+.cui-quickaction-delete-box .cui-quickaction-delete-text {
+  padding: 0 10px;
+  color: #666;
+}
+
+/*# sourceMappingURL=maps/caesar.quickaction.css.map */

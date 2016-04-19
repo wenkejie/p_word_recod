@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+        <link rel="stylesheet" href="css/layout.css">
+        <script src="vendor/avalon/avalon.js"></script>
+    </head>
+    <body ms-controller="demo" >
+        <div ms-include-src="'vip-center-header.html'"></div>
+        <div class="main-frame">
+            <div ms-include-src="'vip-center-left.html'"></div>
+            <div class="right-frame">
+                <div class="persional-info-export-wrapper">
+                    <h3 class="persional-info-export-hd">
+                        基本信息
+                    </h3>
+
+                    <div class="persional-info-export-detail">
+                        <div class="user-info">
+                            <div class="form-group">
+                                <label class="form-label">咖狗账号</label>
+                                <div class="form-input">
+                                    <span class="form-text"><strong class="color-orange">187612521827</strong></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">真实姓名</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="施齐">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">昵称</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large" value="Viola">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">头像</label>
+                                <div class="form-input ps-r">
+                                    <img src="images/avatar.png" height="124" width="124">
+                                    <a href="javascript:" class="change-avatar-link">更换头像</a>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">性别</label>
+                                <div class="form-input">
+                                    <div class="form-text">
+                                        <label for="boy">
+                                            <input type="radio" id="boy">
+                                             男生
+                                        </label>
+
+                                        <label for="girl" class="mg-l10">
+                                            <input type="radio" id="girl">
+                                            女生
+                                        </label>
+                                     </div>   
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">手机号码</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large">
+                                </div>
+                            </div>
+
+                            <div class="form-group mg0">
+                                <label class="form-label">所在公司</label>
+                                <span class="form-text">宁波天时利国际货运代理有限公司  <span class="lighter-grey">(未认证)</span></span>
+                            </div>
+
+                            <div class="form-group mg0">
+                                <label class="form-label">&nbsp;</label>
+                                <div class="form-input">
+                                    <a href="#">企业认证</a>
+                                    <span class="split">|</span>
+                                    <a href="#">供应商申请</a>
+                                    <span class="split">|</span>
+                                    <a href="#">加入已有公司</a>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">联系方式</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">电子邮箱</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">联系地址</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">职位</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">QQ</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">微信</label>
+                                <div class="form-input">
+                                    <input type="text" class="ui-input-large">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group mg-t30">
+                                <label class="form-label">&nbsp;</label>
+                                <div class="form-input">
+                                   <a ms-widget="button" data-button-size="large" data-button-width="62" data-button-color="primary">保存</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>   
+       </div>     
+
+        <div ms-include-src="'vip-center-footer.html'"></div> 
+
+        <script>
+            require([
+                "button/avalon.button",
+                "dialog/avalon.dialog",
+                "checkboxlist/avalon.checkboxlist",
+                "pager/avalon.pager",
+                "dropdown/avalon.dropdown",
+                "browser/avalon.browser",
+                "textbox/avalon.textbox",
+                "spinner/avalon.spinner"
+                ], function() {
+                avalon.define("demo", function(vm) {
+                    vm.message = "笑傻了吧！！";
+                    vm.namee = avalon.browser.name+' '+avalon.browser.version;
+                    vm.show = function( id ){
+                        avalon.vmodels[id].toggle = true;
+                    }
+
+                    vm.pager = {
+                        // currentPage: 8,
+                        totalItems: 120,
+                        showJumper: true,
+                        showPages:5
+                    }
+
+                    vm.dropdown = {
+                        width: "160",
+                        listWidth:"160"
+                    };
+
+                    vm.$spinnerOpts = {
+                        min: 0,
+                        width:25
+                    };
+
+
+                    vm.$skipArray = ["pager"];
+                    vm.check1 = ["2"];
+                })
+                avalon.scan()
+            })
+        </script>
+
+    </body>
+</html>

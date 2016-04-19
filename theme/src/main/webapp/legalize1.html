@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>个人认证</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/example.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'header_legalize.html'"></div>
+    <div class="ui-register-progress-bar">
+        <ul class="ui-register-step ui-register-step-3">
+            <li class="ui-register-step-active">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">1</span>
+                    <span class="ui-register-step-text">填写信息</span>
+                </div>
+                <div class="ui-register-step-line"></div>
+                <div class="ui-register-step-line-2"></div>
+            </li>
+            <li class="">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">2</span>
+                    <span class="ui-register-step-text">等待审核</span>
+                </div>
+                <div class="ui-register-step-line"></div>
+<!--                 <div class="ui-register-step-line-2"></div> -->
+            </li>
+            <li class="ui-register-step-last">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">3</span>
+                    <span class="ui-register-step-text">完成认证</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="wrapper wrapper-legalize">
+        
+        <div class="wrapper-content">
+            <p class="form-line-tips error">审核不通过，您的身份证不够清晰请重新上传</p>
+            <div class="rg-form mg-t20">
+                <div class="rg-form-title">
+                    <label class="rg-label" for="">基础信息</label>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>真实姓名</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input-large" placeholder="设置姓名"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>身份证号</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input-large" placeholder="输入常用手机号"></div>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div class="rg-form mg-t20">
+                <div class="rg-form-line rg-form-unlabel">
+                    <p class="rg-form-top-tips">证件必须是彩色原件电子版，可以扫描件或者数码拍摄照片。仅支持.jpg,.jpeg,.bmp,.png的图片格式。<span>图片大小不超过 2M</span></p>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>身份证正面图片</label>
+                    <div class="rg-form-right">
+                        <div class="rg-idcard-upload">
+                            <div class="idcard-upload-content">
+                                <input type="file" name="" id="" class="idcard-upload-file-input">
+                                <a class="idcard-add" href="javascript:"><i>+</i> 添加</a>
+                                <img class="none" src="" />
+                            </div>
+                            <div class="idcard-upload-example">
+                                <label class="label">事例：</label>
+                                <div class="example-idcard-fir"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>身份证反面图片</label>
+                    <div class="rg-form-right">
+                        <div class="rg-idcard-upload">
+                            <div class="idcard-upload-content">
+                                <input type="file" name="" id="" class="idcard-upload-file-input">
+                                <a class="idcard-add" href="javascript:"><i>+</i>添加</a>
+                                <img class="none" src="" />
+                            </div>
+                            <div class="idcard-upload-example">
+                                <label class="label">事例：</label>
+                                <div class="example-idcard-sec"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>持身份证正面头部照</label>
+                    <div class="rg-form-right">
+                        <div class="rg-idcard-upload">
+                            <div class="idcard-upload-content error">
+                                <input type="file" name="" id="" class="idcard-upload-file-input">
+                                <a class="idcard-add" href="javascript:"><i>+</i>添加</a>
+                                <img class="none" src="" />
+                            </div>
+                            <div class="idcard-upload-example">
+                                <label class="label">事例：</label>
+                                <div class="example-idcard-thr"></div>
+                            </div>
+                        </div>
+                        <div class="rg-form-cell-tips">
+                            <i class="rg-icon-info"></i> 图片过大导致上传失败，请缩小到2M以下
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line rg-form-unlabel mg-t20">
+                    <a class="rg-btn rg-btn-primary" href="javascript:">确认提交</a>
+                    <a class="rg-btn-link" href="javascript:">下次再说</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+
+                })
+                avalon.scan()
+            })
+    </script>
+</body>
+</html>

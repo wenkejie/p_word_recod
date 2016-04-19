@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="supplier-apply">
+<div ms-include-src="'header_supplier.html'"></div>
+<div class="main-frame">
+	<div class="ui-register-progress-bar">
+        <ul class="ui-register-step ui-register-step-3">
+            <li class="ui-register-step-active">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">1</span>
+                    <span class="ui-register-step-text">填写申请信息</span>
+                </div>
+                <div class="ui-register-step-line"></div>
+                <div class="ui-register-step-line-2"></div>
+            </li>
+            <li class="">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">2</span>
+                    <span class="ui-register-step-text">提交审核</span>
+                </div>
+                <div class="ui-register-step-line"></div>
+<!--                 <div class="ui-register-step-line-2"></div> -->
+            </li>
+            <li class="ui-register-step-last">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">3</span>
+                    <span class="ui-register-step-text">成为供应商</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+  	<div class="ui-panel ui-panel-supplier-apply">
+    	<h3 class="supplier-apply-title">企业基本信息</h3>
+        <table class="supplier-apply-form" border="0">
+        	<tr>
+            	<th>企业中文名称</th>
+                <td><b>奥林科技</b></td>
+            </tr>
+            <tr>
+            	<th>企业英文名称</th>
+                <td><b>Ningbo Tianhang Internation Logistics Co.,Ltd</b></td>
+            </tr>
+            <tr>
+            	<th>企业性质</th>
+                <td>
+                	<select ms-widget="dropdown,dropdown0,$optsDropdown0">
+                        <option value="1">民营企业（含股份公司、有限公司）</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+            	<th>企业类型</th>
+                <td>
+                	<ul class="ui-checkbox-list-type1">
+                        <li><input type="checkbox" value="1">工厂</li>
+                        <li><input type="checkbox" value="2">贸易公司</li>
+                        <li><input type="checkbox" value="3">船公司</li>
+                        <li><input type="checkbox" value="4">货代</li>
+                        <li><input type="checkbox" value="5">船代</li>
+                        <li><input type="checkbox" value="6">车队</li>
+                        <li><input type="checkbox" value="7">仓储</li>
+                        <li><input type="checkbox" value="8">报关行</li>
+                        <li><input type="checkbox" value="9">码头</li>
+                        <li><input type="checkbox" value="10">其他</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+            	<th>省市区域</th>
+                <td>
+                	<select ms-widget="dropdown,dropdown1,$optsDropdown1">
+                        <option value="1">浙江省宁波市镇海区</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+            	<th>详细地址</th>
+                <td><div class="ui-form-group"><input type="text" class="ui-input" placeholder="日丽中路555号华茂总部一号1907"></div></td>
+            </tr>
+            <tr>
+            	<th><span class="required">*</span> 企业规模</th>
+                <td>
+                	<select ms-widget="dropdown,dropdown2,$optsDropdown2">
+                        <option value="1">浙江省宁波市镇海区</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+            	<th><span class="required">*</span> 注册资本</th>
+                <td>
+                	<div class="ui-form-group">
+                    	<select ms-widget="dropdown,dropdown3,$optsDropdown3">
+                            <option value="1">人民币</option>
+                        </select>
+                    	<input type="text" class="ui-input w-120 supplier-apply-input-money" placeholder="">
+                        万元
+                    </div>
+                </td>
+            </tr>
+            <tr>
+            	<th><span class="required">*</span> 分支机构</th>
+                <td><div class="ui-form-group"><input type="text" class="ui-input" placeholder=""></div></td>
+            </tr>
+            <tr>
+            	<th><span class="required">*</span> 业务类型</th>
+                <td>
+                	<ul class="ui-checkbox-list-type1">
+                        <li><input type="checkbox" value="1">海运出口整箱</li>
+                        <li><input type="checkbox" value="2">海运出口拼箱</li>
+                        <li><input type="checkbox" value="3">空运</li>
+                        <li><input type="checkbox" value="4">报关</li>
+                        <li><input type="checkbox" value="5">仓储</li>
+                        <li><input type="checkbox" value="6">报检</li>
+                        <li><input type="checkbox" value="7">拖车</li>
+                        <li><input type="checkbox" value="8">其他</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+            	<th><span class="required">*</span> 企业优势</th>
+                <td><div class="ui-form-group"><textarea rows="6" class="ui-textarea w-320"></textarea></div></td>
+            </tr>
+            <tr>
+            	<th><span class="required">*</span> 申请理由</th>
+                <td><div class="ui-form-group"><textarea rows="6" class="ui-textarea w-320"></textarea></div></td>
+            </tr>
+        </table>
+        <h3 class="supplier-apply-title">申请人信息</h3>
+        <table class="supplier-apply-form" border="0">
+        	<tr>
+            	<th><span class="required">*</span> 联系人</th>
+                <td><div class="ui-form-group"><input type="text" class="ui-input" placeholder="张三"></div></td>
+            </tr>
+            <tr>
+            	<th><span class="required">*</span> 职务</th>
+                <td><div class="ui-form-group"><input type="text" class="ui-input" placeholder="总经理"></div></td>
+            </tr>
+            <tr>
+            	<th><span class="required">*</span> 联系电话</th>
+                <td>
+                	<div class="ui-form-group"><input type="text" class="ui-input" placeholder="13888888888"></div>
+                </td>
+            </tr>
+            <tr>
+            	<th><span class="required">*</span> 电子邮箱</th>
+                <td>
+                	<div class="ui-form-group"><input type="text" class="ui-input" placeholder="13888888888@qq.com"></div>
+                </td>
+            </tr>
+        </table>
+        <div class="supplier-apply-btn"><button class="btn-submit">提交申请</button></div>
+    </div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"dropdown/avalon.dropdown",
+			"checkboxlist/avalon.checkboxlist"
+			], function() {
+			avalon.define("supplier-apply", function(vm) {
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+				vm.$optsDropdown0 = {
+					width: "252",
+					listWidth:"252"
+				};
+				vm.$optsDropdown1 = {
+					width: "252",
+					listWidth:"252"
+				};
+				vm.$optsDropdown2 = {
+					width: "252",
+					listWidth:"252"
+				};
+				vm.$optsDropdown3 = {
+					width: "80",
+					listWidth:"80"
+				};
+			})
+
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

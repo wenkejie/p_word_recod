@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/example.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'header_register.html'"></div>
+    <div class="rg-record mg-t20 success">
+        <div class="rg-record-content">
+            <div class="rg-record-icon"></div>
+            <div class="rg-record-right">
+                <p class="rg-record-item rg-record-top"><span class="user-name">周新新</span> <span>恭喜你成功注册大掌柜个人会员</span></p>
+                <p class="rg-record-item">用户名：<span class="phone-num">13939393939</span></p>
+                <p class="rg-record-last">如有问题可咨询客服：400-882-8871</p>
+            </div>
+        </div>
+    </div>
+    
+    <div ms-include-src="'vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+
+                })
+                avalon.scan()
+            })
+    </script>
+</body>
+</html>

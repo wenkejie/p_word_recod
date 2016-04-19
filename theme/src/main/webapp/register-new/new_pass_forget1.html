@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register-new.css">
+    <script src="../vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'../header_register.html'"></div>
+    <div class="rg-progress">
+        <div class="rg-progress-content">
+            <ul>
+                <li class="rg-progress-cell rg-progress-cell-current">
+                    <span class="rg-progress-icon">1<i class="iconfont">&#xe609;</i></span>
+                    <p class="rg-progress-info">填写账户名</p>
+                </li>
+                <li class="rg-progress-cell rg-progress-cell-current">
+                    <span class="rg-progress-icon">2<i>&#xe609;</i></span>
+                    <p class="rg-progress-info">重置密码</p>
+                </li>
+                <li class="rg-progress-cell">
+                    <span class="rg-progress-icon"><span class="iconfont">&#xe60a;</span><i>&#xe609;</i></span>
+                    <p class="rg-progress-info">修改成功</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="rg-form">
+                <div class="rg-form-title">
+                    <label class="rg-label" for="">重置登录密码</label>
+                    <span class="rg-form-des">请设置您的新密码</span>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">新的登录密码</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large" placeholder="请输入您的登录密码"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">确认新的登录密码</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large" placeholder="请再输入一次您的登录密码"></div>
+                </div>
+                <div class="rg-form-line rg-form-unlabel">
+                    <a class="rg-btn rg-btn-primary" href="javascript:"  ms-click="show('aa')">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ms-widget="dialog,aa,$aaOpts">
+        <div class="rg-form rg-form-openwin">
+            <div class="openwin-form-tips">
+                <i class="rg-icon-info"></i>
+                <p class="openwin-form-tips-content">验证码短信已发送到你的手机上，有效时间为30分钟，请及时查收</p>
+            </div>
+            <div class="rg-form-line">
+                <label class="rg-label" for="">手机号码</label>
+                <span class="rg-form-des text-orange">1584932423</span>
+            </div>
+            <div class="rg-form-line">
+                <label class="rg-label" for="">校验码</label>
+                <div class="rg-form-group">
+                    <input type="text" class="rg-input-large w-120" placeholder="">
+                </div>
+                <div class="rg-tips rg-tips-error">
+                    <div class="rg-tips-icon"></div>
+                    <div class="rg-tips-content">
+                    验证码有误
+                    </div>
+                </div>
+            </div>
+            <div class="rg-form-line rg-form-unlabel">
+                <a class="rg-btn none" href="javascript:">获取校验码</a>
+                <a class="rg-btn rg-btn-disable" href="javascript:"><span>60秒</span>后 重新获取短信</a>
+            </div>
+            <div class="rg-form-line rg-form-unlabel">
+                <a class="rg-btn rg-btn-primary" href="javascript:">确定</a>
+            </div>
+        </div>
+    </div>
+
+    <div ms-include-src="'../vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button","dialog/avalon.dialog"],
+            function() {
+                avalon.define("register", function(vm) {
+                    vm.$aaOpts = {
+                        title: "填写校验码",
+                        showClose: false,
+                        width: 530,
+                        getFooter:function(){
+                            return "";
+                        }
+                    }
+                    vm.show = function( id ){
+                        avalon.vmodels[id].toggle = true;
+                    }
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

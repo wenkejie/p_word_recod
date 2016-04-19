@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="verify">
+<div ms-include-src="'vip-center-header.html'"></div>
+<div class="main-frame">
+	<div ms-include-src="'vip-center-left.html'"></div>
+	<div class="right-frame">
+		<div class="ui-panel ui-panel-verify">
+			<div class="pui-table-Layout">
+				<div class="pui-table-title">
+					企业权益认证
+				</div>
+				<table class="pui-table-case">
+					<thead>
+						<tr class="table-case-line">
+							<th width="420"></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td-first">
+								<h3>未实名</h3>
+								<p>未验证任何信息材料</p>
+							</td>
+							<td>
+								<div class="verify-power-area">
+									<p>仅可以查询运价信息，不能订舱</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="td-first">
+								<h3>个人实名认证</h3>
+								<ul class="certify-show">
+									<li>
+										<span class="img-certify id-card"></span>
+										<p class="certify-info">
+											个人身份证<br/>
+											(正反面)
+										</p>
+									</li>
+									<li></li>
+								</ul>
+							</td>
+							<td>
+								<div class="verify-power-area">
+									<ul class="verify-power-list">
+										<li><i class="list-dist">•</i> <span>可以查询运价信息</span></li>
+										<li><i class="list-dist">•</i> <span>预定仓位</span></li>
+										<li><i class="list-dist">•</i> <span>开通企业钱包</span></li>
+										<li><i class="list-dist">•</i> <span>邀请企业成员</span></li>
+										<li><i class="list-dist">•</i> <span>设置成员权限</span></li>
+									</ul>
+									<a href="javascript:;" ms-widget="button" data-button-size="default" data-button-disabled="true" data-button-color="primary">个人实名认证</a>
+								</div>
+							</td>
+						</tr>
+						<tr class="tr-last">
+							<td class="td-first">
+								<h3>企业实名认证</h3>
+								<ul class="certify-show">
+									<li>
+										<span class="img-certify id-card"></span>
+										<p class="certify-info">
+											个人身份证
+											<p>(正反面)</p>
+										</p>
+									</li>
+									<li class="separate">+</li>
+									<li>
+										<span class="img-certify business"></span>
+										<p class="certify-info">
+											营业执照副本
+										</p>
+									</li>
+									<li class="separate">+</li>
+									<li>
+										<span class="img-certify organization"></span>
+										<p class="certify-info">
+											组织机构代码证
+										</p>
+									</li>
+									<li class="separate">+</li>
+									<li>
+										<span class="img-certify tax"></span>
+										<p class="certify-info">
+											税务登记证
+										</p>
+									</li>
+									<li class="separate">+</li>
+									<li>
+										<span class="img-certify bank"></span>
+										<p class="certify-info">
+											银行开户许可证
+										</p>
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="verify-power-area">
+									<ul class="verify-power-list">
+										<li><i class="list-dist">•</i> <span>可以查询运价信息</span></li>
+										<li><i class="list-dist">•</i> <span>预定仓位</span></li>
+										<li><i class="list-dist">•</i> <span>开通企业钱包</span></li>
+										<li><i class="list-dist">•</i> <span>邀请企业成员</span></li>
+										<li><i class="list-dist">•</i> <span>设置成员权限</span></li>
+									</ul>
+									<a href="javascript:;" ms-widget="button" data-button-size="default" data-button-disabled="true" data-button-color="primary">企业实名认证</a>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"pager/avalon.pager",
+			"dropdown/avalon.dropdown"
+			], function() {
+			avalon.define("verify", function(vm) {
+
+			})
+
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>

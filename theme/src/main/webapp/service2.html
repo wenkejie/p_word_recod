@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="service">
+<div ms-include-src="'vip-center-header.html'"></div>
+<div class="main-frame">
+	<div ms-include-src="'vip-center-left.html'"></div>
+	<div class="right-frame">
+		<div class="ui-tab">
+			<div class="ui-tab-item selected">
+				<div class="bd ui-tab-item-cnt">海运整箱</div>
+			</div>
+
+			<div class="ui-tab-item">
+				<div class="bd ui-tab-item-cnt">海运拼箱</div>
+			</div>
+
+			<div class="ui-tab-item">
+				<div class="bd ui-tab-item-cnt">空运</div>
+			</div>
+
+			<div class="ui-tab-line"></div>
+		</div>
+
+		<div class="mg-t20 search-conditions" >
+			<div class="form-group">
+				<label class="form-label w-66">船公司：</label>
+				<div class="form-input">
+					<input type="text" class="ui-input w-146"/> 
+				</div>
+
+				<label class="form-label w-102">起运港：</label>
+				<div class="form-input">
+					<input type="text" class="ui-input w-146"/> 
+				</div>
+
+				<label class="form-label w-102">目的港：</label>
+				<div class="form-input">
+					<input type="text" class="ui-input w-146"/> 
+				</div>
+
+				<button class="mg-l5" ms-widget="button" data-button-color="primary">搜索</button>
+			</div>
+		</div>
+		<div class="ui-table-area">
+			<div class="ui-table-header">
+				<div class="ui-table-header-left" ms-controller="select1">
+					<button ms-widget="button">批量分配</button>
+				</div>
+				<div class="ui-table-header-right">
+					<a href="javascript:" ms-widget="button" data-button-type="icon" data-button-icon-position="left" data-button-icon="\&\#xf104;"></a>
+					<a href="javascript:" ms-widget="button" data-button-type="labeledIcon" data-button-icon-position="right" data-button-icon="\&\#xe61a;">下一页</a>
+				</div>
+			</div>
+			<div class="ui-table-box">
+				<div class="ui-table-payment">
+					<table class="ui-table-border">
+						<thead>
+							<tr>
+								<th width="30">
+									<input type='checkbox' ms-duplex-radio='row.checked' ms-data-index='$index' data-duplex-changed='checkOne' class='ui-helper-checkone'/>
+								</th>
+								<th width="250">船公司</th>
+								<th>起运港</th>
+								<th>目的港</th>
+								<th>中转港</th>
+								<th>航线</th>
+								<th width="170">小二分配</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input type='checkbox' ms-duplex-radio='row.checked' ms-data-index='$index' data-duplex-changed='checkOne' class='ui-helper-checkone'/>
+								</td>
+								<td>APL</td>
+								<td>ningbo</td>
+								<td>Hong Kong></td>
+								<td>shanghai</td>
+								<td>澳新线</td>
+								<td>
+									<a href="javascript:" ms-widget="button" data-button-type="labeledIcon" data-button-icon-position="right" data-button-icon="&#xe612;" data-button-color="primary" data-button-width="100">添加小二</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type='checkbox' ms-duplex-radio='row.checked' ms-data-index='$index' data-duplex-changed='checkOne' class='ui-helper-checkone'/>
+								</td>
+								<td>APL</td>
+								<td>ningbo</td>
+								<td>Hong Kong></td>
+								<td>shanghai</td>
+								<td>澳新线</td>
+								<td>
+									<a href="javascript:" ms-widget="button" data-button-type="labeledIcon" data-button-icon-position="right" data-button-icon="&#xe612;" data-button-color="primary" data-button-width="100">添加小二</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type='checkbox' ms-duplex-radio='row.checked' ms-data-index='$index' data-duplex-changed='checkOne' class='ui-helper-checkone'/>
+								</td>
+								<td>APL</td>
+								<td>ningbo</td>
+								<td>Hong Kong></td>
+								<td>shanghai</td>
+								<td>澳新线</td>
+								<td>
+									<a href="javascript:" ms-widget="button" data-button-type="labeledIcon" data-button-icon-position="right" data-button-icon="&#xe612;" data-button-color="primary" data-button-width="100">添加小二</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type='checkbox' ms-duplex-radio='row.checked' ms-data-index='$index' data-duplex-changed='checkOne' class='ui-helper-checkone'/>
+								</td>
+								<td>APL</td>
+								<td>ningbo</td>
+								<td>Hong Kong></td>
+								<td>shanghai</td>
+								<td>澳新线</td>
+								<td>
+									<a href="javascript:" ms-widget="button" data-button-type="labeledIcon" data-button-icon-position="right" data-button-icon="&#xe612;" data-button-color="primary" data-button-width="100">添加小二</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type='checkbox' ms-duplex-radio='row.checked' ms-data-index='$index' data-duplex-changed='checkOne' class='ui-helper-checkone'/>
+								</td>
+								<td>APL</td>
+								<td>ningbo</td>
+								<td>Hong Kong></td>
+								<td>shanghai</td>
+								<td>澳新线</td>
+								<td>
+									<a href="javascript:" ms-widget="button" data-button-type="labeledIcon" data-button-icon-position="right" data-button-icon="&#xe612;" data-button-color="primary" data-button-width="100">添加小二</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type='checkbox' ms-duplex-radio='row.checked' ms-data-index='$index' data-duplex-changed='checkOne' class='ui-helper-checkone'/>
+								</td>
+								<td>APL</td>
+								<td>ningbo</td>
+								<td>Hong Kong></td>
+								<td>shanghai</td>
+								<td>澳新线</td>
+								<td>
+									<a href="javascript:" ms-widget="button" data-button-type="labeledIcon" data-button-icon-position="right" data-button-icon="&#xe612;" data-button-color="primary" data-button-width="100">添加小二</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type='checkbox' ms-duplex-radio='row.checked' ms-data-index='$index' data-duplex-changed='checkOne' class='ui-helper-checkone'/>
+								</td>
+								<td>APL</td>
+								<td>ningbo</td>
+								<td>Hong Kong></td>
+								<td>shanghai</td>
+								<td>澳新线</td>
+								<td>
+									<a href="javascript:" ms-widget="button" data-button-type="labeledIcon" data-button-icon-position="right" data-button-icon="&#xe612;" data-button-color="primary" data-button-width="100">添加小二</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type='checkbox' ms-duplex-radio='row.checked' ms-data-index='$index' data-duplex-changed='checkOne' class='ui-helper-checkone'/>
+								</td>
+								<td>APL</td>
+								<td>ningbo</td>
+								<td>Hong Kong></td>
+								<td>shanghai</td>
+								<td>澳新线</td>
+								<td>
+									<a href="javascript:" ms-widget="button" data-button-type="labeledIcon" data-button-icon-position="right" data-button-icon="&#xe612;" data-button-color="primary" data-button-width="100">添加小二</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type='checkbox' ms-duplex-radio='row.checked' ms-data-index='$index' data-duplex-changed='checkOne' class='ui-helper-checkone'/>
+								</td>
+								<td>APL</td>
+								<td>ningbo</td>
+								<td>Hong Kong></td>
+								<td>shanghai</td>
+								<td>澳新线</td>
+								<td>
+									<a href="javascript:" ms-widget="button" data-button-type="labeledIcon" data-button-icon-position="right" data-button-icon="&#xe612;" data-button-color="primary" data-button-width="100">添加小二</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			 </div>
+			 <div class="ui-table-footer">
+			  	<div class="ui-table-footer-left">
+			  		<label class="mg-r5 ui-checkbox" for="selAll">
+			  			<input type="checkbox" id="selAll"> 全选  
+			  		</label>
+			  		<button ms-widget="button">批量分配</button>
+			  	</div>
+			  	<div ms-widget="pager" class="pagination ui-table-footer-right"></div>
+			 </div>
+		</div>
+	</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"pager/avalon.pager",
+			"dropdown/avalon.dropdown",
+			"dropdownList/avalon.dropdownList"
+			], function() {
+			avalon.define("service", function(vm) {
+				
+			});
+				
+			avalon.scan()
+		});
+
+		require([
+			"button/avalon.button",
+			"dropdown/avalon.dropdown",
+			], function() {
+			avalon.define("select1", function(vm) {
+				vm.value = 'value5';
+				vm.dropdown = {
+					getTemplate: function(template) {
+						var templates = template.split("MS_OPTION_TEMPLATE");
+						templates[0] = '<div id="title-MS_OPTION_ID"><button ms-widget="button">{{label}}</button></div>';
+						return templates.join("MS_OPTION_TEMPLATE");
+					}
+				};	
+			})
+
+		avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

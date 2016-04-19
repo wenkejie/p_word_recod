@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/example.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register">
+    <div ms-include-src="'header_register.html'"></div>
+    <div class="wa-success-info mg-t20">
+        <div class="info-wrapper">
+            <div class="success-icon"></div>
+            <p class="msg">您的掌柜钱包成功开通</p>
+        </div>
+
+        <div class="return">
+            <a href="#">返回我的大掌柜平台</a>
+        </div>
+    </div>
+
+    <div ms-include-src="'vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+
+                })
+                avalon.scan()
+            })
+    </script>
+</body>
+</html>

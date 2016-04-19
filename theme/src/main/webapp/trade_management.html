@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="demo">
+<div ms-include-src="'vip-center-header.html'"></div>
+ <div class="main-frame">
+	<div ms-include-src="'vip-center-left.html'"></div>
+	<div class="right-frame">
+		<div class="ui-tab">
+			<div class="ui-tab-item selected">
+				<div class="bd ui-tab-item-cnt">全部订单</div>
+			</div>
+
+			<div class="ui-tab-item">
+				<div class="bd ui-tab-item-cnt">待接受<span class="mg-l5 highlight_org">3</span></div>
+			</div>
+
+			<div class="ui-tab-item">
+				<div class="bd ui-tab-item-cnt">已接单<span class="mg-l5 highlight_org">32</span></div>
+			</div>
+
+			<div class="ui-tab-item">
+				<div class="bd ui-tab-item-cnt">费用待确认<span class="mg-l5 highlight_org">23</span></div>
+			</div>
+
+			<div class="ui-tab-item">
+				<div class="bd ui-tab-item-cnt">费用已确认<span class="mg-l5 highlight_org">0</span></div>
+			</div>
+
+			<div class="ui-tab-item">
+				<div class="bd ui-tab-item-cnt">待付款<span class="mg-l5 highlight_org">0</span></div>
+			</div>
+
+			<div class="ui-tab-item">
+				<div class="ui-tab-item-cnt">已付款<span class="mg-l5 highlight_org">0</span></div>
+			</div>
+
+			<div class="ui-tab-line"></div>
+		</div>
+
+		<div class="mg-t20">
+			<div class="ui-form-group">
+				<input type="text" class="ui-input w-320" placeholder="请输入订单号/卖家/起运港/目的港搜索"><button class="ui-search-group-btn">订单搜索</button>
+			</div>
+				<a href="javascript:void(0)" class="more-condition">筛选更多条件 <i class="fs-12">&#xe612;</i></a>
+		</div>
+
+		<div class="mg-t20 search-conditions trade-manage-search" ms-controller="search">
+			<div class="form-group">
+				<label class="form-label">交易时间</label>
+				<div class="form-input">
+					<input type="text" class="ui-input w-66"/> 
+					  到
+					<input type="text" class="ui-input w-66"/>
+				</div>
+
+				<label class="form-label">服务状态</label>
+				<div class="form-input">
+						<select ms-widget="dropdown">
+					      	<option>全部</option>
+					    </select>
+				</div>
+
+
+				<label class="form-label">订单来源</label>
+				<div class="form-input">
+						<select ms-widget="dropdown">
+					      	<option>全部</option>
+					    </select>
+				</div>
+
+				<label class="form-label">评价状态</label>
+				<div class="form-input">
+					<select ms-widget="dropdown">
+				        <option>全部</option>
+				    </select>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="form-label">卖家</label>
+				<div class="form-input">
+					<input type="text" class="ui-input w-174"/> 
+				</div>
+
+				<label class="form-label">退关状态</label>
+				<div class="form-input">
+					<select ms-widget="dropdown">
+				        <option>全部</option>
+				    </select>
+				</div>
+
+				<label class="form-label">费用币种</label>
+				<div class="form-input">
+					<select ms-widget="dropdown">
+				        <option>全部</option>
+				    </select>
+				</div>
+
+				<label class="form-label">费用状态</label>
+				<div class="form-input">
+					<select ms-widget="dropdown">
+				        <option>全部</option>
+				    </select>
+				</div>
+
+				<div class="form-input mg-l21">
+					<button ms-widget="button" class="" data-button-size="big" data-button-color="primary">搜索</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="jy-header mg-t10">
+			<div class="jy-header-wrapper">
+					<div class="header-1 left">
+						<span class="mg-l10">订单信息</span>
+					</div>
+					
+					<div class="header-2  left">
+						<span class="mg-l10">USD费用</span>
+					</div>
+
+					<div class="header-3 left">
+						<span class="mg-l10">RMB费用</span>
+					</div>
+
+					<div class="header-4 left">
+						<span class="mg-l10">状态</span>
+					</div>
+
+					<div class="header-5 left">
+						<span class="mg-l10">操作</span>
+					</div>
+			</div>
+		</div>
+
+		<div class="mg-t20 trade-manage-ope">
+			<label for="select-all" class="mg-r10">
+				<input type="checkbox" id="select-all"> &nbsp;&nbsp; 全选
+			</label>
+
+			<button ms-widget="button">批量操作</button>
+
+			<div class="to-right">
+				<a ms-widget="button" data-button-type="icon" data-button-icon="\&\#xf104;" data-button-icon-position="left" data-button-size="small"  class="mg-r2"></a>
+				<a ms-widget="button" data-button-type="labeledIcon" data-button-icon="\&\#xe61a;" data-button-icon-position="right" data-button-size="small">下一页</a>
+			</div>
+		</div>
+
+		<div class="ui-panel mg-t10 trade-manage-list-item">
+				<div class="ui-panel-hd fs-12">
+					<ul class="trade-manage-ul">
+						<li>
+							<label for="order-time">
+								<input type="checkbox" id="order-time"/>
+							</label>
+						</li>
+						<li>
+							<div class="ui-tag ui-tag-blue mg-l10">空运</div>
+						</li>
+						<li>
+							<label class="mg-l15">
+								订单号：DFDFDFDF123123123
+							</label>
+						</li>
+						<li>
+							<label class="mg-l25">
+								下单时间：2014-12-12
+							</label>
+						</li>
+						<li>
+							<label class="mg-l40">
+								买家：深圳光海物流有限公司
+							</label>
+						</li>
+
+						<li>
+							<a class="left-msg mg-l10" href="javascript:">
+								
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ui-panel-bd pd0">
+					<table class="trade-manage-table">
+						<tr>
+							<td  width="366">
+								<div class="col-1">
+									<p class="place-name">NINGBO(宁波) - dfdsafafafafaf(洛杉矶)</p>
+									<div>
+										<span><span class="label">船期：</span>2014-12-12 周三 / 2014-12-14 周五</span>
+
+										<span class="mg-l9"><span class="label">船公司：</span>MS 20GP*1,40GP*2</span>
+									</div>
+									<p class="tdh">提单号：<span>暂无</span></p>
+								</div>
+								
+							</td>
+							<td  width="260">
+								<div class="price-wrapper">
+									<div class="price-item">
+								   		<div class="pd-l12">
+								   			<p class="mg-t25">
+								   				<span class="symbol">$</span> 4388.<span class="fs-12">23</span>
+								   			</p>
+								   		</div>
+									</div>
+
+									<div class="price-item">
+										<div class="pd-l12">
+											<p class="mg-t25">
+												<span class="symbol">￥</span> 4388.<span class="fs-12">23</span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</td>
+							<td  width="111" class="va-t">
+								<div class="col-3">
+									<p class="highlight_org">待接受</p>
+									<div><div class="ui-tag ui-tag-red shut-out">退关</div></div>
+								    <p class="mg-t3">订单详情</p>
+								</div>
+							</td>
+							<td >
+								<div class="col-4 ta-c">
+									<button ms-widget="button" class="mg-l9">评价</button>
+									<div class="mg-l9 mg-t3">
+										<a href="javascript:void(0)" class="link">货物跟踪</a>
+									</div>
+									<p class="mg-l9 mg-t3">
+										<a href="javascript:void(0)" class="link">订单详情</a>
+									</p>
+								</div>
+							</td>
+						</tr>
+					</table>
+			    </div>
+		</div>
+
+		<div class="ui-panel mg-t10 trade-manage-list-item">
+				<div class="ui-panel-hd fs-12">
+					<ul class="trade-manage-ul">
+						<li>
+							<label for="order-time">
+								<input type="checkbox" id="order-time"/>
+							</label>
+						</li>
+						<li>
+							<div class="ui-tag ui-tag-yellow mg-l10">整箱</div>
+						</li>
+						<li>
+							<label class="mg-l15">
+								订单号：DFDFDFDF123123123
+							</label>
+						</li>
+						<li>
+							<label class="mg-l25">
+								下单时间：2014-12-12
+							</label>
+						</li>
+						<li>
+							<label class="mg-l40">
+								买家：深圳光海物流有限公司
+							</label>
+						</li>
+
+						<li>
+							<a class="left-msg mg-l10" href="javascript:">
+								
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ui-panel-bd pd0">
+					<table class="trade-manage-table">
+						<tr>
+							<td  width="366">
+								<div class="col-1">
+									<p class="place-name">NINGBO(宁波) - dfdsafafafafaf(洛杉矶)</p>
+									<div>
+										<span><span class="label">船期：</span>2014-12-12 周三 / 2014-12-14 周五</span>
+
+										<span class="mg-l9"><span class="label">船公司：</span>MS 20GP*1,40GP*2</span>
+									</div>
+									<p class="tdh">提单号：<span>暂无</span></p>
+								</div>
+								
+							</td>
+							<td  width="260">
+								<div class="price-wrapper">
+									<div class="price-item">
+										<div class="pd-l12">
+										  <p class="mg-t7">
+	  									  	<span class="symbol">$</span> 4388.<span class="fs-12">23</span>
+	  									  </p>
+										  <p class="order-generate">账单已生成</p>
+										</div>
+									
+									</div>
+
+									<div class="price-item">
+										<div class="pd-l12">
+											  <p class="mg-t7">
+											  	   <span class="symbol">￥</span> 4388.<span class="fs-12">23</span>
+											  </p>
+											  <p class="order-generate">账单已生成</p>
+										</div>
+									</div>
+								</div>
+							</td>
+							<td  width="111">
+								<div class="col-3">
+									<p class="highlight_org">待接受</p>
+								    <p class="mg-t3">重货进港</p>
+								</div>
+							</td>
+							<td >
+								<div class="col-4 ta-c">
+									<button ms-widget="button" class="mg-l9">评价</button>
+									<div class="mg-l9 mg-t3">
+										<a href="javascript:void(0)" class="link">货物跟踪</a>
+									</div>
+									<p class="mg-l9 mg-t3">
+										<a href="javascript:void(0)" class="link">订单详情</a>
+									</p>
+								</div>
+							</td>
+						</tr>
+					</table>
+			    </div>
+		</div>
+
+		<div class="ui-panel mg-t10 trade-manage-list-item">
+				<div class="ui-panel-hd fs-12">
+					<ul class="trade-manage-ul">
+						<li>
+							<label for="order-time">
+								<input type="checkbox" id="order-time"/>
+							</label>
+						</li>
+						<li>
+							<div class="ui-tag ui-tag-orange mg-l10">拼箱</div>
+						</li>
+						<li>
+							<label class="mg-l15">
+								订单号：DFDFDFDF123123123
+							</label>
+						</li>
+						<li>
+							<label class="mg-l25">
+								下单时间：2014-12-12
+							</label>
+						</li>
+						<li>
+							<label class="mg-l40">
+								买家：深圳光海物流有限公司
+							</label>
+						</li>
+
+						<li>
+							<a class="contact-me mg-l10" href="javascript:">
+								
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ui-panel-bd pd0">
+					<table class="trade-manage-table">
+						<tr>
+							<td  width="366">
+								<div class="col-1">
+									<p class="place-name">NINGBO(宁波) - dfdsafafafafaf(洛杉矶)</p>
+									<div>
+										<span><span class="label">船期：</span>2014-12-12 周三 / 2014-12-14 周五</span>
+
+										<span class="mg-l9"><span class="label">船公司：</span>MS 20GP*1,40GP*2</span>
+									</div>
+									<p class="tdh">提单号：<span>暂无</span></p>
+								</div>
+								
+							</td>
+							<td  width="260">
+								<div class="price-wrapper">
+									<div class="price-item">
+										<div class="pd-l12">
+										  <p class="mg-t7">
+	  									  	<span class="symbol">$</span> 4388.<span class="fs-12">23</span>
+	  									  </p>
+										  <p class="order-generate">账单已生成</p>
+										</div>
+									
+									</div>
+
+									<div class="price-item paied">
+										<div class="pd-l12">
+											  <p class="mg-t7">
+											  	   <span class="symbol">￥</span> 4388.<span class="fs-12">23</span>
+											  </p>
+											  <p class="order-generate">已支付</p>
+										</div>
+									</div>
+								</div>
+							</td>
+							<td  width="111">
+								<div class="col-3">
+									<p class="highlight_org">待接受</p>
+								    <p class="mg-t3">重货进港</p>
+								</div>
+							</td>
+							<td >
+								<div class="col-4 ta-c">
+									<button ms-widget="button" class="mg-l9">评价</button>
+									<div class="mg-l9 mg-t3">
+										<a href="javascript:void(0)" class="link">货物跟踪</a>
+									</div>
+									<p class="mg-l9 mg-t3">
+										<a href="javascript:void(0)" class="link">订单详情</a>
+									</p>
+								</div>
+							</td>
+						</tr>
+					</table>
+			    </div>
+		</div>
+			
+		
+
+		<div class="mg-t20">
+			<label for="select-all">
+				<input type="checkbox" id="select-all" class="mg-r10">  &nbsp;&nbsp;全选
+			</label>
+
+			<button ms-widget="button">批量操作</button>
+
+			<div ms-widget="pager" class="pagination right"></div>
+		</div>
+		
+	</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"dialog/avalon.dialog",
+			"checkboxlist/avalon.checkboxlist",
+			"pager/avalon.pager",
+			"dropdown/avalon.dropdown",
+			"browser/avalon.browser",
+			"textbox/avalon.textbox",
+			"spinner/avalon.spinner"
+			], function() {
+			avalon.define("demo", function(vm) {	
+				vm.message = "笑傻了吧！！";
+				vm.namee = avalon.browser.name+' '+avalon.browser.version;
+				vm.show = function( id ){
+					avalon.vmodels[id].toggle = true;
+				}
+
+				vm.pager = {
+					// currentPage: 8,
+					totalItems: 120,
+					showJumper: true,
+					showPages:5
+				}
+
+				vm.$spinnerOpts={
+					min: 0,
+					width:25
+				};
+
+
+				vm.$skipArray = ["pager"];
+				vm.check1 = ["2"];
+			})
+
+			avalon.define("search", function(vm) {
+				vm.dropdown = {
+					width: "83",
+					listWidth:"83"
+				};	
+			})
+
+			avalon.define("demo", function(vm) {
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+			})
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

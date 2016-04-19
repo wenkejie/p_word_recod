@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="demo">
+<div ms-include-src="'vip-center-header.html'"></div>
+<div class="main-frame">
+	<div ms-include-src="'vip-center-left.html'"></div>
+	<div class="right-frame wait-shelve-list">
+		<div class="ui-tab">
+			<div class="ui-tab-item selected">
+				<div class="bd ui-tab-item-cnt">待上架</div>
+			</div>
+
+			<div class="ui-tab-item">
+				<div class="bd ui-tab-item-cnt">已上架</div>
+			</div>
+
+			<div class="ui-tab-item">
+				<div class="bd ui-tab-item-cnt">已下架</div>
+			</div>
+
+			<div class="ui-tab-line"></div>
+		</div>
+
+		<div class="mg-t20 search-conditions" ms-controller="search">
+			<div class="form-group">
+				<label class="form-label w-66 ta-l">船公司</label>
+				<div class="form-input">
+					<input type="text" class="ui-input w-135"/> 
+				</div>
+
+				<label class="form-label w-66 ta-l mg-l30">起运港</label>
+				<div class="form-input">
+					<input type="text" class="ui-input w-135"/> 
+				</div>
+
+				<label class="form-label w-66 ta-l mg-l30">目的港</label>
+				<div class="form-input">
+					<input type="text" class="ui-input w-135"/> 
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				<label class="form-label w-66 ta-l">有效时间</label>
+				<div class="form-input">
+					<input type="text" class="ui-input w-66"/> 
+					  到
+					<input type="text" class="ui-input w-66"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="form-label w-66 ta-l">箱型</label>
+				<div class="form-input">
+					<a href="#" class="ui-param-select-item mg-r5 ui-param-option-selected background-pos1">20GP</a>
+					<a href="#" class="ui-param-select-item mg-r5 ui-param-option-selected background-pos1">20GP</a>
+					<a href="#" class="ui-param-select-item mg-r5 ui-param-option-selected background-pos1">20GP</a>
+					<a href="#" class="ui-param-select-item mg-r5 ui-param-option-selected background-pos1">20GP</a>
+					<a href="#" class="ui-param-select-item mg-r5 ui-param-option-selected background-pos1">20GP</a>
+				</div>
+
+				<label class="form-label w-66 ta-l mg-l305">&nbsp;</label>
+				<div class="form-input">
+					<button ms-widget="button" class="" data-button-size="big" data-button-color="primary">搜索</button>
+				</div>
+			</div>
+
+			<div class="mg-t20 trade-manage-ope">
+				<label for="select-all" class="mg-r10">
+					<input type="checkbox" id="select-all"> 全选
+				</label>
+
+				<button ms-widget="button">批量操作</button>
+
+				<div class="to-right">
+					<button ms-widget="button"><</button>
+					<button ms-widget="button">下一页 ></button>
+				</div>
+			</div>
+
+		</div>
+		<div class="ui-table-box mg-t20">
+        	<div class="ui-table-payment" ms-widget="simplegrid"></div>
+        </div>
+		
+
+		<div class="mg-t20 page-wrapper">
+			<label for="select-all" class="left">
+				<input type="checkbox" id="select-all"> 全选
+			</label>
+
+			<button ms-widget="button" class="mg-l9 left">批量操作</button>
+
+			<div ms-widget="pager" class="pagination right"></div>
+		</div>
+		
+	</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"simplegrid/avalon.simplegrid"
+			], function() {
+			avalon.define("demo", function(vm) {
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+				vm.simplegrid = {
+					columns: [
+						{field: "check", sortable:false, width:"30",text: " "},
+						{field: "beginandend", sortable:false, width:"135",text: "起运港 | 目的港",className:"col"},
+						{field: "shipcomp", sortable:false,width:"80",text: "船公司",className:"va-m",className:"col"},
+						{field: "price", sortable:false ,width:"180",text: "<div class='price-wrapper'><div class='ta-c'>运价</div><div class='type'><p>20GP</p><p>40Gp</p> <p>40GP</p></div></div>"},
+						{field: "shiptime", sortable:false,width:"70",text: "船期",className:"col"},
+						{field: "transshipment", sortable:false,width:"100", text: "中转港",className:"col"},
+						{field: "validtime", sortable:false,width:"100", text: "有效期",className:"col"},
+						{field: "boatride", sortable:false, width:"60",text: "船程",className:"col"},
+						{field: "ope", sortable:false, text: "操作",width:"100",className:"col"}
+						],
+					renderCell: function(val, key) {
+						switch (key) {
+							case "check":
+								return  "<input type='checkbox'/>"
+							case "beginandend":
+								return  "<p>NINGBO</p><p>HAMBURG</p>"
+							case "shipcomp":
+								return  "APL"	
+							case "price":
+								return "<div class='price-wrapper'><span class='price'>1000</span><span class='price'>1500</span><span class='price'>2500</span></div>"
+							case "shiptime":
+								return "1/3"
+							case "transshipment":
+								return "Singapore"
+							case "validtime":
+								return "<p>2014-12-12</p><p>2014-12-12</p>"
+							case "boatride":
+								return "20"	
+							case "ope":
+								if(val==0){
+									var html="";
+									html+= '<div class="operate-dropdown">';
+									html+= '<a href="#" class="btn-payment">上架 <i>&#xe613;</i></a>';
+									html+= '<ul class="operate-dropdown-list">';
+									html+= '<li><a href="#">更改</a></li>';
+									html+= '<li><a href="#">删除</a></li>';
+									html+= '</ul></div>';
+									return html;
+								}else{
+									var html2 = "";
+									html2+= '<div class="operate-dropdown">';
+									html2+= '<a href="#" class="btn-payment">上架 <i>&#xe612;</i></a>';
+									html2+= '</div>';
+									return html2;
+								}
+							default:
+								return val			
+						}
+					},
+					data: [
+						{check: null, beginandend: null, shipcomp: null, price: null,shiptime: null,transshipment:null,validtime:null,boatride:null,ope:0},
+						{check: null, beginandend: null, shipcomp: null, price: null,shiptime: null,transshipment:null,validtime:null,boatride:null,ope:1},
+						{check: null, beginandend: null, shipcomp: null, price: null,shiptime: null,transshipment:null,validtime:null,boatride:null,ope:1},
+						{check: null, beginandend: null, shipcomp: null, price: null,shiptime: null,transshipment:null,validtime:null,boatride:null,ope:1},
+						{check: null, beginandend: null, shipcomp: null, price: null,shiptime: null,transshipment:null,validtime:null,boatride:null,ope:1},
+					]
+				}
+				vm.$skipArray = ["simplegrid"]
+
+			})
+
+			avalon.define("search", function(vm) {
+				vm.dropdown = {
+					width: "140",
+					listWidth:"140"
+				};	
+			})
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

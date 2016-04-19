@@ -1,0 +1,17 @@
+/build/
+/target/
+/.settings/
+/.classpath
+/.project
+/node_modules/
+gulpfile.js
+gulpfile.js-bak
+pom.xml
+runMakeLink.bat
+package.json
+/.idea/
+/theme/src/main/webapp/css/maps/
+maps/
+#/maps/
+less-bak/
+*.map

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+        <link rel="stylesheet" href="css/layout.css">
+        <script src="vendor/avalon/avalon.js"></script>
+        <script>
+            require(["button/avalon.button","dialog/avalon.dialog"], function(avalon) {
+                avalon.define("test", function(vm) {
+                    vm.opts = {
+                        title: '邀请成员',
+                        confirmName: "发送邀请"
+                    };
+
+                    vm.dropdown = {
+                        width: "120",
+                        listWidth:"120"
+                    };
+
+                })
+                avalon.scan()
+            })
+        </script>
+    </head>
+    <body ms-controller="test" >
+        <div ms-include-src="'header.html'"></div>
+        <div class="main-frame">
+            <div ms-include-src="'vip-center-left.html'"></div>
+            <div class="right-frame">
+               <div class="news-bulletin-detail-cnt">
+                    <h3>阿里巴巴提交赴美IPO申请</h3>
+                    <div class="news-info">
+                        <div class="left">
+                            作者：张一 
+                            <span class="split">|</span>
+                            发表时间：2015-01-01
+                        </div>
+                       
+
+                        <div class="bdsharebuttonbox right">
+                        <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+                        <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+                    </div>
+
+                    <div class="news-cnt">
+                        <p>生于80年代这群人，最早的80生人已经35岁，夹在而立与不惑之间，性格与思想成熟，熟练掌握工作技能、有行业人脉、有经济基础，正值一生中的黄金时期，也可能是创业的最佳时机。最晚89出生的人群也已经有了3~5年的工作经验，他们正站在大公司与创业公司的十字路口，是跳槽到更好的企业，还是选择创业？前者相对稳定，后者颇具风险。</p>
+                        <p>当看到90后的余佳文们作客央视大谈其谈时，80后们开始集体焦虑——看来不创业是不行了。</p>
+                        <p>可是创业，做什么？</p>
+                        <p>我的朋友C，是朋友圈中收入最高的。他是BAT的一流工程师，是某计算机领域的佼佼者，也曾获得公司内部大奖，如果一直干下去，待遇还有上升空间。</p>
+                        <p>在宝宝出生的第一年，他决定要换掉这种频繁加班、拿命换钱的日子。于是回到山东老家，招了2名大学生开始培养，干起了微信相关的事业——这在当时很火爆，主要是为当地企业开发微信公众号，运营公众号。</p>
+                        <p>像他这种正规军，回到地方后反而寸步难行。企业的开发需求是有，但是都被其它不懂技术的杂牌军给包了。杂牌军们拿着通用的程序，低廉的价格，快速扫荡企业，已经赚到了第一桶金。</p>
+                        <p>朋友C在微信开发事业无果后，选择做了一个本地生活相关的微信公众号+网站，因为命名原因无法认证，无法认证就拿不到相关接口，拿不到相关接口等于此项事业又荒废了。</p>
+                        <p>2015年起，朋友C开始做起了老本行：开发。为具备开发需求的中小企业和网站开发，地域不限，需求不限。这项事业技术门槛较高，竞争较小，总算撑起了公司的运转。</p>
+                        <p>从某种意义上来说，他的生活又转了一圈，从给别人公司打工，回归到给自己公司打工，最核心的还是依靠自己的技术实力。创业并非一劳永逸，高维空间到了低维不一定是秒杀，也可能是被排外。</p>
+                        <p>2015年，朋友C的关键词是回归。回归到自己熟练的技能与熟悉的生活。</p>
+                        <p>我的朋友W，和朋友C的经历惊人相似。他也是BAT的员工，是一位资深媒体小编，在圈内有着很好的口碑和企业资源，工资收入加上外快，收入也颇丰。</p>
+                        <p>应朋友之邀，他选择离职与朋友做小区O2O外卖项目。简单说，就是通过微信公众号展示商户信息，顾客线上下单，线下送货上门。</p>
+                        <p>这项事业有真实的用户需求在，雾霾严重的北京，大把的人宁肯在家宅着也不愿意出门，但是我得吃饭，也得喝水，也得购物吧；这项事业也有价值，北京有成千上万个这样的小区，也有数十万个小店，盘活这些小店的资源，将他们搬到线上，具有很大的想象空间。</p>
+                        <p>这项事业还是没有做成。朋友W遇到了和朋友C一样的问题：公众号认证和接口问题，直接推迟了项目的上线——在2014年底，微信放开了认证政策，如果朋友W晚一些创业，是不是项目就不会这么快失败呢？</p>
+                        <p>我对朋友W放弃这项事业的关键原因尚不可得知，我的推测可能是小区O2O是一项很重的事业，需要大众点评式扫街与谈判，显然拿笔杆子的文弱媒体人能想到，但是做不到。</p>
+                        <p>2015年，朋友W也开始做起了老本行：媒体。依靠自己的专业能力做一家专注互联网金融的垂直媒体。就像我的其它几个媒体朋友分别专注手游、智能硬件和评测。</p>
+                        <p>2015年，朋友W的关键词是清零。他需要清空自己的创业经历，从零开始掌握互联网金融的知识与资源。</p>
+                        <p>我的朋友M，做的也是微信相关的事业，他不懂技术，不会写文章，不靠专业技能事业却做得最为顺利。</p>
+                        <p>朋友M依靠的是对内容天生的敏感度，以及对用户的心理的掌控——没错，他就是微信公众号的百万大号。与他同类的人群还有微博段子手，以及曾经的人人网红人与人气QQ空间。</p>
+                        <p>他专注运营自己的公众号，通过接企业广告的形式，获得基本收入；2014下半年赶上广点通爆发，开始多账号运营策略，最高的时候月入百万，微信编辑多达几十人。</p>
+                        <p>短短的几个月爆发期，微信调整广告策略，他的收入下滑后被迫回归老本行，接企业广告弥补团队投入。</p>
+                        <p>几十个公众号还在，数百万粉丝群体还在，但是朋友M已经想要转型了。转型的方向好几个：</p>
+                        <p>做微商。总不能一直发广告，一直为他人做嫁衣，要尝试自有产品。</p>
+                        <p>做自媒体。总不能一直复制他人内容，粉丝黏度太低，并且没有上升空间。</p>
+                        <p>做APP。朋友M觉得，APP或许比公众号更安全一些，更能留住用户？公众号的粉丝虽多，但同时面临政策风险和平台风险，谁保证自己的账号违规被封禁？谁保证公众号不会成为下一个微博？</p>
+                        <p>2015年，朋友M的关键词是减法。他可以做的项目看似很多，他需要不断做减法，选择一个专注其中。</p>
+                        <p>回归、清零与减法——2015年可能是互联网创业者的最坏的时机，因为现在的创业并非创业，你只是换了一种形式继续过一成不变的生活，还是需要回归自己的专业技能，需要学习掌握新的趋势，需要不断放弃和做出抉择。</p>
+                        <p>2015年也可能是互联网创业者最好的时机，假如你做的不只是纯粹互联网的项目，而是作为一名互联网老人与传统行业新人，投入到互联网对传统行业的改造大军中。</p>
+                        <p>黄太吉煎饼太难吃，身边的朋友都知道它的品牌，都关注了它的微博，但没有一个人去吃它。</p>
+                        <p>西少爷肉夹馍太贵，9元一个的价格是其它传统小店的1.5~2倍，还因创始人内讧一度关停过。</p>
+                        <p>我们是否能做出更好吃的煎饼，更具亲民价格的肉夹馍？</p>
+                        <p>我的另外一个媒体朋友X，酷爱吃小龙虾。她自己研究配方，打造自己的小龙虾品牌，清早5、6点起床进货，男友负责清洗，雇人送货上门，就在朋友圈和微博上的小圈子内一宣传，已经基本收支平衡了。</p>
+                    </div>
+               </div>
+               <div class="mg-t20 news-bulletin-detail-nav">
+                   <div>上一篇：<a href="javascript:">阿里巴巴上市阿里巴巴上市</a></div>
+                   <div class="mg-t5">下一篇：<a href="javascript:">阿里巴巴上市</a></div>
+               </div>
+            </div>   
+        </div>
+
+        <div ms-include-src="'vip-center-footer.html'"></div> 
+    </body>
+</html>

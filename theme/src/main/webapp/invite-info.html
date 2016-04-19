@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="msg_request">
+<div ms-include-src="'vip-center-header.html'"></div>
+<div class="main-frame">
+	<div ms-include-src="'vip-center-left.html'"></div>
+	<div class="right-frame">
+        <div class="receive-req-wrapper">
+                    <h3 class="ui-title-1">我收到的邀请信息</h3>
+
+                    <table class="ui-table-border  ui-table-noborder mg-t20"> 
+                        <thead>
+                            <tr>
+                                <th width="250">邀请单位</th>
+                                <th width="100">邀请人</th>
+                                <th>邀请时间</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>奥林网络科技（宁波）有限公司</td>
+                                <td>小星星</td>
+                                <td>2015-03-23 12:20</td>
+                                <td></td>
+                                <td>
+                                    <div class="ope">
+                                        <a href="#" ms-widget="button" data-button-color="primary">同意</a>
+                                        <a href="#" ms-widget="button" data-button-color="default" class="mg-l5">拒绝</a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>奥林网络科技（宁波）有限公司</td>
+                                <td>小星星</td>
+                                <td>2015-03-23 12:20</td>
+                                <td>
+                                    <span class="already-in">已加入</span>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+        </div>
+	</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"pager/avalon.pager",
+			"dropdown/avalon.dropdown"
+			], function() {
+			avalon.define("msg_request", function(vm) {
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+				
+
+			})
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

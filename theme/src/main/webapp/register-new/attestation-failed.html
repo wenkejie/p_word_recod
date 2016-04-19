@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register-new.css">
+    <script src="../vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'../header_register.html'"></div>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="rg-record">
+                <div class="rg-record-header">
+                    <div class="rg-record-header-left">
+                        <i class="icon-attestation-failed">&#xe614;</i>
+                    </div>
+                    <div class="rg-record-header-right">
+                        <p class="info">您申请的企业资质认证未通过审核</p>
+                        <h4 class="mgt20">认证失败提示：</h4>
+                        <p class="note mgt10">
+                            <span>1、请确认您提交认证的企业信息是否真实</span>
+                        </p>
+                        <p class="note">
+                            <span>2、提交的企业证件必须为正本或副本彩色件</span>
+                        </p>
+                        <p class="note mgt10">
+                            <span>如有疑问，请致电400-805-5656</span>
+                        </p>
+                        <div class="mgt20">
+                            <a class="rg-btn rg-btn-primary" href="javascript:">申请重新认证</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'../vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+// 通用样式集合
+@import "mixin.less";
+@import "variables.less";
+@import "common.less";
+
+
+//布局引入
+@import "en-layout.less";
+// 组件引入
+@import "form.less";
+// 弹窗样式引入
+@import "layout-robot-confirm.less";
+ 
+ .reset(); 
+ 
+ .ui-en-register-header-bar{
+ 	height: 3px;
+ 	background-color: #5a6974;
+ }
+
+ .ui-en-register-wrapper{
+ 	border-bottom: 1px solid #eee;
+ 	background: #fff;
+ }
+
+ .ui-en-register-logo-wrapper{
+ 	&:extend(.clearfix all);
+ 	width: 998px;
+ 	padding: 20px 0;
+ 	margin: 0 auto;
+ }
+
+.ui-en-register-logo{
+	.left;
+	background: url(../images/en.png) no-repeat;
+	background-position: -5px -287px;
+	width: 168px;
+	height: 55px;
+	margin-right: 15px;
+}
+
+.ui-en-register-name{
+	.left;
+	font-size: 24px;
+	color: #666;
+	margin-top: 2px;
+	padding-left: 15px;
+	padding-top: 15px;
+	border-left: 1px solid #ddd;
+}
+
+.ui-en-register-nav-ul{
+	.right;
+	margin-top: 12px;
+	li{
+		.left;
+		padding: 0px 8px;
+		border-right: 1px solid #ddd;
+		&.last{
+			padding-right: 0px;
+			border-right: none;
+		}
+		a{
+			color: #666;
+			font-size: 14px;
+		}
+	}
+
+}
+
+.ui-en-registe-footer{
+	height: 100px;
+	clear: both;
+	background-color: #a4aeb7;
+	line-height: 100px;
+	text-align: center;
+	color: #fff;
+}
+
+.en-register-bd-wrapper{
+	background-color: #f9f9f9;
+}
+
+.en-register-bd{
+	&:extend(.clearfix all);
+	width: 998px;
+	margin: 0 auto;
+	padding-top:20px;
+	padding-bottom: 100px;
+
+	.w-90{
+		width: 90px;
+	}
+
+	.code{
+		width: 78px;
+	}
+
+	.area{
+		width: 40px;
+		margin-left: 10px;
+	}
+
+	.number{
+		width: 79px;
+		margin-left: 10px;
+	}
+
+	.code-input{
+		width: 79px;
+	}
+
+	.refresh{
+		.left;
+		width: 20px;
+		height: 20px;
+		background: url(../images/en.png) no-repeat;
+	    background-position: -78px -94px;
+	    margin-top: 12px;
+	    margin-left: 10px;
+	}
+
+	.create-btn{
+		.left;
+		padding: 0px 34px;
+		background-color: #ff5217;
+		height: 36px;
+		line-height: 36px;
+		color: #fff;
+		font-size: 12px;
+		font-weight: bold;
+		border-radius: 2px;
+	}
+
+	.create-btn-disable{
+		border-color: #e8e8e8;background: #f2f2f2;
+		cursor: not-allowed;color: #aaa;
+		&:hover{
+			background: #f2f2f2;
+			color: #aaa;
+		}
+	}
+
+	.ui-input-large{
+		&.error{
+			border: 1px solid #d95450;
+		}
+	}
+}
+
+.en-rg-label{
+	.left;
+	width: 355px;
+	line-height: 34px;
+	height: 34px;
+	padding-right: 20px;
+	text-align: right;
+	color: #666;
+	font-size:13px;
+}
+.en-rg-required{
+	margin-right: 6px;
+	color: #FF5618;font-family: SimSun;
+}
+.ui-form-txt{
+	line-height:34px;
+	height:34px;
+	font-size:14px;
+	font-weight:bold;
+	color:#666;
+}
+.en-rg-form-title{
+	&:extend(.clearfix all);
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 45px;
+	margin-bottom: 20px;
+}
+.en-rg-form-line{
+	&:extend(.clearfix all);
+	margin-bottom: 14px;
+}
+
+.en-agreement{
+	padding-left: 377px;
+	color: #666;
+	.aggre-title{
+		color: #999;
+		font-weight: bold;
+		margin-top: 42px;
+		margin-bottom: 15px;
+	}
+}
+
+.en-rg-tips{
+	.left;
+	position: relative;
+	margin-left: 10px;
+	&.color-grey{
+		.password-test{
+			background-color: #999;
+			box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.08);
+		}
+		.direction{
+			color: #999;
+			em{
+				color: #999;
+			}
+		}
+	}
+	.password-test {
+		position: absolute;
+		left: 10px;top: 0px;
+		z-index: 101;
+		padding: 6px 14px;
+		width: 211px;
+		background-color: #d95450;
+		font-size: 12px;
+		color: #000;
+		border-radius: 3px;
+		color: #fff;
+		box-shadow: 3px 3px 8px rgba(253, 175, 173, 0.3);
+	}
+
+	 .direction {
+		position: absolute;
+		left: -7px;top: 8px;
+		width: 14px;
+		height: 16px;
+		color: #d95450;
+		font: 14px '宋体',Arial, Helvetica, sans-serif; 
+
+		em {
+			position: absolute;
+			left: 1px;
+			top: 0;
+			color: #d95450;
+			font-size: 14px;
+			font-style: normal;
+		}
+	}
+}
+
+.en-register-success-bd{
+	width: 998px;
+	margin: 0 auto;
+}
+
+.en-register-success-logo{
+	.left;
+	background: url(../images/en.png) no-repeat;
+    background-position: -9px -70px;
+    width: 50px;
+    height: 42px;
+    margin-right: 27px;
+}
+.en-register-fail-logo{
+	.left;  
+	background: url(../images/en.png) no-repeat;
+    background-position: -120px -70px;
+    width: 50px;
+    height: 42px;
+    margin-right: 15px; 
+}
+.en-register-success-msg{
+	.left;
+	.welcome{
+		color: #008c8c;
+		font-size: 28px;
+		font-weight: bold;
+		&.wrong{
+			color:#d90000;
+		}
+	}
+	p{
+		margin-bottom: 10px;
+	}
+
+	.email{
+		color: #269d9d;
+		text-decoration: underline;
+		&.wrong{
+			color:#d90000;
+		}
+	}
+	.notice{
+		font-size: 28px;
+		color: #D60815
+	}
+
+}
+.en-register-success{
+	min-height: 450px;
+	padding: 62px 120px;
+}
+
+.en-register-success-main{
+	&:extend(.clearfix all); 
+
+} 
+
+.en-register-success-link-wrapper{
+		margin-top: 30px;
+	border-top: 1px dashed #ddd;
+	padding-left: 78px;
+}
+.en-register-success-link{
+	margin-top:27px;
+	margin-bottom: 14px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.en-email-title-wrapper{
+  background-color: #f36041;
+}
+
+.en-email-title{
+  width: 650px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  font-size: 24px;
+  color: #fff; 
+}
+
+.en-email-temp-head{
+	&:extend(.clearfix all);
+	padding: 15px 0px;
+	width: 650px;
+	margin: 0 auto;
+}
+
+// ===================================================
+// ==================== 协议框 =======================
+// ===================================================
+
+.rg-license {
+	border: 1px solid #B2B2B2;
+	height: 240px;width: 450px;
+	margin: 15px auto;padding: 5px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+
+@import "en-jianshen.less";
+@import "en-profile.less";

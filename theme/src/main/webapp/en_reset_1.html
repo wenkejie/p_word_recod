@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/en-register.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register">
+    <div ms-include-src="'en_register_header.html'"></div>
+    
+    <div class="en-register-bd-wrapper">
+        <div class="en-register-bd">
+            <p class="en-rg-form-prompt"><i>&#xe611;</i> To change your password, please enter either the email address currently associated with your<br>&nbsp; &nbsp;&nbsp;&nbsp;Cargopm.com account or your Cargopm.com Member ID.</p>
+
+            <div class="en-rg-form-line">
+                <label class="en-rg-label">Enter your registered email:</label>
+                <div class="ui-form-group">
+                    <input type="text" class="ui-input-large" placeholder="fsafs@qq.com">
+                </div>
+            </div>
+
+            
+
+            <div class="en-rg-form-line">
+                <label class="en-rg-label">Enter the code shown:</label>
+                <div class="ui-form-group">
+                    <img src="" width="100px" height="42px" class="left"/>
+
+                    <a href="javascript:" class="refresh"></a>
+                </div>
+            </div>
+
+            <div class="en-rg-form-line">
+                <label class="en-rg-label">&nbsp;</label>
+                <div class="ui-form-group">
+                    <input type="text" class="ui-input-large code-input">
+                </div>
+            </div>
+
+
+            <div class="en-agreement">
+
+                <div class="mg-t30">
+                    <a href="javascript:" class="create-btn">Submit</a>
+                </div>  
+            </div>
+
+
+        </div>
+    </div>
+
+    <div ms-include-src="'en_register_footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

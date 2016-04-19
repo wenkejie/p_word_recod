@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+    <link rel="stylesheet" href="../css/caesar.dropdown.css">
+	<link rel="stylesheet" href="css/layout.css">
+</head>
+<body ms-controller="header">
+<div class="top-bar" ms-controller="top_bar">
+	<div class="top-bar-cnt">
+        <div class="welcome"><span>您好！</span><a href="#">请登录</a><span class="welcome-line">|</span><a href="#" class="welcome-link-register">免费注册</a></div>
+        <div class="top-bar-link">
+        	<ul>
+            	<li><a href="#" class="right-line home-page-link">咖狗网首页</a></li>
+                <li class="link-dropdown" ms-hover="link-dropdown-active" ms-mouseover="myDZGVisible" ms-mouseout="myDZGVisible">
+                	<div class="link-dropdown-header"><a href="#" class="right-line">我的咖狗</a><i class="icon-2">&#xe612;</i></div>
+                    <ul class="link-dropdown-list" ms-css-display="myDZG_visible">
+                    	<li><a href="#">我是买家</a></li>
+                        <li><a href="#">我是卖家</a></li>
+                    </ul>
+                </li>
+                <li class="notice-dropdown" ms-hover="link-dropdown-active" ms-mouseover="msgVisible" ms-mouseout="msgVisible">
+                	<div class="link-dropdown-header"><i class="icon-1">&#xe619;</i><a href="#" class="right-line notice-link">消息</a><i class="icon-2">&#xe612;</i></div>
+                    <ul class="link-dropdown-list" ms-css-display="msg_visible">
+                    	<li><a href="#">我的订单</a></li>
+                        <li><a href="#">评论<span class="num">(1)</span></a></li>
+                        <li><a href="#">认证<span class="num">(1)</span></a></li>
+                        <li><a href="#">邀请<span class="num">(10)</span></a></li>
+                        <li><a href="#">我的积分</a></li>
+                        <li><a href="#">我的优惠券</a></li>
+                        <li><a href="#">系统设置</a></li>
+                        <li class="msg-set"><a href="#">消息设置</a></li>
+                    </ul>
+                </li>
+                <li class="online-customer" ms-hover="online-customer-active" ms-mouseover="onlineVisible" ms-mouseout="onlineVisible">
+                	<div class="link-dropdown-header"><i class="icon-1">&#xe61d;</i><a href="#" class="right-line notice-link">在线客服</a><i class="icon-2">&#xe612;</i></div>
+                    <ul class="link-dropdown-list link-dropdown-list-customer" ms-css-display="online_visible">
+                    	<li class="online-customer-wpaQQ" id="j-sideqq">
+                            <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODAyNjM1MV8yNTk2NDJfNDAwODA1NTY1Nl8">
+                            </script>
+                        </li>
+                        <li><h5>在线客服：</h5><p>400-805-5656</p></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ui-search">
+    <div class="ui-search-wrapper">
+<div class="en-logo"></div>
+            <div class="ui-search-bd ui-search-bd-en">
+                <ul class="ui-search-bd-tab">
+                    <li class="ui-search-bd-tab-selected">FCL</li>
+                    <li>LCL</li>
+                    <!-- <li>空运</li> -->
+                </ul>
+                <div class="ui-search-bd-input ui-search-bd-input-en">
+                    <div class="ui-search-bd-input-wrapper1">
+                        <!-- <div class="name">起运港</div> -->
+                       <input ms-widget="textbox" class="search-input" type="textbox" ms-duplex="p" data-textbox-suggest="test1" placeholder="Port Of Loading"/>
+                       <div class="cui-dropdown cui-dropdown-pol">
+                        <div class="cui-dropdown-header"></div>
+                        <div class="cui-dropdown-content">
+                            <div>
+                                <a href="javascript:" class="cui-dropdown-cell">
+                                    <span class="cui-port-code">
+                                        上海
+                                    </span>
+                                    <span class="cui-port-name">
+                                        ShangHai
+                                    </span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="javascript:" class="cui-dropdown-cell">
+                                    <span class="cui-port-code">
+                                        上海
+                                    </span>
+                                    <span class="cui-port-name">
+                                        ShangHai
+                                    </span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="javascript:" class="cui-dropdown-cell">
+                                    <span class="cui-port-code">
+                                        上海
+                                    </span>
+                                    <span class="cui-port-name">
+                                        ShangHai
+                                    </span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="javascript:" class="cui-dropdown-cell">
+                                    <span class="cui-port-code">
+                                        上海
+                                    </span>
+                                    <span class="cui-port-name">
+                                        ShangHai
+                                    </span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="javascript:" class="cui-dropdown-cell">
+                                    <span class="cui-port-code">
+                                        上海
+                                    </span>
+                                    <span class="cui-port-name">
+                                        ShangHai
+                                    </span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="javascript:" class="cui-dropdown-cell">
+                                    <span class="cui-port-code">
+                                        上海
+                                    </span>
+                                    <span class="cui-port-name">
+                                        ShangHai
+                                    </span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="javascript:" class="cui-dropdown-cell">
+                                    <span class="cui-port-code">
+                                        上海
+                                    </span>
+                                    <span class="cui-port-name">
+                                        ShangHai
+                                    </span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="javascript:" class="cui-dropdown-cell">
+                                    <span class="cui-port-code">
+                                        上海
+                                    </span>
+                                    <span class="cui-port-name">
+                                        ShangHai
+                                    </span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="javascript:" class="cui-dropdown-cell cui-dropdown-last">
+                                    <span class="cui-port-code">
+                                        上海
+                                    </span>
+                                    <span class="cui-port-name">
+                                        ShangHai
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="ui-search-bd-input-wrapper2">
+                        <!-- <div class="name">目的港</div> -->
+                       <input ms-widget="textbox" class="search-input" type="textbox" ms-duplex="p" data-textbox-suggest="test2" placeholder="Port Of Destination"/>
+                       <div class="cui-dropdown cui-dropdown-filter cui-dropdown-pod">
+                        <div class="cui-dropdown-filter-content">
+                            <div class="cui-dropdown-header">
+                                <div class="cui-dropdown-tab">
+                                    <a href="javascript:" class="cui-dropdown-tab-cell cui-dropdown-tab-current">热门港口</a><a href="javascript:" class="cui-dropdown-tab-cell cui-dropdown-tab-last">所有港口</a>
+                                </div>
+                            </div>
+                            <div class="cui-dropdown-content">
+                                <div>
+                                    <a href="javascript:" class="cui-dropdown-cell">
+                                        <span class="cui-port-code">
+                                            China
+                                        </span>
+                                        <span class="cui-port-name">
+                                            ShangHai(上海)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="javascript:" class="cui-dropdown-cell cui-dropdown-cell-current">
+                                        <span class="cui-port-code">
+                                            China
+                                        </span>
+                                        <span class="cui-port-name">
+                                            ShangHai(上海)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="javascript:" class="cui-dropdown-cell">
+                                        <span class="cui-port-code">
+                                            China
+                                        </span>
+                                        <span class="cui-port-name">
+                                            ShangHai(上海)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="javascript:" class="cui-dropdown-cell">
+                                        <span class="cui-port-code">
+                                            China
+                                        </span>
+                                        <span class="cui-port-name">
+                                            ShangHai(上海)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="javascript:" class="cui-dropdown-cell">
+                                        <span class="cui-port-code">
+                                            China
+                                        </span>
+                                        <span class="cui-port-name">
+                                            ShangHai(上海)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="javascript:" class="cui-dropdown-cell">
+                                        <span class="cui-port-code">
+                                            China
+                                        </span>
+                                        <span class="cui-port-name">
+                                            ShangHai(上海)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="javascript:" class="cui-dropdown-cell">
+                                        <span class="cui-port-code">
+                                            China
+                                        </span>
+                                        <span class="cui-port-name">
+                                            ShangHai(上海)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="javascript:" class="cui-dropdown-cell">
+                                        <span class="cui-port-code">
+                                            China
+                                        </span>
+                                        <span class="cui-port-name">
+                                            ShangHai(上海)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="javascript:" class="cui-dropdown-cell">
+                                        <span class="cui-port-code">
+                                            China
+                                        </span>
+                                        <span class="cui-port-name">
+                                            ShangHai(上海)
+                                        </span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="javascript:" class="cui-dropdown-cell cui-dropdown-last">
+                                        <span class="cui-port-code">
+                                            China
+                                        </span>
+                                        <span class="cui-port-name">
+                                            ShangHai(上海)
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="ui-search-bd-btn-wrapper">
+                        <button>Search</button>
+                    </div>
+                </div>
+                <!-- <div class="ui-search-bd-sgst">
+                    历史搜索：
+                    <a>DSFDSD</a>
+                    <a>SDS</a>
+                    <a>SCDD</a>
+                    <a>WEWE</a>
+                    <a>HTHT</a>
+                    <a>BVB</a>
+                    <a>ERER</a>
+                </div>
+
+                <div class="ui-search-tip">
+                    <a href="javascript:void(0)">高级<br>搜索</a>
+                </div> -->
+            </div>
+			<a href="#" class="header-apply-supplier-btn">申请供应商</a>
+          <!--   <div class="ui-search-adv">
+                广告
+            </div> -->
+    </div>
+</div>
+<script>
+	require([], function() {
+		avalon.define("top_bar", function(vm) {
+			vm.myDZG_visible = "none";
+			vm.msg_visible = "none";
+			vm.online_visible = "none";
+			vm.myDZGVisible = function(event) {
+				if(event.type=="mouseover"){
+					vm.myDZG_visible = "block";
+				}else{
+					vm.myDZG_visible = "none";
+				}
+			}
+			
+			vm.msgVisible = function(event) {
+				if(event.type=="mouseover"){
+					vm.msg_visible = "block";
+				}else{
+					vm.msg_visible = "none";
+				}
+			}	
+			vm.onlineVisible = function(event) {
+				if(event.type=="mouseover"){
+					vm.online_visible = "block";
+				}else{
+					vm.online_visible = "none";
+				}
+			}
+		})
+
+		avalon.scan()
+	})
+	
+</script>
+
+
+</body>
+</html>

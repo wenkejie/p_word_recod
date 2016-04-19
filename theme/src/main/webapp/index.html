@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title></title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+</head>
+<body ms-controller="index">
+<!-- <div ms-include-src="'header_en.html'"></div> -->
+<div ms-include-src="'header.html'"></div>
+<div class="ui-index-banner-box">
+	<div ms-widget="carousel,carousel1,$opt1" class="ui-index-banner"></div>
+    <div class="index-toolbox">
+        <div class="index-toolbox-bg"></div>
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="index-toolbox-icon"><i>&#xe602;</i></div>
+                    <span class="index-toolbox-des">货物跟踪</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="index-toolbox-icon"><i>&#xe600;</i></div>
+                    <span class="index-toolbox-des">海关编码</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="index-toolbox-icon"><i>&#xe601;</i></div>
+                    <span class="index-toolbox-des">货代知识</span>
+                </a>
+            </li>
+            <li class="index-toolbox-wxyj">
+                <div class="index-toolbox-icon"><img src="images/index-ewm.png"></div>
+                <h5>微信运价</h5>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="main-frame">
+    <!--<div class="ui-index-box">
+    	<div class="ui-index-bzax">
+        	<ul>
+            	<li>
+                	<div class="ui-index-bzax-icon icon-bao"></div>
+                    <div class="ui-index-bzax-text">
+                    	<h5>舱位优先保障</h5>
+                        <p>日均5000个舱位实时在线订舱</p>
+                    </div>
+                </li>
+                <li>
+                	<div class="ui-index-bzax-icon icon-zheng"></div>
+                    <div class="ui-index-bzax-text">
+                    	<h5>价格认证保证真实</h5>
+                        <p>网罗500家超大型国内外物流服务商</p>
+                    </div>
+                </li>
+                <li>
+                	<div class="ui-index-bzax-icon icon-an"></div>
+                    <div class="ui-index-bzax-text">
+                    	<h5>风险安全可控</h5>
+                        <p>在线支付0风险，我们承诺先行赔付</p>
+                    </div>
+                </li>
+                <li>
+                	<div class="ui-index-bzax-icon icon-xin"></div>
+                    <div class="ui-index-bzax-text">
+                    	<h5>服务专业贴心</h5>
+                        <p>全面打造24小时一站式服务体系</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ui-index-pic-slide">
+        	
+            <div class="ui-index-today-statistics">
+            	<p>今日更新运价<span class="today-statistics-num">698</span>条</p>
+                <p>今日成功交易<span class="today-statistics-num">56</span>笔</p>
+                <p class="no-border">优质供应商<span class="today-statistics-num">183</span>家</p>
+            </div>
+        </div>
+        <div class="ui-index-topRight">
+        	<!--登录后-->
+        	<!--<div class="ui-index-welcome">
+            	<p>Hi~&nbsp;下午好：<span class="name">周星星</span></p>
+            </div>-->
+            <!--登录前-->
+            <!--<ul class="ui-index-login-link">
+            	<li class="ui-index-link-login"><a href="#"><span class="icon-index-login"></span>登录</a></li>
+                <li class="ui-index-link-register"><a href="#">注册</a></li>
+            </ul>
+            <div class="ui-index-toolbox">
+                <h3>工具箱</h3>
+                <ul>
+                    <li><span class="ui-index-toolbox-icon icon-gz"></span><p class="ui-index-toolbox-text">跟踪</p></li>
+                    <li><span class="ui-index-toolbox-icon icon-shl"></span><p class="ui-index-toolbox-text">算汇率</p></li>
+                    <li><span class="ui-index-toolbox-icon icon-xzs"></span><p class="ui-index-toolbox-text">小知识</p></li>
+                    <li><p class="ui-index-toolbox-jqqd">敬请期待</p></li>
+                </ul>
+            </div>
+            <div class="ui-index-transaction-records">
+                <h3>最新成交记录</h3>
+                <ul>
+                    <li>深圳史先生2*20GP已成交</li>
+                    <li>宁波潘小姐1*40HQ已成交</li>
+                    <li>天津赵先生3*20GP已成交</li>
+                    <li>青岛马先生1*40GP 1*20GP已成交</li>
+                    <li>厦门汝小姐2*40GP已成交</li>
+                </ul>
+            </div>
+        </div>
+    </div>-->
+    
+    <div class="ui-index-box">
+    	<div class="ui-index-yhcx" id="yhcx">
+            <ul class="ui-index-yhcx-list">
+            	<li><img src="images/index-pic-3.png"></li>
+                <li><img src="images/index-pic-3.png"></li>
+                <li><img src="images/index-pic-3.png"></li>
+                <li><img src="images/index-pic-3.png"></li>
+                <li><img src="images/index-pic-3.png"></li>
+                <li><img src="images/index-pic-3.png"></li>
+            </ul>
+            <div class="ui-index-yhcx-link-box1" id="yhcxLink">
+            	<div class="ui-index-yhcx-link">
+                	<a href="#">我要在这里</a>
+                    <span class="arrow">◆</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-index-box mg-t10" id="imageAD">
+    	<img src="images/index-pic-2.png">
+    </div>
+    <div class="ui-index-box ui-index-mb">
+    	<div class="ui-index-mbgs">
+        	<h3><span class="float-l">咖狗动态</span><a href="#" class="float-r">更多</a></h3>
+            <div class="ui-index-mbgs-slide" ms-widget="carousel,carousel2,$opt2"></div>
+            <ul class="ui-index-mbgs-list">
+            	<li>
+                	<span class="ui-index-mbgs-list-num num-top3">1</span>
+                    <a href="#">【动态】牵手国际物流协会 推动全球物流产业互联网化</a>
+                </li>
+                <li>
+                	<span class="ui-index-mbgs-list-num num-top3">2</span>
+                    <a href="#">【观点】黄教授解读关于电子商务总理答记者问</a>
+                </li>
+                <li>
+                	<span class="ui-index-mbgs-list-num num-top3">3</span>
+                    <a href="#">【动态】奥林科技荣获2014年度中国软件和信息服务物流电子商务信息化领域最佳解决方案奖</a>
+                </li>
+                <li>
+                	<span class="ui-index-mbgs-list-num">4</span>
+                    <a href="#">【资讯】李克强总理提出制定“互联网+”行动计划</a>
+                </li>
+                <li>
+                	<span class="ui-index-mbgs-list-num">5</span>
+                    <a href="#">【分享】离中海，入奥林</a>
+                </li>
+                <li>
+                	<span class="ui-index-mbgs-list-num">6</span>
+                    <a href="#">【分享】拥抱变化的奥林人</a>
+                </li>
+                <li>
+                	<span class="ui-index-mbgs-list-num">7</span>
+                    <a href="#">【动态】2015我们玩把大的</a>
+                </li>
+                <li>
+                	<span class="ui-index-mbgs-list-num">8</span>
+                    <a href="#">【动态】我们处在物流行业大变革的时代</a>
+                </li>
+            </ul>
+        </div>
+        <div class="ui-index-mbdt">
+        	<h3><span class="float-l">咖狗故事</span><a href="#" class="float-r">更多</a></h3>
+            <ul class="ui-index-mbdt-list">
+            	<li><a href="#">为何你的店铺无人问津</a></li>
+                <li><a href="#">豆腐郎200元创业网销千万</a></li>
+                <li><a href="#">十年间白手起家到身价千万</a></li>
+                <li><a href="#">2014年1688上最阿萨德发射点发发生大幅阿斯顿法斯蒂芬阿斯多夫阿斯顿火36人全在这</a></li>
+                <li><a href="#">美女弃文从商3个月做到300万</a></li>
+                <li><a href="#">李嘉诚：我用10亿元也买不来</a></li>
+                <li><a href="#">业余帮人洗衣服投资小可行吗</a></li>
+                <li><a href="#">业余帮人洗衣服投资小可行吗</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="service-wrapper">
+        <img src="images/bzax.png" height="57" width="998">
+    </div>    
+</div>
+<div ms-include-src="'footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"datepicker/avalon.datepicker",
+			"carousel/avalon.carousel"
+			], function() {
+			avalon.define("index", function(vm) {
+				vm.$opt1 = {
+                    alwaysShowArrow:false,
+                     content: '<h4 class="cui-carousel-info">12312</h4><div class="cui-carousel-shadow"></div>',
+                     pictures: [
+                     
+                     {
+                        src:"images/banner/home_header_banner.jpg",
+                        title: 'picture-1',
+                        href:"#!{king:_adlink/}",
+                        alt:'skdfajslkdfjals'
+                    },
+                    {
+                        src:"images/banner/home_header_banner.jpg"
+                    }
+                    
+                    ],
+					pictureWidth:"100%",
+					pictureHeight:340
+				},
+				vm.$opt2 = {
+                    content: '<div class="cui-carousel-shadow"></div><p class="cui-carousel-info">这是一张图片</p>',
+                    pictures: [ 
+                    {src:"images/index-pic-5.png"},
+                    {src:"images/index-pic-5.png"}
+
+                    ],
+                    pictureWidth:455,
+                    pictureHeight:240
+                }
+
+            });
+			
+			avalon.scan()
+		})
+	</script>
+	<script>
+	window.onscroll = function () { 
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; 
+		var yhcxTop = document.getElementById("yhcx").offsetTop;
+		var imageADTop = document.getElementById("imageAD").offsetTop;
+		var yhcxLink = document.getElementById("yhcxLink")
+		if(scrollTop > yhcxTop){
+			yhcxLink.className = "ui-index-yhcx-link-box2";
+		}
+		if(scrollTop <= yhcxTop || scrollTop >= imageADTop-60){
+			yhcxLink.className = "ui-index-yhcx-link-box1";
+		}
+	};
+    </script>
+</body>
+</html>

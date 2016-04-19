@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/example.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="p_pay" class="rg-body">
+    <div ms-include-src="'header_pay.html'"></div>
+    <div class="wrapper wrapper-pay mg-t20">
+        <div class="wrapper-header">
+            <div class="pay-detail">
+                <div class="pay-detail-head">
+                    <label class="pay-label" for="">收&nbsp;&nbsp;款&nbsp;&nbsp;方：</label>
+                    <span class="pay-span">宁波开源国际物流有限公司</span>
+                    <a href="javascript:" class="show-detail">详情 <i>&#xe612;</i></a>
+                </div>
+                <div class="pay-detail-list">
+                    <div class="detail-list-line">
+                        <label class="pay-label" for="" class="">账&nbsp;&nbsp;单&nbsp;&nbsp;号：</label>
+                        <span class="pay-span">412313</span>
+                    </div>
+                    <div class="detail-list-line">
+                        <label class="pay-label" for="" class="">发&nbsp;&nbsp;票&nbsp;&nbsp;号：</label>
+                        <span class="pay-span">312312131</span>
+                    </div>
+                    <div class="detail-list-line">
+                        <label class="pay-label" for="" class="">发票金额：</label>
+                        <span class="pay-span">1444</span>
+                    </div>
+                    <div class="detail-list-line">
+                        <label class="pay-label" for="" class="">购买时间：</label>
+                        <span class="pay-span">2014年1月14日 18:32:44</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pay-total">
+                <label for="" class="pay-total-label">CNY</label>
+                <span class="pay-price">7000</span>
+            </div>
+        </div>
+        <div class="wrapper-content">
+            <div class="rg-form rg-form-pay">
+                <div class="rg-form-title">
+                    <h3>付款账户</h3>
+                </div>
+                <div class="rg-form-line">
+                    <div class="bank-list">
+                        <div class="bank-list-item">
+                            <div class="bank-list-cell">
+                                <div class="bank-info">
+                                    <div class="bank-logo">
+                                        <img class="img" src="images/bank_logo/card_logo.png"/>
+                                    </div>
+                                    <span class="bank-name">宁波通商银行</span>
+                                </div>
+                                <div class="bank-balance">
+                                    <div class="bank-balance-unit">
+                                        <p>余额</p>
+                                        <p>CNY</p>
+                                    </div>
+                                    <div class="bank-balance-num">
+                                        1,345,418<span>.80</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bank-list-item error">
+                            <div class="bank-list-cell">
+                                <div class="bank-info">
+                                    <div class="bank-logo">
+                                        <img class="img" src="images/bank_logo/card_logo.png"/>
+                                    </div>
+                                    <span class="bank-name">宁波通商银行</span>
+                                </div>
+                                <div class="bank-balance">
+                                    <div class="bank-balance-unit">
+                                        <p>余额</p>
+                                        <p>CNY</p>
+                                    </div>
+                                    <div class="bank-balance-num">
+                                        1,345,418<span>.80</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bank-error-info">
+                                余额不足请充值后再付款
+                            </div>
+                        </div>
+                        <div class="bank-list-item last">
+                            <div class="bank-list-cell">
+                                <div class="bank-info">
+                                    <div class="bank-logo">
+                                        <img class="img" src="images/bank_logo/card_logo.png"/>
+                                    </div>
+                                    <span class="bank-name">宁波通商银行</span>
+                                </div>
+                                <div class="bank-balance">
+                                    <div class="bank-balance-unit">
+                                        <p>余额</p>
+                                        <p>CNY</p>
+                                    </div>
+                                    <div class="bank-balance-num">
+                                        1,345,418<span>.80</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line mg-t20">
+                    <a class="rg-btn rg-btn-primary" href="javascript:">下一步</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("p_pay", function(vm) {
+
+                })
+                avalon.scan()
+            })
+    </script>
+</body>
+</html>

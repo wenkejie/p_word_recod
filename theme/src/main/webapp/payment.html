@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="payment">
+<div ms-include-src="'vip-center-header.html'"></div>
+<div class="main-frame">
+	<div ms-include-src="'vip-center-left.html'"></div>
+	<div class="right-frame">
+		<div class="ui-tab">
+			<div class="ui-tab-item selected">
+				<div class="bd ui-tab-item-cnt">全部</div>
+			</div>
+
+			<div class="ui-tab-item">
+				<div class="bd ui-tab-item-cnt">待付款<span class="mg-l5 highlight_org">3</span></div>
+			</div>
+
+			<div class="ui-tab-item">
+				<div class="bd ui-tab-item-cnt">已付款<span class="mg-l5 highlight_org">23</span></div>
+			</div>
+
+			<div class="ui-tab-item">
+				<div class="bd ui-tab-item-cnt">退回</div>
+			</div>
+
+			<div class="ui-tab-line"></div>
+		</div>
+
+		<div class="mg-t20">
+			<div class="ui-form-group">
+				<input type="text" class="ui-input w-320" placeholder="请输入订单号/卖家/起运港/目的港搜索"><button class="ui-search-group-btn">订单搜索</button>
+			</div>
+				<a href="javascript:void(0)" class="more-condition">筛选更多条件 <i>&#xe612;</i></a>
+		</div>
+
+		<div class="mg-t20 search-conditions" ms-controller="search">
+			<div class="form-group">
+				<label class="form-label w-66 ta-l">交易时间</label>
+				<div class="form-input">
+					<input type="text" class="ui-input w-66"/> 
+					  到
+					<input type="text" class="ui-input w-66"/>
+				</div>
+
+				<label class="form-label w-66 ta-l mg-l65">付款状态</label>
+				<div class="form-input">
+						<select ms-widget="dropdown">
+					        <option>全部</option>
+					    </select>
+				</div>
+
+			</div>
+
+			<div class="form-group">
+				<label class="form-label w-66 ta-l">收款单位</label>
+				<div class="form-input">
+					<input type="text" class="ui-input w-174"/> 
+				</div>
+
+				<label class="form-label w-66 ta-l mg-l65">币种</label>
+				<div class="form-input">
+					<select ms-widget="dropdown">
+				        <option>全部</option>
+				    </select>
+				</div>
+
+				<label class="form-label w-66 ta-l mg-l65">&nbsp;</label>
+				<div class="form-input">
+					<button ms-widget="button" class="" data-button-size="big" data-button-color="primary">搜索</button>
+				</div>
+			</div>
+		</div>
+		<div class="ui-table-box">
+        	<div class="ui-table-payment">
+            	<table class="ui-table-border">
+                    <thead>
+                        <tr>
+                            <th>账单号 | 创建时间</th>
+                            <th>发票号</th>
+                            <th width="250">收款单位</th>
+                            <th>付款金额</th>
+                            <th>状态 | 支付时间</th>
+                            <th width="70">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><p class='bill-number'>12889809999</p><p class='setup-time'>2014-12-15 12:00</p></td>
+                            <td>67889063</td>
+                            <td>奥林科技（宁波）有限公司</td>
+                            <td><span class='payment-amount'>$2131</span></td>
+                            <td><span class='wait-payment'>待付款</span></td>
+                            <td><a href="#">详情</a></td>
+                        </tr>
+                        <tr class="split">
+                            <td><p class='bill-number'>12889809999</p><p class='setup-time'>2014-12-15 12:00</p></td>
+                            <td>67889063</td>
+                            <td>奥林科技（宁波）有限公司</td>
+                            <td><span class='payment-amount'>￥2131</span></td>
+                            <td><p class='payment-succeed'>支付成功</p><p class='payment-time'>2014-12-15 <span>12:00</span></p></td>
+                            <td>
+                            	<div class="operate-dropdown">
+									<a href="#" class="btn-payment">付款 <i>&#xe612;</i></a>
+									<ul class="operate-dropdown-list">
+									<li><a href="#">详情</a></li>
+									<li><a href="#">退回</a></li>
+									</ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class='bill-number'>12889809999</p><p class='setup-time'>2014-12-15 12:00</p></td>
+                            <td>67889063</td>
+                            <td>奥林科技（宁波）有限公司</td>
+                            <td><span class='payment-amount'>$2131</span></td>
+                            <td><span class='wait-payment'>待付款</span></td>
+                            <td><a href="#">详情</a></td>
+                        </tr>
+                        <tr class="split">
+                            <td><p class='bill-number'>12889809999</p><p class='setup-time'>2014-12-15 12:00</p></td>
+                            <td>67889063</td>
+                            <td>奥林科技（宁波）有限公司</td>
+                            <td><span class='payment-amount'>￥2131</span></td>
+                            <td><p class='payment-succeed'>支付成功</p><p class='payment-time'>2014-12-15 <span>12:00</span></p></td>
+                            <td>
+                            	<div class="operate-dropdown">
+									<a href="#" class="btn-payment">付款 <i>&#xe612;</i></a>
+									<ul class="operate-dropdown-list">
+									<li><a href="#">详情</a></li>
+									<li><a href="#">退回</a></li>
+									</ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class='bill-number'>12889809999</p><p class='setup-time'>2014-12-15 12:00</p></td>
+                            <td>67889063</td>
+                            <td>奥林科技（宁波）有限公司</td>
+                            <td><span class='payment-amount'>$2131</span></td>
+                            <td><span class='wait-payment'>待付款</span></td>
+                            <td><a href="#">详情</a></td>
+                        </tr>
+                        <tr class="split">
+                            <td><p class='bill-number'>12889809999</p><p class='setup-time'>2014-12-15 12:00</p></td>
+                            <td>67889063</td>
+                            <td>奥林科技（宁波）有限公司</td>
+                            <td><span class='payment-amount'>￥2131</span></td>
+                            <td><p class='payment-succeed'>支付成功</p><p class='payment-time'>2014-12-15 <span>12:00</span></p></td>
+                            <td>
+                            	<div class="operate-dropdown">
+									<a href="#" class="btn-payment">付款 <i>&#xe612;</i></a>
+									<ul class="operate-dropdown-list">
+									<li><a href="#">详情</a></li>
+									<li><a href="#">退回</a></li>
+									</ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class='bill-number'>12889809999</p><p class='setup-time'>2014-12-15 12:00</p></td>
+                            <td>67889063</td>
+                            <td>奥林科技（宁波）有限公司</td>
+                            <td><span class='payment-amount'>$2131</span></td>
+                            <td><span class='wait-payment'>待付款</span></td>
+                            <td><a href="#">详情</a></td>
+                        </tr>
+                        <tr class="split">
+                            <td><p class='bill-number'>12889809999</p><p class='setup-time'>2014-12-15 12:00</p></td>
+                            <td>67889063</td>
+                            <td>奥林科技（宁波）有限公司</td>
+                            <td><span class='payment-amount'>￥2131</span></td>
+                            <td><p class='payment-succeed'>支付成功</p><p class='payment-time'>2014-12-15 <span>12:00</span></p></td>
+                            <td>
+                            	<div class="operate-dropdown">
+									<a href="#" class="btn-payment">付款 <i>&#xe612;</i></a>
+									<ul class="operate-dropdown-list">
+									<li><a href="#">详情</a></li>
+									<li><a href="#">退回</a></li>
+									</ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class='bill-number'>12889809999</p><p class='setup-time'>2014-12-15 12:00</p></td>
+                            <td>67889063</td>
+                            <td>奥林科技（宁波）有限公司</td>
+                            <td><span class='payment-amount'>$2131</span></td>
+                            <td><span class='wait-payment'>待付款</span></td>
+                            <td><a href="#">详情</a></td>
+                        </tr>
+                        <tr class="split">
+                            <td><p class='bill-number'>12889809999</p><p class='setup-time'>2014-12-15 12:00</p></td>
+                            <td>67889063</td>
+                            <td>奥林科技（宁波）有限公司</td>
+                            <td><span class='payment-amount'>￥2131</span></td>
+                            <td><p class='payment-succeed'>支付成功</p><p class='payment-time'>2014-12-15 <span>12:00</span></p></td>
+                            <td>
+                            	<div class="operate-dropdown">
+									<a href="#" class="btn-payment">付款 <i>&#xe612;</i></a>
+									<ul class="operate-dropdown-list">
+									<li><a href="#">详情</a></li>
+									<li><a href="#">退回</a></li>
+									</ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+		
+
+		<div class="mg-t20">
+
+			<div ms-widget="pager" class="pagination right"></div>
+		</div>
+		
+	</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"pager/avalon.pager",
+			"dropdown/avalon.dropdown"
+			], function() {
+			avalon.define("payment", function(vm) {
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+				
+			})
+
+			avalon.define("search", function(vm) {
+				vm.dropdown = {
+					width: "140",
+					listWidth:"140"
+				};	
+			})
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

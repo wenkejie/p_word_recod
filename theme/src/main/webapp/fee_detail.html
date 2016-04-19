@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>费用明细</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="order-detail">
+<div ms-include-src="'header_order.html'"></div>
+<div class="main-frame">
+    <div class="ui-module-box pd0">
+    	<div class="ui-buyer-info">
+        	<h3>买家信息</h3>
+            <div class="ui-buyer-info-part1">
+            	<dl>
+                	<dt>姓名：</dt>
+                    <dd><span class="buyer-name">张三</span><a href="#" class="link-contact-me float-l"></a></dd><!--如果没有在线客服请再a标签里加link-contact-me-disabled类名-->
+                    <dt>公司：</dt>
+                    <dd>深圳海光国际物流有限公司</dd>
+                    <dt>手机：</dt>
+                    <dd>13888888888</dd>
+                    <dt>联系电话：</dt>
+                    <dd>0571-88888888</dd>
+                </dl>
+            </div>
+            <div class="ui-buyer-info-part2">
+            	<dl>
+                	<dt>订单号：</dt>
+                    <dd>123235445345534</dd>
+                    <dt>提单号：</dt>
+                    <dd>345324234523464</dd>
+                    <dt>业务编号：</dt>
+                    <dd>SDFSDGR32423423</dd>
+                    <dt>工作编号：</dt>
+                    <dd>ASDFER123234</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="ui-business-info">
+        	<div class="ui-business-info-status">
+            	<h3>当前页面状态：<span>重箱进港</span></h3>
+                <table class="ui-business-info-status-tb">
+                	<thead>
+                    	<tr>
+                        	<td>进港码头</td>
+                            <td>箱号</td>
+                            <td>封号</td>
+                            <td>进港时间</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                        	<td>大榭招商码头</td>
+                            <td>CVSDF346346</td>
+                            <td>3452346</td>
+                            <td>2014-12-12 12:00:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ui-business-info-cost">
+            	<dl>
+                	<dt>美金合计项：</dt>
+                    <dd>12323.00</dd>
+                    <dt>人民币合计项：</dt>
+                    <dd>12323.00</dd>
+                    <dt>折合人民币总计：</dt>
+                    <dd class="fs-18">12323.00</dd>
+                </dl>
+            </div>
+            <div class="ui-business-info-operate">
+            	<span>您可以</span>
+                <button ms-widget="button" data-button-size="big" data-button-color="primary">编辑业务状态</button>
+                <button ms-widget="button" data-button-size="big" data-button-color="primary">费用调整</button>
+            </div>
+        </div>
+    </div>
+    <div class="ui-module-box pd0">
+    	<div class="ui-tab-type2">
+        	<ul class="ui-tab-type2-list">
+            	<li>订舱信息</li>
+                <li class="active">费用明细</li>
+                <li>业务状态</li>
+          </ul>
+            <a href="#" class="ui-tab-type2-print">打印</a>
+        </div>
+        <div class="ui-tab-type2-cnt">
+        
+        <div class="ui-booking-detail-info ui-fee-detail">
+        	<div class="ui-business-info-cost-edit pd0">
+                <div>
+                    <table class="ui-business-info-cost-edit-tb ui-fee-detail-tb">
+                        <thead>
+                            <tr>
+                                <th>费用名称</th>
+                                <th>币种</th>
+                                <th>金额</th>
+                                <th>备注</th>
+                                <th class="ta-c" width="100">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>海运费</td>
+                                <td>USD</td>
+                                <td class="color-orange">1230.00</td>
+                                <td>威尔斯大飞生栋覆屋而士大夫玩儿</td>
+                                <td class="ta-c"><a href="#">编辑</a></td>
+                            </tr>
+                            <tr class="alt">
+                                <td>海运费</td>
+                                <td>USD</td>
+                                <td class="color-orange">1230.00</td>
+                                <td>威尔斯大飞生栋覆屋而士大夫玩儿</td>
+                                <td class="ta-c"><a href="#">编辑</a></td>
+                            </tr>
+                            <tr>
+                                <td>海运费</td>
+                                <td>USD</td>
+                                <td class="color-orange">1230.00</td>
+                                <td>-</td>
+                                <td class="ta-c"><a href="#">编辑</a></td>
+                            </tr>
+                            <tr class="alt">
+                                <td>
+                                    <select ms-widget="dropdown,dropdown1,$dropdown1">
+                                        <option>海运费</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select ms-widget="dropdown,dropdown2,$dropdown2">
+                                        <option>USD</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="ui-input w-66"></td>
+                                <td><textarea rows="2" class="ui-textarea w-180"></textarea></td>
+                                <td class="ta-c">
+                                    <button class="ui-btn-edit" ms-widget="button" data-button-size="big" data-button-color="primary">确定</button>
+                                    <a href="#">取消</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td colspan="5" class="fee-detail-td">
+                                    费用增加项
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>海运费</td>
+                                <td>USD</td>
+                                <td class="color-orange">1230.00</td>
+                                <td>威尔斯大飞生栋覆屋而士大夫玩儿</td>
+                                <td class="ta-c"><a href="#">编辑</a></td>
+                            </tr>
+                            <tr class="alt">
+                                <td>海运费</td>
+                                <td>USD</td>
+                                <td class="color-orange">1230.00</td>
+                                <td>威尔斯大飞生栋覆屋而士大夫玩儿</td>
+                                <td class="ta-c"><a href="#">编辑</a></td>
+                            </tr>
+                            <tr>
+                                <td>海运费</td>
+                                <td>USD</td>
+                                <td class="color-orange">1230.00</td>
+                                <td>-</td>
+                                <td class="ta-c"><a href="#">编辑</a></td>
+                            </tr>
+                            <tr class="alt">
+                                <td>
+                                    <select ms-widget="dropdown,dropdown1,$dropdown1">
+                                        <option>海运费</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select ms-widget="dropdown,dropdown2,$dropdown2">
+                                        <option>USD</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="ui-input w-66"></td>
+                                <td><input type="text" class="ui-input w-180"></td>
+                                <td class="ta-c">
+                                    <button class="ui-btn-edit" ms-widget="button" data-button-size="normal" data-button-color="primary">确定</button>
+                                    <a href="#" class="mg-l10">取消</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="ui-business-info-cost-add"><a href="#">+ 添加费用</a></div>
+                </div>
+                <div>
+                    <table class="ui-business-info-cost-edit-tb ui-fee-detail-tb">
+                        <thead>
+                            <tr>
+                                <th colspan="5">优惠费用项</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="ui-business-info-cost-add"><a href="#">+ 添加费用</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="fee-detail-list">
+            <div class="fee-detail-right">
+                <div class="fee-detail-line">
+                    <div class="fee-bill-list">
+                        <div class="fee-bill-line important">
+                            <label class="fee-bill-label" for="">美金合计项：</label>
+                            <span class="fee-bill-num">$ 12323.00</span>
+                        </div>
+                        <div class="fee-bill-line">
+                            <label class="fee-bill-label" for="">人民币合计项：</label>
+                            <span class="fee-bill-num">￥ 12323.00</span>
+                        </div>
+                        <div class="fee-bill-line">
+                            <label class="fee-bill-label" for="">折合人民币总计：</label>
+                            <span class="fee-bill-num">￥ 12323.00</span>
+                        </div>
+                    </div>
+                    <div class="fee-bill-list">
+                        <div class="fee-bill-line important">
+                            <label class="fee-bill-label" for="">美金合计项：</label>
+                            <span class="fee-bill-num">$ 12323.00</span>
+                        </div>
+                        <div class="fee-bill-line">
+                            <label class="fee-bill-label" for="">人民币合计项：</label>
+                            <span class="fee-bill-num">￥ 12323.00</span>
+                        </div>
+                        <div class="fee-bill-line">
+                            <label class="fee-bill-label" for="">折合人民币总计：</label>
+                            <span class="fee-bill-num">￥ 12323.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fee-detail-line last">
+                    <div class="fee-bill-list">
+                        <div class="fee-bill-line important">
+                            <label class="fee-bill-label" for="">应付金额：</label>
+                            <span class="fee-bill-num">$ 12323.00</span>
+                        </div>
+                    </div>
+                    <div class="fee-bill-list">
+                        <div class="fee-bill-line important">
+                            <label class="fee-bill-label" for="">&nbsp;</label>
+                            <span class="fee-bill-num">￥ 12323.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fee-detail-footer">
+                    <button ms-widget="button" data-button-size="large" data-button-color="primary" class="mg-r10">确认发送给买家</button>
+                    <button ms-widget="button" data-button-size="large">保存</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"datepicker/avalon.datepicker"
+			], function() {
+			avalon.define("order-detail", function(vm) {
+				vm.$dropdown1 = {
+					width: "120",
+					listWidth:"120"
+				};
+				vm.$dropdown2 = {
+					width: "80",
+					listWidth:"80"
+				};
+			});
+			
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>

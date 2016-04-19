@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="supplier-apply">
+<div ms-include-src="'header_supplier.html'"></div>
+<div class="main-frame">
+	<div ms-include-src="'vip-center-left.html'"></div>
+	<div class="right-frame">
+    	<div class="ui-panel ui-panel-supplier-apply-type2">
+            <h3 class="ui-title-1">供应商申请</h3>
+            <div class="ui-supplier-apply-remind">
+                <div class="ui-supplier-apply-remind-cnt">
+                    <p>成为供应商后就可以在平台上开设店铺，做买卖了。</p>
+                    <p>成为供应商后就可以在平台上开设店铺，做买卖了。</p>
+                </div>
+            </div>
+            <div class="ui-supplier-apply-remind warning">
+                <div class="ui-supplier-apply-remind-cnt">
+                    <p>成为供应商后就可以在平台上开设店铺，做买卖了。</p>
+                    <p>成为供应商后就可以在平台上开设店铺，做买卖了。</p>
+                </div>
+            </div>
+            <div class="ui-supplier-apply-remind success">
+                <div class="ui-supplier-apply-remind-cnt">
+                    <p>成为供应商后就可以在平台上开设店铺，做买卖了。</p>
+                    <p>成为供应商后就可以在平台上开设店铺，做买卖了。</p>
+                </div>
+            </div>
+            <a href="#" class="ui-supplier-apply-btn">立即申请供应商</a>
+        </div>
+	</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"dropdown/avalon.dropdown",
+			], function() {
+			avalon.define("supplier-apply", function(vm) {
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+			})
+
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

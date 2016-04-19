@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/en-register.css">
+    <script src="/vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register">
+    <div ms-include-src="'en_register_header.html'"></div>
+    
+    <div class="en-register-bd-wrapper">
+        <div class="en-register-success-bd">
+            <div class="en-register-success">
+                <div class="en-register-success-main">
+                    <div class="en-register-fail-logo activation-logo">
+
+                    </div>
+
+
+                    <div class="en-register-success-msg">
+                        <h1 class="notice">The Link has failed!</h1>
+
+                        <p>Because your mail has more than 24 hours.</p>
+                         <p><a href="#">Please try again</a></p>
+                    </div>
+
+                </div>
+
+
+    
+
+            </div>
+        </div>
+    </div>
+
+    <div ms-include-src="'en_register_footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    vm.opt = {
+                        width: "250px",
+                        listWidth: "250px",
+                    }
+
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

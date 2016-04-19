@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/example.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="p_pay" class="rg-body">
+    <div ms-include-src="'header_pay.html'"></div>
+    <div class="wrapper wrapper-pay mg-t20">
+        <div class="wrapper-header">
+            <div class="pay-detail">
+                <div class="pay-detail-head">
+                    <label class="pay-label" for="">收&nbsp;&nbsp;款&nbsp;&nbsp;方：</label>
+                    <span class="pay-span">宁波开源国际物流有限公司</span>
+                    <a href="javascript:" class="show-detail">详情 <i>&#xe612;</i></a>
+                </div>
+            </div>
+            <div class="pay-total">
+                <label for="" class="pay-total-label">CNY</label>
+                <span class="pay-price">7000</span>
+            </div>
+        </div>
+        <div class="wrapper-content">
+            <div class="rg-form rg-form-pay">
+                <div class="rg-form-title">
+                    <label class="rg-label" style="width:106px" for="">验证支付校验码</label>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">付款校验手机</label>
+                    <span class="rg-form-des name">13958784523</span>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">钱包密码</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input-large" placeholder="输入常用手机号"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">支付校验码</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input-large" placeholder="输入常用手机号"></div>
+                </div>
+               <div class="rg-form-line">
+                    <label class="rg-label" for="">校验码</label>
+                    <div class="rg-form-right">
+                        <div class="form-right-content">
+                            <div class="ui-form-group">
+                                <input type="text" class="ui-input-large w-102">
+                            </div>
+                            <div class="rg-tips error">
+                                <div class="rg-tips-icon"></div>
+                                <div class="rg-tips-content">验证码输入有误</div>    
+                            </div>
+                        </div>
+                        <div class="rg-form-cell-tips">
+                            <i class="rg-icon-info"></i> 请输入 19321332131手机收到的支付校验码
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line rg-form-unlabel">
+                    <a class="rg-btn" href="javascript:">获取校验码</a>
+                    <a class="rg-btn disable none" href="javascript:"><span>60秒</span>后 重新获取短信</a>
+                </div>
+                <div class="rg-form-line rg-form-unlabel mg-t20">
+                    <a class="rg-btn rg-btn-primary" href="javascript:">确认支付</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("p_pay", function(vm) {
+
+                })
+                avalon.scan()
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="payment">
+<div ms-include-src="'vip-center-header.html'"></div>
+<div class="main-frame">
+    	<div class="ui-panel">
+            <div class="ui-panel-hd">
+                <span>船期信息</span>
+            </div>
+    
+            <div class="ui-panel-bd">
+                <div class="ui-panel-bd-lt ta-c">
+                    <div class="lt-wrapper">
+                        <div>
+                            <img src="images/MU.png" class="hipping-compay-logo"></img>
+                        </div>
+                        <p>HMM</p>
+                    </div>		
+                </div>
+                <div class="ui-panel-bd-ct">
+                    <div class="ui-panel-bd-ct-wrapper">
+                        <span class="fs-23">宁波</span> - <span class="fs-23 mg-r48">洛杉矶</span>
+                        <div class="ui-tag ui-tag-orage">直达</div>
+    
+                        <div>
+                            <span class="place">NINGBO-LOS ANGULAR,CA</span>
+                        </div>	
+                    </div>
+    
+                </div>
+                <div class="ui-panel-bd-rt">
+                	<table class="ui-shelves-change-shipment-detail-td">
+                    	<tbody>
+                        	<tr>
+                            	<th>航线：</th>
+                                <td>北美线</td>
+                                <th>船期：</th>
+                                <td>1/3</td>
+                            </tr>
+                            <tr>
+                            	<th>中转港：</th>
+                                <td>越南（HJKASID）</td>
+                                <th>有效期：</th>
+                                <td>2014-12-12 至 2014-12-18</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="ui-shelves-change-shipment-box">
+                    <table class="ui-shelves-change-shipment-tb">
+                        <tbody>
+                            <tr class="alt">
+                                <th>箱型</th>
+                                <td>20GP</td>
+                                <td>40GP</td>
+                                <td>40HC</td>
+                                <td>20GP</td>
+                                <td>40GP</td>
+                                <td>40HC</td>
+                                <td>20GP</td>
+                                <td>40GP</td>
+                                <td>40HC</td>
+                                <td>20GP</td>
+                                <td>40GP</td>
+                            </tr>
+                            <tr>
+                                <th>价格(usd)</th>
+                                <td>1000</td>
+                                <td>1000</td>
+                                <td>1000</td>
+                                <td>1000</td>
+                                <td>1000</td>
+                                <td>1000</td>
+                                <td>1000</td>
+                                <td>1000</td>
+                                <td>1000</td>
+                                <td>1000</td>
+                                <td>1000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+        <div class="ui-panel">
+            <div class="ui-panel-hd">
+                <span>变更信息</span>
+            </div>
+            <div class="ui-panel-bd">
+            	<div class="ui-change-info-form">
+                	<ul>
+                    	<li><label>进港码头：</label><div class="ui-change-info-form-cnt"><input type="text" class="ui-input" placeholder=""></div></li>
+                        <li><label>航程：</label><div class="ui-change-info-form-cnt"><input type="text" class="ui-input" placeholder=""></div></li>
+                        <li><label>限重：</label><div class="ui-change-info-form-cnt"><input type="text" class="ui-input" placeholder=""></div></li>
+                        <li><label>备注：</label><div class="ui-change-info-form-cnt"><textarea rows="6" class="ui-textarea"></textarea></div></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ui-booking-detail-info ui-cost-detail">
+        	<h3>库存</h3>
+        	<div class="ui-business-info-cost-edit">
+            	<table class="ui-business-info-cost-edit-tb">
+                	<thead>
+                    	<tr>
+                        	<th>截（周一）</th>
+                            <th>开（周三）</th>
+                            <th>剩余库存</th>
+                            <th>已销售</th>
+                            <th>总库存</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                        	<td>01-12</td>
+                            <td>01-14</td>
+                            <td><input ms-duplex="p" ms-widget="spinner, $spinner, $spinnerOpts" id=""/></td>
+                            <td class="color-orange">7</td>
+                            <td>7</td>
+                        </tr>
+                        <tr class="alt">
+                        	<td>01-12</td>
+                            <td>01-14</td>
+                            <td><input ms-duplex="p" ms-widget="spinner, $spinner, $spinnerOpts" id=""/></td>
+                            <td class="color-orange">7</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                        	<td>01-12</td>
+                            <td>01-14</td>
+                            <td><input ms-duplex="p" ms-widget="spinner, $spinner, $spinnerOpts" id=""/></td>
+                            <td class="color-orange">7</td>
+                            <td>7</td>
+                        </tr>
+                        <tr class="alt">
+                        	<td>01-12</td>
+                            <td>01-14</td>
+                            <td><input ms-duplex="p" ms-widget="spinner, $spinner, $spinnerOpts" id=""/></td>
+                            <td class="color-orange">7</td>
+                            <td>7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+        <div class="order-sub-wrp">
+			<a href="#" ms-widget="button" data-button-size="large" data-button-color="primary">保持</a>
+            <a href="#" ms-widget="button" data-button-size="large" data-button-color="default">返回</a>
+		</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"pager/avalon.pager",
+			"dropdown/avalon.dropdown",
+			"spinner/avalon.spinner"
+			], function() {
+			avalon.define("payment", function(vm) {
+				vm.$spinnerOpts={
+					min: 0,
+					width:25
+				};
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+				
+			})
+
+			avalon.define("search", function(vm) {
+				vm.dropdown = {
+					width: "140",
+					listWidth:"140"
+				};	
+			})
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

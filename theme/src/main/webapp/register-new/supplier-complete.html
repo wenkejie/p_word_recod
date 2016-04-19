@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register-new.css">
+    <script src="../vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'../header_register.html'"></div>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="rg-record">
+                <div class="rg-record-header">
+                    <div class="rg-record-header-left">
+                        <i>&#xe608;</i>
+                    </div>
+                    <div class="rg-record-header-right">
+                        <p class="info">感谢您注册咖狗网，并成功提交供应商申请</p>
+                        <p class="note">
+                            您的账号：<span class="text-orange">13958201888</span>
+                        </p>
+
+                        <p class="note">
+                            <span>您可以：<a href="#" class="mg-r15">登录会员中心查看进度</a> <a href="#">返回首页</a></span>
+                        </p>
+                        <dl class="rg-list">
+                            <dt class="rg-list-title">供应商申请说明：</dt>
+                            <dd class="rg-list-item">1.您的申请提交后我们的客户经理会在一个工作日内与您取得联系</dd>
+                            <dd class="rg-list-item">2.获得供应商资质前咖狗网首先会对您的企业进行认证</dd>
+                            <dd class="rg-list-item">3.您可以登录咖狗网会员中心查看企业认证和供应商审核的进度</dd>
+                            <dd class="rg-list-item">4.如有其他疑问，可拨打客服热线<strong>400-805-5656</strong>咨询</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'../vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

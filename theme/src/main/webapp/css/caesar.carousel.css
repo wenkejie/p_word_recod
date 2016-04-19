@@ -1,0 +1,25 @@
+.cui-carousel .oni-carousel-selection-wrap {
+  bottom: 40px;
+}
+.cui-carousel-shadow {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 36px;
+  width: 100%;
+  opacity: 0.8;
+  background: #fff;
+}
+.cui-carousel-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 31;
+  height: 36px;
+  width: 100%;
+  line-height: 38px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=maps/caesar.carousel.css.map */

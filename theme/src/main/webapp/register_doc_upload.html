@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/example.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="root">
+     <div class="ui-header-order">
+         <div class="ui-header-order-wrapper">
+             <div class="ui-header-order-logo">
+
+             </div>
+
+             <div class="ui-header-order-name">
+                个人账号注册
+            </div>
+        </div>    
+    </div>
+    <div class="wrapper">
+         <div class="ui-register-progress-bar">
+             <ul class="ui-register-step ui-register-step-3">
+                 <li class="ui-register-step-pass">
+                     <div class="ui-register-step-icon">        
+                         <span class="ui-register-step-number">1</span>
+                         <span class="ui-register-step-text">设置用户名</span>
+                     </div>
+                     <div class="ui-register-step-line"></div>
+                     <div class="ui-register-step-line-2"></div>
+                 </li>
+                 <li class="ui-register-step-active">
+                     <div class="ui-register-step-icon">        
+                         <span class="ui-register-step-number">2</span>
+                         <span class="ui-register-step-text">填写账户信息</span>
+                     </div>
+                     <div class="ui-register-step-line"></div>
+                     <div class="ui-register-step-line-2"></div>
+                 </li>
+                 <li class="ui-register-step-last">
+                     <div class="ui-register-step-icon">        
+                         <span class="ui-register-step-number">3</span>
+                         <span class="ui-register-step-text">注册成功</span>
+                     </div>
+                 </li>
+             </ul>
+         </div>
+        <div class="wrapper-content">
+            <div class="rg-form">
+               <div class="certificate-request-wrapper">
+               		证件要求:
+               		<ul class="certificate-request">
+               			<li>必须为清晰彩色原件扫描物或数码照,图片大小不超过2M</li>
+               			<li>必须在有效期内年检章齐全(当年成立的公司可无年检章)</li>
+               			<li>必须为中国大陆工商局颁发</li>
+               		</ul>
+               </div>
+
+               <div class="upload-area">
+               		<div class="reg-upload-box">
+               			<div class="title"><strong class="pd-l10">工商营业执照</strong></div>
+               			<div class="cross-area">
+               				+
+               			</div>
+               		</div>
+
+               		<div class="reg-upload-box">
+               			<div class="title"><strong class="pd-l10">组织机构代码证</strong></div>
+               			<div class="cross-area">
+               				+
+               			</div>
+               		</div>
+
+               		<div class="reg-upload-box mg-r0">
+               			<div class="title"><strong class="pd-l10">税务登记证</strong></div>
+               			<div class="cross-area">
+               				+
+               			</div>
+               		</div>
+
+               		<div class="reg-upload-box">
+               			<div class="title"><strong class="pd-l10">法人身份证</strong></div>
+               			<div class="cross-area">
+               				+
+               			</div>
+               		</div>
+
+               		<div class="reg-upload-box">
+               			<div class="title"><strong class="pd-l10">银行开户许可证</strong></div>
+               			<div class="cross-area">
+               				+
+               			</div>
+               		</div>
+               </div>
+
+               <div class="doc-upoload-btn-wrapper">
+                    <a href="javascript:" ms-widget="button" data-button-color="primary" data-button-size="large">完成</a>
+               </div>
+            </div>
+        </div>
+    </div>
+    <div style="height:200px;margin-top:15px;background:orange;">{{footer}}</div>
+    <script>
+        require("./button/avalon.button", function() {
+            avalon.define("root", function(vm) {
+                 
+            })
+            avalon.scan()
+        })
+    </script>    
+</body>
+</html>

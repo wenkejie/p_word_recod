@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register-new.css">
+    <link rel="stylesheet" href="../vendor/webuploader/webuploader.css">
+    <script src="../vendor/jquery/jquery-1.9.1.min.js"></script>
+    <script src="../vendor/webuploader/webuploader.nolog.js"></script>
+    <script src="../vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'../header_register.html'"></div>
+    <div class="rg-progress rg-progress-five">
+        <div class="rg-progress-content">
+            <ul>
+                <li class="rg-progress-cell rg-progress-cell-current">
+                    <span class="rg-progress-icon">1<i class="iconfont">&#xe609;</i></span>
+                    <p class="rg-progress-info">注册账号</p>
+                </li>
+                <li class="rg-progress-cell rg-progress-cell-current">
+                    <span class="rg-progress-icon">1<i class="iconfont">&#xe609;</i></span>
+                    <p class="rg-progress-info">填写账户信息</p>
+                </li>
+                <li class="rg-progress-cell rg-progress-cell-current">
+                    <span class="rg-progress-icon">1<i class="iconfont">&#xe609;</i></span>
+                    <p class="rg-progress-info">完善供应商资料</p>
+                </li>
+                <li class="rg-progress-cell rg-progress-cell-current">
+                    <span class="rg-progress-icon">2<i>&#xe609;</i></span>
+                    <p class="rg-progress-info">上传企业资质</p>
+                </li>
+                <li class="rg-progress-cell">
+                    <span class="rg-progress-icon"><span class="iconfont">&#xe60a;</span><i>&#xe609;</i></span>
+                    <p class="rg-progress-info">完成申请</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="rg-form rg-form-mini">
+                <div class="rg-form-line">
+                    <p class="form-line-tips form-line-tips-normal">
+                        证件要求：<br />
+                        必须是彩色原件电子版，可以扫描件或者数码拍摄照片。<br />
+                        仅支持.jpg,.jpeg,.bmp,.png的图片格式。<span class="text-orange">图片大小不超过 2M</span>
+                    </p>
+                </div>
+                <div class="rg-form-line mgt20">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>公司营业执照</label>
+                    <div class="rg-form-right">
+                        <div class="rg-idcard-upload">
+                            <div class="idcard-upload-content">
+                                <a class="idcard-add" href="javascript:"><i>+</i>添加</a>
+                                <img ms-visible="thumbImage.identityCardPositiveThumbImageUrl" 
+                                    ms-attr-src="thumbImage.identityCardPositiveThumbImageUrl" />
+                            </div>
+                            <div class="idcard-upload-example">
+                                <label class="label">事例：</label>
+                                <div class="example-idcard-fir"><img src="../images/temp/sfz.png"></div>
+                            </div>
+                            <div class="filePicker" id="filePicker1" cardType="identityCardPositive" >点击上传</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>组织机构代码证</label>
+                    <div class="rg-form-right">
+                        <div class="rg-idcard-upload">
+                            <div class="idcard-upload-content">
+                                <a class="idcard-add" href="javascript:"><i>+</i>添加</a>
+                                <img ms-visible="thumbImage.identityCardPositiveThumbImageUrl" 
+                                    ms-attr-src="thumbImage.identityCardPositiveThumbImageUrl" />
+                            </div>
+                            <div class="idcard-upload-example">
+                                <label class="label">事例：</label>
+                                <div class="example-idcard-fir"><img src="../images/temp/sfz.png"></div>
+                            </div>
+                            <div class="filePicker" id="filePicker" cardType="identityCardPositive" >点击上传</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>法人身份证</label>
+                    <div class="rg-form-right">
+                        <div class="rg-idcard-upload">
+                            <div class="idcard-upload-content">
+                                <a class="idcard-add" href="javascript:"><i>+</i>添加</a>
+                                <img ms-visible="thumbImage.identityCardPositiveThumbImageUrl" 
+                                    ms-attr-src="thumbImage.identityCardPositiveThumbImageUrl" />
+                            </div>
+                            <div class="idcard-upload-example">
+                                <label class="label">事例：</label>
+                                <div class="example-idcard-fir"><img src="../images/temp/sfz.png"></div>
+                            </div>
+                            <div class="filePicker" id="filePicker" cardType="identityCardPositive" >点击上传</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>法人身份证反面</label>
+                    <div class="rg-form-right">
+                        <div class="rg-idcard-upload">
+                            <div class="idcard-upload-content">
+                                <a class="idcard-add" href="javascript:"><i>+</i>添加</a>
+                                <img ms-visible="thumbImage.identityCardPositiveThumbImageUrl" 
+                                    ms-attr-src="thumbImage.identityCardPositiveThumbImageUrl" />
+                            </div>
+                            <div class="idcard-upload-example">
+                                <label class="label">事例：</label>
+                                <div class="example-idcard-fir"><img src="../images/temp/sfz.png"></div>
+                            </div>
+                            <div class="filePicker" id="filePicker" cardType="identityCardPositive" >点击上传</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line rg-form-upload">
+                    <a class="rg-btn rg-btn-primary" href="javascript:">下一步</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'../vip-center-footer.html'"></div>
+    <script>
+		var uploader = WebUploader.create({
+		
+			// 选完文件后，是否自动上传。
+			auto: true,
+		
+			// swf文件路径
+			swf:'../vendor/webuploader/Uploader.swf',
+		
+			// 文件接收服务端。
+			server: 'http://webuploader.duapp.com/server/fileupload.php',
+		
+			// 选择文件的按钮。可选。
+			// 内部根据当前运行是创建，可能是input元素，也可能是flash.
+			pick: '#filePicker,#filePicker1',
+		
+			// 只允许选择图片文件。
+			accept: {
+				title: 'Images',
+				extensions: 'gif,jpg,jpeg,bmp,png',
+				mimeTypes: 'image/*'
+			}
+		});
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

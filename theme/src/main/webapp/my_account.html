@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+        <link rel="stylesheet" href="css/layout.css">
+
+        <script src="vendor/avalon/avalon.js"></script>
+    </head>
+    <body ms-controller="demo" >
+        <div ms-include-src="'vip-center-header.html'"></div>
+        <div class="main-frame">
+            <div ms-include-src="'vip-center-left.html'"></div>
+            <div class="right-frame">
+                <div class="member-center-personal-info ui-panel mg-t10">
+                    <div class="avater-wrapper"> 
+                        <img src="images/avatar.png" height="124" width="124">
+                    </div>
+                    <div class="left mg-l20">
+                        <p>
+                            <span class="color-key my-account-label">真实姓名：</span><span class="fs-16 fw-b">施齐</span>
+                            <span class="lighter-grey"> (s-viola)</span>
+                        </p>
+                        <p class="mg-t15">
+                            <span class="color-key my-account-label">
+                                手机号码：
+                            </span>
+                            137****9999
+                        </p>
+                        <p class="mg-t15">
+                            <span class="color-key my-account-label">
+                                所在公司：
+                            </span>
+                            宁波天时利国际货运代理有限公司
+                            <span class="not-auth">
+                               &nbsp; (未认证) &nbsp;
+                            </span>
+                            <a href="#" class="auth-link">企业认证</a>
+                            <span class="split">|</span>
+                            <a href="#" class="auth-link">供应商认证</a>
+                            <span class="split">|</span>
+                            <a href="#" class="auth-link">加入已有公司</a>
+                        </p>
+
+                        <p class="mg-t15">
+                            <span class="color-key my-account-label">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;昵称：
+                            </span>
+                            S-Viola
+                        </p>
+
+                        <p class="mg-t15 mg-b14">
+                            <span class="color-key my-account-label">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮箱：
+                            </span>
+                            lucky@163.com
+                        </p>
+                    </div>
+                </div>
+
+                <div class="ui-panel my-account-info-panel persional-info-export-detail">
+                    <div class="password-security-strength">
+                        <label class="form-label fw-b">密码安全强度：</label>
+                        <div class="pwd-level-wrapper">
+                           <span class="level">中</span>
+                            <div class="progress middle">
+                                <div class="progress-bar">
+                                </div>
+                            </div>
+
+                            <span class="level">高</span>
+                             <div class="progress high">
+                                 <div class="progress-bar">
+                                 </div>
+                             </div>  
+
+                             <a href="javascript:" class="change-password">修改密码</a>
+                        </div> 
+                    </div>
+
+                    <div class="binding-auth">
+                        <label class="form-label fw-b">绑定及认证信息：</label>
+                        <div class="auth-wrapper">
+                            <div class="auth-icon pos-firm-disabled"></div>
+                            <a href="javascript:" class="auth-link">企业未认证</a>
+                        </div>
+                        <div class="auth-wrapper">
+                            <div class="auth-icon pos-supply-disabled"></div>
+                            <a href="javascript:" class="auth-link">供应商未认证</a>
+                        </div>
+
+                        <div class="auth-wrapper">
+                            <div class="auth-icon pos-ent-disabled"></div>
+                            <a href="javascript:" class="auth-link">个人钱包未开通</a>
+                        </div>
+                    </div>
+
+                    <div class="binding-auth">
+                        <label class="form-label fw-b">绑定及认证信息：</label>
+                        <div class="auth-wrapper">
+                            <div class="auth-icon pos-firm"></div>
+                            <a href="javascript:" class="auth-view">查看</a>
+                            <span class="auth-msg">企业已认证</span>
+                        </div>
+                        <div class="auth-wrapper">
+                            <div class="auth-icon pos-supply"></div>
+                            <a href="javascript:" class="auth-view">查看</a>
+                            <span class="auth-msg">供应商已认证</span>
+                        </div>
+
+                        <div class="auth-wrapper">
+                            <div class="auth-icon pos-ent"></div>
+                            <a href="javascript:" class="auth-view">查看</a>
+                            <span class="auth-msg">个人钱包已开通</span>
+                        </div>
+                    </div>
+                </div>
+       </div>     
+        <div ms-include-src="'vip-center-footer.html'"></div> 
+
+        <script>
+            require([
+                "button/avalon.button",
+                "dialog/avalon.dialog",
+                "checkboxlist/avalon.checkboxlist",
+                "pager/avalon.pager",
+                "dropdown/avalon.dropdown",
+                "browser/avalon.browser",
+                "textbox/avalon.textbox",
+                "spinner/avalon.spinner"
+                ], function() {
+                avalon.define("demo", function(vm) {
+                    vm.message = "笑傻了吧！！";
+                    vm.namee = avalon.browser.name+' '+avalon.browser.version;
+                    vm.show = function( id ){
+                        avalon.vmodels[id].toggle = true;
+                    }
+
+                    vm.pager = {
+                        // currentPage: 8,
+                        totalItems: 120,
+                        showJumper: true,
+                        showPages:5
+                    }
+
+                    vm.dropdown = {
+                        width: "120",
+                        listWidth:"120"
+                    };
+
+                    vm.$spinnerOpts={
+                        min: 0,
+                        width:25
+                    };
+
+
+                    vm.$skipArray = ["pager"];
+                    vm.check1 = ["2"];
+                })
+                avalon.scan()
+            })
+        </script>
+
+    </body>
+</html>

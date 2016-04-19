@@ -1,0 +1,115 @@
+// ===================================================================
+// ============ 弹出框里的验证码填写，用于平台组的验证  ==============
+// ===================================================================
+
+.form-group-robot-confirm{
+	padding: 15px 0;
+	
+	.form-item{//定义每一行的样式
+		padding: 5px 0 5px 100px;
+	}
+	
+	.form-item-tips{
+		padding: 5px 0 5px 30px;
+		color: #d90000;
+		i{
+			margin-right: 5px;
+			color: #d90000;
+		}
+	}
+
+	.form-label{//label的样式
+		float: left;
+		margin-left: -100px;
+		width: 90px;
+	}
+
+	.check-code-img{//验证码图片 
+		width: 80px;
+		height: 30px;
+		margin: 0 5px;
+		vertical-align: middle;
+	}
+
+	.w-60{
+		width: 60px;
+	}
+}
+
+
+
+// ===================================================
+// ================= 引入提示框结构 ===================
+// ===================================================
+.ui-news-tips {
+	border-radius:3px;
+	padding:7px 40px 7px 7px;
+	position:relative;
+	.ui-news-tips-close {
+		position:absolute;
+		top:5px;
+		right:4px;
+		_right:34px;
+		font-size: 16px;
+		cursor:pointer;
+		width:24px;
+		height:24px;
+		line-height:24px;
+		border-radius:3px;
+		text-align: center;
+		color:#333;
+		.opacity(@opacity: 40);
+		&:hover {
+			.opacity(@opacity: 90);
+		}
+	}
+	p {
+		display:inline;
+	}
+	i {
+		font-size:18px;
+		margin-right:7px;
+	}
+}
+.ui-news-tips-default {
+	background:#eaf7fd;
+	border:#9dcadf 1px solid;
+	i{
+		color:#1c8cda;
+	}
+	p {
+		color:#333333;
+	}
+}
+.ui-news-tips-success {
+	background:#dfffbf;
+	border:#afcd7e 1px solid;
+	i{
+		color:#238c00;
+	}
+	p {
+		color:#004000;
+	}
+}
+.ui-news-tips-warning {
+	background:#fdf4e1;
+	border:#d5a880 1px solid;
+	i{
+		color:#a55825;
+	}
+	p {
+		color:#a55825;
+	}
+}
+.ui-news-tips-error {
+	background:#ffe1d7;
+	border:#d69385 1px solid;
+	i{
+		color:#d93600;
+	}
+	p {
+		color:#d93600;
+	}
+}
+
+// ================= end =================

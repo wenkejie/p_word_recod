@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+</head>
+<body ms-controller="index">
+<div ms-include-src="'header.html'"></div>
+<div class="wrapper">
+    <div class="expect-content">
+        <img src="images/expect.png">
+    </div>
+</div>
+<div ms-include-src="'footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"datepicker/avalon.datepicker",
+			"carousel/avalon.carousel"
+			], function() {
+			avalon.define("index", function(vm) {
+				vm.$opt1 = {
+                    alwaysShowArrow:false,
+                     content: '<h4 class="cui-carousel-info">12312</h4><div class="cui-carousel-shadow"></div>',
+                     pictures: [
+                     
+                     {
+                        src:"images/banner/home_header_banner.jpg",
+                        title: 'picture-1',
+                        href:"#!{king:_adlink/}",
+                        alt:'skdfajslkdfjals'
+                    },
+                    {
+                        src:"images/banner/home_header_banner.jpg"
+                    }
+                    
+                    ],
+					pictureWidth:"100%",
+					pictureHeight:340
+				},
+				vm.$opt2 = {
+                    content: '<div class="cui-carousel-shadow"></div><p class="cui-carousel-info">这是一张图片</p>',
+                    pictures: [ 
+                    {src:"images/index-pic-5.png"},
+                    {src:"images/index-pic-5.png"}
+
+                    ],
+                    pictureWidth:455,
+                    pictureHeight:240
+                }
+
+            });
+			
+			avalon.scan()
+		})
+	</script>
+	<script>
+	window.onscroll = function () { 
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; 
+		var yhcxTop = document.getElementById("yhcx").offsetTop;
+		var imageADTop = document.getElementById("imageAD").offsetTop;
+		var yhcxLink = document.getElementById("yhcxLink")
+		if(scrollTop > yhcxTop){
+			yhcxLink.className = "ui-index-yhcx-link-box2";
+		}
+		if(scrollTop <= yhcxTop || scrollTop >= imageADTop-60){
+			yhcxLink.className = "ui-index-yhcx-link-box1";
+		}
+	};
+    </script>
+</body>
+</html>

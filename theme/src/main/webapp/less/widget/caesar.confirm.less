@@ -1,0 +1,93 @@
+// ===================================================
+// ================= confirm弹窗 =====================
+// ===================================================
+.cui-dialog-confirm{
+	.oni-dialog-inner {
+		.oni-dialog-header {
+			background:#fafafa;
+			border-bottom:#e7e7e7 1px solid;
+			.oni-dialog-close {
+				background:#fafafa;
+				&:hover {
+					// border:none!important;
+					// background:#fff;
+					padding: 1px 10px 1px 9px;
+					border-top: 1px solid #fafafa;
+				}
+			}
+		}
+		.oni-dialog-title {
+			color:#666;
+		}
+		.oni-dialog-footer {
+			background:#fafafa;
+			border-top:#e7e7e7 1px solid;
+			padding:10px;
+			.oni-button {
+				height:30px!important;
+				line-height:30px!important;
+				padding:0 15px!important;
+				.oni-button-text {
+					vertical-align: initial;
+					height:30px!important;
+					line-height:30px!important;
+				}
+			}
+
+			.oni-state-default {
+				border:#d5d5d5 1px solid;
+				// .linear(#f9f9f9,#f1f1f1);
+				&:hover {
+					background: darken(#f5f5f5, 12%)
+				}
+			}
+			.oni-button-success {
+				border:#db3917 1px solid;
+				// .linear(#1c8fdf,#1c86d2);
+				&:hover {
+					background: darken(#f1512e, 12%)
+				}
+			}
+		}
+		.oni-dialog-alert-footer {
+			.oni-dialog-footer {
+				border:none;
+				background:#fff;
+				text-align: left;
+				padding-left:60px;padding-top: 5px;padding-bottom: 20px;
+				.oni-dialog-btns {
+					float: left;
+				}
+			}
+		}
+		.oni-dialog-content{
+			padding-top: 17px;padding-bottom: 17px;
+		}
+	}
+} 
+.ui-prompt-info-type1 {
+	padding:8px 0;
+	color:#666;
+	i {
+		color:#428bca;
+		margin-right:5px;
+		font-size:18px;
+	}
+}
+.ui-dialog-icon-error {
+	float:left;
+	width:35px;
+	height:31px;
+	background-position:-5px -4px;
+}
+.ui-dialog-icon-warn {
+	float:left;
+	width:35px;
+	height:31px;
+	background-position:-52px -4px;
+}
+.ui-dialog-alert-text{
+	padding-left: 50px;
+	font-size: 14px;
+	padding-top: 5px;
+}

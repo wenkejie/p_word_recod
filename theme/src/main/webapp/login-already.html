@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="login" class="login-bg">
+<div ms-include-src="'header_register.html'"></div>
+<div class="main-frame">
+	<div class="ui-login-ad"><img src="images/promo/login.png"/></div>
+    <div class="ui-login-box">
+    	<div class="ui-login ui-login-already">
+        	<h3 class="ui-login-title">掌柜会员</h3>
+            <div class="ui-login-cnt">
+                <p class="ui-login-already-info">
+                    <span>已登录账号：</span>
+                    <span class="user-name">唐伯虎</span>
+                </p>
+                <div class="ui-login-btn ui-login-btn-already"><a href="#" ms-click="show('loginDialog')">进入我的咖狗</a></div>
+                <p class="ui-login-already-footer">
+                    <a href="javascript:" class="link-other-login">使用其他账户登入</a>
+                    <a href="javascript:" class="link-register">免费注册</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+
+	<script>
+		require([
+			"dialog/avalon.dialog"
+			], function() {
+			avalon.define("login", function(vm) {
+				vm.$ffOpts = {
+					title: "超时重新登录",
+					width: 283,
+					getFooter:function(tmp){
+						return "";
+					}
+				}
+				vm.show = function( id ){
+					avalon.vmodels[id].toggle = true;
+				}
+			})
+
+			avalon.scan()
+		})
+		
+	</script>
+
+</body>
+</html>
+
+
+

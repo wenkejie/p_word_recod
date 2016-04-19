@@ -1,0 +1,94 @@
+// ===================================================
+// ================= 翻页结构 ========================
+// ===================================================
+
+
+// ===================== 常量 ========================
+
+//色系
+@colorBlue:            #1488d4;
+@borderColorBlue:      #127ac2;
+
+
+@colorOrange:          #f1512e;
+@borderColorOrange:    #db3917;
+
+
+// ====================== end ========================
+
+
+
+.cui-pager{
+	float: right;*zoom:1;
+	color: #666;
+}
+
+
+.cui-pager-item,.cui-pager-jump,.cui-pager-text,.cui-pager-textbox-wrapper,.cui-pager-btn{
+	display: inline-block;*display: inline;*zoom:1;
+	vertical-align: middle;
+}
+
+
+.cui-pager-item{
+	margin-right: 5px;
+}
+
+
+
+.cui-pager-cell,.cui-pager-prev,.cui-pager-next{
+	display: inline-block;_float: left;*zoom:1;
+	height: 28px;line-height: 28px;padding: 0 10px;
+	border: #d6d6d6 1px solid;background-color: #f1f1f1;background-image:linear-gradient(to top,#f1f1f1,#f9f9f9);border-radius: 1px;
+	font-weight: bold;color: #666;
+	font-family: "宋体";
+	&:hover{
+		border-color: @borderColorOrange;
+		color: #666;
+	}
+	&.current{
+		background: @colorOrange;border-color: @borderColorOrange;
+		color: #fff;
+	}
+}
+.cui-pager-omit{
+	display: block;_float: left;*zoom:1;
+}
+
+.cui-pager-jump{
+	position: relative;
+	padding: 0 5px;
+}
+
+.cui-pager-textbox-wrapper{
+	display: inline-block;*display: inline;*zoom: 1;
+	width: 26px;margin-left: 5px;margin-right: 5px;padding: 3px 5px;
+	background-color: #fff;border: 1px solid #d4d4d4;vertical-align: middle;
+	font-size: 0;outline: none;
+}
+
+.cui-pager-textbox{
+	display: inline-block;*display: inline;*zoom:1;
+	width: 26px;height: 18px;line-height: 18px;
+	padding: 0;	border: 0 none;
+	background: #fff;vertical-align: middle;
+	text-align: center;color: #333333;font-size: 12px;outline: medium none;
+}
+
+.cui-pager-text{
+	display: inline-block;*display: inline;*zoom:1;
+	vertical-align: middle;
+}
+
+.cui-pager-btn{
+	display: inline-block;*zoom: 1;
+	overflow: visible;_overflow-y: hidden;border: #d6d6d6 1px solid;background-color: #f1f1f1;background:linear-gradient(to top,#f1f1f1,#f9f9f9);vertical-align: middle;
+	height: 26px;margin-left: 5px;border-radius: 1px;padding: 0 10px;
+	cursor: pointer;font-size: 12px;text-decoration: none;color: #666;
+	&:hover{
+		border-color: @borderColorOrange;
+		color: #666;
+	}	
+}
+
+

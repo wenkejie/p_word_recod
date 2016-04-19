@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="demo">
+<div ms-include-src="'header.html'"></div>
+<div class="wrapper">
+	<div class="wrapper-header">
+		<div class="ui-search-hs-area">
+			<div class="ui-search-hs">
+				<input type="text" placeholder="请输入HS编码或中文品名" />
+				<button>搜索HS编码</button>
+			</div>
+			<p>提示：品名暂不支持繁体、英文及特殊符号;本网数据仅供参考，部分生僻编码或争议编码，请咨询当地海关</p>
+		</div>
+	</div>
+	<div class="search-result-wrapper">
+		
+		<table class="ui-table ui-table-hs">
+			<thead>
+				<tr>
+					<th width="120">商品编号</th>
+					<th>商品名称</th>
+					<th width="100">最惠国税率</th>
+					<th width="100">退税率</th>
+					<th width="90">计量单位</th>
+					<th width="90">监管条件</th>
+					<th width="90">检验检疫</th>
+					
+					<th width="50">操作</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td>83123204123</td>
+						<td>德古斯特佐餐红酒</td>
+						<td>15%</td>
+						<td>8%</td>
+						<td>个</td>
+						<td>个</td>
+						<td>个</td>
+						<td>
+							<a href="#" class="option">展开</a>
+						</td>
+					</tr>
+					<tr class="none">
+						<td colspan="8" class="td-inside">
+							<table class="ui-inside-table">
+								<tbody>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td colspan="5">大碗大碗大碗大碗的</td>
+									</tr>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+									</tr>
+									<tr class="tr-last">
+										<th width="88" class="th-first">申报要素</th>
+										<td colspan="5"></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>83123204123</td>
+						<td>德古斯特佐餐红酒</td>
+						<td>15%</td>
+						<td>8%</td>
+						<td>个</td>
+						<td>个</td>
+						<td>个</td>
+						<td>
+							<a href="#" class="option">展开</a>
+						</td>
+					</tr>
+					<tr class="none">
+						<td colspan="8" class="td-inside">
+							<table class="ui-inside-table">
+								<tbody>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td colspan="5">大碗大碗大碗大碗的</td>
+									</tr>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+									</tr>
+									<tr class="tr-last">
+										<th width="88" class="th-first">申报要素</th>
+										<td colspan="5"></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>83123204123</td>
+						<td>德古斯特佐餐红酒</td>
+						<td>15%</td>
+						<td>8%</td>
+						<td>个</td>
+						<td>个</td>
+						<td>个</td>
+						<td>
+							<a href="#" class="option">展开</a>
+						</td>
+					</tr>
+					<tr class="none">
+						<td colspan="8" class="td-inside">
+							<table class="ui-inside-table">
+								<tbody>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td colspan="5">大碗大碗大碗大碗的</td>
+									</tr>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+									</tr>
+									<tr class="tr-last">
+										<th width="88" class="th-first">申报要素</th>
+										<td colspan="5"></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+				<tbody class="tbody-open">
+					<tr class="tr-active">
+						<td>83123204123</td>
+						<td>德古斯特佐餐红酒</td>
+						<td>15%</td>
+						<td>8%</td>
+						<td>个</td>
+						<td>个</td>
+						<td>个</td>
+						<td>
+							<a href="#" class="option">收缩</a>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="8" class="td-inside">
+							<table class="ui-inside-table">
+								<tbody>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td colspan="5">大碗大碗大碗大碗的</td>
+									</tr>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+									</tr>
+									<tr class="tr-last">
+										<th width="88" class="th-first">申报要素</th>
+										<td colspan="5"></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>83123204123</td>
+						<td>德古斯特佐餐红酒</td>
+						<td>15%</td>
+						<td>8%</td>
+						<td>个</td>
+						<td>个</td>
+						<td>个</td>
+						<td>
+							<a href="#" class="option">展开</a>
+						</td>
+					</tr>
+					<tr class="none">
+						<td colspan="8" class="td-inside">
+							<table class="ui-inside-table">
+								<tbody>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td colspan="5">大碗大碗大碗大碗的</td>
+									</tr>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+									</tr>
+									<tr class="tr-last">
+										<th width="88" class="th-first">申报要素</th>
+										<td colspan="5"></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+				<tbody class="tbody-open">
+					<tr class="tr-active">
+						<td>83123204123</td>
+						<td>德古斯特佐餐红酒</td>
+						<td>15%</td>
+						<td>8%</td>
+						<td>个</td>
+						<td>个</td>
+						<td>个</td>
+						<td>
+							<a href="#" class="option">收缩</a>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="8" class="td-inside">
+							<table class="ui-inside-table">
+								<tbody>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td colspan="5">大碗大碗大碗大碗的</td>
+									</tr>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th width="88" class="th-first">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+										<th width="72">申报要素</th>
+										<td></td>
+									</tr>
+									<tr class="tr-last">
+										<th width="88" class="th-first">申报要素</th>
+										<td colspan="5"></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+		</table>
+		<div ms-widget="pager" class="pagination"></div>
+	</div>
+		
+	
+
+
+		<div ms-widget="dialog,aa">
+			<p>{{message}}</p>
+			<ul ms-widget="checkboxlist" data-checkboxlist-duplex="check1">
+				<li><input type="checkbox" value="1">选项一</li>
+				<li><input type="checkbox" value="2">选项二</li>
+				<li><input type="checkbox" value="3">选项三</li>
+			</ul>
+		</div>
+</div>
+
+	<script>
+		require([
+			"button/avalon.button",
+			"dialog/avalon.dialog",
+			"checkboxlist/avalon.checkboxlist",
+			"pager/avalon.pager",
+			"browser/avalon.browser",
+			"textbox/avalon.textbox",
+			"spinner/avalon.spinner"
+			], function() {
+			avalon.define("demo", function(vm) {
+				vm.message = "笑傻了吧！！";
+				vm.namee = avalon.browser.name+' '+avalon.browser.version;
+				vm.show = function( id ){
+					avalon.vmodels[id].toggle = true;
+				}
+
+				vm.pager = {
+					// currentPage: 8,
+					totalItems: 120,
+					showJumper: true,
+					showPages:5
+				}
+
+				vm.$spinnerOpts={
+					min: 0,
+					width:25
+				};
+
+
+				vm.$skipArray = ["pager"];
+				vm.check1 = ["2"];
+
+				// 注意不可通过suggest重写suggest值，要不然就不能加载suggest插件
+	              vm.p = "";
+
+			})
+			avalon.scan();
+
+			avalon.ui["suggest"].strategies['test1'] = function( value , done ) {
+	              setTimeout(function(){
+	                  var arr = value ? ["xueer", "shirly"] : []
+	                  done(arr)
+	              },100)
+	          }
+
+		})
+	</script>
+
+</body>
+</html>
+
+
+

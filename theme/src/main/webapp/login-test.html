@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="login" class="login-bg">
+<div ms-include-src="'header_register.html'"></div>
+<div class="main-frame">
+	<div class="ui-login-ad"><img src="images/promo/login.png"/></div>
+    <div class="ui-login-box">
+    	<div class="ui-login">
+        	<h3 class="ui-login-title">掌柜会员</h3>
+            <div class="ui-login-cnt">
+            	<div class="ui-login-error-text"><i>&#xe614;</i> 用户名或密码错误</div>
+            	<div class="ps-r">
+                    <div class="input-outline"></div>
+                    <div class="ui-login-username">
+                        <span class="ui-login-input-icon"></span>
+                        <div class="oni-textbox">
+                            <div class="oni-textbox-input-wrap">
+                                <span class="oni-textbox-placeholder">手机号</span>
+                                <input type="text" placeholder="手机号" class="oni-textbox-input">
+                            </div>
+                        </div>
+                        <i>&#xe614;</i>
+                    </div>
+                    <div class="ui-login-password">
+                        <span class="ui-login-input-icon"></span>
+                        <input type="text" placeholder="密码">
+                        <i>&#xe614;</i>
+                    </div>
+                    <div class="ui-login-verifyCode">
+                        <input class="input-login-verifyCode" type="text" placeholder="验证码">
+                        <img class="img-login-verifyCode" src="images/login-yzm.png">
+                        <a href="#" class="link-login-verifyCode">看不清<br>换一张</a>
+                    </div>
+                </div>
+                <p class="ui-login-forget-link"><a href="#">忘记登录密码？</a></p>
+                <div class="ui-login-btn"><a href="#" ms-click="show('loginDialog')">登 录</a></div>
+                <p class="ui-login-register-link"><a href="#">免费注册</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+<div ms-widget="dialog,loginDialog,$ffOpts" data-dialog-modal="false">
+    <div class="ui-login-cnt ui-dialog-login-cnt">
+    	<div class="ui-login-error-text"><i>&#xe614;</i> 用户名或密码错误</div>
+        <div class="ps-r">
+            <div class="input-outline"></div>
+            <div class="ui-login-username">
+                <span class="ui-login-input-icon"></span>
+                <input type="text" placeholder="手机号">
+                <i>&#xe614;</i>
+            </div>
+            <div class="ui-login-password">
+                <span class="ui-login-input-icon"></span>
+                <input type="text" placeholder="密码">
+                <i>&#xe614;</i>
+            </div>
+        </div>
+        <p class="ui-login-forget-link"><a href="#">忘记登录密码？</a></p>
+        <div class="ui-login-btn"><a href="#">登 录</a></div>
+        <p class="ui-login-register-link"><a href="#">免费注册</a></p>
+    </div>
+</div>
+
+	<script>
+		require([
+			"dialog/avalon.dialog",
+            "textbox/avalon.textbox"
+			], function() {
+			avalon.define("login", function(vm) {
+				vm.$ffOpts = {
+					title: "超时重新登录",
+					width: 283,
+					getFooter:function(tmp){
+						return "";
+					}
+				}
+				vm.show = function( id ){
+					avalon.vmodels[id].toggle = true;
+				}
+			})
+
+			avalon.scan()
+		})
+		
+	</script>
+
+</body>
+</html>
+
+
+

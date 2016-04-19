@@ -1,0 +1,3273 @@
+// ===================================================
+// ================= 颜色调用 ======================
+// ===================================================
+.color-blue {
+	color:#1c87d2;
+	font-weight:bold;
+	padding:0 5px;
+	 
+}
+.color-orange {
+	color:#f36041;
+	font-weight:bold;
+}
+// ===================================================
+// ================= 图片引用 ======================
+// ===================================================
+.ui-booking-month-arrow-up,.ui-booking-month-arrow-down,.ui-booking-btn,.ui-comment-list-icon,.link-contact-me,.ui-booking-seller-info-icon,.icon-business-state-point,.ui-scroll-monitor-icon-first,.ui-scroll-monitor-icon-last,.ui-scroll-monitor-icon {
+	background-image:url(../images/bg.png);
+	background-repeat:no-repeat;
+}
+.ui-login-input-icon {
+	background-image:url(../images/icon.png);
+	background-repeat:no-repeat;
+}
+.ui-dialog-icon-warn,.ui-dialog-icon-error {
+	background-image:url(../images/component_bg.png);
+	background-repeat:no-repeat;
+}
+
+// ===================================================
+// ================= 支付页面 table ======================
+// ===================================================
+.ui-table-box {
+	box-shadow: 2px 2px 10px #dcdcdc;
+}
+.ui-table-payment {
+	td {
+		vertical-align:top;
+	}
+	.setup-time {
+		color:#999999;
+	}
+	.payment-amount {
+		font-size:14px;
+		color:#d96d00;
+		font-weight: bold;
+	}
+	.wait-payment {
+		color:#ff4000;
+	}
+	.payment-time {
+		span {
+			color:#999;
+		}
+	}
+	.payment-succeed {
+		color:#999;
+	}
+	.operate-dropdown {
+		position:relative;
+		.btn-payment {
+			width:60px;
+			height:24px;
+			line-height:24px;
+			display:block;
+			border:#ff9326 1px solid;
+			border-radius:2px;
+			background:#ff9326;
+			color:#fff;
+			text-indent:12px;
+			&:hover {
+				background:#ff8000;
+				border-color:#ff8000;
+			}
+		}
+		.btn-payment-long{
+			width:75px;
+		}
+		.operate-dropdown-list {
+			position:absolute;
+			top:25px;
+			left:0;
+			width:60px;
+			border:#cdcdcd 1px solid;
+			border-top:none;
+			background:#fff;
+			border-radius:0 0 2px 2px;
+			padding:5px 0;
+			li {
+				list-style:none;
+			}
+			a {
+				display:block;
+				height:24px;
+				line-height:24px;
+				text-indent:12px;
+				&:hover {
+					background:#ff8000;
+					color:#fff;
+				}
+			}
+		}
+	}
+}
+
+// 表格控件
+
+.ui-table-header{
+	.clearfix;
+	margin-bottom: 10px;
+}
+
+.ui-table-header-left{
+	float: left;*display: inline;
+}
+
+.ui-table-header-right{
+	float: right;*display: inline;
+}
+
+
+.ui-table-footer{
+	.clearfix;
+	margin-top: 10px;
+}
+
+.ui-table-footer-left{
+	float: left;*display: inline;
+	label{
+		float: left;*display: inline;
+		padding-left: 20px;height: 24px;line-height: 24px;
+	}
+}
+
+.ui-table-footer-right{
+	float: right;*display: inline;
+}
+
+// ===================================================
+// ================= 订舱页面 ======================
+// ===================================================
+.ui-booking-box {
+	.clearfix;
+}
+.ui-booking {
+	.left;
+	width:520px;
+}
+.ui-booking-price {
+	.clearfix;
+	margin:0 -9px;
+	padding:10px 0;
+	li {
+		.left;
+		margin:10px 9px 0;
+		background:@color-orange;
+		border-radius:5px;
+	}
+}
+.ui-booking-price-unit {
+	color:#f9b0a0;
+}
+.ui-booking-price-num {
+	color:#fff;
+}
+.ui-price-type1 {
+	li{
+		padding:0 20px;
+		height:100px;
+		width:210px;
+	}
+	.ui-booking-price-unit {
+		.left;
+		padding-top:44px;
+		font-size:14px;
+	}
+	.ui-booking-price-num {
+		.left;
+		padding:22px 0 0 20px;
+		font-size:36px;
+	}
+}
+.ui-price-type2 {
+	margin:0 -6px;
+	li{
+		padding:0 20px;
+		height:100px;
+		width:125px;
+		margin:10px 6px 0;
+	}
+	.ui-booking-price-unit {
+		padding-top:25px;
+	}
+	.ui-booking-price-num {
+		font-size:24px;
+	}
+}
+.ui-price-type3 {
+	margin:0 -6px;
+	li{
+		padding:0 17px;
+		height:60px;
+		width:87px;
+		margin:10px 6px 0;
+	}
+	.ui-booking-price-unit {
+		padding-top:10px;
+	}
+	.ui-booking-price-num {
+		font-size:18px;
+	}
+}
+
+// ===================================================
+// ================= 订舱页面日历 ======================
+// ===================================================
+.ui-booking-date {
+	margin-top:10px;
+}
+.ui-booking-date-tb {
+	// float:left;
+	table-layout: fixed;
+	float: left;width: 460px;
+	border:#dddddd 1px solid;
+	thead {
+		th {
+			background:#eeeeee;
+			line-height:32px;
+			font-size:14px;
+			color:#666;
+		}
+
+		.ui-choose-row{
+			width: 80px;
+		}
+	}
+	td {
+		border-left:#eeeeee 1px solid;
+		border-top:#eeeeee 1px solid;
+		text-align:center;
+		background:#fff;
+		a {
+			display:block;
+			height:34px;
+			line-height:34px;
+			padding:0 5px;
+			// width:51px;
+			color:#333;
+			border:#fff 2px solid;
+		}
+		.ui-td-choose {
+			line-height:17px;
+			text-align:right;
+			span {
+				.oneline;
+				color:#999999;
+				display:block;
+				b{
+					color:#333!important;
+				}
+			}
+		}
+		.ui-td-optional {
+			background:#fff0d9;
+			border:#fff0d9 2px solid;
+		}
+		.ui-td-selected,.ui-td-choose:hover {
+			background:#fddcb7;
+			border:@color-orange 2px solid;
+			color:@color-orange;
+		}
+	}
+	.ui-td-grey {
+		a {
+			color:#999;
+		}
+	}
+	.border-left-none {
+		border-left:none;
+	}
+}
+.ui-booking-month {
+	.right;
+	width:49px;
+	height:266px;
+	border:#dddddd 1px solid;
+	background:#f7f7f7;
+}
+.ui-booking-year {
+	height:32px;
+	line-height:32px;
+	color:#666;
+	background:#e4e4e4;
+	text-align:center;
+	font-weight:bold;
+}
+.ui-booking-month-arrow-up {
+	display:block;
+	height:16px;
+	width:27px;
+	margin:7px 0 0 11px;
+	background-position:-274px -150px;
+	cursor:pointer;
+	&:hover {
+		background-position:-306px -150px;
+	}
+}
+.ui-booking-month-arrow-down {
+	display:block;
+	height:16px;
+	width:27px;
+	margin:7px 0 0 11px;
+	background-position:-274px -166px;
+	cursor:pointer;
+	&:hover {
+		background-position:-306px -166px;
+	}
+}
+.ui-booking-month-box {
+	height:173px;
+	margin:7px 0 0 0;
+	overflow:hidden;
+}
+.ui-booking-month-list {
+	li {
+		list-style:none;
+		height:33px;
+		line-height:33px;
+		text-align:center;
+		color:#666;
+		font-weight:bold;
+		cursor:pointer;
+	}
+	.active {
+		background:#dddddd;
+	}
+}
+// ===================================================
+// ================= 订舱页面基础信息 ======================
+// ===================================================
+.ui-booking-info {
+	.right;
+	width:434px;
+	padding-top:20px;
+}
+.ui-booking-info-title {
+	.clearfix;
+	border-bottom:#eee 1px solid;
+	padding:15px 0 28px 0;
+}
+.ui-booking-info-title-logo {
+	.left;
+	border-right:#eee 1px solid;
+	padding-right:30px;
+	text-align:center;
+	span {
+		display:block;
+	}
+}
+.ui-booking-info-title-route {
+	.left;
+	width:300px;
+	padding-left:25px;
+	h3 {
+		font-size:18px;
+	}
+	h4 {
+		padding-top:5px;
+		color:#666666;
+		font-weight:normal;
+	}
+}
+.ui-booking-info-detail {
+	.clearfix;
+	padding:15px 0;
+	border-bottom:#eee 1px solid;
+	line-height:24px;
+	dt {
+		.left;
+		width:60px;
+		text-align:right;
+		color:#999;
+		clear:left;
+	}
+	dd {
+		.left;
+		width:320px;
+		white-space:nowrap;
+		overflow:hidden;
+		text-overflow:ellipsis; 
+		-o-text-overflow:ellipsis;
+	}
+}
+
+.ui-en-booking-info-detail{
+	dt {
+		width:113px;
+	}
+	dd {
+		width:300px;
+	}
+}
+
+.ui-booking-info-remark {
+	padding:10px 5px 0;
+	.ui-remark-title {
+		font-size:12px;
+		padding-bottom:5px;
+	}
+	.ui-remark-cnt {
+		color:#666;
+	}
+}
+.ui-booking-info-operate-statistics {
+	.clearfix;
+	padding-top:28px;
+}
+.ui-booking-info-operate {
+	.left;
+	width:170px;
+	.ui-booking-btn {
+		width:170px;
+		height:39px;
+		background:url(../images/bg.png) 0 -146px no-repeat;
+		border:none;
+		outline:none;
+	}
+	.ui-booking-btn-disabled {
+		background-position:0 -191px;
+	}
+	.ui-en-booking-btn {
+		background-position:-248px -237px;
+	}
+	.ui-en-booking-btn-disabled {
+		background-position:-248px -282px;
+	}
+}
+.bdshare-title {
+	float:left;
+	padding:5px 5px 0 0;
+}
+.ui-booking-info-statistics {
+	.left;
+	margin-left:40px;
+	padding:11px;
+	border:#ddd 1px solid;
+	background:#fff;
+	li {
+		list-style:none;
+		.left;
+		padding:0 12px;
+		text-align:center;
+		a {
+			color:#333!important;
+		}
+		.ui-statistics-num {
+			display:block;
+			font-size:18px;
+		}
+		.ui-statistics-text {
+			display:block;
+		}
+	}
+	.right-border {
+		border-right:#ddd 1px solid;
+	}
+}
+
+// ===================================================
+// ================= 拼箱页面框架样式 ======================
+// ===================================================
+.ui-module-box {
+	.clearfix;
+	border:#ccc 1px solid;
+	padding:20px;
+	margin-top:20px;
+	background:#fff;
+}
+.ui-booking-statistics {
+	width:685px;
+	.left;
+	padding:0 5px;
+}
+.ui-table-surcharge {
+	.clearfix;
+	margin-top:20px;
+}
+// ===================================================
+// ================= 拼箱页面模块样式 ======================
+// ===================================================
+.ui-booking-statistics-top-box {
+	clear:both;
+	border:#eee 1px solid;
+	margin-top:20px;
+	height:36px;
+}
+.ui-booking-statistics-radioGroup {
+	.left;
+	padding:10px 0 0 18px;
+	label {
+		padding-right:20px;
+		cursor:pointer;
+	}
+}
+.ui-booking-statistics-checkbox {
+	.right;
+	padding:10px 15px 0 0;
+}
+.ui-booking-statistics-comment-list {
+	padding:10px 0;
+	li {
+		.clearfix;
+		list-style:none;
+		border-bottom:#eee 1px solid;
+		padding:12px 0;
+	}
+	.ui-comment-list-icon {
+		.left;
+		width:20px;
+		height:24px;
+		margin:5px 0 0 8px;
+	}
+	.ui-comment-list-icon-praise {
+		background-position:-184px -196px;
+	}
+	.ui-comment-list-icon-negative {
+		background-position:-228px -196px;
+	}
+}
+.ui-booking-statistics-comment-cnt {
+	.left;
+	width:600px;
+	margin-left:35px;
+}
+.ui-booking-statistics-commentator {
+	padding-top:10px;
+	span {
+		color:#999;
+	}
+	.user-name {
+		color:#666;
+		padding-right:20px;
+	}
+}
+
+.ui-booking-statistics-comment{
+	.pagination{
+		margin-bottom: 20px;
+	}
+}
+
+.ui-booking-statistics{
+	.pagination{
+		margin-bottom: 20px;
+	}
+}
+
+// ===================================================
+// ================= 统计记录 ======================
+// ===================================================
+.ui-booking-statistics-record-text {
+	line-height:36px;
+	padding-left:18px;
+}
+.ui-table-deal-record {
+	margin-top:20px;
+	color:#666;
+	td {
+		vertical-align:top;
+	}
+	.oni-simplegrid {
+		border: none;
+		border-bottom: 1px solid #d4d4d4;
+	}
+	.oni-simplegrid-thead {
+		td {
+			background:none;
+			font-weight:bold;
+		}
+	}
+	.transaction-time {
+		color:#999;
+	}
+}
+// ===================================================
+// ================= 卖家信息 ======================
+// ===================================================
+.ui-booking-seller-info {
+	width:205px;
+	.right;
+	padding-right:15px;
+}
+.ui-booking-seller-info-title {
+	border-bottom:#ddd 2px solid;
+	height:37px;
+	padding-top:5px;
+	color:#666;
+}
+.ui-booking-seller-info-list {
+	.clearfix;
+	padding:15px 5px;
+	color:#666;
+	line-height:30px;
+	border-bottom:#ddd 1px solid;
+	dt {
+		.left;
+		clear:left;
+		white-space:nowrap;
+	}
+	dd {
+		.left;
+		width:150px;
+	}
+}
+.link-contact-me {
+	display:block;
+	width:79px;
+	height:19px;
+	background-position:-138px -10px;
+	margin-top:3px;
+	cursor:pointer;
+}
+.link-contact-me-disabled {
+	background-position:-227px -11px;
+	cursor:pointer;
+}
+.ui-booking-seller-comment {
+	padding-top:27px;
+	li {
+		list-style:none;
+		.left;
+		height:58px;
+	}
+}
+.ui-booking-seller-info-praise {
+	border-right:#ddd 1px solid;
+	width:56px;
+	color:#999;
+	line-height:24px;
+	.icon-praise {
+		background-position:-183px -150px;
+	}
+}
+.ui-booking-seller-info-negative {
+	border-right:#ddd 1px solid;
+	width:70px;
+	text-align:center;
+	color:#999;
+	line-height:24px;
+	.icon-negative {
+		background-position:-228px -150px;
+		margin:0 auto;
+	}
+}
+.ui-booking-seller-info-icon  {
+	width:28px;
+	height:32px;
+}
+.ui-booking-seller-info-received-orders {
+	text-align:center;
+	width:75px;
+	padding:5px 0 ;
+	line-height:24px;
+	.title {
+		font-size:14px;
+		padding-bottom:3px;
+	}
+}
+
+// ===================================================
+// ================= 买家信息 ======================
+// ===================================================
+.ui-buyer-info {
+	.left;
+	width:306px;
+	h3 {
+		height:34px;
+		line-height:34px;
+		background:#f5f5f5;
+		border-bottom:#ccc 1px solid;
+		padding-left:20px;
+		font-size:12px;
+	}
+}
+.ui-buyer-info-part1 {
+	.clearfix;
+	padding:20px;
+	border-bottom:#dcdcdc 1px solid;
+	line-height:26px;
+	dt {
+		.left;
+		clear:left;
+		width:70px;
+		text-align:right;
+		color:#979797;
+	}
+	dd {
+		.left;
+		width:180px;
+		.buyer-name {
+			.left;
+			padding-right:10px;
+		}
+	}
+}
+.ui-buyer-info-part2 {
+	.clearfix;
+	padding:20px;
+	line-height:26px;
+	dt {
+		.left;
+		clear:left;
+		width:70px;
+		text-align:right;
+		color:#979797;
+	}
+	dd {
+		.left;
+		width:180px;
+		.buyer-name {
+			.left;
+			padding-right:10px;
+		}
+	}
+}
+.ui-business-info {
+	.left;
+	width:680px;
+	min-height:330px;
+	_height:330px;
+	border-left:#ccc 1px solid;
+	position:relative;
+	.ui-business-info-close {
+		position:absolute;
+		top:7px;
+		right:2px;
+		color:#cccccc;
+		cursor:pointer;
+		&:hover {
+			color:#333;
+		}
+		i {
+			font-size:20px;
+		}
+	}
+}
+.ui-business-info-status {
+	padding:30px 80px;
+	h3 {
+		line-height:30px;
+		span {
+			color:#00b183;
+		}
+	}
+}
+.ui-business-info-status-tb {
+	width:100%;
+	td{
+		padding:0 15px;
+		line-height:24px;
+		border:#dcdcdc 1px solid;
+	}
+	thead {
+		td {
+			background:#f6f6f6;
+		}
+	}
+}
+.ui-cost-detail {
+	margin:30px 38px 0!important;
+}
+.ui-business-info-cost {
+	.clearfix;
+	padding:0 80px;
+	font-weight:bold;
+	line-height:26px;
+	dt {
+		.left;
+		clear:left;
+		width:110px;
+		text-align:right;
+		color:#666;
+	}
+	dd {
+		.left;
+		width:300px;
+		color:#fd3d00;
+	}
+	.prompt-exchange-rate {
+		color:#949494;
+		font-size:12px;
+		font-weight:normal;
+	}
+}
+.ui-business-info-operate {
+	padding:25px 40px;
+	color:#666;
+	span {
+		margin-right:20px;
+	}
+	button {
+		span {
+			margin:0;
+		}
+	}
+}
+.ui-business-info-tab {
+	.left;
+	width:306px;
+	li {
+		.clearfix;
+		padding:20px 0 20px 20px;
+		list-style:none;
+		border-bottom:#dcdcdc 1px solid;
+		background:#FFF;
+		h3 {
+			.left;
+			line-height:30px;
+		
+			span {
+				color:#00b183;
+			}
+		}
+		dl{
+			.left;
+		}
+		dt {
+			.left;
+			clear:left;
+			width:95px;
+			text-align:right;
+			color:#666;
+			font-weight:bold;
+			line-height:26px;
+		}
+		dd {
+			.left;
+			width:85px;
+			color:#fd3d00;
+			font-weight:bold;
+			line-height:26px;
+		}
+		button {
+			.right;
+			margin-right:15px;
+		}
+	}
+	.active {
+		position:relative;
+		box-shadow: -5px 3px 5px #dcdcdc;
+		width:287px;
+		z-index:999;
+	}
+}
+.ui-business-info-choose-status {
+	padding:20px 0 20px 100px;
+}
+
+.ui-business-info-cost-edit {
+	padding:20px 0;
+}
+.ui-business-info-cost-edit-tb {
+	width:100%;
+	thead {
+		th {
+			background:#f9f9f9;
+			border-top:#ddd 1px solid;
+			border-bottom:#ddd 1px solid;
+			line-height:28px;
+			padding:0 14px;
+			text-align:left;
+			color:#666;
+		}
+		.ta-c {
+			text-align:center;
+		}
+
+	}
+	td {
+		border-bottom:#ddd 1px solid;
+		padding:6px 14px;
+		line-height:20px;
+		vertical-align:top;
+	}
+	.alt {
+		td {
+			background:#f9f9f9;
+		}
+	}
+}
+
+// 费用明细表
+.ui-fee-detail-tb{
+	thead {
+		th {
+			padding-top: 5px;padding-bottom: 5px;
+			border-top: 0;border-bottom: 2px solid #ccc;background: #fff;
+		}
+		.ta-c {
+			text-align:center;
+		}
+
+	}
+
+	.fee-detail-td{
+		padding: 5px 14px;padding-top: 15px;
+		border-top: 0;border-bottom: 2px solid #ccc;background: #fff;
+		font-weight: bold;
+	}
+}
+
+.ui-business-info-cost-add {
+	padding:15px;
+}
+
+
+
+
+// 费用明细结构
+.fee-detail-list{
+	&:extend(.clearfix all);
+	margin: 0 38px;
+	border-top: 1px solid #ddd;
+}
+
+.fee-detail-right{
+	float: right;*display: inline;
+}
+
+.fee-detail-line{
+	&:extend(.clearfix all);
+	border-bottom: 1px solid #ddd;
+	&.last{
+		border-bottom: 0;
+	}
+}
+
+.fee-detail-footer{
+	padding-top: 10px;padding-bottom: 30px;
+	text-align: right;
+}
+
+
+// 费用单列表
+.fee-bill-list{
+	float: left;*display: inline;
+	padding: 10px 15px;
+	
+}
+
+.fee-bill-line{
+	&:extend(.clearfix all);
+	&.important{
+		padding-bottom: 10px;
+		font-size: 14px;font-weight: bold;
+		.fee-bill-num{
+			color: #ff4000;	
+		}
+	}
+}
+
+.fee-bill-label{
+	float: left;*display: inline;
+	width: 100px;
+	text-align: right;
+}
+
+.fee-bill-num{
+	float: left;*display: inline;
+	text-align: left;
+}
+
+
+// ===================================================
+// ================= tab ======================
+// ===================================================
+.ui-tab-type2 {
+	height:34px;
+	background:#f5f5f5;
+	border-bottom:#dedede 1px solid;
+}
+.ui-tab-type2-list {
+	.left;
+	padding:5px;
+	_padding-bottom:0;
+	li {
+		.left;
+		list-style:none;
+		position:relative;
+		_top:1px;
+		border:#ccc 1px solid;
+		height:28px;
+		line-height:28px;
+		margin-right:5px;
+		padding:0 15px;
+		cursor:pointer;
+		color:#666;
+		font-size:14px;
+		font-weight:bold;
+	}
+	.active {
+		background:#fff;
+		border-bottom:1px solid #fff;
+		color:@color-orange;
+		_padding:0 15px!important;
+	}
+}
+.ui-tab-type2-print {
+	.right;
+	margin:8px 15px 0 0;
+}
+.ui-tab-type2-cnt {
+	.clearfix;
+}
+
+// ===================================================
+// ================= 订单详情 ======================
+// ===================================================
+.ui-booking-detail-info {
+	margin:30px 170px 0 38px;
+	padding-top:10px;
+	border-top:#efefef 1px solid;
+	position:relative;
+	clear:both;
+	h3 {
+		position:absolute;
+		top:-10px;
+		left:20px;
+		background:#fff;
+		padding:0 10px;
+	}
+}
+.ui-booking-detail-info-cnt {
+	padding:20px 0 10px 0;
+	.clearfix;
+	line-height:24px;
+	p {
+		padding:0 30px 0 70px;
+	}
+	h4 {
+		border-top:#f5f5f5 1px dashed;
+		line-height:30px;
+		color:#666;
+		padding-left:30px;
+	}
+	dt {
+		.left;
+		padding-left:70px;
+		width:110px;
+		text-align:right;
+		color:#999;
+		clear:left;
+	}
+	dd {
+		.left;
+		width:600px;
+	}
+}
+.trade-manage-table-info-list {
+	.left;
+	padding:15px;
+	line-height:24px;
+}
+
+.ui-fee-detail{
+	padding: 0;margin:30px 38px 0!important;
+	border-top: 0;
+}
+
+// ===================================================
+// ================= 订舱信息滚动监听 ======================
+// ===================================================
+.ui-scroll-monitor-icon {
+	position:relative;
+	top:16px;
+	_top:18px;
+	left:-22px;
+	background-position:-356px -173px;
+	width:10px;
+	height:9px;
+	display:block;
+}
+.ui-scroll-monitor {
+	position:absolute;
+	top:250px;
+	right:15px;
+	border-left:#d6d6d6 1px solid;
+	padding:10px 15px;
+	li {
+		list-style:none;
+		color:#666;
+	}
+	.active {
+		font-weight:bold;
+		color:#198bd8;
+		.ui-scroll-monitor-icon {
+			background-position:-355px -191px;
+			width:14px;
+			height:14px;
+			top:16px;
+			left:-23px;
+		}
+	}
+}
+.ui-scroll-monitor-icon-first {
+	position:relative;
+	width:12px;
+	height:11px;
+	background-position:-356px -152px;
+	top:-10px;
+	_top:-12px;
+	left:-22px;
+	display:block;
+}
+.ui-scroll-monitor-icon-last {
+	position:relative;
+	width:12px;
+	height:11px;
+	background-position:-356px -152px;
+	bottom:-10px;
+	_bottom:-14px;
+	left:-22px;
+	display:block;
+}
+
+// ===================================================
+// ================= 订单详情备注 ======================
+// ===================================================
+.ui-order-detail-remind {
+	margin-top:20px;
+	border:#d5a880 1px solid;
+	background:#fdf4e1;
+	padding:15px 20px 5px 20px;
+	h3 {
+		color:#a55825;
+		font-size:12px;
+		i {
+			font-size:20px;
+		}
+	}
+	ol {
+		padding:10px 45px;
+		line-height:24px;
+	}
+}
+.ui-order-detail-remind-cnt {
+	padding:10px 22px;
+	color:#a55825;
+}
+
+
+
+// ===================================================
+// ================= 备注信息 ======================
+// ===================================================
+.ui-business-state {
+	padding:50px 35px 30px 45px;
+}
+.ui-business-state-column {
+	padding-bottom:30px;
+	border-left:#cccccc 2px solid;
+	position:relative;
+	padding-left:22px;
+}
+.icon-business-state-point {
+	position:absolute;
+	top:-2px;
+	left:-7px;
+	_left:-27px;
+	background-position:-146px -107px;
+	width:12px;
+	height:12px;
+	display:block;
+}
+.ui-business-state-column-no-bd {
+	border-left:none;
+}
+.ui-business-state-column-title {
+	.clearfix;
+	height:27px;
+	line-height:27px;
+	border:#dcdcdc 1px solid;
+	background:#f9f9f9;
+	position:relative;
+	padding:0 10px;
+	top:-10px;
+	.state-column-arrow1 {
+		position: absolute;
+		top: 1px;
+		left: -8px;
+		color: #dcdcdc;
+		font-size: 16px;
+		font-family: "宋体";
+	}
+	.state-column-arrow2 {
+		position: absolute;
+		top: 1px;
+		left: -6px;
+		color: #f9f9f9;
+		font-size: 16px;
+		font-family: "宋体";
+	}
+	h3 {
+		.left;
+	}
+	.state-column-time {
+		.left;
+		padding-left:15px;
+		color:#999;
+		b {
+			color:#666;
+		}
+	}
+	.btn-up-down {
+		.right;
+	}
+}
+.ui-business-state-column-tb {
+	margin-top:10px;
+	width:100%;
+	th {
+		height:27px;
+		line-height:27px;
+		border-bottom:#b8dffe 1px solid;
+		border-top:#b8dffe 1px solid;
+		background:#e2f2ff;
+	    text-align:left;
+		padding:0 10px;
+		color:#666;
+	}
+	
+	.ui-state-column-tb-dp {
+		width:70px!important;
+	}
+}
+.ui-business-state-column-tb>tbody>tr>td {
+	border-bottom:#badffc 1px solid;
+	background:#f7faff;
+	padding:10px;
+	color:#666;
+	vertical-align:top;
+}
+.ui-business-state-column-active {
+	.ui-business-state-column-title {
+		background:#1b8bd7;
+		border:#1b8bd7 1px solid;
+		.state-column-arrow1 {
+			color:#1b8bd7;
+		}
+		.state-column-arrow2 {
+			display:none;
+		}
+		h3 {
+			color:#fff;
+		}
+		.state-column-time {
+			color:#fff;
+			b {
+				color:#fff;
+			}
+		}
+		.btn-up-down {
+			color:#fff!important;
+			text-decoration:underline;
+		}
+	}
+	.icon-business-state-point {
+		background-position:-169px -106px;
+		width:14px;
+		height:14px;
+		left:-8px;
+		_left:-30px;
+	}
+}
+
+// ===================================================
+// ================= 登录样式 ======================
+// ===================================================
+.login-bg {
+	background:#f5f5f5;
+}
+.ui-login-ad {
+	.left;
+	padding:40px 20px 0 0;
+	width:550px;
+	text-align:center;
+}
+.ui-login-box {
+	.right;
+	padding:57px 87px 0 0;
+}
+.ui-login {
+	width:283px;
+	border:#bbbbbb 1px solid;
+	background:#fff;
+	box-shadow: 0 0 10px #dcdcdc;
+}
+.ui-login-title {
+	height:45px;
+	line-height:45px;
+	padding:0 24px;
+	background:#f6f6f6;
+}
+.ui-login-cnt {
+	padding:20px 22px;
+	position:relative;
+}
+.ui-login-input-icon {
+	display:block;
+	width:16px;
+	height:16px;
+	position:absolute;
+	top:9px;
+	left:10px;
+	z-index: 11;
+}
+.ui-login-username {
+	margin:5px 0;
+	position:relative;
+	input {
+		border:#cccccc 1px solid;
+		padding:0 20px 0 40px;
+		box-shadow:0 3px 3px #e8e8e8 inset;
+		height:30px;
+		line-height:30px;
+		width:177px;
+		outline:none;
+		&:focus {
+			border:#ff9901 1px solid!important;
+		}
+		&::-ms-clear { display: none; }
+	}
+	i {
+		position:absolute;z-index: 11;
+		top:8px;
+		right:8px;
+		_right:28px;
+		font-size:18px;
+		color:#cccccc;
+		cursor:pointer;
+		width: 38px;height: 18px;background: #fff;text-align: right;
+		&:hover {
+			color:#333;
+		}
+	}
+	.ui-login-input-icon {
+		background-position:-34px -17px;
+	}
+}
+.ui-login-password {
+	margin:10px 0;
+	position:relative;
+	input {
+		border:#cccccc 1px solid;
+		padding:0 20px 0 40px;
+		box-shadow:0 3px 3px #e8e8e8 inset;
+		height:30px;
+		line-height:30px;
+		width:177px;
+		outline:none;
+		&:focus {
+			border:#ff9901 1px solid!important;
+		}
+		&::-ms-clear { display: none; }
+	}
+	i {
+		position:absolute;
+		top:8px;
+		right:8px;
+		_right:28px;
+		font-size:18px;
+		color:#cccccc;
+		cursor:pointer;
+		width: 38px;height: 18px;background: #fff;text-align: right;
+		&:hover {
+			color:#333;
+		}
+	}
+	.ui-login-input-icon {
+		background-position:-51px -18px;
+	}
+}
+.ui-login-verifyCode {
+	margin:10px 0;
+	.clearfix;
+	.input-login-verifyCode {
+		border:#cccccc 1px solid;
+		padding:0 10px;
+		box-shadow:0 3px 3px #e8e8e8 inset;
+		height:30px;
+		line-height:30px;
+		width:77px;
+		outline:none;
+		vertical-align:middle;
+		float:left;
+		&:focus {
+			border:#ff9901 1px solid!important;
+		}
+	}
+	.img-login-verifyCode {
+		float:left;
+		display:inline;
+		margin-left:5px;
+		width: 90px;height: 32px;
+		border: none;
+	}
+	.link-login-verifyCode {
+		float:right;
+		line-height:16px;
+	}
+}
+.input-outline {
+	width:239px;
+	height:32px;
+	border:#ffeb9c 2px solid;
+	position:absolute;
+	top:-2px;
+	_top:-1px;
+	left:-2px;
+}
+.ui-login-forget-link {
+	text-align:right;
+	a {
+		color:#999;
+		&:hover {
+			color:#0088cc;
+		}
+	}
+	
+}
+.ui-login-error-text {
+	border:#d93701 1px solid;
+	background:#ffe8df;
+	position:relative;
+	padding:6px 15px 6px 34px;
+	color:#d93600;
+	margin:0 0 10px;
+	i {
+		position:absolute;
+		top:6px;
+		_top:7px;
+		left:10px;
+		_left:-20px;
+		font-size:18px;
+	}
+}
+.ui-login-btn {
+	padding-top:10px;
+	a {
+		display:block;
+		border:#db3917 1px solid;
+		.linear-all(#f35f3f,#f1512e);
+		text-align:center;
+		height:34px;
+		line-height:34px;
+		color:#fff!important;
+		font-size:14px;
+		font-weight:bold;
+		border-radius:3px;
+		&:hover {
+			.linear-all(#e94734,#ed4123);
+			border-color: #ba3114
+		}
+	}
+}
+.ui-login-register-link {
+	border-top:#ddd 1px solid;
+	margin-top:25px;
+	text-align:center;
+	a {
+		position:relative;
+		top:-10px;
+		background:#fff;
+		padding:0 10px;
+		color:#666;
+		&:hover {
+			color:#0088cc;
+		}
+	}
+}
+.ui-dialog-login-cnt {
+	padding:3px 2px;
+}
+
+// ==================== 5.8号新增，evan ====================
+.ui-login-already{
+	
+}
+
+.ui-login-btn-already{
+	
+}
+
+.ui-login-already-info{
+	.user-name{
+		color: #ed6840;
+	}
+}
+
+.ui-login-already-footer{
+	height: 18px;
+	margin-top: 40px;
+	.link-other-login{
+		float: left;
+	}
+	.link-register{
+		float: right;
+	}
+}
+
+
+// ======================= end =======================
+// ===================================================
+// ================= title ======================
+// ===================================================
+.ui-title-1 {
+	border-bottom:#ccc 2px solid;
+	padding:10px 0;
+	font-size:16px;
+	color:#666;
+	.ui-title-1-prompt {
+		margin-left:20px;
+		color:#999;
+		font-size:12px;
+		font-weight:normal;
+		em {
+			font-style:normal;
+			color:#d8524e;
+			font-weight:bold;
+		}
+	}
+}
+
+// ===================================================
+// ================= 评论发布 ======================
+// ===================================================
+.ui-comment-publish {
+	.clearfix;
+	padding:15px 0;
+	h3 {
+		color:#555555;
+		font-size:16px;
+		margin-top:5px;
+	}
+}
+.ui-comment-publish-left {
+	.left;
+	width:442px;
+	.ui-panel-hd{
+		background-color: #f9f9f9;
+	}
+}
+.ui-comment-publish-right {
+	.right;
+	width:430px;
+	margin-top:20px;
+
+	.word{
+		.left;
+		line-height: 24px;
+	}
+
+	.c1{
+		color: #999;
+	}
+
+	.c2{
+		color: #666;
+	}
+
+	.comment-ava{
+		font-size: 14px;
+		font-weight: bold;
+		color: #666;
+		margin-bottom: 12px;
+	}
+}
+
+.comment-publish-panel{
+	background-color: #fff;
+}
+.ui-comment-publish-self{
+	&:extend(.clearfix all);
+	.icon-good {
+		background-image:url(../images/bg.png);
+		background-repeat:no-repeat;
+		background-position:-184px -196px;
+		width:20px;
+		height:24px;
+		margin:0 5px;
+	}
+
+	 .icon-bad {
+		background-image: url(../images/bg.png);
+		background-repeat: no-repeat;
+		background-position: -228px -196px;
+		width: 20px;
+		height: 24px;
+		margin: 0 5px;
+	}
+}
+
+.ui-comment-publish-right-radio {
+	.clearfix;
+	padding:2px 0 10px 47px;
+	color:#999;
+	label {
+		.left;
+		padding-right:25px;
+		cursor:pointer;
+	}
+	input {
+		.left;
+		margin-top:8px;
+		*margin-top:3px;
+	}
+	span {
+		.left;
+		line-height:24px;
+	}
+	.icon-good {
+		background-image:url(../images/bg.png);
+		background-repeat:no-repeat;
+		background-position:-184px -196px;
+		width:20px;
+		height:24px;
+		margin:0 5px;
+	}
+	.icon-bad {
+		background-image:url(../images/bg.png);
+		background-repeat:no-repeat;
+		background-position:-228px -196px;
+		width:20px;
+		height:24px;
+		margin:0 5px;
+	}
+}
+.ui-comment-publish-right-textarea {
+	label {
+		font-size:14px;
+	}
+	textarea {
+		width:350px;
+	}
+	.ui-login-error-text{
+		margin-left: 36px;
+		border: none;
+		background: #fff;
+	}
+}
+.ui-comment-publish-right-button {
+	padding:10px 0 0 47px;
+}
+
+.ui-comment-publish-right-bd{
+	padding: 15px 25px;
+	width: auto;
+}
+
+.ui-comment-publish-success{
+	&:extend(.clearfix all);
+	padding: 20px 30px;
+	background-color: #dfffbf;
+	border: 1px solid #afcd7e;
+	.success-icon{
+		display: inline;
+		float: left;
+		width: 40px;
+		height: 40px;
+		background: url(../images/reg_bg.png) 0 -78px;
+	}
+
+	.msg {
+		float: left;
+		color: #597557;
+		font-size: 24px;
+		font-weight: bold;
+		display: inline;
+		height: 40px;
+		line-height: 40px;
+		margin-left: 30px;
+	}
+}
+
+// ===================================================
+// ================= 积分 ======================
+// ===================================================
+.ui-integral-amount {
+	padding-top:10px;
+	*padding-top:0;
+	line-height:30px;
+	clear:both;
+	.color-red {
+		color:#d9534f;
+		font-weight:bold;
+	}
+}
+.integral-change-red {
+	font-size:14px;
+	font-weight:bold;
+	color:#d9534f;
+}
+.integral-change-green {
+	font-size:14px;
+	font-weight:bold;
+	color:#5cb85c;
+}
+
+// ===================================================
+// ================= 信息重置 ======================
+// ===================================================
+.ui-change-info-form {
+	padding:10px 10px 0 10px;
+	li {
+		.clearfix;
+		padding:7px 0;
+		label {
+			.left;
+			width:120px;
+			text-align:right;
+			color:#999;
+			font-size:14px;
+		}
+	}
+}
+.ui-change-info-form-cnt {
+	width:600px;
+	.left;
+	textarea {
+		width:350px;
+	}
+}
+.ui-shelves-change-shipment-box {
+}
+.ui-shelves-change-shipment-tb {
+	width:100%;
+	clear:both;
+	td,th {
+		border-top:#dddddd 1px solid;
+		padding:8px 10px;
+		text-align:left;
+		color:#666;
+	}
+	.alt {
+		background:#f7f7f7;
+	}
+}
+.ui-shelves-change-shipment-detail-td {
+	width:100%;
+	font-size:14px;
+	th {
+		font-weight:normal;
+		color:#999;
+		width:100px;
+		padding:4px 0;
+		text-align:right;
+	}
+	td {
+		padding:4px 0;
+	}
+}
+
+
+// ===================================================
+// ================= 供应商申请 ======================
+// ===================================================
+.ui-panel-supplier-apply-type2 {
+	padding:20px 30px;
+	min-height:400px;
+	_height:400px;
+}
+.ui-supplier-apply-remind {
+	border:#e0ccae 1px solid;
+	background:#ffffcc;
+	padding:10px 25px;
+	margin-top:18px;
+	p {
+		color:#8c4600;
+	}
+}
+.ui-supplier-apply-remind-cnt {
+	line-height:20px;
+	color:#d86c00;
+}
+.ui-supplier-apply-remind.warning {
+	border:#eaa299 1px solid;
+	background:#fff2f0;
+	.ui-supplier-apply-remind-cnt {
+		color:#d90000;
+	}
+}
+.ui-supplier-apply-remind.success {
+	border:#bcce99 1px solid;
+	background:#edfed0;
+	.ui-supplier-apply-remind-cnt {
+		color:#597257;
+	}
+}
+.ui-supplier-apply-btn {
+	display:block;
+	width:200px;
+	height:50px;
+	line-height:50px;
+	color:#fff;
+	font-size:14px;
+	font-weight:bold;
+	border-radius:3px;
+	text-align:center;
+	margin-top:20px;
+	background:#ff5c26;
+	&:hover {
+		color:#fff;
+		background: darken(#ff5c26, 12%);
+	}
+}
+.ui-supplier-apply-link {
+	border:#e0ccae 1px solid;
+	background:#ffffff;
+	border-top:none;
+	padding:10px 25px;
+	a {
+		font-size:14px;
+		color:#00a3d9;
+		&:hover {
+			color:#127191;
+		}
+	}
+}
+
+// ===================================================
+// ================= dialog ======================
+// ===================================================
+.oni-dialog {
+	.oni-dialog-inner {
+		.oni-dialog-header {
+			background:#fafafa;
+			border-bottom:#e7e7e7 1px solid;
+			.oni-dialog-close {
+				background:#fafafa;
+				&:hover {
+					border:none!important;
+					background:#fff;
+				}
+			}
+		}
+		.oni-dialog-title {
+			color:#666;
+		}
+		.oni-dialog-footer {
+			background:#fafafa;
+			border-top:#e7e7e7 1px solid;
+			padding:10px;
+			.oni-button {
+				height:30px!important;
+				line-height:30px!important;
+				padding:0 15px!important;
+				.oni-button-text {
+					vertical-align: initial;
+					height:30px!important;
+					line-height:30px!important;
+				}
+			}
+			.oni-state-default {
+				border:#bbb 1px solid;
+				.linear(#fafafa,#f3f3f3);
+				&:hover {
+					border:#999 1px solid;
+					.linear(#f5f5f5,#f0f0f0);
+				}
+			}
+			.oni-button-success {
+				border:#db3917 1px solid;
+				.linear(#f35f3f,#f1512e);
+				&:hover {
+					border:#ba3114 1px solid;
+					.linear(#e94734,#ed4123);
+				}
+			}
+		}
+		.oni-dialog-alert-footer {
+			.oni-dialog-footer {
+				border:none;
+				background:#fff;
+				text-align:left;
+				padding-left:80px;
+				.oni-dialog-btns {
+					float:left;
+				}
+			}
+		}
+	}
+} 
+.ui-prompt-info-type1 {
+	padding:8px 0;
+	color:#666;
+	i {
+		color:#428bca;
+		margin-right:5px;
+		font-size:18px;
+	}
+}
+.ui-dialog-icon-error {
+	float:left;
+	width:35px;
+	height:31px;
+	background-position:-5px -4px;
+}
+.ui-dialog-icon-warn {
+	float:left;
+	width:35px;
+	height:31px;
+	background-position:-52px -4px;
+}
+.ui-dialog-alert-text{
+	padding-left: 50px;
+	font-size: 14px;
+	padding-top: 5px;
+}
+
+// ===================================================
+// ================= button ======================
+// ===================================================
+.oni-button {
+	padding:0 15px;
+	_padding:0 7px;
+}
+.oni-button-small {
+	height:22px!important;
+	padding:0 11px;
+	.oni-button-text {
+		line-height:22px!important;
+		height:22px!important;
+	}
+}
+.oni-button-big {
+	height:28px!important;
+	.oni-button-text {
+		line-height:28px!important;
+		height:28px!important;
+		font-size:12px;
+	}
+}
+.oni-button-large {
+	height:34px!important;
+	padding:0 22px!important;
+	.oni-button-text {
+		line-height:34px!important;
+		height:34px!important;
+	}
+}
+.oni-button.oni-state-default {
+	border:#bbb 1px solid;
+	.linear(#fafafa,#f3f3f3);
+	color:#666;
+	_margin-right:10px!important;
+	font-size:12px;
+	&:hover {
+		border:#999 1px solid;
+		.linear(#f5f5f5,#f0f0f0);
+	}
+}
+.oni-button.oni-button-primary {
+	border:#db3917 1px solid!important;
+	.linear(#f35f3f,#f1512e);
+	background-color:#f1512e\9!important;
+	color:#fff;
+	&:hover {
+		border:#ba3114 1px solid!important;
+		.linear(#e94734,#ed4123);
+		background-color:#ed4123\9!important;
+	}
+}
+.oni-button.oni-button-danger {
+	.linear(#d9524a,#d53b37);
+	border-color:#bd504a;
+	color:#fff;
+	&:hover {
+		.linear(#d33a35,#c72d29);
+		border-color:#ad443f;
+	}
+}
+.oni-button.oni-button-warning  {
+	.linear(#f0ac4d,#eea037);
+	border-color:#d98f53;
+	color:#fff;
+	&:hover {
+		.linear(#ed9b2b,#ec9116);
+		border-color:#d87647;
+	}
+}
+.oni-button.oni-button-inverse  {
+	.linear(#333,#333);
+	border-color:#222;
+	color:#fff;
+	&:hover {
+		background: darken(#333, 12%);
+	}
+}
+.oni-button.oni-button-success   {
+	.linear(#5bb75b,#4fb04f);
+	border-color:#4aa44a;
+	color:#fff;
+	&:hover {
+		.linear(#4bac4b,#459b45);
+		border-color:#387e38;
+	}
+}
+.oni-button.oni-button-info    {
+	.linear(#5bc0de,#5bc0de);
+	border-color:#46b8da;
+	color:#fff;
+	&:hover {
+		background: darken(#5bc0de, 12%);
+	}
+}
+.oni-spinner {
+	.oni-textbox {
+		vertical-align:middle;
+	}
+}
+// ===================================================
+// ================= notice ======================
+// ===================================================
+.ui-notice {
+	border-radius:3px;
+	padding:5px 40px 5px 7px;
+	position:relative;
+	color:#fff;
+	.ui-notice-close {
+		position:absolute;
+		top:3px;
+		right:4px;
+		_right:30px;
+		font-size: 16px;
+		cursor:pointer;
+		width:24px;
+		height:24px;
+		line-height:24px;
+		border-radius:3px;
+		text-align: center;
+		color:#333;
+		.opacity(@opacity: 40);
+		&:hover {
+			.opacity(@opacity: 90);
+		}
+	}
+	p {
+		display:inline;
+	}
+	i {
+		font-size:18px;
+		margin-right:7px;
+	}
+}
+.ui-notice-success {
+	background:#5cb85c;
+}
+.ui-notice-warning {
+	background:#f0ad4e;
+}
+.ui-notice-error {
+	background:#d9534f;
+}
+
+// ===================================================
+// ================= news tips ======================
+// ===================================================
+.ui-news-tips {
+	border-radius:3px;
+	padding:7px 40px 7px 7px;
+	position:relative;
+	.ui-news-tips-close {
+		position:absolute;
+		top:5px;
+		right:4px;
+		_right:34px;
+		font-size: 16px;
+		cursor:pointer;
+		width:24px;
+		height:24px;
+		line-height:24px;
+		border-radius:3px;
+		text-align: center;
+		color:#333;
+		.opacity(@opacity: 40);
+		&:hover {
+			.opacity(@opacity: 90);
+		}
+	}
+	p {
+		display:inline;
+	}
+	i {
+		font-size:18px;
+		margin-right:7px;
+	}
+}
+.ui-news-tips-default {
+	background:#eaf7fd;
+	border:#9dcadf 1px solid;
+	i{
+		color:#1c8cda;
+	}
+	p {
+		color:#333333;
+	}
+}
+.ui-news-tips-success {
+	background:#dfffbf;
+	border:#afcd7e 1px solid;
+	i{
+		color:#238c00;
+	}
+	p {
+		color:#004000;
+	}
+}
+.ui-news-tips-warning {
+	background:#fdf4e1;
+	border:#d5a880 1px solid;
+	i{
+		color:#a55825;
+	}
+	p {
+		color:#a55825;
+	}
+}
+.ui-news-tips-error {
+	background:#ffe1d7;
+	border:#d69385 1px solid;
+	i{
+		color:#d93600;
+	}
+	p {
+		color:#d93600;
+	}
+}
+
+// ===================================================
+// ================= tooltip ======================
+// ===================================================
+div.oni-tooltip {
+	border-color:#ae936a!important;
+	background-color:#fef8e0!important;
+	color:#60430f!important;
+	border-radius:3px!important;
+	box-shadow:2px 2px 5px #ccc!important;
+}
+.oni-tooltip-bottom {
+	.oni-tooltip-arrow-in {
+		border-top: 5px solid #ae936a!important;
+	}
+	.oni-tooltip-arrow-out {
+		border-top: 6px solid #ae936a!important;
+	}
+} 
+.oni-tooltip-top {
+	.oni-tooltip-arrow-in {
+		border-bottom: 5px solid #ae936a!important;
+	}
+	.oni-tooltip-arrow-out {
+		border-bottom: 6px solid #ae936a!important;
+	}
+} 
+.oni-tooltip-right {
+	.oni-tooltip-arrow-in {
+		border-left: 5px solid #ae936a!important;
+		right:-5px!important;
+	}
+	.oni-tooltip-arrow-out {
+		border-left: 6px solid #ae936a!important;
+		right:-6px!important;
+	}
+} 
+.oni-tooltip-left {
+	.oni-tooltip-arrow-in {
+		border-right: 5px solid #ae936a!important;
+	}
+	.oni-tooltip-arrow-out {
+		border-right: 6px solid #ae936a!important;
+	}
+} 
+.icon-tooltip {
+	font-size:18px!important;
+	color:#52A609;
+	margin-right:7px!important;
+}
+
+// ===================================================
+// ================= tab ======================
+// ===================================================
+.oni-tab {
+	.oni-tab-nav {
+		border-bottom:#ccc 1px solid;
+		width:100%;
+		height:31px;
+		.oni-state-default {
+			padding: 2px 17px;
+			border-bottom:none;
+			.linear(#f9f9f9,#f1f1f1);
+			&:hover {
+				.linear(#f5f5f5,#e6e6e6);
+			}
+		}
+		.oni-state-active {
+			background:#fff;
+			position:relative;
+			padding-bottom:3px;
+			&:hover {
+				background:#fff;
+			}
+		}
+	}
+}
+.oni-tab-slider-button {
+	display:none!important;
+}
+
+// ===================================================
+// ================= 分页 ======================
+// ===================================================
+.ui-pager-box {
+	text-align:right;
+	margin-top:10px;
+	color:#666;
+}
+.oni-pager {
+	.oni-pager-item {
+		height:28px;
+		line-height:28px;
+		border:#d6d6d6 1px solid;
+		.linear(#f9f9f9,#f1f1f1);
+		border-radius:0;
+		&:hover {
+			border:#db3917 1px solid;
+		}
+	}
+	.oni-pager-item.oni-state-active {
+		border:#db3917 1px solid;
+		color:#fff;
+		padding:0 10px;
+		.linear(#f35f3f,#f1512e);
+	}
+	.oni-pager-prev,.oni-pager-next {
+		height:28px;
+		line-height:28px;
+		border:#d6d6d6 1px solid;
+		background:#f7f7f7;
+		font-family:"Î¢ÈíÑÅºÚ";
+		font-weight:bold;
+		border-radius:0;
+	}
+	.oni-pager-prev.oni-state-disabled,.oni-pager-next.oni-state-disabled,.oni-pager-item.oni-state-disabled {
+		background:#fbfbfb;
+		color:#b6b6b6;
+		border:#eaeaea 1px solid;
+		
+	}
+	.oni-pager-textbox-wrapper:hover {
+		border-color:#999999;
+	}
+	.oni-pager-button {
+		border:#bbb 1px solid;
+		.linear(#fafafa,#f3f3f3);
+		color:#666;
+		&:hover {
+			border:#999 1px solid;
+			.linear(#f5f5f5,#f0f0f0);
+		}
+	}
+	
+}
+
+
+// ===================================================
+// ================= quickAction ======================
+// ===================================================
+.ui-quickaction-edit {
+	position:relative;
+}
+.ui-quickaction-edit-text {
+	cursor:pointer;
+}
+.ui-quickaction-edit-box {
+	position:absolute;
+	top:-10px;
+	left:-5px;
+	padding:4px 6px;
+	border:#3580e5 1px solid;
+	border-radius:3px;
+	box-shadow:0 0 10px #abcfff;
+	width:230px;
+	z-index:999;
+	background:#fff;
+	display:none;
+}
+.ui-quickaction-delete {
+	position:relative;
+	display:inline;
+}
+.ui-quickaction-delete-box {
+	position:absolute;
+	top:-8px;
+	right:0;
+	padding:4px 6px;
+	border:#d95551 1px solid;
+	border-radius:3px;
+	box-shadow:0 0 10px #fcb5b3;
+	width:200px;
+	z-index:999;
+	background:#fff;
+	display:none;
+	.ui-quickaction-delete-text {
+		padding:0 10px;
+		color:#666;
+	}
+}
+
+
+// ===================================================
+// ================= 评论 ======================
+// ===================================================
+.ui-msg-request {
+	margin-top:20px;
+	border:#cccccc 1px solid;
+	box-shadow: 3px 3px 5px #ededed;
+	padding:15px;
+	position:relative;
+	.ui-msg-request-close {
+		position:absolute;
+		right:10px;
+		top:5px;
+		cursor:pointer;
+		i {
+			font-size:18px;
+			color:#ccc;
+			&:hover {
+				color:#666;
+			}
+		}
+	}
+}
+.ui-msg-request-tb {
+	td {
+		padding:5px;
+		vertical-align:top;
+		.text-color-gray {
+			color:#999999;
+		}
+		.request-text {
+			color:#d96c00;
+			.company {
+				color:#666666;
+				margin:0 5px;
+			}
+		}
+		.status {
+			padding-top:45px;
+			.agreed {
+				color:#008d8d;
+				text-align:right;
+				padding-right:40px;
+			}
+			.refused {
+				color:#999;
+				text-align:right;
+				padding-right:40px;
+			}
+		}
+	}
+}
+
+
+// ===================================================
+// ================= 供应商申请 企业基本信息 ======================
+// ===================================================
+.ui-panel-supplier-apply {
+	padding:20px 80px;
+}
+.supplier-apply-title {
+	line-height:30px;
+	margin-top:15px;
+}
+.supplier-apply-form {
+	width:80%;
+	margin-top:10px;
+	th {
+		text-align:right;
+		font-weight:normal;
+		color:#999;
+		padding:5px 6px;
+		vertical-align:top;
+		line-height:30px;
+		width:80px;
+	}
+	td {
+		text-align:left;
+		vertical-align:top;
+		padding:5px 6px;
+		color:#666;
+		line-height:30px;
+		.supplier-apply-input-money {
+			*margin-top:-10px;
+		}
+	}
+}
+.supplier-apply-btn {
+	padding:20px 100px;
+	.btn-submit {
+		background:#ff4000;
+		color:#fff;
+		font-weight:bold;
+		font-size:14px;
+		border-radius:3px;
+		height:36px;
+		line-height:36px;
+		padding:0 25px;
+		border:none;
+		outline:none;
+		&:hover {
+			background: darken(#ff4000, 12%);
+		}
+	}
+}
+
+
+// ===================================================
+// ================= 供应商申请 复选框组 ======================
+// ===================================================
+.ui-checkbox-list-type1 {
+	li {
+		float:left;
+		padding-right:30px;
+		white-space:nowrap;
+		input {
+			margin-right:5px;
+		}
+	}
+}
+
+// ===================================================
+// ================= 供应商申请 申请成功 ======================
+// ===================================================
+.supplier-apply-complete{
+	&.success{
+		.supplier-apply-complete-content{
+			border: 1px solid #afcd7e;background: #dfffbf;
+		}		
+	}
+	&.warning{
+		.supplier-apply-complete-content{
+			border: 1px solid #e0ccae;background: #ffffd6;
+			color: #d86c00;
+		}	
+	}
+	&.error{
+		.supplier-apply-complete-content{
+			border: 1px solid #afcd7e;background: #dfffbf;
+		}		
+	}
+}
+
+.supplier-apply-complete-content{
+	&:extend(.clearfix all);
+	position: relative;
+	padding: 25px 36px;padding-left: 95px;
+}
+
+.supplier-apply-complete-icon{
+	// float: left;*display: inline;
+	position: absolute;left: 36px;top: 20px;
+	width: 40px;height: 40px;
+	background: url(../images/reg_bg.png) 0 -78px;
+}
+
+.supplier-apply-complete-right{
+	// float: left;*display: inline;
+	padding-right: 20px;
+	p {
+		font-size: 18px;font-weight: bold;
+		color:#666;
+	}
+}
+.supplier-apply-complete-link {
+	background:#fff;
+	border-color:#e0ccae;
+	padding-left:95px;
+}
+
+// ===================================================
+// ================= 滑动按钮组 ======================
+// ===================================================
+.ui-flipswitch {
+	width:40px;
+	height:20px;
+	text-align:center;
+	border-radius:2px;
+	line-height:20px;
+}
+.ui-flipswitch-box-yes {
+	border:#428bca 1px solid;
+}
+.ui-flipswitch-box-no {
+	border:#d3d3d3 1px solid;
+}
+.ui-flipswitch-yes {
+	height:20px;
+	width:26px;
+	background:#428bca;
+	color:#fff;
+	float:left;
+}
+.ui-flipswitch-blank {
+	float:left;
+	width:14px;
+	height:20px;
+	background:#fff;
+	cursor:pointer;
+}
+.ui-flipswitch-no {
+	height:20px;
+	width:25px;
+	background:#eeeeee;
+	border-left:#d3d3d3 1px solid;
+	color:#999999;
+	float:left;
+}
+.ui-flipswitch-large {
+	width:50px;
+	height:24px;
+	line-height:24px;
+	.ui-flipswitch-yes {
+		height:24px;
+		width:32px;
+	}
+	.ui-flipswitch-blank {
+		height:24px;
+		width:18px;
+	}
+	.ui-flipswitch-no {
+		height:24px;
+		width:31px;
+	}
+}
+// ===================================================
+// ================= im ======================
+// ===================================================
+.ui-im {
+	position: fixed;
+	_position: absolute;
+	bottom: 3px;
+	right: 3px;
+	z-index:99999;
+}
+
+// ===================================================
+// ================= 消息设置 ======================
+// ===================================================
+.ui-msg-info-tb {
+	margin-top:10px;
+	td {
+		color:#999;
+		white-space:nowrap;
+		padding:2px 15px 2px 0;
+		span {
+			color:#666;
+		}
+	}
+}
+.ui-msg-set-tb {
+	th,td {
+		color:#666;
+	}
+	td {
+		padding:15px 8px;
+	}
+}
+.msg-set-btn {
+	padding:15px 0 0 530px;
+}
+
+// ===================================================
+// ================= 首页 保障安心 ======================
+// ===================================================
+.ui-index-box {
+	clear:both;
+	.clearfix;
+}
+.ui-index-bzax {
+	float:left;
+	padding:10px 16px;
+	width:166px;
+	border:#dddddd 1px solid;
+	background:#fff;
+	height:275px;
+	li {
+		padding:8px 0;
+		_padding:5px 0;
+		.clearfix;
+	}
+	.ui-index-bzax-icon {
+		float:left;
+		width:36px;
+		height:36px;
+		background:url(../images/icon-index.png) no-repeat;
+	}
+	.icon-bao {
+		background-position:0 0;
+	}
+	.icon-zheng {
+		background-position:-37px 0;
+	}
+	.icon-an {
+		background-position:-74px 0;
+	}
+	.icon-xin {
+		background-position:-111px 0;
+	}
+	.ui-index-bzax-text {
+		float:right;
+		width:120px;
+		h5{
+			font-size:12px;
+		}
+		p {
+			color:#999;
+		}
+	}
+}
+
+// ===================================================
+// ================= 首页 图片切换和每日统计 ======================
+// ===================================================
+.ui-index-pic-slide {
+	float:left;
+	display:inline;
+	width:548px;
+	margin-left:10px;
+}
+.ui-index-today-statistics {
+	border:#dddddd 1px solid;
+	border-top:none;
+	background:#f7f7f7;
+	height:36px;
+	p {
+		width:33%;
+		float:left;
+		border-right:#cccccc 1px solid;
+		text-align:center;
+		color:#666;
+		margin-top:10px;
+		.today-statistics-num {
+			color:#f36041;
+			font-weight:bold;
+			margin:0 12px;
+		}
+	}
+	.no-border {
+		border-right:none;
+	}
+}
+// ===================================================
+// ================= 首页 主体内容区右上角模块 ======================
+// ===================================================
+.ui-index-topRight {
+	float:right;
+	border:#dddddd 1px solid;
+	background:#fff;
+	width:228px;
+	height:295px;
+	border-top-color:#eb8c77;
+}
+.ui-index-welcome {
+	background:#f9f9f9;
+	border-bottom:#f1f1f1 1px solid;
+	line-height:36px;
+	padding: 0 15px;
+	color:#666666;
+	.name {
+		font-weight:bold;
+	}
+}
+.ui-index-login-link {
+	height:36px;
+	line-height:36px;
+	li {
+		float:left;
+		width:50%;
+		a {
+			display:block;
+			text-align:center;
+			color:#f36f31;
+			font-size:14px;
+			_height:36px;
+			_line-height:36px;
+		}
+	}
+	.ui-index-link-login {
+		a {
+			background:#ffe8e8;
+			_padding-top:8px;
+			_height:28px;
+			_line-height:28px;
+		}
+		.icon-index-login {
+			display:inline-block;
+			width:16px;
+			height:16px;
+			background:url(../images/icon-index.png) -63px -37px no-repeat;
+			margin:0 5px 2px 0;
+			vertical-align:middle;
+			cursor:pointer;
+		}
+	}
+	.ui-index-link-register {
+		a {
+			background:#fff4f4;
+		}
+	}
+}
+/*.ui-index-toolbox {
+	padding:0 2px 10px 2px;
+	h3 {
+		line-height:30px;
+		color:#666;
+		padding-left:6px;
+	}
+	ul{
+		.clearfix;
+		li {
+			float:left;
+			display:inline;
+			margin:0 3px;
+			width:48px;
+			height:48px;
+			border:#ebebeb 1px solid;
+			background:#f5f5f5;
+			text-align:center;
+			border-radius:3px;
+			.ui-index-toolbox-icon {
+				background:url(../images/icon-index.png) no-repeat;
+				width:20px;
+				height:20px;
+				margin:5px auto;
+				display:block;
+			}
+			.icon-gz {
+				background-position:0 -37px;
+			}
+			.icon-shl {
+				background-position:-21px -37px;
+			}
+			.icon-xzs {
+				background-position:-42px -37px;
+			}
+			.ui-index-toolbox-text {
+				color:#777777;
+				margin-top:-2px;
+			}
+			.ui-index-toolbox-jqqd {
+				color:#999;
+				padding:6px 10px;
+			}
+		}
+	}
+}*/
+.ui-index-transaction-records {
+	h3 {
+		height:25px;
+		line-height:25px;
+		color:#666;
+		padding-left:14px;
+		background:#f9f9f9;
+		border-top:#eeeeee 1px solid;
+		border-bottom:#eeeeee 1px solid;
+	}
+	ul {
+		padding:5px 17px;
+		li {
+			line-height:25px;
+			width:100%;
+			white-space:nowrap;
+			overflow:hidden;
+			text-overflow:ellipsis; 
+			-o-text-overflow:ellipsis;
+			color:#666666;
+		}
+	}
+}
+// ===================================================
+// ================= 首页 优惠促销 ======================
+// ===================================================
+.ui-index-yhcx {
+	position:relative;
+	h3{
+		line-height:44px;
+		color:#666;
+	}
+	ul {
+		margin:0 -3px;
+		li {
+			float:left;
+			display:inline;
+			margin:0 2.5px;
+			*margin:0 1px 0 2px;
+		}
+	}
+	.ui-index-yhcx-link-box1 {
+		position:absolute;
+		top:0;
+		right:-25px;
+	}
+	.ui-index-yhcx-link-box2 {
+		position:fixed;
+		top:0;
+		left:50%;
+		margin-left:501px;
+		_position:absolute;
+		_left:996px;
+		_margin-left:0;
+	}
+	.ui-index-yhcx-link {
+		position:relative;
+		a {
+			display:block;
+			width:13px;
+			padding:8px 5px;
+			background:#f36041;
+			border-radius:3px;
+			color:#fff!important;
+			box-shadow:0 0 5px #ccc;
+			line-height:14px;
+		}
+		.arrow {
+			position:absolute;
+			top:34px;
+			left:-6px;
+			color:#f36041;
+			font-family: "\5B8B\4F53";//宋体
+		}
+	}
+}
+// ===================================================
+// ================= 首页 马帮故事 ======================
+// ===================================================
+.ui-index-mb {
+	margin-top:14px;
+	border:#dddddd 1px solid;
+	background:#fff;
+	h3 {
+		font-size: 16px;
+		font-weight: 500;
+		line-height:56px;
+		height:56px;
+		color:#333;
+		padding-left:14px;
+		a {
+			font-size:12px;
+			font-weight:normal;
+			margin-right:10px;
+			display:inline;
+		}
+	}
+}
+.ui-index-mbgs {
+	width:715px;
+	height:324px;
+	padding:0 10px;
+	float:left;
+	.ui-index-mbgs-slide {
+		float:left;
+		padding-left:16px;
+		clear:both;
+		width:455px;
+	}
+}
+.ui-index-mbgs-list {
+	float:right;
+	width:206px;
+	padding-right:15px;
+	li {
+		.clearfix;
+		line-height:30px;	
+		*line-height:28px;	
+		.ui-index-mbgs-list-num {
+			width:16px;
+			height:16px;
+			line-height:16px;
+			background:#555555;
+			border-radius:8px;
+			text-align:center;
+			color:#fff;
+			float:left;
+			margin-top:7px;
+			*margin-top:6px;
+		}
+		.num-top3 {
+			background:#ff7300;
+		}
+		a {
+			margin-left:8px;
+			color:#555555;
+			float:left;
+			display:inline;
+			width:170px;
+			white-space:nowrap;
+			overflow:hidden;
+			text-overflow:ellipsis; 
+			-o-text-overflow:ellipsis;
+			&:hover {
+				color:#0088cc;
+			}
+		}
+	}
+}
+.ui-index-mbdt {
+	height:324px;
+	border-left:#dddddd 1px solid;
+	float:right;
+	width:240px;
+
+	padding:0 10px;
+	li {
+		line-height:30px;
+		padding-left:14px;
+		a {
+			display: block;
+			width: 220px;
+			.toe;
+			color:#555555;
+			&:hover {
+				color:#0088cc;
+			}
+		}
+	}
+}
+
+// ===================================================
+// ================= 首页 图片切换 ======================
+// ===================================================
+.ui-index-banner-box {
+	position:relative;
+	width:100%;
+	height:340px;
+}
+.ui-index-banner .oni-carousel .oni-carousel-panel .oni-carousel-item img {
+	width:auto;
+}
+.ui-index-banner .cui-carousel-shadow {
+	background:#6b6b6b;
+	.opacity(@opacity: 40);
+	height:50px;
+}
+.ui-index-banner .cui-carousel-info {
+	display:none;
+}
+.ui-index-banner .cui-carousel .oni-carousel-selection-wrap {
+	bottom:18px;
+	margin-left:-190px!important;
+	z-index:31;
+}
+.ui-index-banner .oni-carousel .oni-carousel-selection-wrap .selected {
+	background:#f36041;
+}
+// ===================================================
+// ================= 首页 图片切换上的链接 ======================
+// ===================================================
+.index-toolbox {
+	position: absolute;
+	bottom:0;
+	left:50%;
+	width:326px;
+	height:110px;
+	margin-left:172px;
+	z-index:100;
+	overflow:hidden;
+	.index-toolbox-bg {
+		width:100%;
+		height:110px;
+		box-shadow:0 0 5px rgba(38,59,71,0.25);
+		background:#28373d;
+		.opacity(@opacity: 90);
+		position: absolute;
+		top:0;
+		left:0;
+		z-index:-1;
+	}
+
+		li {
+			float:left;
+			height:45px;
+			border-right:#455257 1px solid;
+			width:50px;
+			height:105px;
+			padding:5px 11px 0 11px;
+			text-align:center;
+			a {
+				color:#a8aeb1;
+				display:block;
+				transition: all .5s ease;
+				.index-toolbox-icon {
+					margin-top:18px;
+					margin-bottom: 5px;
+					height:35px;
+					
+					i{
+						font-size:34px;
+					}
+				}
+
+				&:hover{
+					color: #fff;
+				}
+				
+			}
+		}
+		.index-toolbox-wxyj {
+			width:83px;
+			text-align:center;
+			padding-top:10px;
+			height:100px;
+			border-right-width:0;
+			h5 {
+				font-weight:normal;
+				color:#ffffff;
+				text-align:left;
+				padding-left:5px;
+			}
+		}
+
+}
+
+
+
+.index-toolbox-des {
+	display: block;
+	font-size:14px;
+	width:40px;
+	margin:0 auto;
+	line-height: 1.4
+}
+
+// ===================================================
+// ================= 首页 快捷导航弹窗 ======================
+// ===================================================
+.quick-window-layout {
+	display: none;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+	opacity: 0.6;
+	zoom: 1;
+	z-index: 999;
+	background: #000;
+	height: auto;
+	width: auto;
+	position: fixed;
+	_position: absolute;
+}
+.quick-window-box {
+	display:none;
+	position: fixed;
+	left: 50%;
+	top: 10%;
+	zoom: 1;
+	z-index: 1000;
+	background: #f25430;
+	width:260px;
+	padding:5px;
+	margin:0 0 0 -135px;
+	_position: absolute;
+}
+.quick-window {
+	background:#373432;
+	border-radius:5px;
+	position:relative;
+	.quick-window-close {
+		cursor:pointer;
+		position:absolute;
+		top:10px;
+		right:10px;
+		font-size:18px;
+		color:#373433;
+		z-index:9999;
+	}
+	.quick-window-top {
+		background:#fff;
+		position:relative;
+		padding:15px 20px;
+		border-radius:5px 5px 0 0;
+		_width:225px;
+		.arrow {
+			position:absolute;
+			left:30px;
+			bottom:-13px;
+			color:#fff;
+			font-size:18px;
+		}
+		p {
+			color:#666;
+			font-size:14px;
+		}
+		.quick-window-top-title {
+			color:#ff6102;
+			line-height:200%;
+		}
+	}
+	.quick-window-list {
+		padding:15px 28px;
+		li{
+			padding:8px 0;
+			a {
+				color:#fff;
+				font-size:14px;
+				i {
+					font-size:20px;
+					margin-right:25px;
+					text-decoration:none;
+				}
+				span {
+					text-decoration:underline;
+				}
+				&:hover {
+					color:#ff8017;
+				}
+			}
+			.quick-window-list-prompt {
+				padding-left:45px;
+				a{
+					color:#a55825;
+					font-size:12px;
+					white-space:nowrap;
+					span {
+						margin-right:5px;
+						text-decoration:none;
+					}
+				}
+			}
+		}
+	}
+}
+// ===================================================
+// ================= 供应商申请 如何成为供应商 ======================
+// ===================================================
+.suppliers-process {
+	padding:20px;
+	h3 {
+		font-size:18px;font-weight: normal;
+		line-height:40px;
+		color:#333;
+	}
+	.suppliers-process-list {
+		background: url(../images/topic_page/for_suppliers/step.png) center top no-repeat;
+		padding-top:40px;
+		margin:30px -25px;
+		&:extend(.clearfix all);
+		li {
+			float:left;
+			display:inline;
+			width:16.6%;
+			text-align:center;
+			h4 {
+				font-size:16px;font-weight: normal;
+				color:#666;
+			}
+			a {
+				font-size:14px;
+			}
+			p{
+				font-size: 14px;color: #999;
+			}
+		}
+	}
+}
+// ===================================================
+// ================= 企业资料 ======================
+// ===================================================
+.persional-info-export-detail {
+	&:extend(.clearfix all);
+}
+.org-info-module-hd {
+	font-size:14px;
+	color:#666;
+	line-height:30px;
+	margin-top:20px;
+	margin-left:52px;
+	margin-bottom:10px;
+}
+.user-info-no-border {
+	border:none!important;
+}
+.icon-org-info {
+	color:#f46141;
+	font-size:24px;
+	margin-left:5px;
+	vertical-align:middle;
+}
+.why-org-attestation {
+	position:absolute;
+	top:48px;
+	right:20px;
+	border:#eeeeee 1px solid;
+	background:#fdfdfd;
+	padding:35px;
+	width:275px;
+	h3 {
+		font-size:14px;
+		margin-bottom:10px;
+	}
+	p {
+		color:#999;
+	}
+}
+.why-org-attestation-link {
+	margin-top:30px;
+	a {
+		display:block;
+		width:126px;
+		height:35px;
+		line-height:35px;
+		text-align:center;
+		border:#bbbbbb 1px solid;
+		.linear(#fff,#f8f8f8);
+		color:#333!important;
+		&:hover {
+			border:#9f9f9f 1px solid;
+			.linear(#f5f5f5,#ededed);
+		}
+	}
+}
+
+
+
+// 英文版logo
+.en-logo{
+		width: 168px;
+		height: 55px;
+		background: url(../images/en.png) -6px -287px no-repeat;
+		float: left;
+		margin-top: 20px;
+}
+
+
+
+// 为引入placeholder新增的样式，6.25，by:evan
+
+.ui-login-username,.ui-login-password{
+	.oni-textbox{
+		display: block;width: 100%;
+		border: none;
+		padding: 0;
+		.oni-textbox-input-wrap{
+			display: block;
+			width: 100%;line-height: 30px;
+			.oni-textbox-input{
+					display: block;position: static;float: none;
+				  border: #cccccc 1px solid;
+				  padding: 0 20px 0 40px;
+				  box-shadow: 0 3px 3px #e8e8e8 inset;
+				  height: 30px;
+				  line-height: 30px;
+				  width: 177px;
+				  outline: none;
+			}
+			.oni-textbox-placeholder{
+				padding-left: 41px;line-height: 30px;
+				font-size: 12px;
+			}
+		}
+	}
+}

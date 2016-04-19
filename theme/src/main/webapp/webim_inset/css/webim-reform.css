@@ -1,0 +1,433 @@
+/** 图片引用 **/
+.minbutton,.praise-icon,.ctb01,.status-icon,.min_msg_tip_icon,.min_msg_tip_arrow {
+	background-image:url(../img/msg-icon.png);
+	background-repeat:no-repeat;
+}
+/** 重置样式 **/
+.main {
+	top:22px;
+}
+.leftcontact {
+	float:left;
+	background:#35a0f9;
+	border:#1b8dde 1px solid;
+	width:140px;
+}
+.leftheader {
+	display:none;
+}
+.accordion-inner {
+	padding:0!important;
+}
+.chat03_content_ul {
+	color: #e4f2fc;
+}
+.chat03_content_ul .offline {
+	margin:2px;
+	line-height:30px;
+	cursor:pointer;
+}
+.chatRight {
+	width:350px;
+	height:462px;
+}
+.badge {
+	background:#FF9B00!important;
+}
+
+/** 聊天窗口头部 **/
+.chat01_title {
+	position:relative;
+	height:44px;
+	line-height:44px;
+	background:#fff;
+	width: 561px;
+}
+.talkTo li{
+	margin:0;
+}
+#talkTo img {
+	position:absolute;
+	top:-24px;
+	left:10px;
+}
+#talkTo a {
+	float:left;
+	padding: 14px 0 0 50px;
+	font-weight:normal;
+	color:#666;
+}
+.friend-status-online {
+	color:#5cb85c;
+	font-size:14px;
+}
+.friend-status-online .status-icon {
+	display:inline-block;
+	width:15px;
+	height:14px;
+	background-position:-21px 0;
+	margin-left:5px;
+}
+.friend-status-offline {
+	color:#8a8a8a;
+	font-size:14px;
+}
+.friend-status-offline .status-icon {
+	display:inline-block;
+	width:15px;
+	height:14px;
+	background-position:-21px -23px;
+	margin-left:5px;
+}
+.minbutton {
+	top:13px;
+	width:16px;
+	height:16px;
+	background-position:0 -23px;
+	text-indent:-999em;
+	background-color:#fff;
+}
+.minbutton:hover {
+	background-position:0 0;
+}
+.msg-seller-info {
+	height:28px;
+	line-height:28px;
+	border:#ae936a 1px solid;
+	background:#fef8e0;
+	margin:-1px 0 0 -1px;
+	position:relative;
+	width:100%;
+}
+.msg-seller-info-left {
+	float:left;
+	color:#666;
+	padding-left:10px;
+}
+.msg-seller-info-left a {
+	text-decoration:underline;
+}
+.msg-seller-info-left a:hover {
+	color:#085c98;
+}
+.msg-seller-info-right {
+	float:right;
+	padding-right:10px;
+}
+.msg-seller-info-right span {
+	float:left;
+	color:#666;
+}
+.msg-seller-info-right .praise-icon {
+	width:14px;
+	height:15px;
+	background-position:-92px -24px;
+	margin: 6px 5px 0 0;
+}
+.msg-seller-info-right .praise-percentage {
+	color:#ff5c26;
+}
+
+/** 聊天内容及聊天发送 **/
+.chat01_content{
+	width:330px;
+	height:250px;
+	padding-right:10px;
+}
+.chat02 {
+	height:auto;
+}
+.chat02_title {
+	height:26px;
+	background:#fff;
+}
+.ctb01 {
+	width:22px;
+	height:22px;
+	background-position:-63px 3px;
+}
+.ctb01:hover {
+	background-position:-66px -23px;
+}
+.ctb01-active {
+	background-position:-92px 0!important;
+}
+.chat02_content textarea {
+	width:340px;
+	border:none;
+	box-shadow:none;
+	margin:0;
+	clear:both;
+}
+.chat02_content textarea:focus {
+	box-shadow:none;
+}
+.chat02_bar {
+	background:#fff;
+	border-top:#dedede 1px solid;
+	height:34px;
+}
+.btn-send {
+	display:block;
+	width:54px;
+	height:24px;
+	line-height:24px;
+	border:#1179c2 1px solid;
+	border-radius:3px;
+	color:#fff;
+	text-align:center;
+	background:#1c8ad7;
+	cursor:pointer;
+}
+.btn-send:hover {
+	background:#1179c2;
+}
+.wl_faces_box {
+	width:390px;
+}
+.wl_faces_content {
+	left:2px;
+}
+.wl_faces_content .title {
+	height:35px;
+}
+.wl_faces_content .title ul {
+	margin:0;
+}
+.wl_faces_content .title ul li.wl_faces_close {
+	top:12px;
+}
+.chat-content-p1,.chat-content-p2 {
+	display:inline;
+}
+.msg-my {
+	text-align:right;
+	padding-top:10px;
+	color:#999;
+	clear:both;
+}
+.msg-my .chat-content-p3 {
+	background:#fff!important;
+	clear:both;
+	display:block;
+	padding-right:0;
+}
+.msg-my .chat-content-p3:after {
+content: "."; 
+display: block; 
+height: 0; 
+clear: both; 
+visibility: hidden;
+}
+.msg-my .chat-content-box {
+	float:right;
+	width:255px;
+	margin-right:10px;
+	position:relative;
+}
+.msg-my .chat-content-text {
+	border-radius:5px;
+	padding:5px 14px;
+	color:#fff;
+	line-height:20px;
+	float: right;
+	background:#1b8dde;
+	word-break: break-all;
+}
+.msg-my .chat-content-p3 .msg-my-arrow1{
+	position:absolute;
+	top:4px;
+	right:-7px;
+	color:#1b8dde;
+}
+.msg-my .chat-content-p3 .msg-my-arrow2 {
+	display:none;
+}
+.msg-my .msg-head {
+	float:right;
+}
+.msg-friend {
+	text-align:left;
+	padding-top:10px;
+	color:#999;
+	clear:both;
+}
+.msg-friend .chat-content-p3 {
+	background:#fff!important;
+	clear:both;
+	display:block;
+	padding-left:0;
+}
+.msg-friend .chat-content-p3:after {
+content: "."; 
+display: block; 
+height: 0; 
+clear: both; 
+visibility: hidden;
+}
+.msg-friend .chat-content-box {
+	float:left;
+	width:255px;
+	margin-left:10px;
+	position:relative;
+}
+.msg-friend .chat-content-text {
+	border-radius:5px;
+	padding:4px 13px;
+	color:#666;
+	line-height:20px;
+	float: left;
+	background:#fff;
+	word-break: break-all;
+	border:#dedede 1px solid;
+}
+.msg-friend .chat-content-p3 .msg-my-arrow1{
+	position:absolute;
+	top:4px;
+	left:-6px;
+	color:#dedede;
+}
+.msg-friend .chat-content-p3 .msg-my-arrow2 {
+	position:absolute;
+	top:4px;
+	left:-5px;
+	color:#fff;
+}
+.msg-friend .msg-head {
+	float:left;
+}
+
+/** 右侧运价详情 **/
+.rightWaybillInfo {
+	width:182px;
+	padding:10px 14px;
+	background:#fff;
+	border-bottom:#ccc 1px solid;
+	border-right:#ccc 1px solid;
+	border-top:#ccc 1px solid;
+	height:394px;
+	float:left;
+	padding-top:58px;
+}
+.msg-waybill-type span{
+	padding:4px 8px;
+	background:#ff5c26;
+	color:#fff;
+	border-radius:2px;
+}
+.msg-waybill-title {
+	padding-top:10px;
+	font-size:14px;
+	color:#1b8dde;
+	font-weight:bold;
+	line-height:20px;
+}
+.msg-waybill-detail {
+	padding-top:5px;
+}
+.msg-waybill-detail p{
+	margin:0;
+}
+.msg-waybill-price-list {
+	margin:5px 0 0 0;
+}
+.msg-waybill-price-list li{
+	float:left;
+	width:33.3%;
+	padding-top:8px;
+}
+.msg-waybill-price-list li span {
+	padding:4px 8px;
+	background:#e4eaeb;
+	color:#6c6c6c;
+	border-radius:2px;
+}
+.msg-waybill-price-list li p {
+	color:#b25900;
+	line-height:24px;
+	margin-bottom:0;
+}
+.msg-waybill-btn {
+	clear:both;
+	padding-top:10px;
+}
+.msg-waybill-btn a {
+	background:#1b8dde;
+	display:block;
+	text-align:center;
+	color:#fff;
+	height:28px;
+	line-height:28px;
+	border-radius:3px;
+}
+.msg-waybill-btn a:hover {
+	background:#63b4ee;
+	color:#fff;
+	text-decoration:none;
+}
+
+/** 最小化的聊天窗口 **/
+.minsize {
+	border:#1b8dde 1px solid;
+	width:209px;
+	height:36px;
+	background:#fff;
+	cursor:pointer;
+}
+.minsize_msg {
+	background:#fff;
+	width: 100%;
+	height: 36px;
+}
+.minsize_msg .min_msg_tip_icon {
+	float:left;
+	width:18px;
+	height:17px;
+	background-position:-41px 1px;
+	margin:10px 0 0 16px;
+}
+.min_msg_tip {
+	float:left;
+	width:140px;
+	text-align:left;
+	color:#428bca;
+	position:static;
+	line-height:36px;
+	padding-left:10px;
+}
+.min_msg_tip_arrow{
+	float:left;
+	width:9px;
+	height:4px;
+	background-position:-12px -45px;
+	margin:17px 0 0 5px;
+}
+.minsize_msg_blue {
+	background:#428bca;
+}
+.minsize_msg_blue .min_msg_tip_icon {
+	background-position:-41px -22px;
+}
+.minsize_msg_blue .min_msg_tip {
+	color:#fff;
+}
+.minsize_msg_blue .min_msg_tip_arrow{
+	background-position:0 -45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

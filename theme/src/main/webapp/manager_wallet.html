@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="demo">
+<div ms-include-src="'vip-center-header.html'"></div>
+<div class="main-frame">
+	<div ms-include-src="'vip-center-left.html'"></div>
+	<div class="right-frame">
+		<div ms-controller="test">
+		       <div class="manager-wallet-header">
+		       		<h3 class="header-left">掌柜钱包</h3>
+
+		       		<div class="manager-wallet-tabs-wrapper">
+		       			<ul class="nav-tabs manager-wallet-tabs">
+		       				<li class="active"><i class="manager-wallet-bg personal"></i>个人钱包</li>
+		       				<li class="last"><i class="manager-wallet-bg enterprise"></i>企业钱包</li>
+		       			</ul>
+		       		</div>
+		       </div>
+
+		       <div class="manager-wallet-body">
+		       		<div class="manager-wallet-body-wrapper">
+		       			<div class="bind-item-wrapper">
+		       				<div class="wallet-item">
+		       					<div class="wallet-item-info">
+		       						<div class="panel-top">
+		       							<div class="bank">
+		       								<div class="bank-logo">
+		       									<img src="images/bank_logo/card_logo.png" height="36" width="36"></img>
+		       								</div>
+		       								<span class="bank-name">宁波通商银行</span>
+		       							</div>
+
+		       							<div class="account">
+		       							人民币账号：324242342143243245432532
+		       							</div>
+
+		       							<div class="wallet">
+		       								<div class="balance">
+		       									<p>余额 <span class="cny">CNY</span></p>
+		       									<p class="rest-money">3948.<span class="fs-12">80</span></p>
+		       								</div>
+
+		       								<div class="ope mg-t10">
+		       									<a ms-widget="button" data-button-size="big">充值</a>
+		       									<a ms-widget="button" data-button-size="big" class="mg-l6">提现</a>
+		       								</div>
+		       							</div>
+		       						</div>
+		       						<div class="panel-bottom">
+		       							<div class="bank-logo">
+		       								<img src="images/bank_logo/card_logo.png" height="36" width="36">
+		       							</div>
+		       							<div class="left">
+		       								<p class="mg-t5 bot-name">建设银行</p>
+		       								<p class="mg-t5">账号：**** **** **** 3488</p>
+		       							</div>
+
+		       							<a href="javascript:" class="right">移除</a>
+		       						</div>
+		       					</div>
+
+		       					<div class="wallet-binding manager-wallet-bg">
+
+		       					</div>
+
+
+		       					<div class="rmb manager-wallet-bg">
+
+		       					</div>
+		       				</div>
+
+		       				<div class="wallet-item">
+		       					<div class="wallet-item-info">
+		       						<div class="panel-top">
+		       							<div class="bank">
+		       								<div class="bank-logo">
+		       									<img src="images/bank_logo/card_logo.png" height="36" width="36"></img>
+		       								</div>
+		       								<span class="bank-name">宁波通商银行</span>
+		       							</div>
+
+		       							<div class="account">
+		       							人民币账号：324242342143243245432532
+		       							</div>
+
+		       							<div class="wallet">
+		       								<div class="balance">
+		       									<p>余额 <span class="cny">USD</span></p>
+		       									<p class="rest-money">3948.<span class="fs-12">80</span></p>
+		       								</div>
+
+		       								<div class="ope mg-t10">
+		       									<a ms-widget="button" data-button-size="big">充值</a>
+		       									<a ms-widget="button" data-button-size="big" class="mg-l6">提现</a>
+		       								</div>
+		       							</div>
+		       						</div>
+		       						<div class="panel-bottom no-binding">
+		       							<span class="add-card">+</span> <span class="binding-cc">绑定银行卡</span>
+		       						</div>
+		       					</div>
+
+		       					<div class="wallet-binding manager-wallet-bg">
+
+		       					</div>
+
+		       					<div class="usd manager-wallet-bg">
+
+		       					</div>
+		       				</div>
+		       			</div>
+
+		       			<div class="unbind-item-wrapper">
+		       				<div class="un-bind-item">
+		       					<div class="apply-wallet">+</div><div class="apply-wallet-cc">申请钱包</div>
+		       				</div>
+		       			</div>
+		       		</div>
+		       </div>
+		</div>
+
+
+		<div ms-controller="test2" class="mg-t20">
+		       <div class="manager-wallet-header">
+		       		<h3 class="header-left">掌柜钱包</h3>
+
+		       		<div class="manager-wallet-tabs-wrapper">
+		       			<ul class="nav-tabs manager-wallet-tabs">
+		       				<li class="active"><i class="manager-wallet-bg personal"></i>个人钱包</li>
+		       				<li class="last"><i class="manager-wallet-bg enterprise"></i>企业钱包</li>
+		       			</ul>
+		       		</div>
+		       </div>
+
+		       <div class="manager-wallet-body">
+		       		<div class="manager-wallet-body-wrapper">
+		       			<div class="wallet-desc">说明性文字</div>
+		       			<div class="unbind-item-wrapper">
+		       				<div class="un-bind-item">
+		       					<div class="apply-wallet">+</div><div class="apply-wallet-cc">申请钱包</div>
+		       				</div>
+		       			</div>
+		       		</div>
+		       </div>
+		</div>
+
+
+		<div ms-controller="test3" class="mg-t20">
+		       <div class="manager-wallet-header">
+		       		<h3 class="header-left">掌柜钱包</h3>
+
+		       		<div class="manager-wallet-tabs-wrapper">
+		       			<ul class="nav-tabs manager-wallet-tabs">
+		       				<li class="active"><i class="manager-wallet-bg personal"></i>个人钱包</li>
+		       				<li class="last"><i class="manager-wallet-bg enterprise"></i>企业钱包</li>
+		       			</ul>
+		       		</div>
+		       </div>
+
+		       <div class="manager-wallet-body">
+		       		<div class="manager-wallet-body-wrapper">
+		       			<div class="bind-item-wrapper">
+		       				<div class="wallet-item">
+		       					<div class="wallet-item-info">
+		       						<div class="panel-top">
+		       							<div class="bank">
+		       								<div class="bank-logo">
+		       									<img src="images/bank_logo/card_logo.png" height="36" width="36"></img>
+		       								</div>
+		       								<span class="bank-name">宁波通商银行</span>
+		       							</div>
+
+		       							<div class="account">
+		       							人民币账号：324242342143243245432532
+		       							</div>
+
+		       							<div class="wallet un-activation">
+		       								<div class="text">
+		       									未激活
+		       								</div>
+
+		       								<div class="btn-wrapper">
+		       									<a href="javascript:" class="btn-activation">立即激活</a>
+		       								</div>
+		       							</div>
+		       						</div>
+		       					</div>
+		       				</div>
+		       			</div>
+		       		</div>
+		       	</div>			
+		</div>
+
+	</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"dialog/avalon.dialog",
+			"checkboxlist/avalon.checkboxlist",
+			"pager/avalon.pager",
+			"tab/avalon.tab",
+			"dropdown/avalon.dropdown",
+			"browser/avalon.browser",
+			"textbox/avalon.textbox",
+			"spinner/avalon.spinner"
+			], function() {
+			avalon.define("demo", function(vm) {	
+				vm.message = "笑傻了吧！！";
+				vm.namee = avalon.browser.name+' '+avalon.browser.version;
+				vm.show = function( id ){
+					avalon.vmodels[id].toggle = true;
+				}
+
+				vm.dropdown = {
+					width: "80",
+					listWidth:"80"
+				};
+
+				vm.pager = {
+					// currentPage: 8,
+					totalItems: 120,
+					showJumper: true,
+					showPages:5
+				}
+
+				vm.$spinnerOpts={
+					min: 0,
+					width:25
+				};
+
+
+				vm.$skipArray = ["pager"];
+				vm.check1 = ["2"];
+			})
+
+			avalon.define("test", function(vm) {
+               vm.tab = {
+               	  active: 1,
+               	  event: "click"
+               }
+               vm.$skipArray = ["tab"]
+           })
+
+			avalon.define("test2", function(vm) {
+               vm.tab = {
+               	  active: 1,
+               	  event: "click"
+               }
+               vm.$skipArray = ["tab"]
+           })
+
+			avalon.define("test3", function(vm) {
+               vm.tab = {
+               	  active: 1,
+               	  event: "click"
+               }
+               vm.$skipArray = ["tab"]
+           })
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>

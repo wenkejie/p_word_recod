@@ -1,0 +1,11 @@
+<div ms-controller="first">
+   <p>First name: <input ms-duplex="firstName" /></p>
+    <p>Last name: <input ms-duplex="lastName"  /></p>
+    <p>Hello,    <input ms-duplex="fullName" /></p>
+    <div>{{firstName  + lastName }}</div>
+    <ul>
+        <li ms-repeat="arr" >
+        	<input type="checkbox" ms-attr-value="el" ms-duplex="selected"/>{{el}}
+        </li>
+    </ul>
+</div>

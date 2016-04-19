@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/example.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'header_register.html'"></div>
+    <div class="rg-record mg-t20 success">
+        <div class="rg-record-content">
+            <div class="rg-record-icon"></div>
+            <div class="rg-record-right">
+                <p class="rg-record-item rg-record-top"><span class="user-name">周新新</span> <span>恭喜你成功注册大掌柜个人会员</span></p>
+                <p class="rg-record-item">用户名：<span class="phone-num">13939393939</span></p>
+                <p class="rg-record-last">如有问题可咨询客服：400-882-8871</p>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper mg-t20">
+        
+        <div class="wrapper-content">
+            <p class="form-line-tips">为了让您获得更精准的服务和商业机会，我们建议您立即完善一下信息。</p>
+            <div class="rg-form mg-t20">
+                <div class="rg-form-title">
+                    <label class="rg-label" for="">基础信息</label>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>您的姓名</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input-large" placeholder="设置姓名"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>业务联系手机</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input-large" placeholder="输入常用手机号"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">性别</label>
+                    <label class="rg-radio mg-r20" for="male">
+                        <input id="male" checked="check" type="radio" name="con">
+                        <span>男</span>
+                    </label>
+                    <label class="rg-radio" for="female">
+                        <input id="female" type="radio" name="con">
+                        <span>女</span>
+                    </label>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">固定电话</label>
+                    <div class="ui-form-group mg-r7"><input type="text" class="ui-input-large w-66" placeholder="区号"></div>
+                    <div class="ui-form-group"><input type="text" class="ui-input-large w-135" placeholder="固定电话"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">邮箱</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input-large w-136" placeholder="请设置邮箱"></div>
+                </div>
+                <div class="rg-form-line rg-form-unlabel mg-t20">
+                    <a class="rg-btn rg-btn-primary" href="javascript:">确认提交</a>
+                    <a class="rg-btn-link" href="javascript:">下次再说</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+
+                })
+                avalon.scan()
+            })
+    </script>
+</body>
+</html>

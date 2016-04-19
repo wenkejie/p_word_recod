@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+        <link rel="stylesheet" href="css/layout.css">
+        <script src="vendor/avalon/avalon.js"></script>
+        <script>
+            require(["button/avalon.button","dialog/avalon.dialog","pager/avalon.pager"], function(avalon) {
+
+                avalon.define("test", function(vm) {
+                    vm.opts = {
+                        title: '邀请成员',
+                        confirmName: "发送邀请"
+                    };
+                    vm.pager = {
+                        currentPage: 8,
+                        totalItems: 150,
+                        showJumper: true,
+                        showPages: 5,
+                        alwaysShowNext: true,
+                        alwaysShowPrev: true
+                    }
+
+                    vm.show = function( id ){
+                        avalon.vmodels[id].toggle = true;
+                    }
+
+                })
+                avalon.scan()
+            })
+        </script>
+    </head>
+    <body ms-controller="test" >
+        <div ms-include-src="'vip-center-header.html'"></div>
+        <div class="main-frame">
+            <div ms-include-src="'vip-center-left.html'"></div>
+            <div class="right-frame">
+                <div class="member-manage-hd">
+                    <div class="ui-tab">
+                        <div class="ui-tab-item selected">
+                            <div class="bd ui-tab-item-cnt">正式员工</div>
+                        </div>
+
+                        <div class="ui-tab-item">
+                            <div class="bd ui-tab-item-cnt">待通过</div>
+                        </div>
+
+                        <div class="ui-tab-ope">
+                            <div class="ui-form-group">
+                                <input type="text" class="ui-input"><button class="ui-search-group-btn">搜索</button>
+                            </div>
+                        </div>
+                       
+                        <div class="ui-tab-line"></div>
+                    </div>
+                 </div>
+
+                 <div class="member-manage-ope">
+                    <div class="left">
+                        <a ms-widget="button"  ms-click="show('bb')" data-button-color="primary">邀请</a>
+                        <a ms-widget="button">删除</a>
+                    </div>
+                    
+                    <div class="right">
+                    <a ms-widget="button" data-button-type="icon" data-button-icon="\&\#xf104;" data-button-icon-position="left" data-button-size="small"  class="mg-r2"></a>
+                     <a ms-widget="button" data-button-type="labeledIcon" data-button-icon="\&\#xe61a;" data-button-icon-position="right" data-button-size="small">下一页</a>
+                    </div>
+                  </div>  
+
+                <div class="member-manage-wrapper mg-t10">
+                    <table class="ui-table-border">
+                        <thead>
+                            <tr>
+                                <th width="50px"><input type='checkbox'/></th>
+                                <th  width="100px">姓名</th>
+                                <th>手机</th>
+                                <th width="140px">邮箱</th>
+                                <th>状态</th>
+                                <th width="250px">权限</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                               <tr>
+                                    <td>
+                                        <input type='checkbox'>
+                                    </td>
+                                    <td>
+                                        小明
+                                    </td>
+                                    <td>
+                                        176762732322
+                                    </td>
+                                    <td>
+                                        fdsaf@qq.com
+                                    </td>
+                                    <td>
+                                        正常
+                                    </td>
+                                    <td>
+                                        <div class="mm-dropdown-wrapper" style="z-index:99">
+                                           <a href="javascript:void(0)" class="set-authority">设置权限
+                                           </a>
+                                           <div class="authority-dropdown">
+                                               <ul class="authority-dropdown-ul">
+                                                   <li class="mg-b14">
+                                                       <label for="c1">
+                                                           <input type="checkbox" id="c1"> 下拉选项
+                                                       </label>
+                                                   </li>
+
+                                                   <li class="mg-b14">
+                                                       <label for="c2">
+                                                           <input type="checkbox" id="c2"> 下拉选项文字
+                                                       </label>    
+                                                   </li>
+
+                                                   <li class="mg-b14">
+                                                       <label for="c3">
+                                                           <input type="checkbox" id="c3"> 下拉选项
+                                                       </label>    
+                                                   </li>
+                                               </ul>
+                                            <div class="btn-wrapper">
+                                                        <button ms-widget="button" data-button-color="primary">确定</button>
+                                                        <button ms-widget="button" class="mg-l5">取消</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </td>
+
+                               </tr>
+
+                               <tr class="split">
+                                    <td>
+                                        <input type='checkbox'>
+                                    </td>
+                                    <td>
+                                        小明
+                                    </td>
+                                    <td>
+                                        176762732322
+                                    </td>
+                                    <td>
+                                        fdsaf@qq.com
+                                    </td>
+                                    <td>
+                                        <span class="invited">已邀请</span>
+                                    </td>
+                                    <td>
+                                        <div class="ui-tag">中转</div>
+                                        <div class="ui-tag">中转</div>
+                                        <div class="ui-tag">中转</div>
+                                        <div class="mm-dropdown-wrapper">
+                                            <a href="javascript:void(0)" class="set-authority" >设置权限
+                                            </a>
+                                        <div>
+                                    </td>
+
+                               </tr>
+
+                               <tr>
+                                    <td>
+                                        <input type='checkbox'>
+                                    </td>
+                                    <td>
+                                        小明
+                                    </td>
+                                    <td>
+                                        176762732322
+                                    </td>
+                                    <td>
+                                        fdsaf@qq.com
+                                    </td>
+                                    <td>
+                                        正常
+                                    </td>
+                                    <td>
+                                        <div class="mm-dropdown-wrapper">
+                                            <a href="javascript:void(0)" class="set-authority" >设置权限
+                                            </a>
+                                        <div>
+                                    </td>
+
+                               </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="ui-pager-box mg-t10">
+                    <div ms-widget="pager"></div>
+                </div>
+
+                <div ms-widget="dialog,bb,opts" class="invent-member-dialog">
+                     <div class="info mg-b14">发送短信邀请成员加入 | 最多一次<span class="num">10</span>位</div>
+
+                     <div class="form-group mg-b14">
+                        <label class="form-label">手机号：</label>
+                        <div class="form-input">
+                            <input type="text" class="ui-input"/>
+                            <span class="can-invite">可邀请</span>
+                        </div>
+                     </div>
+                  
+                     <div class="form-group mg-b14">
+                        <label class="form-label">&nbsp;</label>
+                        <div class="form-input">
+                            <input type="text" class="ui-input"/>
+                            <span class="not-leave">没离职</span>
+                            <a href="javascrip:" class="del">删除</a>
+                        </div>
+                     </div>
+
+                     <div class="form-group mg-b14">
+                        <label class="form-label">&nbsp;</label>
+                        <div class="form-input">
+                            <a href="javascript:void(0)">+ 添加</a>
+                        </div>
+                     </div>
+                </div>
+
+            </div>   
+        </div>
+
+        <div ms-include-src="'vip-center-footer.html'"></div> 
+    </body>
+</html>

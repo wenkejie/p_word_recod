@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/en-register.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register">
+    <div ms-include-src="'en_register_header.html'"></div>
+    
+    <div class="en-register-bd-wrapper">
+        <div class="en-register-success-bd">
+            <div class="en-register-success">
+                <div class="en-register-success-main">
+                    <div class="en-register-success-logo">
+
+                    </div>
+
+
+                    <div class="en-register-success-msg">
+
+                        <p>We sent an email to <a class="email" href="#">junjiec@126.com</a></p>
+                        <p>Follow the instructions in the email to reset your password</p>
+
+                        <p>
+                            Your email may take up to 5 minutes to arrive (depending on your email service provider).<br>
+                            If you don't receive an email, try the following:<br>
+                            Check your spam or junk mail folder
+                        </p>
+
+                        <a href="#">Request another emai</a>
+                    </div>
+
+                </div>
+
+
+                <div class="en-register-success-link-wrapper">
+                    <p class="en-register-success-link">Having trouble resetting your password?</p>
+                    <p><a href="#">Check mailbox immediately</a></p>
+                    <p><a href="#">Register for a new account</a></p>
+                    <p><a href="#">Contact customer service</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div ms-include-src="'en_register_footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    vm.opt = {
+                        width: "250px",
+                        listWidth: "250px",
+                    }
+
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

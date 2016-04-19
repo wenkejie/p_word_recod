@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/example.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'header_register.html'"></div>
+    <div class="ui-register-progress-bar">
+        <ul class="ui-register-step ui-register-step-3">
+            <li class="ui-register-step-pass">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">1</span>
+                    <span class="ui-register-step-text">设置用户名</span>
+                </div>
+                <div class="ui-register-step-line"></div>
+                <div class="ui-register-step-line-2"></div>
+            </li>
+            <li class="ui-register-step-active">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">2</span>
+                    <span class="ui-register-step-text">填写账户信息</span>
+                </div>
+                <div class="ui-register-step-line"></div>
+                <div class="ui-register-step-line-2"></div>
+            </li>
+            <li class="ui-register-step-last">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">3</span>
+                    <span class="ui-register-step-text">注册成功</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        
+        <div class="wrapper-content">
+            <div class="rg-form">
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">登入名</label>
+                    <span class="rg-form-des name">13958784523</span>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div class="rg-form">
+                <div class="rg-form-title">
+                    <label class="rg-label" for="">设置登录密码</label>
+                    <span class="rg-form-des">登录时需验证，保护帐号信息</span>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">登录密码</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input-large" placeholder="设置登录密码"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">再输入一次</label>
+                    <div class="ui-form-group"><input type="text" class="ui-input-large" placeholder="再次输入登录密码"></div>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div class="rg-form">
+                <div class="rg-form-title">
+                    <label class="rg-label" for="">公司信息</label>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">姓名</label>
+                    <div class="ui-form-group">
+                        <input type="text" class="ui-input-large" placeholder="">
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">公司名称</label>
+                    <div class="ui-form-group">
+                        <input type="text" class="ui-input-large" placeholder="">
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">固定电话</label>
+                    <div class="ui-form-group mg-r7"><input type="text" class="ui-input-large w-66" placeholder="区号"></div>
+                    <div class="ui-form-group"><input type="text" class="ui-input-large w-135" placeholder="固定电话"></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">公司地址</label>
+                    <div class="rg-select-btn w-100">
+                        <div class="rg-select-cnt">
+                            <div class="slide-down-icon"></div><span>请选择</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line rg-form-unlabel">
+                    <div class="ui-form-group">
+                        <input type="text" class="ui-input-large w-320" placeholder="详细地址">
+                    </div>
+                </div>
+                <div class="rg-form-line rg-form-unlabel">
+                    <a class="rg-btn rg-btn-primary" href="javascript:">下一步</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+
+                })
+                avalon.scan()
+            })
+    </script>
+</body>
+</html>

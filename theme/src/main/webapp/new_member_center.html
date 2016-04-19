@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+        <link rel="stylesheet" href="css/layout.css">
+
+        <script src="vendor/avalon/avalon.js"></script>
+    </head>
+    <body ms-controller="demo" >
+        <div ms-include-src="'vip-center-header.html'"></div>
+        <div class="main-frame">
+            <div ms-include-src="'vip-center-left.html'"></div>
+            <div class="right-frame">
+                <div class="ui-member-center-warning">
+                    <i>&#xe611;</i>
+                    <span> &nbsp;您还未完成会员实名认证，认证后将享受更多权益。</span>
+                    <a href="javascript:" class="setting">立即认证</a>
+                    <i class="ui-member-center-close">&#xe617;</i>
+                </div>
+
+                <div class="member-center-personal-info ui-panel mg-t10">
+                    <div class="avater-wrapper"> 
+                        <img src="images/avatar.png" height="124" width="124">
+                    </div>
+                    <div class="left mg-l20  w-520">
+                        <p class="fw-b">
+                            <span class="color-key">真实姓名：</span><span class="fs-16 fw-b"> &nbsp;&nbsp;施齐</span>
+                            <span class="lighter-grey"> (s-viola)</span>
+                        </p>
+                      <!--   <p class="mg-t5">
+                            <span class="color-key fw-b">
+                                所在公司：
+                            </span>
+                            宁波天时利国际货运代理有限公司
+                            <span class="not-auth">(未认证)</span>
+                            <a href="#" class="auth-link">马上认证</a>
+                            <span class="split">|</span>
+                            <a href="#" class="auth-link">我要成为供应商</a>
+                        </p> -->
+
+                         <p class="mg-t10">
+                        <span class="color-key fw-b">
+                            所在公司：
+                        </span>
+                        宁波天时利国际货运代理有限公司
+                        <span class="fail-auth">[企业认证不通过] &nbsp;
+                        </span>
+                        <a href="#">重新认证</a>
+                        <span class="split">|</span>
+                        <span class="fail-auth"> [供应商审核不通过] &nbsp;
+                        </span>
+                        <a href="#">重新认证</a>
+                    </p>
+
+                        <div class="member-center-link-wrapper">
+                            <div class="left">
+                                <a href="javascript:">会员资料</a>
+                                <span class="break-line">|</span>
+                                <a href="javascript:">密码修改</a>
+                            </div>
+                            
+                            <!-- <div class="icon-wrapper">
+                                <a class="ui-member-center-icon-bg mobile"></a>
+                                <a class="ui-member-center-icon-bg auth"></a>
+                                <a class="ui-member-center-icon-bg email"></a> 
+                                <a class="ui-member-center-icon-bg medal"></a>
+                            </div>   -->
+                        </div>
+
+                        <div class="member-center-panel-invite">
+                            <div class="ui-invite">
+                                <div class="ui-invite-line">
+                                    <h3 class="ui-invite-title">邀请好友</h3><span class="ui-invite-tips">每成功邀请一位好友加入咖狗网即可获得<span class="ui-invite-notice">100积分</span>，邀请越多奖励越多</span>
+                                </div>
+                                <div class="ui-invite-link">
+                                    <input type="text" class="ui-invite-input" value="www.cargopm.com" readonly="readonly">
+                                    <div class="bdsharebuttonbox ui-invite-share"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="right ta-c mg-r15">
+                        <img src="/images/qr.png" class="dp-b">
+                        <span class="lighter-grey">
+                            扫一扫
+                        </span>
+                    </div>
+
+                </div>
+
+
+
+
+                <table width="100%" class="member-center-table mg-t15">
+                    <tr>
+                        <td width="336">
+                            <div class="col-wrapper">
+                                <i class="icon-title walllet"></i><strong class="icon-cnt">掌柜钱包</strong>
+                            </div>
+                        </td>
+                        <td width="301">
+                            <div class="col-wrapper">
+                                <i class="icon-title info"></i><strong class="icon-cnt">会员积分</strong>
+                            </div>
+                        </td>  
+
+                        <td>
+                            <div class="col-wrapper">
+                                <i class="icon-title activity"></i><strong class="icon-cnt">活动邀请</strong>
+                                <a href="#" class="more">更多</a>
+                            </div>
+                        </td>    
+                        <!-- <td rowspan="2" class="bg-white">
+                            <img src="/images/qr.png" class="mg-l60"/>
+                            <p class="fwh-text">微信服务号</p>
+                        </td> -->
+                    </tr>
+
+                    <tr>
+                        <td class="bg-white pd20-23">
+                            <div class="top-bank-wrapper">
+                                <img src="/images/bank_logo/card_logo.png" class="bank-logo"></img>
+                                <span class="bank-name">宁波通商银行</span>
+                            </div>
+                            <div class="bottom-wrapper">
+                                <span class="rest-money">
+                                    <span class="left">40</span>
+                                    <span class="zeros">.00</span><span class="yuan"> 元</span>
+                                </span>
+
+                                <div class="btn-wrapper">
+                                    <a ms-widget="button" data-button-size="small" class="mg-r2">提现</a>
+                                    <a ms-widget="button" data-button-size="small">明细</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="point-col">
+                            <p class="your-point">你的积分：<span class="color-orange">20 &nbsp;</span>分<a href="javascript:" class="mg-l12">明细</a></p>
+
+                            <div class="lighter-grey">
+                                <p class="mg-t14">邀请好友送积分</p>
+                                <p class="mg-t10">查询下单送积分</p>
+                                <p class="mg-t10">一个积分也能兑换</p>
+                            </div>
+                            
+                        </td>
+
+                        <td class="point-col">
+                            <ul class="ui-member-center-activity-wrapper">
+                                <li>
+                                    <span class="ui-member-center-activity-num">1</span>
+                                    <a href="#">邀请好友送积分</a>
+                                </li>
+
+                                <li>
+                                    <span class="ui-member-center-activity-num">2</span>
+                                    <a href="#">查询下单就送积分</a>
+                                </li>
+
+                                <li>
+                                    <span class="ui-member-center-activity-num">3</span>
+                                    <a href="#">一个积分也能兑换</a>
+                                </li>
+
+                                <li>
+                                    <span class="ui-member-center-activity-num">4</span>
+                                    <a href="#">一个积分也能兑换</a>
+                                </li>
+
+                                <li>
+                                    <span class="ui-member-center-activity-num">5</span>
+                                    <a href="#">一个积分也能兑换</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+
+
+                <table width="100%" class="member-center-table mg-t15">
+                    <tr>
+                        <td width="336">
+                            <div class="col-wrapper">
+                                <i class="icon-title walllet"></i><strong class="icon-cnt">掌柜钱包</strong>
+                            </div>
+                        </td>
+                        <td width="301">
+                            <div class="col-wrapper">
+                                <i class="icon-title info"></i><strong class="icon-cnt">会员积分</strong>
+                            </div>
+                        </td>  
+
+                        <td>
+                            <div class="col-wrapper">
+                                <i class="icon-title activity"></i><strong class="icon-cnt">活动邀请</strong>
+                                <a href="#" class="more">更多</a>
+                            </div>
+                        </td>    
+                        <!-- <td rowspan="2" class="bg-white">
+                            <img src="/images/qr.png" class="mg-l60"/>
+                            <p class="fwh-text">微信服务号</p>
+                        </td> -->
+                    </tr>
+
+                    <tr>
+                        <td class="bg-white pd20-23">
+                            <span class="fs-14 color-key">您还未绑定掌柜钱包，先去<a href="#" class="wallet-blid-link">云融通</a>绑定</span>
+                        </td>
+                        <td class="point-col">
+                            <p class="your-point">你的积分：<span class="color-orange">20 &nbsp;</span>分<a href="javascript:" class="mg-l12">明细</a></p>
+
+                            <div class="lighter-grey">
+                                <p class="mg-t14">邀请好友送积分</p>
+                                <p class="mg-t10">查询下单送积分</p>
+                                <p class="mg-t10">一个积分也能兑换</p>
+                            </div>
+                            
+                        </td>
+
+                        <td class="point-col">
+                            <ul class="ui-member-center-activity-wrapper">
+                                <li>
+                                    <span class="ui-member-center-activity-num">1</span>
+                                    <a href="#">邀请好友送积分</a>
+                                </li>
+
+                                <li>
+                                    <span class="ui-member-center-activity-num">2</span>
+                                    <a href="#">查询下单就送积分</a>
+                                </li>
+
+                                <li>
+                                    <span class="ui-member-center-activity-num">3</span>
+                                    <a href="#">一个积分也能兑换</a>
+                                </li>
+
+                                <li>
+                                    <span class="ui-member-center-activity-num">4</span>
+                                    <a href="#">一个积分也能兑换</a>
+                                </li>
+
+                                <li>
+                                    <span class="ui-member-center-activity-num">5</span>
+                                    <a href="#">一个积分也能兑换</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="ui-panel ui-member-center-order">
+                    <div class="ui-panel-hd">
+                        <i class="ui-member-center-icon-bg my-order"></i><strong class="icon-cnt">我的订单</strong>
+                    </div>
+
+                    <div class="ui-panel-bd pd0">
+                        <table class="member-center-order-table">
+                            <tr>
+                                <td>待接受订单</td>
+                                <td>待费用确认</td>
+                                <td>待支付订单</td>
+                                <td>待评价订单</td>
+                            </tr>
+
+                            <tr class="split">
+                                <td><a href="javascript:">12</a></td>
+                                <td><a href="javascript:">12</a></td>
+                                <td><a href="javascript:">12</a></td>
+                                <td><a href="javascript:">12</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="member-center-personal-info">
+                    <p class="mg-t15">
+                        <span class="color-key fw-b">
+                            所在公司：
+                        </span>
+                        <span class="lighter-grey">
+                            您还未注册或加入公司 &nbsp;
+                        </span>
+                        <a href="#" class="auth-link">企业认证</a>
+                        <span class="split">|</span>
+                        <a href="#" class="auth-link">供应商认证</a>
+                        <span class="split">|</span>
+                        <a href="#" class="auth-link">加入已有公司</a>
+
+                    </p>
+
+                    <p class="mg-t15">
+                        <span class="color-key fw-b">
+                            所在公司：
+                        </span>
+                        宁波天时利国际货运代理有限公司
+                        <span class="not-auth">
+                           &nbsp; (未认证) &nbsp;
+                        </span>
+                        <a href="#" class="auth-link">企业认证</a>
+                        <span class="split">|</span>
+                        <a href="#" class="auth-link">供应商认证</a>
+                        <span class="split">|</span>
+                        <a href="#" class="auth-link">加入已有公司</a>
+
+                    </p>
+
+                    <p class="mg-t15">
+                        <span class="color-key fw-b">
+                            所在公司：
+                        </span>
+                        宁波天时利国际货运代理有限公司
+                        <span class="fail-auth">
+                           &nbsp; (认证不通过) &nbsp;
+                        </span>
+                        <a href="#">查看</a>
+                    </p>
+
+
+                    <p class="mg-t15">
+                        <span class="color-key fw-b">
+                            所在公司：
+                        </span>
+                        宁波天时利国际货运代理有限公司
+                        <span class="authing">
+                           &nbsp; (认证中) &nbsp;
+                        </span>
+                        <a href="#">查看</a>
+                    </p>
+
+                    <p class="mg-t15">
+                        <span class="color-key fw-b">
+                            所在公司：
+                        </span>
+                        宁波天时利国际货运代理有限公司
+                        <span class="authed">
+                           &nbsp; 【已认证】
+                        </span>
+                        <a href="#">查看</a>
+                        <span class="split">|</span>
+                        <a href="#" class="auth-link">供应商认证</a>
+                    </p>
+
+                    <p class="mg-t15">
+                        <span class="color-key fw-b">
+                            所在公司：
+                        </span>
+                        宁波天时利国际货运代理有限公司
+                        <span class="authed">
+                           &nbsp; 【已认证】
+                        </span>
+                        <span class="well-supply">
+                        【咖狗优选供应商】 &nbsp;
+                        </span>
+                        <a href="#">查看</a>
+                    </p>
+                </div>
+            </div>   
+       </div>     
+        <div ms-include-src="'vip-center-footer.html'"></div> 
+
+        <script>
+            require([
+                "button/avalon.button",
+                "dialog/avalon.dialog",
+                "checkboxlist/avalon.checkboxlist",
+                "pager/avalon.pager",
+                "dropdown/avalon.dropdown",
+                "browser/avalon.browser",
+                "textbox/avalon.textbox",
+                "spinner/avalon.spinner"
+                ], function() {
+                avalon.define("demo", function(vm) {
+                    vm.message = "笑傻了吧！！";
+                    vm.namee = avalon.browser.name+' '+avalon.browser.version;
+                    vm.show = function( id ){
+                        avalon.vmodels[id].toggle = true;
+                    }
+
+                    vm.pager = {
+                        // currentPage: 8,
+                        totalItems: 120,
+                        showJumper: true,
+                        showPages:5
+                    }
+
+                    vm.dropdown = {
+                        width: "120",
+                        listWidth:"120"
+                    };
+
+                    vm.$spinnerOpts={
+                        min: 0,
+                        width:25
+                    };
+
+
+                    vm.$skipArray = ["pager"];
+                    vm.check1 = ["2"];
+                })
+                avalon.scan()
+            })
+        </script>
+
+    </body>
+</html>

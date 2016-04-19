@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'header_register.html'"></div>
+
+    <div class="wrapper mg-t20" style="margin-top:20px;">
+        <div class="wrapper-content etprs-wallet-apply-cnt">
+            <div class="ui-tab">
+                <div class="ui-tab-item" ms-class="selected:enter_visible" ms-click="show($event,'enter')">
+                    <div class="bd ui-tab-item-cnt">企业信息</div>
+                </div>
+
+                <div class="ui-tab-item" ms-class="selected:indiv_visible" ms-click="show($event,'indiv')">
+                    <div class="bd ui-tab-item-cnt">法人信息</div>
+                </div>
+                <div class="ui-tab-line"></div>
+            </div>
+
+            <div class="tab-panel" ms-visible="enter_visible">
+                <table class="etprs-wallet-apply-table">
+                    <tr>
+                        <td width="500px">
+                            <label class="name">公司名称</label>
+                            <span class="value">奥林科技(宁波)有限公司</span>
+                        </td>
+                        <td>
+                            <label class="name">行业类别</label>
+                            <span class="value">物流</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label class="name">公司联系人</label>
+                            <span class="value">杨逍</span>
+                        </td>
+                        <td>
+                            <label class="name">从业人员数</label>
+                            <span class="value">500人</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label class="name">公司电话</label>
+                            <span class="value">0574-897987877</span>
+                        </td>
+                        <td>
+                            <label class="name">营业收入</label>
+                            <span class="value">500万元</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label class="name">邮政编码</label>
+                            <span class="value">315115</span>
+                        </td>
+                        <td>
+                            <label class="name">资产总额</label>
+                            <span class="value">5000万元</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label class="name">公司地址</label>
+                            <p class="value pd-l142">浙江宁波鄞州范德萨发的vcxx想VC持续性分被忽挺好听浙江</p>
+                        </td>
+                        <td>
+                            <label class="name">企业规模</label>
+                            <span class="value">大</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label class="name">控股股东</label>
+                            <span class="value">杨逍</span>
+                        </td>
+                        <td>
+                            <label class="name">企业类型</label>
+                            <span class="value">内资</span>
+                        </td>
+                    </tr>
+                </table> 
+
+                <div class="hr"></div>
+
+                <table class="etprs-wallet-apply-table">
+                    <tr>
+                        <td width="500px">
+                            <label class="name">组织机构代码</label>
+                            <span class="value">23232433143134141413</span>
+                        </td>
+                        <td>
+                            <label class="name">银行开户许可核准号</label>
+                            <span class="value">23232433143134141413</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label class="name">税务登记证号</label>
+                            <span class="value">23232433143134141413</span>
+                        </td>
+                        <td>
+                            <label class="name">营业执照号</label>
+                            <span class="value">23232433143134141413</span>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <div class="mg-t20">
+                    <a href="javascript:" class="cert-control"  ms-click="toggle">证件图片 <i>{{dire|html}}</i></a>
+
+                    <div class="mg-t20 cert-area" ms-visible="bool">
+                        <div class="left mg-r20 ps-r">
+                            <div>
+                                <img src="images/paper_example.png" width="203" height="134">
+                            </div>
+                            <p class="ta-c">营业执照副本</p>
+                            <div class="mask">
+                                <div class="magnifier-icon">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="left mg-r20 ps-r">
+                            <div>
+                                <img src="images/paper_example.png" width="203" height="134">
+                            </div>
+                            <p class="ta-c">组织机构代码证</p>
+                        </div>
+
+                        <div class="left mg-r20 ps-r">
+                            <div>
+                                <img src="images/paper_example.png" width="203" height="134">
+                            </div>
+                            <p class="ta-c">银行开户许可证</p>
+                        </div>
+
+                        <div class="left mg-r20 ps-r">
+                            <div>
+                                <img src="images/paper_example.png" width="203" height="134">
+                            </div>
+                            <p class="ta-c">税务登记证</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="hr"></div>
+
+                <div class="wa-form-group">
+                    <label class="wa-label">托管银行</label>
+                    <img width="148" height="38" class="bank-logo selected" src="images/bank_logo/zhaoshang_big.png"></img>
+                    <img width="148" height="38" class="mg-l10 bank-logo" src="images/bank_logo/pingan_bg.png"></img>
+                </div>
+
+                <div class="hr"></div>
+                <div class="wa-form-group">
+                    <label class="wa-label">账户类型</label>
+                    <div class="ui-form-group">
+                       <div class="account selected">
+                            ￥人民币账户
+                       </div>
+
+                       <div class="account w-84 ta-c">
+                            $ 美金账户
+                       </div>
+                    </div>
+                </div>
+
+                <div class="hr"></div>
+
+                <div class="wa-form-group">
+                    <label class="wa-label">支付人姓名</label>
+                    <div class="ui-form-group">
+                        <input type="text" class="ui-input-large w-180">
+                        <div>
+                            <label for="check" class="agreement">
+                                需谨慎填写，填写后不可随意更改
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wa-form-group">
+                    <label class="wa-label">付款验证手机</label>
+                    <div class="ui-form-group">
+                        <input type="text" class="ui-input-large w-180" value="18732832333">
+                        <div>
+                            <label for="check" class="agreement">
+                                需谨慎填写，填写后不可随意更改
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wa-form-group">
+                    <label class="wa-label">&nbsp;</label>
+                    <div class="ui-form-group">
+                        <a ms-widget="button" data-button-size="large" class="w-150">发送校验码</a>
+                    </div>
+                </div>
+
+                <div class="wa-form-group">
+                    <label class="wa-label">校验码</label>
+                    <div class="ui-form-group">
+                        <input type="text" class="ui-input-large w-180">
+                        <div>
+                            <label for="check" class="agreement">
+                                <input type="checkbox" id="check"/> 同意 <a href="javascript:">《通商银行账户开通协议》</a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wallet-apply-btn-wrapper">
+                    <a href="#" ms-widget="button" data-button-size="large">提交申请</a>
+                </div>
+            </div>
+
+            <div class="tab-panel" ms-visible="indiv_visible">
+                <div class="wallet-apply-cnt">
+                    <div class="wa-form-group">
+                        <label class="wa-label">真实姓名</label>
+                        <span class="wa-value">李光耀</span>
+                    </div>
+
+                    <div class="wa-form-group">
+                        <label class="wa-label">身份证号</label>
+                        <span class="wa-value">33076656787899989</span>
+                    </div>
+
+                    <div class="wa-form-group">
+                        <label class="wa-label">身份证图片</label>
+                        <img width="140" height="90" src="images/temp/sfz.png"></img>
+                        <img width="140" height="90" class="mg-l10" src="images/temp/sfz.png"></img>
+                        <img width="140" height="90" class="mg-l10" src="images/temp/sfz.png"></img>
+                    </div>
+
+                    <div class="hr"></div>
+
+                    <div class="wa-form-group">
+                        <label class="wa-label">托管银行</label>
+                        <img width="148" height="38" class="bank-logo selected" src="images/bank_logo/zhaoshang_big.png"></img>
+                        <img width="148" height="38" class="mg-l10 bank-logo" src="images/bank_logo/pingan_bg.png"></img>
+                    </div>
+
+                    <div class="hr"></div>
+
+                    <div class="wa-form-group">
+                        <label class="wa-label">手机号码</label>
+                        <div class="ui-form-group">
+                            <input type="text" class="ui-input-large w-180" placeholder="手机号">
+                        </div>
+                    </div>
+
+                    <div class="wa-form-group">
+                        <label class="wa-label">&nbsp;</label>
+                        <div class="ui-form-group">
+                            <a ms-widget="button" data-button-size="large" class="w-150">发送校验码</a>
+                        </div>
+                    </div>
+
+                    <div class="wa-form-group">
+                        <label class="wa-label">校验码</label>
+                        <div class="ui-form-group">
+                            <input type="text" class="ui-input-large w-180">
+                            <div>
+                                <label for="check" class="agreement">
+                                    <input type="checkbox" id="check"/> 同意 <a href="javascript:">通商银行账户开通协议</a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wallet-apply-btn-wrapper">
+                        <a href="#" ms-widget="button" data-button-size="large">提交申请</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div ms-include-src="'vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                var vm = avalon.define("register", function(vm) {
+                    vm.bool = false;
+                    vm.dire = "&#xe612;";
+                    vm.enter_visible = true;
+                    vm.indiv_visible = false;
+                    
+                    vm.show = function(event,param){
+                        if(param == "enter"){
+                            vm.enter_visible = true;
+                            vm.indiv_visible = false;
+                        }else{
+                            vm.enter_visible = false;
+                            vm.indiv_visible = true;
+                        }
+                    }
+                    vm.toggle = function(){
+                        vm.bool = !vm.bool;
+                        if(vm.bool){
+                            vm.dire = "&#xe613";
+                        }else{
+                            vm.dire = "&#xe612";
+                        }
+                    }
+                })
+                console.log(vm);
+                avalon.scan()
+            })
+    </script>
+</body>
+</html>

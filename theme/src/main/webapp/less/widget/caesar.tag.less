@@ -1,0 +1,83 @@
+// ===================================================
+// ================= 标签结构 ========================
+// ===================================================
+
+
+.cui-tag{
+	position: relative;
+	padding: 0 5px 5px 5px;width: 238px;
+	background: #fff;border: 1px solid #cfd3d5;border-radius: 1px;box-shadow:inset 0 3px 2px #eee;
+    font-size: 12px;
+    // overflow: hidden;
+    .cui-dropdown{
+    	left: -5px;top: 4px;
+    	width: 246px;
+    	.cui-dropdown-content{
+    		height: 125px;padding: 5px 0;
+    	}
+    	.cui-dropdown-cell{
+    		height: 15px;line-height: 15px;
+    		border-bottom: none;
+    		.cui-port-name{
+    			// padding-left: 10px;
+    		}
+    	}
+    }
+}
+
+
+
+
+.cui-tag-list{
+	.clearfix;
+	li{
+		float: left;
+		margin: 5px 5px 0 0;padding: 0 9px;
+		.delete-tag-btn{
+			color: #ccc;font-family: '宋体';font-size: 12px;font-weight: bold;
+			padding-left: 5px;
+			&:hover{
+				color: #333;
+			}
+		}
+	}
+	.member{
+		line-height: 23px;
+		background: #fafafa;border-radius: 2px;border: 1px solid #ccc;	
+		white-space: nowrap;
+		color: #333;
+	}
+
+}
+
+
+.cui-tag-down-area{
+	position: relative;
+	
+}
+
+.cui-tag-input{
+	border: medium none;
+    height: 24px;line-height: 24px;
+    outline: medium none;
+    width: 120px;
+    color: #aaa;cursor: pointer;
+}
+
+
+
+
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}

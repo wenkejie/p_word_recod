@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+        <link rel="stylesheet" href="css/layout.css">
+        <script src="vendor/avalon/avalon.js"></script>
+        <script>
+            require([
+                    "button/avalon.button",
+                    "dialog/avalon.dialog",
+                    "pager/avalon.pager",
+                    "dropdown/avalon.dropdown"], function(avalon) {
+                avalon.define("test", function(vm) {
+                    vm.show = function( id ){
+                        avalon.vmodels[id].toggle = true;
+                    }
+
+                    vm.opts1 = {
+                        width: "70",
+                        listWidth:"70"
+                    }
+
+                    vm.opts2 = {
+                        width: "120",
+                        listWidth:"120"
+                    }
+                  });   
+                    avalon.scan();
+
+                })
+        </script>
+    </head>
+    <body ms-controller="test" >
+        <div ms-include-src="'vip-center-header.html'"></div>
+        <div class="main-frame">
+            <div ms-include-src="'vip-center-left.html'"></div>
+            <div class="right-frame">
+                <div class="comment-manage-hd">
+                    <h2 class="comment-manage-tt">
+                        评价管理
+                        <span class="pos-rate">好评率：<span class="num">50%</span></span>
+                    </h2>
+
+                 </div> 
+
+                 <table class="comment-manage-wrapper ui-table-border mg-t10">
+                    <thead> 
+                        <tr>
+                            <th>评级</th>
+                            <th>最近一周</th>
+                            <th>最近一个月</th>
+                            <th>最近六个月</th>
+                            <th>六个月前</th>
+                            <th>总计</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td><i class='icon pos-good'></i><span class='va-m mg-l5'>好评</span></td>
+                            <td><a href='javascript:void(0)'>1</a></td>
+                            <td><a href='javascript:void(0)'>1</a></td>
+                            <td><a href='javascript:void(0)'>1</a></td>
+                            <td><a href='javascript:void(0)'>1</a></td>
+                            <td><strong>4</strong></td>
+                        </tr>
+
+                        <tr class="split">
+                            <td><i class='icon pos-bad'></i><span class='va-m mg-l5'>差评</span></td>
+                            <td><a href='javascript:void(0)'>1</a></td>
+                            <td><a href='javascript:void(0)'>1</a></td>
+                            <td><a href='javascript:void(0)'>1</a></td>
+                            <td><a href='javascript:void(0)'>1</a></td>
+                            <td><strong>4</strong></td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>总计</strong></td>
+                            <td><a href='javascript:void(0)'>1</a></td>
+                            <td><a href='javascript:void(0)'>1</a></td>
+                            <td><a href='javascript:void(0)'>1</a></td>
+                            <td><a href='javascript:void(0)'>1</a></td>
+                            <td><strong>4</strong></td>
+                        </tr>
+                    </tbody>
+                 </table>
+               <!--  <div ms-widget="simplegrid" style="width:99%" class="comment-manage-wrapper mg-t10">
+     
+                </div>
+ -->
+                <div class="ui-tab mg-t10">
+                    <div class="ui-tab-item selected">
+                        <div class="bd ui-tab-item-cnt">收到的评价</div>
+                    </div>
+
+                    <div class="ui-tab-item">
+                        <div class="bd ui-tab-item-cnt">给他人的评价</div>
+                    </div>
+                    <div class="ui-tab-line"></div>
+                </div>
+                
+
+                <table class="comment-manage-cnt-wrapper ui-table-border mg-t10">
+                    <thead>
+                        <tr>
+                            <th width="80px">
+                                <select ms-widget="dropdown,$,opts1">
+                                    <option value="value4">评价</option>
+                                </select>
+                            </th>
+                            <th width="320px">
+                                <select ms-widget="dropdown,$,opts2">
+                                    <option value="value4">评论</option>
+                                </select>
+                            </th>
+                            <th width="170px">被评价方</th>
+                            <th>业务类型</th>
+                            <th>订单信息</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <i class='icon pos-good'></i>
+                            </td>
+
+                            <td>
+                                <p>额外vvdvdvdc删除沈定成所产生的从四川省从市场上的额外vvdvdvdc删除沈定成所</p>
+                                <p class='time'>2015-01-10 17.30</p>
+                            </td>
+
+                            <td>
+                                <div><a href='javascript:void(0)'>深圳海关深圳海关</a></div>
+                                <div><a href='javascript:void(0)'>深圳海关深圳海关</a></div>
+                            </td>
+
+                            <td>
+                                整箱
+                            </td>
+
+                            <td>
+                                <p class='place'>宁波 - 洛杉矶</p>
+                                <p class='price'>$34234. 00</p>
+                                <p class='price'>￥34234. 00</p>
+                            </td>
+                        </tr>
+
+                        <tr class="split">
+                            <td>
+                                <i class='icon pos-good'></i>
+                            </td>
+
+                            <td>
+                                <p>额外vvdvdvdc删除沈定成所产生的从四川省从市场上的额外vvdvdvdc删除沈定成所</p>
+                                <p class='time'>2015-01-10 17.30</p>
+                            </td>
+
+                            <td>
+                                <div><a href='javascript:void(0)'>深圳海关深圳海关</a></div>
+                                <div><a href='javascript:void(0)'>深圳海关深圳海关</a></div>
+                            </td>
+
+                            <td>
+                                整箱
+                            </td>
+
+                            <td>
+                                <p class='place'>宁波 - 洛杉矶</p>
+                                <p class='price'>$34234. 00</p>
+                                <p class='price'>￥34234. 00</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <i class='icon pos-bad'></i></i>
+                            </td>
+
+                            <td>
+                                <p>额外vvdvdvdc删除沈定成所产生的从四川省从市场上的额外vvdvdvdc删除沈定成所</p>
+                                <p class='time'>2015-01-10 17.30</p>
+                            </td>
+
+                            <td>
+                                <div><a href='javascript:void(0)'>深圳海关深圳海关</a></div>
+                                <div><a href='javascript:void(0)'>深圳海关深圳海关</a></div>
+                            </td>
+
+                            <td>
+                                整箱
+                            </td>
+
+                            <td>
+                                <p class='place'>宁波 - 洛杉矶</p>
+                                <p class='price'>$34234. 00</p>
+                                <p class='price'>￥34234. 00</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <div ms-controller="test2" >
+                   < <div ms-widget="simplegrid" style="width:99%" class="comment-manage-cnt-wrapper mg-t10">
+                    
+                    </div> 
+                </div>
+                 -->
+                <div class="mg-t20">
+                    <div ms-widget="pager" class="pagination right"></div>
+                </div>
+
+            </div>   
+        </div>
+
+        <div ms-include-src="'vip-center-footer.html'"></div> 
+    </body>
+</html>

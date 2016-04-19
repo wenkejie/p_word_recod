@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register-new.css">
+    <script src="../vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'../header_register.html'"></div>
+    <div class="rg-progress">
+        <div class="rg-progress-content">
+            <ul>
+                <li class="rg-progress-cell rg-progress-cell-current">
+                    <span class="rg-progress-icon">1<i class="iconfont">&#xe609;</i></span>
+                    <p class="rg-progress-info">填写信息</p>
+                </li>
+                <li class="rg-progress-cell">
+                    <span class="rg-progress-icon">2<i>&#xe609;</i></span>
+                    <p class="rg-progress-info">等待审核</p>
+                </li>
+                <li class="rg-progress-cell">
+                    <span class="rg-progress-icon"><span class="iconfont">&#xe60a;</span><i>&#xe609;</i></span>
+                    <p class="rg-progress-info">完成认证</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="rg-form">
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">手机号</label>
+                    <div class="rg-form-right">
+                        <div class="form-right-content">
+                            <div class="rg-form-group">
+                                <input type="text" class="rg-input-large" placeholder="请输入手机号">
+                            </div>
+                            <div class="rg-tips rg-tips-success">
+                                <div class="rg-tips-icon"></div>
+
+                            </div>
+                        </div>
+                        <div class="rg-form-cell-tips">
+                            手机号码用来登录咖狗网
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for="">验证码</label>
+                    <div class="rg-form-group mg-r15"><input type="text" class="rg-input-large w-102"></div>
+                    <img class="rg-checkcode-img" src="../images/check.png">
+                    <a class="rg-btn-link" href="javascript:">看不清，换一张</a>
+                </div>
+                <div class="rg-form-line rg-form-unlabel">
+                    <label class="rg-checkbox" for="agree">
+                        <input type="checkbox" checked="check" id="agree">
+                        <span>以阅读并同意 <a href="javascript:">《咖狗网会员服务协议》</a></span>
+                    </label>
+                </div>
+                <div class="rg-form-line rg-form-unlabel">
+                    <a class="rg-btn rg-btn-primary" href="javascript:">下一步</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'../vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

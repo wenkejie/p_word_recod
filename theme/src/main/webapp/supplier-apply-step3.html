@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="supplier-apply">
+<div ms-include-src="'header_supplier.html'"></div>
+<div class="main-frame">
+	<div class="ui-register-progress-bar">
+        <ul class="ui-register-step ui-register-step-3">
+            <li class="ui-register-step-pass">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">1</span>
+                    <span class="ui-register-step-text">填写申请信息</span>
+                </div>
+                <div class="ui-register-step-line"></div>
+                <div class="ui-register-step-line-2"></div>
+            </li>
+            <li class="ui-register-step-active">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">2</span>
+                    <span class="ui-register-step-text">提交审核</span>
+                </div>
+                <div class="ui-register-step-line"></div>
+                <div class="ui-register-step-line-2"></div>
+            </li>
+            <li class="ui-register-step-last">
+                <div class="ui-register-step-icon">        
+                    <span class="ui-register-step-number">3</span>
+                    <span class="ui-register-step-text">成为供应商</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+  	<div class="supplier-apply-complete success">
+        <div class="supplier-apply-complete-content">
+            <div class="supplier-apply-complete-icon"></div>
+            <div class="supplier-apply-complete-right">
+                <p>您已完成供应商申请，成功升级为供应商！</p>
+            </div>
+        </div>
+    </div>
+    <div class="ui-supplier-apply-link supplier-apply-complete-link"><a href="#">返回我的大掌柜平台</a></div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"dropdown/avalon.dropdown",
+			"checkboxlist/avalon.checkboxlist"
+			], function() {
+			avalon.define("supplier-apply", function(vm) {
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+				vm.$optsDropdown0 = {
+					width: "252",
+					listWidth:"252"
+				};
+				vm.$optsDropdown1 = {
+					width: "252",
+					listWidth:"252"
+				};
+				vm.$optsDropdown2 = {
+					width: "252",
+					listWidth:"252"
+				};
+				vm.$optsDropdown3 = {
+					width: "80",
+					listWidth:"80"
+				};
+			})
+
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

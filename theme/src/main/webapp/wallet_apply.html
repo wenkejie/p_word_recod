@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/example.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register">
+    <div ms-include-src="'header_register.html'"></div>
+
+    <div class="wrapper mg-t20">
+        
+        <div class="wrapper-content wallet-apply-cnt">
+            <div class="wa-form-group">
+                <label class="wa-label">真实姓名</label>
+                <span class="wa-value">李光耀</span>
+            </div>
+
+            <div class="wa-form-group">
+                <label class="wa-label">身份证号</label>
+                <span class="wa-value">33076656787899989</span>
+            </div>
+
+            <div class="wa-form-group">
+                <label class="wa-label">身份证图片</label>
+                <img width="140" height="90" src="images/temp/sfz.png"></img>
+                <img width="140" height="90" class="mg-l10" src="images/temp/sfz.png"></img>
+                <img width="140" height="90" class="mg-l10" src="images/temp/sfz.png"></img>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="wa-form-group">
+                <label class="wa-label">托管银行</label>
+                <img width="148" height="38" class="bank-logo selected" src="images/bank_logo/zhaoshang_big.png"></img>
+                <img width="148" height="38" class="mg-l10 bank-logo" src="images/bank_logo/pingan_bg.png"></img>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="wa-form-group">
+                <label class="wa-label">手机号码</label>
+                <div class="ui-form-group">
+                    <input type="text" class="ui-input-large w-180" placeholder="手机号">
+                </div>
+            </div>
+
+            <div class="wa-form-group">
+                <label class="wa-label">&nbsp;</label>
+                <div class="ui-form-group">
+                    <a ms-widget="button" data-button-size="large" class="w-150">发送校验码</a>
+                </div>
+            </div>
+
+            <div class="wa-form-group">
+                <label class="wa-label">校验码</label>
+                <div class="ui-form-group">
+                    <input type="text" class="ui-input-large w-180">
+                    <div>
+                        <label for="check" class="agreement">
+                            <input type="checkbox" id="check"/> 同意 <a href="javascript:">通商银行账户开通协议</a>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wallet-apply-btn-wrapper">
+                <a href="#" ms-widget="button" data-button-size="large">提交申请</a>
+            </div>
+
+        </div>
+    </div>
+    <div ms-include-src="'vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+
+                })
+                avalon.scan()
+            })
+    </script>
+</body>
+</html>

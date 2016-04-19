@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register-new.css">
+    <script src="../vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register" class="rg-body">
+    <div ms-include-src="'../header_register.html'"></div>
+    <div class="rg-progress">
+        <div class="rg-progress-content">
+            <ul>
+                <li class="rg-progress-cell">
+                    <span class="rg-progress-icon">1<i class="iconfont">&#xe609;</i></span>
+                    <p class="rg-progress-info">填写认证信息</p>
+                </li>
+                <li class="rg-progress-cell rg-progress-cell-current">
+                    <span class="rg-progress-icon">2<i>&#xe609;</i></span>
+                    <p class="rg-progress-info">上传企业证件</p>
+                </li>
+                <li class="rg-progress-cell">
+                    <span class="rg-progress-icon"><span class="iconfont">&#xe60a;</span><i>&#xe609;</i></span>
+                    <p class="rg-progress-info">完成企业认证</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="rg-form">
+            	<div class="rg-form-line">
+                    <p class="form-line-tips form-line-tips-normal">
+                        证件要求：<br />
+                        必须是彩色原件电子版，可以扫描件或者数码拍摄照片。<br />
+                        仅支持.jpg,.jpeg,.bmp,.png的图片格式。<span class="text-orange">图片大小不超过 2M</span>
+                    </p>
+                </div>
+                <div class="rg-form-line mgt20">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>营业执照号</label>
+                    <div class="rg-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder=""></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>营业执照副本</label>
+                    <div class="rg-form-right">
+                        <div class="rg-paperwork-upload">
+                            <a href="javascript:" class="rg-btn rg-btn-mini rg-btn-upload">
+                                <input type="file" name="" id="" class="rg-file-upload-input">
+                                点击上传
+                            </a>
+                        </div>
+                        <div class="rg-form-cell-tips">
+                            <p>1、证照必须为中国大陆工商局颁发，必须在有效期内，2014年之前副本须年检章齐全<br>（当年成立的公司可无年检章）。</p>
+                            <p>2、正本或副本（彩色件）</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>组织机构代码</label>
+                    <div class="ui-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder=""></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>组织机构代码证</label>
+                    <div class="rg-form-right">
+                        <div class="rg-paperwork-upload">
+                            <a href="javascript:" class="rg-btn rg-btn-mini rg-btn-upload none">
+                                <input type="file" name="" id="" class="rg-file-upload-input">
+                                点击上传
+                            </a>
+                            <div class="paperwork-upload-content">
+                                <img src="../images/paper_example.png" />
+                                <a href="javascript:">删除</a>
+                                <a href="javascript:">查看</a>
+                            </div>
+                            <div class="rg-form-cell-tips">
+                            <p>1、证照必须为中国大陆工商局颁发，必须在有效期内，2014年之前副本须年检章齐全<br>（当年成立的公司可无年检章）。</p>
+                            <p>2、正本或副本（彩色件）</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>法人身份证号</label>
+                    <div class="ui-form-group"><input type="text" class="rg-input-large rg-org-input" placeholder=""></div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>法人身份证正面</label>
+                    <div class="rg-form-right">
+                        <div class="rg-paperwork-upload">
+                            <a href="javascript:" class="rg-btn rg-btn-mini rg-btn-upload">
+                                <input type="file" name="" id="" class="rg-file-upload-input">
+                                点击上传
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line">
+                    <label class="rg-label" for=""><span class="rg-form-required">*</span>法人身份证反面</label>
+                    <div class="rg-form-right">
+                        <div class="rg-paperwork-upload">
+                            <a href="javascript:" class="rg-btn rg-btn-mini rg-btn-upload">
+                                <input type="file" name="" id="" class="rg-file-upload-input">
+                                点击上传
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg-form-line rg-form-btn">
+                    <a class="rg-btn rg-btn-primary" href="javascript:">提交认证</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ms-include-src="'../vip-center-footer.html'"></div>
+    <script>
+        require([
+            "button/avalon.button"],
+            function() {
+                avalon.define("register", function(vm) {
+                    
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

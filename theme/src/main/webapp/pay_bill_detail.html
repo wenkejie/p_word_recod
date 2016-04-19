@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="demo">
+<div ms-include-src="'vip-center-header.html'"></div>
+<div class="main-frame">
+		<div>
+			<h2 class="pay-bill-hd">账单详情<span class="status">未付款</span></h2>
+
+			<table class="bill-detail-table">
+					<tr>
+						<th width="362">账单号</th>
+						<th>收款方</th>
+						<th>金额</th>
+					</tr>
+
+					<tr>
+						<td>DDFFFEW21312313</td>
+						<td>手动阀的手法飞儿飞飞</td>
+						<td><p class="price">USD <span>324234</span></p></td>
+					</tr>
+			</table>
+
+			<table class="bill-detail-table">
+					<tr>
+						<th width="362">发票号码</th>
+						<th>最迟付款时间</th>
+					</tr>
+
+					<tr>
+						<td>DDFFFEW21312313</td>
+						<td>2012-1-12</td>
+					</tr>
+			</table>
+
+			<table class="bill-detail-table">
+					<tr>
+						<th width="362">发票照片</th>
+						<th>外汇购汇第四联照片</th>
+					</tr>
+
+					<tr>
+						<td><img src="images/pic_fpzp1.png" width="240" height="140" alt="发票"></img></td>
+						<td><img src="images/pic_fpzp2.png" width="240" height="140" alt="发票"></img></td>
+					</tr>
+			</table>
+
+
+			<table class="bill-detail-table">
+					<tr>
+						<th>备注说明</th>
+					</tr>
+
+					<tr>
+						<td>分vgvrtrvfdgd 得分v的说法</td>
+					</tr>
+			</table>
+		
+		<div>
+			<h3 class="related-order-hd">关联订单</h3>
+			
+			<div class="ui-panel mg-t10 paybill-order-info">
+					<div class="ui-panel-hd fs-12">
+						<label for="order-time">
+							2014-12-12
+						</label>
+
+						<label class="mg-l25">
+							订单号：DFDFDFDF123123123
+						</label>
+					</div>
+
+					<div class="ui-panel-bd pd0">
+						<table class="order-info-table">
+							<tr>
+								<td rowspan="2" width="343">
+									<div class="col-1">
+										<div class="left">
+											<img src="images/MU.png" class="hipping-compay-logo dp-b"></img>
+											<p>LOGO</p>
+										</div>
+										<div class="left mg-l21">
+											<p class="place-name">宁波 - 洛杉矶</p>
+											<p class="mg-t3">提单号：<span class="tdh">SADDSDCFSDC231231</span></p>
+										</div>
+									</div>
+								</td>
+								<td rowspan="1" width="162">
+									<div class="col-2">
+										<div class="ui-tag left">20GP</div>x2
+									</div>
+								</td>
+								<td rowspan="2" width="265">
+									<div class="col-3 ta-c">
+										<p class="tdh">USD 123123</p>
+									</div>
+								</td>
+								<td rowspan="2">
+									<div class="col-4 ta-c">
+										<a href="javascript:void(0)">订单详情</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-2">
+										<div class="ui-tag left">20GP</div>x1
+									</div>
+								</td>
+							</tr>
+						</table>
+				    </div>
+			</div>
+
+
+			
+			<div class="ui-panel mg-t10 paybill-order-info">
+					<div class="ui-panel-hd fs-12">
+						<label for="order-time">
+							2014-12-12
+						</label>
+
+						<label class="mg-l25">
+							订单号：DFDFDFDF123123123
+						</label>
+					</div>
+
+					<div class="ui-panel-bd pd0">
+						<table class="order-info-table">
+							<tr>
+								<td rowspan="2" width="343">
+									<div class="col-1">
+										<div class="left">
+											<img src="images/MU.png" class="hipping-compay-logo dp-b"></img>
+											<p>LOGO</p>
+										</div>
+										<div class="left mg-l21">
+											<p class="place-name">宁波 - 洛杉矶</p>
+											<p class="mg-t3">提单号：<span class="tdh">SADDSDCFSDC231231</span></p>
+										</div>
+									</div>
+								</td>
+								<td rowspan="1" width="162">
+									<div class="col-2">
+										<div class="ui-tag left">20GP</div>x2
+									</div>
+								</td>
+								<td rowspan="2" width="265">
+									<div class="col-3 ta-c">
+										<p class="tdh">USD 123123</p>
+									</div>
+								</td>
+								<td rowspan="2">
+									<div class="col-4 ta-c">
+										<a href="javascript:void(0)">订单详情</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="col-2">
+										<div class="ui-tag left">20GP</div>x1
+									</div>
+								</td>
+							</tr>
+						</table>
+				    </div>
+			</div>
+
+			<div class="mg-t10">
+				<button ms-widget="button" class="" data-button-color="primary">付款</button>
+
+				<button ms-widget="button" class="">退回</button>
+			</div>
+		</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"dialog/avalon.dialog",
+			"checkboxlist/avalon.checkboxlist",
+			"pager/avalon.pager",
+			"dropdown/avalon.dropdown",
+			"browser/avalon.browser",
+			"textbox/avalon.textbox",
+			"spinner/avalon.spinner"
+			], function() {
+			avalon.define("demo", function(vm) {	
+				vm.message = "笑傻了吧！！";
+				vm.namee = avalon.browser.name+' '+avalon.browser.version;
+				vm.show = function( id ){
+					avalon.vmodels[id].toggle = true;
+				}
+
+				vm.pager = {
+					// currentPage: 8,
+					totalItems: 120,
+					showJumper: true,
+					showPages:5
+				}
+
+				vm.$spinnerOpts={
+					min: 0,
+					width:25
+				};
+
+
+				vm.$skipArray = ["pager"];
+				vm.check1 = ["2"];
+			})
+
+			avalon.define("search", function(vm) {
+				vm.dropdown = {
+					width: "140",
+					listWidth:"140"
+				};	
+			})
+
+			avalon.define("demo", function(vm) {
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+			})
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+

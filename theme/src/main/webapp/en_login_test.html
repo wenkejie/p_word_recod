@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/en-register.css">
+    <script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="register">
+	<img src="images/en-login-bg.jpg" class="en-login-bg" width="100%" height="588">
+    	<div class="en-login-header">
+        	<div class="en-login-logo"></div>
+            <div class="en-login-link">
+            	<a href="#">Home</a>
+                <span>|</span>
+                <a href="#">Join Free</a>
+                <span>|</span>
+                <a href="#">Chinese</a>
+            </div>
+        </div>
+        <div class="en-login-box">
+            <h3 class="en-login-title">Login</h3>
+            <p class="en-login-error">Email address can't be blank.</p>
+            <div class="en-login-input en-login-input-error">
+                <input type="text" placeholder="Email Address">
+            </div>
+            <div class="en-login-input">
+                <!-- <input type="text" placeholder="Password"> -->
+                <div class="oni-textbox">
+                    <div class="oni-textbox-input-wrap">
+                        <span class="oni-textbox-placeholder">手机号</span>
+                        <input type="text" placeholder="手机号" class="oni-textbox-input">
+                    </div>
+                </div>
+            </div>
+            <div class="en-login-verification">
+                <input type="text" placeholder="Verification Code">
+                <img src="" width="100" height="40">
+                <span class="en-login-btn-refresh"></span>
+            </div>
+            <button class="en-btn-login">Sign In</button>
+            <div class="en-login-bottom-link">
+                <span class="en-login-bottom-link-left">Not a member? <a href="#">Join Free</a></span>
+                <a href="#" class="en-login-bottom-link-right">Forget Password?</a>
+            </div>
+        </div>
+    	<div class="en-login-footer">
+            <p>Copyright © 2014 OlymTech (Ningbo) Co. Ltd. All rights reserved<span class="en-index-footer-Contact">Contact us by <a href="mailto:contact@olymtech.com">contact@olymtech.com</a> or on hotline +86-400-111111</span></p>
+        </div>
+    <script>
+        require([
+                "textbox/avalon.textbox"
+            ],
+            function() {
+                avalon.define("register", function(vm) {
+                    
+                })
+                avalon.scan()
+            })
+
+    </script>
+</body>
+</html>

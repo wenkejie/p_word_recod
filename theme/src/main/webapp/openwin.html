@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>填写校验码</title>
+    <link rel="stylesheet" href="css/register.css">
+    <script src="vendor/avalon/avalon.js"></script>
+</head>
+<body>
+    <div class="demo-show" ms-controller="demo">
+        <fieldset>  
+            <legend>填写校验码</legend>
+                <button ms-click="show('aa')">打开对话框</button>
+                <div ms-widget="dialog,aa,$aaOpts">
+                    <div class="rg-form rg-form-openwin">
+                        <div class="openwin-form-tips">
+                            <i class="icon"></i>
+                            <p class="openwin-form-tips-content">验证码短信已发送到你的手机上，有效时间为30分钟，请及时查收</p>
+                        </div>
+                        <div class="rg-form-line">
+                            <label class="rg-label" for="">手机号码</label>
+                            <span class="rg-form-des text-orange">1584932423</span>
+                        </div>
+                        <div class="rg-form-line">
+                            <label class="rg-label" for="">校验码</label>
+                            <div class="ui-form-group">
+                                <input type="text" class="ui-input-large w-120" placeholder="">
+                            </div>
+                            <div class="rg-tips error">
+                                <div class="rg-tips-icon"></div>
+                                <div class="rg-tips-content">
+                                验证码有误
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rg-form-line rg-form-unlabel">
+                            <a class="rg-btn none" href="javascript:">获取校验码</a>
+                            <a class="rg-btn disable" href="javascript:"><span>60秒</span>后 重新获取短信</a>
+                        </div>
+                        <div class="rg-form-line rg-form-unlabel">
+                            <a class="rg-btn rg-btn-primary" href="javascript:">确定</a>
+                        </div>
+                    </div>
+                </div>
+        </fieldset>
+        <script>
+            require("dialog/avalon.dialog", function(avalon) {
+                avalon.define("demo", function(vm) {
+                    vm.$aaOpts = {
+                        title: "填写校验码",
+                        showClose: false,
+                        width: 530
+                    }
+                    vm.show = function( id ){
+                        avalon.vmodels[id].toggle = true;
+                    }
+                })
+                avalon.scan();
+            })
+        </script>
+    </div>
+</body>
+</html>

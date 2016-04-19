@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="ClearType" content="true">
+
+	<title>Document</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<script src="vendor/avalon/avalon.js"></script>
+
+</head>
+<body ms-controller="msg_set">
+<div ms-include-src="'vip-center-header.html'"></div>
+<div class="main-frame">
+	<div ms-include-src="'vip-center-left.html'"></div>
+	<div class="right-frame">
+    	<div class="ui-panel ui-panel-verify">
+            <h3 class="ui-title-1">消息设置</h3>
+            <div class="ui-supplier-apply-remind">
+                <p>请勾选您需要的消息类型和接收方式。为了您能准确收到消息，请确认您的手机号和邮箱是否正确</p>
+            </div>
+            <table class="ui-msg-info-tb" width="400" border="0">
+                <tr>
+                    <td width="150">手机号：<span>13888888888</span></td>
+                    <td><a href="#">修改</a></td>
+                </tr>
+                <tr>
+                    <td>邮　箱：<span>未验证</span></td>
+                    <td><a href="#">马上验证</a></td>
+                </tr>
+            </table>
+        
+        	<table class="ui-table-border ui-msg-set-tb mg-t20">
+            	<thead>
+                	<tr>
+                    	<th width="120"></th>
+                        <th></th>
+                        <th width="95" class="ta-c">站内信</th>
+                        <th width="95" class="ta-c">短信</th>
+                        <th width="95" class="ta-c">邮箱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>订单状态</b></td>
+                        <td>当订单发货、派件、签收时候的消息通知</td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                    </tr>
+                    <tr class="split">
+                        <td><b>账户状态</b></td>
+                        <td>当订单发货、派件、签收时候的消息通知</td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>成员邀请</b></td>
+                        <td>当订单发货、派件、签收时候的消息通知</td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                    </tr>
+                    <tr class="split">
+                        <td><b>活动消息</b></td>
+                        <td>当订单发货、派件、签收时候的消息通知</td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>交易评价</b></td>
+                        <td>当订单发货、派件、签收时候的消息通知</td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                    </tr>
+                    <tr class="split">
+                        <td><b>积分变动</b></td>
+                        <td>当订单发货、派件、签收时候的消息通知</td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>消息设置</b></td>
+                        <td>当订单发货、派件、签收时候的消息通知</td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                        <td class="ta-c">
+                          <input checked="checked" type="checkbox"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="msg-set-btn"><a href="javascript:;" ms-widget="button" data-button-size="large" data-button-color="primary">保存</a></div>
+        </div>
+	</div>
+</div>
+<div ms-include-src="'vip-center-footer.html'"></div>
+	<script>
+		require([
+			"button/avalon.button",
+			"dropdown/avalon.dropdown",
+			"flipswitch/avalon.flipswitch"
+			], function() {
+			avalon.define("msg_set", function(vm) {
+				vm.dropdown = {
+					width: "120",
+					listWidth:"120"
+				};
+				vm.buyersInfo = true;
+				vm.sellerInfo = false;
+				
+				vm.show = function(event,param){
+					if(param == "buyersInfo"){
+						vm.buyersInfo = true;
+						vm.sellerInfo = false;
+					}else{
+						vm.buyersInfo = false;
+						vm.sellerInfo = true;
+					}
+				}
+
+			})
+
+			avalon.scan()
+		})
+	</script>
+
+</body>
+</html>
+
+
+
